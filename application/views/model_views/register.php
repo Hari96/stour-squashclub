@@ -11,6 +11,7 @@
     <section class="col-md-7">
       <form <form action="" method="post">
         <div class="form-group">
+          <label class="required-star">indicates required field</label>
           <div class="row spacing">
             <div class="col-md-6">
               <label for="inputFirstName" class="required">First Name</label>
@@ -69,9 +70,10 @@
               </select>
             </div>
           </div>
+          <input type="submit" value="Submit">
         </div>
       </form>
-    </section><!--end of from section-->
+    </section><!--end of form section-->
 
   </div>
 <div>

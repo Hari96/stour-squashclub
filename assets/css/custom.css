@@ -22,3 +22,7 @@ table, th, td {
   content: " *";
   color: red;
 }
+.required-star::before {
+  content: "* ";
+  color: red;
+}
