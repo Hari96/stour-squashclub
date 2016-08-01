@@ -1,6 +1,24 @@
 body {
-  padding-top: 70px;
+  padding-top: 90px;
 }
 form {
   width: 80%;
+}
+#head {
+  font-size: 1.3em;
+}
+table {
+  width: 98%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.spacing {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.required::after {
+  content: " *";
+  color: red;
 }

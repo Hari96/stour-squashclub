@@ -9,18 +9,13 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/custom.css" />
     <script src ="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src ="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
-      <style>
-      table {
-        width: 98%;
-      }
-      table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
-      </style>
+      
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
+
+      <h1 class="text-center" id="head">Stour Centre Squash Club</h1>
+
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -28,7 +23,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-          <a class="navbar-brand" href="<?php echo base_url();?>pages/view/home">Stour Centre Squash Club</a>
+
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
