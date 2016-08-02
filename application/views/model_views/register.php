@@ -12,7 +12,7 @@
       <form <form action="" method="post">
         <div class="form-group">
           <label class="required-star">indicates required field</label>
-          <div class="row spacing">
+          <div class="row spacing-bottom">
             <div class="col-md-6">
               <label for="inputFirstName" class="required">First Name</label>
               <input type="text" class="form-control" id="inputFirstName" required>
@@ -22,13 +22,13 @@
               <input type="text" class="form-control" id="inputLastName" required>
             </div>
           </div>
-          <div class="row spacing">
+          <div class="row spacing-bottom">
             <div class="col-md-12">
               <label for="inputEmail" class="required">Email</label>
               <input type="email" class="form-control" id="inputEmail" required>
             </div>
           </div>
-          <div class="row spacing">
+          <div class="row spacing-bottom">
             <div class="col-md-6">
               <label for="inputPassword" class="required">Password</label>
               <input type="password" class="form-control" id="inputPassword" required>
@@ -38,7 +38,7 @@
               <input type="password" class="form-control" id="confirmPassword" required>
             </div>
           </div>
-          <div class="row spacing">
+          <div class="row spacing-bottom">
             <div class="col-md-6">
               <label for="inputMobile">Mobile</label>
               <input type="tel" class="form-control" id="inputMobile">
@@ -48,15 +48,15 @@
               <input type="tel" class="form-control" id="inputLandline">
             </div>
           </div>
-          <div class="row spacing">
+          <div class="row spacing-bottom">
             <div class="col-md-6">
               <label for="inputAge">Age Group</label>
               <select name ="age" class="form-control" id="inputAge">
                 <option value="choose">Choose your age group</option>
                 <option value="1">Under 16</option>
-                <option value="2">Over 16 - Under 40</option>
-                <option value="3">Over 40 - Under 60</option>
-                <option value="4">Over 60</option>
+                <option value="2">16 - Under 40</option>
+                <option value="3">40 - Under 60</option>
+                <option value="4">60 or Over 60</option>
               </select>
             </div>
             <div class=col-md-6>
@@ -70,7 +70,11 @@
               </select>
             </div>
           </div>
-          <input type="submit" value="Submit">
+          <div class="spacing-top">
+            <input type="submit" value="Submit" class="btn btn-primary">
+            <input type="reset" value="Reset" class="btn btn-warning">
+            <input type="button" value="Cancel" class="btn btn-info">
+          </div>
         </div>
       </form>
     </section><!--end of form section-->

@@ -14,9 +14,11 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-.spacing {
-  padding-top: 2px;
-  padding-bottom: 2px;
+.spacing-bottom {
+  margin-bottom: 15px;
+}
+.spacing-top {
+  margin-top: 15px;
 }
 .required::after {
   content: " *";
