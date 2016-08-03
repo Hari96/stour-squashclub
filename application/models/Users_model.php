@@ -11,8 +11,5 @@ class Users_model extends CI_Model {
     return $query->result_array();
   }
 
-  public function create_users($data) {
 
-    $this->db->insert('players', $data);
-  }
 }

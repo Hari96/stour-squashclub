@@ -23,20 +23,4 @@ class Model_views extends CI_Controller {
     $this->load->helper('url_helper');
   }
 
-  public function insert($fname, $lname, $password, $mobile, $landline, $email, $age, $standard ) {
-
-    $this->users_model->create_users([
-      'fName' => $fname,
-      'lName' => $lname,
-      'password' => $password,
-      'mobile' => $mobile,
-      'landline' => $landline,
-      'email' => $email,
-      'age' => $age,
-      'standard' => $standard
-
-    ]);
-
-  }
-
 }

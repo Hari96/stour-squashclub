@@ -1,5 +1,12 @@
 <h1>Register Page</h1>
 <div class="container-fluid">
+  <?php if ( validation_errors() !== '') {?>
+<div style="color:red;"><p>Registration failed due to following errors:</p><?php echo validation_errors(); ?></div>
+<?php } ?>
+  <?php if (isset($message)) { ?>
+<h3 style="color:green;">Data inserted successfully</h3><br>
+<?php } ?>
+
   <div class="row">
     <section class="col-md-5">
       <p>
@@ -9,74 +16,147 @@
       </p>
     </section><!--end of left hand section-->
     <section class="col-md-7">
-      <form <form action="" method="post">
+      <?php echo form_open('insert_users'); ?>
         <div class="form-group">
           <label class="required-star">indicates required field</label>
           <div class="row spacing-bottom">
             <div class="col-md-6">
-              <label for="inputFirstName" class="required">First Name</label>
-              <input type="text" class="form-control" id="inputFirstName" required>
+              <?php
+                $attributes = array(
+                  'class' => 'required'
+                );
+                echo form_label('First Name', 'inputFirstName', $attributes);
+                $data = array(
+                  'name' => 'inputFirstName',
+                  'class' => 'form-control',
+                  'required' => 'required'
+                );
+                echo form_input($data);
+              ?>
             </div>
             <div class="col-md-6">
-              <label for="inputLastName" class="required">Last Name</label>
-              <input type="text" class="form-control" id="inputLastName" required>
+              <?php
+                $attributes = array(
+                  'class' => 'required'
+                );
+                echo form_label('Last Name', 'inputLastName', $attributes);
+                $data = array(
+                  'name' => 'inputLastName',
+                  'class' => 'form-control',
+                  'required' => 'required'
+                );
+                echo form_input($data);
+              ?>
             </div>
           </div>
           <div class="row spacing-bottom">
             <div class="col-md-12">
-              <label for="inputEmail" class="required">Email</label>
-              <input type="email" class="form-control" id="inputEmail" required>
+              <?php
+                $attributes = array(
+                  'class' => 'required'
+                );
+                echo form_label('Email', 'inputEmail', $attributes);
+                $data = array(
+                  'type' => 'email',
+                  'name' => 'inputEmail',
+                  'class' => 'form-control',
+                  'required' => 'required'
+                );
+                echo form_input($data);
+              ?>
             </div>
           </div>
           <div class="row spacing-bottom">
             <div class="col-md-6">
-              <label for="inputPassword" class="required">Password</label>
-              <input type="password" class="form-control" id="inputPassword" required>
+              <?php
+                $attributes = array(
+                  'class' => 'required'
+                );
+                echo form_label('Password', 'inputPassword', $attributes);
+                $data = array(
+                  'name' => 'inputPassword',
+                  'class' => 'form-control',
+                  'required' => 'required'
+                );
+                echo form_password($data);
+              ?>
             </div>
             <div class="col-md-6">
-              <label for="confirmPassword" class="required">Confirm Password</label>
-              <input type="password" class="form-control" id="confirmPassword" required>
+              <?php
+                $attributes = array(
+                  'class' => 'required'
+                );
+                echo form_label('Confirm Password', 'confirmPassword', $attributes);
+                $data = array(
+                  'name' => 'confirmPassword',
+                  'class' => 'form-control',
+                  'required' => 'required'
+                );
+                echo form_password($data);
+              ?>
             </div>
           </div>
           <div class="row spacing-bottom">
             <div class="col-md-6">
-              <label for="inputMobile">Mobile</label>
-              <input type="tel" class="form-control" id="inputMobile">
+              <?php
+                echo form_label('Mobile', 'inputMobile');
+                $data = array(
+                  'type' => 'tel',
+                  'name' => 'inputMobile',
+                  'class' => 'form-control'
+                );
+                echo form_input($data);
+              ?>
             </div>
             <div class="col-md-6">
-              <label for="inputLandline">Landline</label>
-              <input type="tel" class="form-control" id="inputLandline">
+              <?php
+                echo form_label('Landline', 'inputLandline');
+                $data = array(
+                  'type' => 'tel',
+                  'name' => 'inputLandline',
+                  'class' => 'form-control'
+                );
+                echo form_input($data);
+              ?>
             </div>
           </div>
           <div class="row spacing-bottom">
             <div class="col-md-6">
-              <label for="inputAge">Age Group</label>
-              <select name ="age" class="form-control" id="inputAge">
-                <option value="choose">Choose your age group</option>
-                <option value="1">Under 16</option>
-                <option value="2">16 - Under 40</option>
-                <option value="3">40 - Under 60</option>
-                <option value="4">60 or Over 60</option>
-              </select>
+              <?php
+                echo form_label('Age Group', 'inputAge');
+                $options = array(
+                  '0' => 'Choose your age group',
+                  '1' => 'Under 16',
+                  '2' => '16 - Under 40',
+                  '3' => '40 - Under 60',
+                  '4' => '60 or Over 60'
+                );
+                echo form_dropdown('age', $options, 'Choose your age group', 'class="form-control"');
+              ?>
             </div>
             <div class=col-md-6>
-              <label for="inputStandard">Standard</label>
-              <select name="standard" class="form-control" id="inputStandard">
-                <option value="choose">Choose your standard</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
+              <?php
+                echo form_label('Standard', 'inputStandard');
+                $options = array(
+                  '0' => 'Choose your standard',
+                  '1' => '1',
+                  '2' => '2',
+                  '3' => '3',
+                  '4' => '4'
+                );
+                echo form_dropdown('standard', $options, 'Choose your standard', 'class="form-control"');
+              ?>
             </div>
           </div>
           <div class="spacing-top">
-            <input type="submit" value="Submit" class="btn btn-primary">
-            <input type="reset" value="Reset" class="btn btn-warning">
-            <input type="button" value="Cancel" class="btn btn-info">
+            <?php
+              echo form_submit('user-submit', 'Submit', 'class="btn btn-primary"');
+              echo form_reset('user-reset', 'Reset', 'class="btn btn-warning"');
+              echo form_button('cancel-reg', 'Cancel', 'class="btn btn-info"');
+            ?>
           </div>
         </div>
-      </form>
+      <?php echo form_close(); ?>
     </section><!--end of form section-->
 
   </div>
