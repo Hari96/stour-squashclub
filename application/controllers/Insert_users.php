@@ -27,6 +27,14 @@
         $this->load->view('model_views/register');
         $this->load->view('templates/footer');
       } else {
+        //checking for duplicate email
+        $email = $this->input->post('inputEmail');
+        if($this->insert_model->get_emails($email) == true) {
+          $data['email_message'] = 'Email address already exists, please input a different address';
+          $this->load->view('templates/header', $data);
+          $this->load->view('model_views/register', $data);
+          $this->load->view('templates/footer', $data);
+        } else {
         //hashing password
         $password = $this->input->post('inputPassword');
         $salt = file_get_contents('http://rgbmarketing.co.uk/_private69/salt.txt');
@@ -36,7 +44,7 @@
         $data = array(
         'fname' => $this->input->post('inputFirstName'),
         'lName' => $this->input->post('inputLastName'),
-        'email' => $this->input->post('inputEmail'),
+        'email' => $email,
         'password' => $password,
         'mobile' => $this->input->post('inputMobile'),
         'landline' => $this->input->post('inputLandline'),
@@ -50,7 +58,8 @@
         $this->load->view('templates/header', $data);
         $this->load->view('model_views/register', $data);
         $this->load->view('templates/footer', $data);
-      }
+      }//end of second else
+    }//end of first else
 
 
     }

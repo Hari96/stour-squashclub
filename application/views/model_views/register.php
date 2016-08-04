@@ -3,9 +3,12 @@
   <?php if ( validation_errors() !== '') {?>
 <div style="color:red;"><p>Registration failed due to following errors:</p><?php echo validation_errors(); ?></div>
 <?php } ?>
-  <?php if (isset($message)) { ?>
-<h3 style="color:green;">Data inserted successfully</h3><br>
-<?php } ?>
+<?php if (isset($email_message)) { ?>
+<h3 style="color:red;"><?php echo $email_message; ?></h3><br>
+<?php $email_message = '';} ?>
+<?php if (isset($message)) { ?>
+<h3 style="color:green;"><?php echo $message; ?></h3><br>
+<?php $message = ''; } ?>
 
   <div class="row">
     <section class="col-md-5">
