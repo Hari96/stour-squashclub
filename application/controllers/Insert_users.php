@@ -54,15 +54,35 @@
         //Transfering data to Model
         $this->insert_model->form_insert($data);
         $data['message'] = 'Data Inserted Successfully';
+        $code = uniqid('', true);
+        $data_code = array(
+          'activation_code' => $code,
+          'user_id' => $this->insert_model->get_user_id()
+        );
+        $this->insert_model->code_insert($data_code);
+        $message = "Activate your account with us by going to: http://www.stoursquashclub.co.uk/insert_users/complete?activate_code=" . $code;
+		    mail($email, "Activate your account today!", $message, "From: noreply@stoursquashclub.co.uk\n");
         //Loading View
         $this->load->view('templates/header', $data);
         $this->load->view('model_views/register', $data);
         $this->load->view('templates/footer', $data);
-      }//end of second else
-    }//end of first else
+        }//end of second else
+      }//end of first else
 
+    }// end of index function
 
+    public function complete() {
+      $code = $this->input->get('activate_code');
+      $code = trim($code);
+      $code = stripslashes($code);
+      $code = htmlspecialchars($code);
+      if(empty($code)) {
+  		  echo 'faulty';//message to produce goes to activate view?
+  	  } else {
+        $user_id = $this->insert_model->get_id_from_code($code);
+        $this->insert_model->activation_insert($user_id);
+      }
+      echo $user_id;
     }
 
-
-  }
+  }//end of class
