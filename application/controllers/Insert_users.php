@@ -4,6 +4,7 @@
     function __construct() {
       parent::__construct();
       $this->load->model('insert_model');
+      $this->load->model('users_model');
     }
 
     public function index() {
@@ -29,7 +30,7 @@
       } else {
         //checking for duplicate email
         $email = $this->input->post('inputEmail');
-        if($this->insert_model->get_emails($email) == true) {
+        if($this->users_model->check_for_email($email) == true) {
           $data['email_message'] = 'Email address already exists, please input a different address';
           $this->load->view('templates/header', $data);
           $this->load->view('model_views/register', $data);
@@ -60,7 +61,7 @@
           'user_id' => $this->insert_model->get_user_id()
         );
         $this->insert_model->code_insert($data_code);
-        $message = "Activate your account with us by going to: http://www.stoursquashclub.co.uk/insert_users/complete?activate_code=" . $code;
+        $message = "Activate your account with us by going to: http://www.stoursquashclub.co.uk/insert_users/complete_registration?activate_code=" . $code;
 		    mail($email, "Activate your account today!", $message, "From: noreply@stoursquashclub.co.uk\n");
         //Loading View
         $this->load->view('templates/header', $data);
@@ -71,7 +72,7 @@
 
     }// end of index function
 
-    public function complete() {
+    public function complete_registration() {
       $code = $this->input->get('activate_code');
       $code = trim($code);
       $code = stripslashes($code);
@@ -81,8 +82,14 @@
   	  } else {
         $user_id = $this->insert_model->get_id_from_code($code);
         $this->insert_model->activation_insert($user_id);
+        $data['activation_message'] = "You are now activated and can login";
+        $this->load->view('templates/header', $data);
+        $this->load->view('model_views/login', $data);
+        $this->load->view('templates/footer', $data);
       }
-      echo $user_id;
+
     }
+
+
 
   }//end of class

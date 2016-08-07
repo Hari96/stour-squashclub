@@ -6,17 +6,7 @@
       $this->db->insert('players', $data);
     }
 
-    public function get_emails($email) {
-
-      $this->db->where('email', $email);
-      $query = $this->db->get('players');
-      if($query->num_rows() == 1) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-
+    
     public function get_id_from_code($code) {
       $this->db->where('activation_code', $code);
       $query = $this->db->get('activation');
@@ -34,13 +24,14 @@
     }
 
     public function activation_insert($user_id) {
-      $this->load->helper('date');
+      //$this->load->helper('date');
+      $date = date('d/m/y');
       $data = array(
         'activated' => 1,
-        'JoinDate' => NOW()
+        'JoinDate' => $date
       );
       $this->db->where('id', $user_id);
-      $this->db->insert('players', $data);
+      $this->db->update('players', $data);
 
     }
 

@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/custom.css" />
     <script src ="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src ="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
-      
+    <script src ="<?php echo base_url();?>assets/js/custom.js"></script>
+
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -36,7 +37,11 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<?php echo base_url();?>pages/view/contact">Contact</a></li>
+        <?php if(isset($login_message)) { ?>
+          <li><a href="<?php echo base_url();?>model_views/view/logout">Logout</a></li>
+        <?php }  else { ?>
         <li><a href="<?php echo base_url();?>model_views/view/login">Login</a></li>
+        <?php } ?>
         <li><a href="<?php echo base_url();?>model_views/view/register">Signup</a></li>
       </ul>
       </div><!-- navbar-collapse-->

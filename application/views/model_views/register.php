@@ -155,7 +155,7 @@
             <?php
               echo form_submit('user-submit', 'Submit', 'class="btn btn-primary"');
               echo form_reset('user-reset', 'Reset', 'class="btn btn-warning"');
-              echo form_button('cancel-reg', 'Cancel', 'class="btn btn-info"');
+              echo form_button('cancel-reg', 'Cancel', 'class="btn btn-info" id="cancel-reg"');
             ?>
           </div>
         </div>
