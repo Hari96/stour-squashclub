@@ -34,18 +34,39 @@ class user_login extends CI_Controller {
           $this->load->view('templates/footer', $data);
         } else {
           //successful login
-          $data['login_message'] = "Successful";
-          $this->load->view('templates/header', $data);
-          $this->load->view('pages/home', $data);
-          $this->load->view('templates/footer', $data);
+          $user_data = array(
+            'email'     => '$email',
+            'logged_in' => TRUE
+          );
+          $this->session->set_userdata($user_data);
+          if($this->users_model->get_role($email) == TRUE) {
+            //admin user
+            $admin_data = array(
+              'email' => '$email',
+              'role' => 1,
+              'logged_in' => TRUE
+            );
+            $this->session->set_userdata($admin_data);
+          } else {
+            unset($_SESSION['role']);
+          }
+          $this->load->view('templates/header');
+          $this->load->view('pages/home');
+          $this->load->view('templates/footer');
         }
       } else {
         $data['no_email_message'] = "No user with that email address exists";
-           $this->load->view('templates/header', $data);
+          $this->load->view('templates/header', $data);
           $this->load->view('model_views/login', $data);
           $this->load->view('templates/footer', $data);
       }
     }
-
+  }
+  public function user_logout() {
+    unset($_SESSION['email']);
+    unset($_SESSION['role']);
+    $this->load->view('templates/header');
+    $this->load->view('pages/home');
+    $this->load->view('templates/footer');
   }
 }

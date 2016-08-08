@@ -37,12 +37,15 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<?php echo base_url();?>pages/view/contact">Contact</a></li>
-        <?php if(isset($login_message)) { ?>
-          <li><a href="<?php echo base_url();?>model_views/view/logout">Logout</a></li>
+        <?php if(isset($_SESSION['email'])) { ?>
+          <li><a href="<?php echo base_url();?>user_login/user_logout">Logout</a></li>
         <?php }  else { ?>
         <li><a href="<?php echo base_url();?>model_views/view/login">Login</a></li>
-        <?php } ?>
         <li><a href="<?php echo base_url();?>model_views/view/register">Signup</a></li>
+        <?php }         
+        if(isset($_SESSION['role'])) { ?>
+        <li><a href="<?php echo base_url();?>model_views/view/admin">Admin</a></li>
+        <?php } ?>
       </ul>
       </div><!-- navbar-collapse-->
     </div><!--container-->

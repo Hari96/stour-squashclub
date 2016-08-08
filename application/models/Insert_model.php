@@ -6,7 +6,7 @@
       $this->db->insert('players', $data);
     }
 
-    
+
     public function get_id_from_code($code) {
       $this->db->where('activation_code', $code);
       $query = $this->db->get('activation');
@@ -25,7 +25,7 @@
 
     public function activation_insert($user_id) {
       //$this->load->helper('date');
-      $date = date('d/m/y');
+      $date = date('Y-m-d');
       $data = array(
         'activated' => 1,
         'JoinDate' => $date

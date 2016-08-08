@@ -32,5 +32,15 @@ class Users_model extends CI_Model {
     }
   }
 
+  public function get_role($email) {
+    $this->db->where('email', $email);
+    $query = $this->db->get('players');
+    if($query->row(0)->role == 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
 }
