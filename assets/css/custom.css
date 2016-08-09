@@ -11,8 +11,18 @@ table {
   width: 98%;
 }
 table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+  /*border: 1px solid black;
+  border-collapse: collapse;*/
+  text-align:center;
+}
+table .nums {
+  width: 7%;
+}
+table .text {
+  width: 18%;
+}
+table .email {
+  width: 25%;
 }
 .spacing-bottom {
   margin-bottom: 15px;

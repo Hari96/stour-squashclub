@@ -6,7 +6,9 @@ class Users_model extends CI_Model {
   }
 
   public function get_players() {
-
+    // ensure players are registered
+    $this->db->where('activated', 1);
+    $this->db->order_by('current_league', 'asc');
     $query = $this->db->get('players');
     return $query->result_array();
   }

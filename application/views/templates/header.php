@@ -42,9 +42,9 @@
         <?php }  else { ?>
         <li><a href="<?php echo base_url();?>model_views/view/login">Login</a></li>
         <li><a href="<?php echo base_url();?>model_views/view/register">Signup</a></li>
-        <?php }         
+        <?php }
         if(isset($_SESSION['role'])) { ?>
-        <li><a href="<?php echo base_url();?>model_views/view/admin">Admin</a></li>
+        <li><a href="<?php echo base_url();?>player_admin/admin_view/admin_home">Admin</a></li>
         <?php } ?>
       </ul>
       </div><!-- navbar-collapse-->
