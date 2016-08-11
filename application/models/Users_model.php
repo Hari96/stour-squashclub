@@ -5,16 +5,15 @@ class Users_model extends CI_Model {
     $this->load->database();
   }
 
-  public function get_players() {
+  public function get_players($order_field, $order_direction) {
     // ensure players are registered
     $this->db->where('activated', 1);
-    $this->db->order_by('current_league', 'asc');
+    $this->db->order_by($order_field, $order_direction);
     $query = $this->db->get('players');
     return $query->result_array();
   }
 
   public function check_for_email($email) {
-
     $this->db->where('email', $email);
     $query = $this->db->get('players');
     if($query->num_rows() == 1) {

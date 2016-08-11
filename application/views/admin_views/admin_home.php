@@ -1,2 +1,17 @@
 <h1>Admin page</h1>
-<a href="<?php echo base_url();?>player_admin/admin_view/user_details">Player details</a><br>
+
+<table class="table table-responsive table-bordered">
+  <thead>
+    <tr><th>Task description</th><th>Link</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>text, text </td>
+      <td><a href="<?php echo base_url();?>player_admin/full_view/user_details">Player details</a></td>
+    </tr>
+    <tr>
+      <td>text, text</td>
+      <td><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Player and leagues</a></td>
+    </tr>
+</tbody>
+</table>

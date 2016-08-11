@@ -8,7 +8,10 @@ class Model_views extends CI_Controller {
 
     $data['title'] = ucfirst($page); // Capitalize the first letter
 
-    $data['players'] = $this->users_model->get_players();
+    $order_field= "current_league";// field to order by
+    $order_direction = "asc";//direction of sort
+
+    $data['players'] = $this->users_model->get_players($order_field, $order_direction);
     $data['title'] = 'Players List';
 
     $this->load->view('templates/header', $data);

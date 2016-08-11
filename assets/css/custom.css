@@ -15,14 +15,14 @@ table, th, td {
   border-collapse: collapse;*/
   text-align:center;
 }
-table .nums {
-  width: 7%;
+.narrow {
+  width: 6%;
 }
-table .text {
-  width: 18%;
+.wide {
+  width: 13%;
 }
-table .email {
-  width: 25%;
+.wider {
+  width: 24%;
 }
 .spacing-bottom {
   margin-bottom: 15px;
