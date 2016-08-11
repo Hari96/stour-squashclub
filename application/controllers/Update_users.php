@@ -25,7 +25,7 @@
 
       if ($this->form_validation->run() == FALSE) {
         $this->load->view('templates/header');
-        $this->load->view('admin_views/user_details');
+        $this->load->view('admin_views/user_update');
         $this->load->view('templates/footer');
       } else {
 

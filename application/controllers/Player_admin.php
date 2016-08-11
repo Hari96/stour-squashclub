@@ -7,7 +7,7 @@ class Player_admin extends CI_Controller {
     $this->load->model('users_model');
   }
 
-  public function full_view($page="admin_home") {
+  public function crud_view($page="admin_home") {
     if (!file_exists(APPPATH.'views/admin_views/'.$page.'.php')) {
       // whoops don't have a page for that!
       show_404();

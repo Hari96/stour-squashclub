@@ -44,7 +44,7 @@
         <li><a href="<?php echo base_url();?>model_views/view/register">Signup</a></li>
         <?php }
         if(isset($_SESSION['role'])) { ?>
-        <li><a href="<?php echo base_url();?>player_admin/full_view/admin_home">Admin</a></li>
+        <li><a href="<?php echo base_url();?>player_admin/crud_view/admin_home">Admin</a></li>
         <?php } ?>
       </ul>
       </div><!-- navbar-collapse-->

@@ -7,7 +7,11 @@
   <tbody>
     <tr>
       <td>text, text </td>
-      <td><a href="<?php echo base_url();?>player_admin/full_view/user_details">Player details</a></td>
+      <td><a href="<?php echo base_url();?>player_admin/crud_view/user_update">Update players</a></td>
+    </tr>
+    <tr>
+      <td>text, text </td>
+      <td><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Delete a player</a></td>
     </tr>
     <tr>
       <td>text, text</td>
