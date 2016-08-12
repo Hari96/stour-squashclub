@@ -38,3 +38,9 @@ table, th, td {
   content: "* ";
   color: red;
 }
+.message-box {
+  border: 2px solid black;
+  width: 50%;
+  margin-left: 10px;
+  margin-bottom: 6px;
+}

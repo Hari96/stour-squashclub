@@ -50,7 +50,4 @@
       </div><!-- navbar-collapse-->
     </div><!--container-->
     </nav>
-    <div class="container-fluid">
-      <div class="row">
-
-      </div>
+    

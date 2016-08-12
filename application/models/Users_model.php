@@ -48,5 +48,16 @@ class Users_model extends CI_Model {
     $this->db->delete('players');
   }
 
+  public function check_other_emails($email, $user_id) {
+    $this->db->where('id !=',$user_id);
+    $this->db->where('email', $email);
+    $query = $this->db->get('players');
+    if($query->num_rows() == 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
 }

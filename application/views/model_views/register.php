@@ -1,5 +1,4 @@
 <h1>Register Page</h1>
-<div class="container-fluid">
   <?php if ( validation_errors() !== '') {?>
 <div style="color:red;"><p>Registration failed due to following errors:</p><?php echo validation_errors(); ?></div>
 <?php } ?>
@@ -9,7 +8,7 @@
 <?php if (isset($message)) { ?>
 <h3 style="color:green;"><?php echo $message; ?></h3><br>
 <?php $message = ''; } ?>
-
+<div class="container-fluid">
   <div class="row">
     <section class="col-md-5">
       <p>

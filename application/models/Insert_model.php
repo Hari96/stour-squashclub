@@ -35,8 +35,9 @@
 
     }
 
-    public function update_users() {
-
+    public function update_users($data, $user_id) {
+      $this->db->where('id', $user_id);
+      $this->db->update('players', $data);
     }
 
 
