@@ -22,7 +22,14 @@
     <a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Return to delete page</a>
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
    </div>
-   <?php $delete_message = ''; } ?>
+<?php $delete_message = ''; } ?>
+<?php if (isset($leagues_message)) { ?>
+ <div class="message-box alert alert-success">
+   <h3 style="color:green;"><?php echo $leagues_message; ?></h3>
+   <a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Return to league page</a>
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+<?php $leagues_message = ''; } ?>
 
 <div class="container-fluid">
   <table class="table table-responsive table-bordered">

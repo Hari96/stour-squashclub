@@ -1,9 +1,6 @@
 body {
   padding-top: 100px;
 }
-form {
-  width: 80%;
-}
 #head {
   font-size: 1.3em;
 }
@@ -43,4 +40,7 @@ table, th, td {
   width: 50%;
   margin-left: 10px;
   margin-bottom: 6px;
+}
+.number-column {
+  width: 50px;
 }
