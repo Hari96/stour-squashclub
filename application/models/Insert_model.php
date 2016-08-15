@@ -30,14 +30,30 @@
         'activated' => 1,
         'JoinDate' => $date
       );
+      $data_leagues = array(
+        'user_id' => $user_id
+      );
       $this->db->where('id', $user_id);
       $this->db->update('players', $data);
+      $this->db->insert('leagues', $data_leagues);
 
     }
 
     public function update_users($data, $user_id) {
       $this->db->where('id', $user_id);
       $this->db->update('players', $data);
+    }
+
+    public function update_leagues($data, $user_id, $year) {
+      $this->load->dbforge();
+      $this->db->where('user_id', $user_id);
+      $league_name = 'leagues' . $year;
+      if ($this->db->table_exists($league_name)) {
+        $this->db->update($league_name, $data);
+      } else {
+        $base_league = 'leagues';
+        $this->db->query("CREATE TABLE $league_name LIKE $base_league");//need now to initiate new table with all id's
+      }
     }
 
 
