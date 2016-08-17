@@ -1,5 +1,7 @@
 <h1>Delete player</h1>
-
+<?php
+if(isset($_SESSION['role']))
+{ ?>
 <table class="table table-responsive table-bordered">
   <thead>
     <tr><th>Surname</th><th>First Name</th><th>Email</th><th>Remove</th></tr>
@@ -15,3 +17,6 @@
     <?php endforeach; ?>
   </tbody>
 </table>
+<?php } else {
+  echo "You are not an admin, so you do not have access to this page";
+} ?>

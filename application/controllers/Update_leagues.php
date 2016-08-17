@@ -9,6 +9,7 @@
 
     public function index() {
       $year = $this->input->post('year');
+      $this->insert_model->create_new_league($year);//checks if league already exists
       $month_no = $this->input->post('month');
       switch ($month_no) {
         case 1:
@@ -48,7 +49,8 @@
           $month = 'dec';
           break;
       }
-      for ($i = 1; $i <= 8; $i++) {
+      $max = $this->input->post('num_records');
+      for ($i = 1; $i <= $max; $i++) {
         $num = 'curr' . $i;
         $id = 'id' . $i;
         $league_num = $this->input->post($num);

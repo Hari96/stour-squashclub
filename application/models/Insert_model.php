@@ -44,18 +44,29 @@
       $this->db->update('players', $data);
     }
 
-    public function update_leagues($data, $user_id, $year) {
-      $this->load->dbforge();
+    public function update_leagues($data_leagues, $user_id, $year) {
       $this->db->where('user_id', $user_id);
       $league_name = 'leagues' . $year;
-      if ($this->db->table_exists($league_name)) {
-        $this->db->update($league_name, $data);
-      } else {
-        $base_league = 'leagues';
-        $this->db->query("CREATE TABLE $league_name LIKE $base_league");//need now to initiate new table with all id's
-      }
+      $this->db->update($league_name, $data_leagues);
+
     }
 
-
-
+    public function create_new_league($year) {
+      $league_name = 'leagues' . $year;
+      if ($this->db->table_exists($league_name)) {
+        return true;
+      } else {
+        $base_league = 'leagues';
+        $this->db->query("CREATE TABLE $league_name LIKE $base_league");
+        $this->db->select('user_id');
+        $query_leagues = $this->db->get('leagues');
+        foreach ($query_leagues->result() as $row) {
+          $id = $row->user_id;
+          $data = array(
+            'user_id' => $id
+          );
+          $this->db->insert($league_name, $data);
+      }
+    }
+  }
 }

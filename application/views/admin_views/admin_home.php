@@ -1,4 +1,7 @@
 <h1>Admin page</h1>
+<?php
+if(isset($_SESSION['role']))
+{ ?>
 <!-- successful update message-->
 <?php if (isset($message)) { ?>
   <div class="message-box alert alert-success">
@@ -47,8 +50,15 @@
       </tr>
       <tr>
         <td>text, text</td>
-        <td><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Player and leagues</a></td>
+        <td><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Update leagues</a></td>
+      </tr>
+      <tr>
+        <td>text, text</td>
+        <td><a href="<?php echo base_url();?>player_admin/league_view/results_view">Enter results</a></td>
       </tr>
     </tbody>
   </table>
 </div>
+<?php } else {
+  echo "You are not an admin, so you do not have access to this page";
+} ?>

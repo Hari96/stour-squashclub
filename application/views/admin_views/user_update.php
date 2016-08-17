@@ -1,4 +1,7 @@
 <h1>Update players</h1>
+<?php
+if(isset($_SESSION['role']))
+{ ?>
 <div class="container-fluid">
   <?php if ( validation_errors() !== '') {?>
 <div style="color:red;"><p>Update failed due to following errors:</p><?php echo validation_errors(); ?></div>
@@ -30,3 +33,6 @@
     </tbody>
 </table>
 </div>
+<?php } else {
+  echo "You are not an admin, so you do not have access to this page";
+} ?>
