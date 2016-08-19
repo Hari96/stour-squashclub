@@ -69,4 +69,15 @@
       }
     }
   }
+
+  public function insert_into_results($year, $month, $divs, $player1_id, $player2_id) {
+    $data = array(
+      'year' => $year,
+      'month' => $month,
+      'division' => $divs,
+      'player1_id' => $player1_id,
+      'player2_id' => $player2_id
+    );
+    $this->db->insert('results', $data);
+  }
 }

@@ -1,5 +1,12 @@
 <?php
 class Model_views extends CI_Controller {
+
+  public function __construct() {
+    parent::__construct();
+    $this->load->model('users_model');
+    $this->load->helper('url_helper');
+  }
+
   public function view($page = 'register') {
     if (!file_exists(APPPATH.'views/model_views/'.$page.'.php')) {
       // whoops don't have a page for that!
@@ -18,12 +25,6 @@ class Model_views extends CI_Controller {
     $this->load->view('model_views/'.$page, $data);
     $this->load->view('templates/footer', $data);
 
-  }
-
-  public function __construct() {
-    parent::__construct();
-    $this->load->model('users_model');
-    $this->load->helper('url_helper');
-  }
+  }  
 
 }

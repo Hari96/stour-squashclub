@@ -1,7 +1,14 @@
 <h1>Admin page</h1>
 <?php
 if(isset($_SESSION['role']))
-{ ?>
+{
+  if ( validation_errors() !== '') {?>
+  <div class="message-box alert alert-danger"><p><?php echo $val_message ?></p>
+    <?php echo validation_errors(); ?>
+    <a href="<?php echo base_url(); echo $val_direct; ?>"> <?php echo $val_amessage; ?></a>
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+  <?php } ?>
 <!-- successful update message-->
 <?php if (isset($message)) { ?>
   <div class="message-box alert alert-success">
@@ -50,7 +57,7 @@ if(isset($_SESSION['role']))
       </tr>
       <tr>
         <td>text, text</td>
-        <td><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Update leagues</a></td>
+        <td><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Start new leagues</a></td>
       </tr>
       <tr>
         <td>text, text</td>

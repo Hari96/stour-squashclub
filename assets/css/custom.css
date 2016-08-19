@@ -44,3 +44,6 @@ table, th, td {
 .number-column {
   width: 50px;
 }
+.emphasis {
+  color: red;
+}

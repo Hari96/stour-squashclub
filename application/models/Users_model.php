@@ -59,5 +59,38 @@ class Users_model extends CI_Model {
     }
   }
 
+  public function find_players_in_div($div) {
+    $this->db->where('current_league', $div);
+    $this->db->order_by('lName');
+    $query = $this->db->get('players');
+    if($query->num_rows() > 0) {
+      return $query->result_array();
+    } else {
+      return false;
+    }
+
+  }
+
+  public function get_current_results($year, $month, $div) {
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $this->db->where('division', $div);
+    $query = $this->db->get('results');
+    return $query->result_array();
+  }
+
+  public function get_names_from_id($player_id) {
+    $this->db->where('id', $player_id);
+    $query = $this->db->get('players');
+    $row = $query->row();
+    $fname = $row->fName;
+    $lname = $row->lName;
+    $player_name = $fname . " " . $lname;
+    return $player_name;
+
+  }
+
+
+
 
 }
