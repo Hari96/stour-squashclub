@@ -18,5 +18,5 @@ if(isset($_SESSION['role']))
   </tbody>
 </table>
 <?php } else {
-  echo "You are not an admin, so you do not have access to this page";
+  echo "You are not an admin, so you do not have access to this page <br>";
 } ?>

@@ -70,6 +70,17 @@
     }
   }
 
+  public function check_existence_of_results($year, $month) {
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $query = $this->db->get('months');
+    if($query->num_rows() == 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public function insert_into_results($year, $month, $divs, $player1_id, $player2_id) {
     $data = array(
       'year' => $year,
@@ -80,4 +91,32 @@
     );
     $this->db->insert('results', $data);
   }
+
+  public function initiate_month_year($year, $month) {
+    $months_data = array(
+      'year' => $year,
+      'month' => $month
+    );
+    $this->db->insert('months', $months_data);//insert month and year into 'months' table
+  }
+
+  public function get_id_from_results($year, $month, $rowNum) {
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $query = $this->db->get('results');
+    $row = $query->row($rowNum);
+    $id = $row->id;
+    return $id;
+  }
+
+  /*public function update_results_info($divs, $player1_id, $player2_id, $id) {// may be needed later??
+    $this->db->where('id', $id);
+    $data = array(
+      'division' => $divs,
+      'player1_id' => $player1_id,
+      'player2_id' => $player2_id
+    );
+    $this->db->update('results', $data);
+  }*/
+
 }

@@ -61,14 +61,29 @@ class Users_model extends CI_Model {
 
   public function find_players_in_div($div) {
     $this->db->where('current_league', $div);
-    $this->db->order_by('lName');
+    $this->db->order_by('lName', 'asc');
     $query = $this->db->get('players');
     if($query->num_rows() > 0) {
       return $query->result_array();
     } else {
       return false;
     }
+  }
 
+  public function delete_set_of_players($year, $month) {
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $this->db->delete('results');
+    $query = $this->db->query("SELECT MAX(id) AS id FROM results");
+    $row = $query->row();
+    $max = $row->id;
+    $max = $max + 1;
+    $query = $this->db->query("ALTER TABLE results AUTO_INCREMENT = $max");//ensures id continues from last, without gap
+  }
+
+  public function get_results() {
+    $query = $this->db->get('results');
+    return $query->result_array();
   }
 
   public function get_current_results($year, $month, $div) {

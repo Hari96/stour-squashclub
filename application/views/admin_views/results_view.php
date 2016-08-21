@@ -68,12 +68,13 @@ if(isset($_SESSION['role']))
   <div class="row">
     <div class="col-md-6">
       <h3>DIVISION 1</h3>
-      <?php echo form_open(''); ?>
+      <?php echo form_open('results_hub'); ?>
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Day</th></tr>
         </thead>
         <tbody>
+          <?php foreach ($results as $result): ?>
           <tr><td>1</td><td></td><td>2</td><td></td><td></td></tr>
           <tr><td>1</td><td></td><td>3</td><td></td><td></td></tr>
           <tr><td>1</td><td></td><td>4</td><td></td><td></td></tr>
@@ -89,6 +90,7 @@ if(isset($_SESSION['role']))
           <tr><td>4</td><td></td><td>5</td><td></td><td></td></tr>
           <tr><td>4</td><td></td><td>6</td><td></td><td></td></tr>
           <tr><td>5</td><td></td><td>6</td><td></td><td></td></tr>
+          <?php endforeach; ?>
         </tbody>
       </table>
     </div>
@@ -309,5 +311,5 @@ if(isset($_SESSION['role']))
   <br>
 </div>
 <?php } else {
-  echo "You are not an admin, so you do not have access to this page";
+  echo "You are not an admin, so you do not have access to this page <br>";
 } ?>
