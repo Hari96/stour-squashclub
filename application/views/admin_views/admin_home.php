@@ -108,7 +108,7 @@ if(isset($_SESSION['role']))
             'nov' => 'Nov',
             'dec' => 'Dec'
           );
-          echo form_dropdown('year', $options, 'Choose the month', 'class="form-control"');
+          echo form_dropdown('month', $options, 'Choose the month', 'class="form-control"');
           ?>
         </td>
         <td>

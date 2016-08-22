@@ -20,20 +20,17 @@
       } else {
         $year = $this->input->post('year');
         $month = $this->input->post('month');
-        //for ($i = 1; $i <= 6; $i++) {
-        $i = 1;
-          $div = $i;
-          //$results_array = $this->users_model->get_current_results($year, $month, $div);
-          //$data['results'] = $this->users_model->get_current_results($year, $month, $div);
-          /*foreach ($results_array as $row) {
-            $player1_id = $row['player1_id'];
-            $player1_name = $this->users_model->get_names_from_id($player1_id);
-            echo $player1_name . "<br>";
-            $player2_id = $row['player2_id'];
-            $player2_name = $this->users_model->get_names_from_id($player2_id);
-            echo $player2_name;
-          }*/
-      //  }
+        $data['results'] = $this->users_model->get_current_results($year, $month);
+        $order_field = "id";
+        $order_direction = "asc";
+        $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+        $data['year'] = $year;
+        $data['month'] = $month;
+        $results = $this->users_model->get_current_results($year, $month);
+        $this->load->view('templates/header', $data);
+        $this->load->view('admin_views/results_view', $data);
+        $this->load->view('templates/footer', $data);
+
       }
     }
   }

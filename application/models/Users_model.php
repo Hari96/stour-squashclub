@@ -86,15 +86,17 @@ class Users_model extends CI_Model {
     return $query->result_array();
   }
 
-  public function get_current_results($year, $month, $div) {
+  public function get_current_results($year, $month) {
     $this->db->where('year', $year);
     $this->db->where('month', $month);
-    $this->db->where('division', $div);
+    $this->db->order_by('division', 'asc');
     $query = $this->db->get('results');
+    $row = $query->row();
+
     return $query->result_array();
   }
 
-  public function get_names_from_id($player_id) {
+  public function get_name_from_id($player_id) {
     $this->db->where('id', $player_id);
     $query = $this->db->get('players');
     $row = $query->row();

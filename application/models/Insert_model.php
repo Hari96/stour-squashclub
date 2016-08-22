@@ -109,7 +109,7 @@
     return $id;
   }
 
-  /*public function update_results_info($divs, $player1_id, $player2_id, $id) {// may be needed later??
+  /*public function update_results($year, $month, $divs, $player1_id, $player2_id, $score) {// may be needed later??
     $this->db->where('id', $id);
     $data = array(
       'division' => $divs,
