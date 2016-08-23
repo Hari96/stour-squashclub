@@ -40,8 +40,26 @@ table, th, td {
   margin-bottom: 6px;
 }
 .number-column {
-  width: 50px;
+  width: 98%;
+}
+.score-col {
+  width: 98%;
 }
 .emphasis {
   color: red;
+}
+.name-col {
+  width: 24%;
+}
+.num-col {
+  width: 3%;
+}
+.day-col {
+  width: 46%;
+}
+.date-col {
+  width: 45%;
+}
+.month-col {
+  width: 55%;
 }

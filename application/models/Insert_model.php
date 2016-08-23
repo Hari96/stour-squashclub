@@ -109,14 +109,17 @@
     return $id;
   }
 
-  /*public function update_results($year, $month, $divs, $player1_id, $player2_id, $score) {// may be needed later??
-    $this->db->where('id', $id);
+  public function update_results($year, $month, $div, $player1_id, $player2_id, $player1_score, $player2_score) {// may be needed later??
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $this->db->where('division', $div);
+    $this->db->where('player1_id', $player1_id);
+    $this->db->where('player2_id', $player2_id);
     $data = array(
-      'division' => $divs,
-      'player1_id' => $player1_id,
-      'player2_id' => $player2_id
+      'player1_score' => $player1_score,
+      'player2_score' => $player2_score
     );
     $this->db->update('results', $data);
-  }*/
+  }
 
 }
