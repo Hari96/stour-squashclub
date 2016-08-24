@@ -22,7 +22,7 @@ if(isset($_SESSION['role']))
         <br><br>
         <table class="table table-responsive table-bordered">
           <thead>
-            <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Day</th></tr>
+            <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
           </thead>
           <tbody>
             <?php $c = 1; foreach ($results as $result):
@@ -39,7 +39,8 @@ if(isset($_SESSION['role']))
                   endforeach;
                 ?>
               </td>
-              <td class="num-col"><input type="number" min="0" max="3" class="text-center score-col" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>"></td>
+              <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>">
+              </td>
               <td class="name-col">
                 <?php
                   foreach ($players as $player):
@@ -50,34 +51,37 @@ if(isset($_SESSION['role']))
                   endforeach;
                 ?>
               </td>
-              <td class="num-col"><input type="number" min="0" max="3" class="text-center score-col" name="<?php $num2 = 'p2'. $c; echo $num2; $c++; ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>"></td>
+              <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num2 = 'p2'. $c; echo $num2;  ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>">
+              </td>
+              <td class="date-col">
+                <input type="number" min="0" max="31" class="date-input" name="<?php $date = 'date' . $c; echo $date; ?>" value="<?php echo set_value('$date', $result['date']); ?>">
+              </td>
               <td class="day-col">
-                <input type="number" min="1" max="31" class="form-control date-col pull-left" name="day" value="<?php echo set_value('day', $result['date']); ?>">
                 <?php
-                $options = array(
-                  'jan' => 'Jan',
-                  'feb' => 'Feb',
-                  'mar' => 'Mar',
-                  'apr' => 'Apr',
-                  'may' => 'May',
-                  'jun' => 'Jun',
-                  'jul' => 'Jul',
-                  'aug' => 'Aug',
-                  'sep' => 'Sep',
-                  'oct' => 'Oct',
-                  'nov' => 'Nov',
-                  'dec' => 'Dec'
-                );
-                echo form_dropdown('month', $options, 'Choose the month', 'class="form-control month-col pull-right"');
+                  $sel = $result['day'];
+                  if ($sel == "") {
                 ?>
+                <select name="<?php $day = 'day' . $c; echo $day; $c++; ?>">
+                  <option value="d">Choose day</option>
+                  <option value="Mon">Mon</option>
+                  <option value="Tue">Tue</option>
+                  <option value="Wed">Wed</option>
+                  <option value="Thu">Thu</option>
+                  <option value="Fri">Fri</option>
+                  <option value="Sat">Sat</option>
+                  <option value="Sun">Sun</option>
+                </select>
+                <?php } else { ?>
+                  <input type="text" name="<?php $day = 'day' . $c; echo $day; $c++; ?>" class="form-control text-center" value="<?php echo $sel; ?>">
+                <?php } ?>
               </td>
             </tr>
             <?php } endforeach;  ?>
           </tbody>
         </table>
+        <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
+        <?php echo form_close(); ?>
       </div>
-      <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
-      <?php echo form_close(); ?>
       <div class="col-md-6">
         <?php echo form_open('enter_results'); ?>
         <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -96,7 +100,7 @@ if(isset($_SESSION['role']))
         <br><br>
         <table class="table table-responsive table-bordered">
           <thead>
-            <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Day</th></tr>
+            <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
           </thead>
           <tbody>
             <?php $c = 1; foreach ($results as $result):
@@ -109,49 +113,53 @@ if(isset($_SESSION['role']))
                     if ($player['id'] == $result['player1_id']) { echo $player['fName'] . " " . $player['lName'];
                 ?>
                 <input type="hidden" name="<?php $id1 = 'id1' . $c; echo $id1; ?>" value="<?php echo $player['id']; ?>">
-                <?php
-                    }  endforeach;
+                  <?php  }
+                  endforeach;
                 ?>
               </td>
-              <td class="num-col"><input type="number" min="0" max="3" class="text-center score-col" name="<?php $num1 = 'p1'. $c; echo $num1;  ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>"></td>
+              <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>">
+              </td>
               <td class="name-col">
                 <?php
                   foreach ($players as $player):
                     if ($player['id'] == $result['player2_id']) { echo $player['fName'] . " " . $player['lName'];
                 ?>
                 <input type="hidden" name="<?php $id2 = 'id2' . $c; echo $id2; ?>" value="<?php echo $player['id']; ?>">
-                <?php
-                    } endforeach;
+                <?php  }
+                  endforeach;
                 ?>
               </td>
-              <td class="num-col"><input type="number" min="0" max="3" class="text-center score-col" name="<?php $num2 = 'p2'. $c; echo $num2; $c++ ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>"></td>
+              <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num2 = 'p2'. $c; echo $num2; ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>">
+              </td>
+              <td class="date-col">
+                <input type="number" min="0" max="31" class="date-input" name="<?php $date = 'date' . $c; echo $date; ?>" value="<?php echo set_value('$date', $result['date']); ?>">
+              </td>
               <td class="day-col">
-                <input type="number" min="1" max="31" class="form-control date-col pull-left" name="day" value="<?php echo set_value('day', $result['date']); ?>">
                 <?php
-                $options = array(
-                  'jan' => 'Jan',
-                  'feb' => 'Feb',
-                  'mar' => 'Mar',
-                  'apr' => 'Apr',
-                  'may' => 'May',
-                  'jun' => 'Jun',
-                  'jul' => 'Jul',
-                  'aug' => 'Aug',
-                  'sep' => 'Sep',
-                  'oct' => 'Oct',
-                  'nov' => 'Nov',
-                  'dec' => 'Dec'
-                );
-                echo form_dropdown('month', $options, 'Choose the month', 'class="form-control month-col pull-right"');
+                  $sel = $result['day'];
+                  if ($sel == "") {
                 ?>
+                <select name="<?php $day = 'day' . $c; echo $day; $c++; ?>">
+                  <option value="d">Choose day</option>
+                  <option value="Mon">Mon</option>
+                  <option value="Tue">Tue</option>
+                  <option value="Wed">Wed</option>
+                  <option value="Thu">Thu</option>
+                  <option value="Fri">Fri</option>
+                  <option value="Sat">Sat</option>
+                  <option value="Sun">Sun</option>
+                </select>
+                <?php } else { ?>
+                  <input type="text" name="<?php $day = 'day' . $c; echo $day; $c++; ?>" class="form-control text-center" value="<?php echo $sel; ?>">
+                <?php } ?>
               </td>
-              </tr>
-            <?php } endforeach; ?>
+            </tr>
+            <?php } endforeach;  ?>
           </tbody>
         </table>
+        <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
+        <?php echo form_close(); ?>
       </div>
-      <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
-      <?php echo form_close(); ?>
     </div>
   <div class="row">
     <div class="col-md-6">
@@ -172,43 +180,66 @@ if(isset($_SESSION['role']))
       <br><br>
       <table class="table table-responsive table-bordered">
         <thead>
-          <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Day</th></tr>
+          <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
         </thead>
         <tbody>
           <?php $c = 1; foreach ($results as $result):
             if ($result['division'] == 3) {
           ?>
           <tr>
-            <td>
+            <td class="name-col">
               <?php
                 foreach ($players as $player):
                   if ($player['id'] == $result['player1_id']) { echo $player['fName'] . " " . $player['lName'];
               ?>
               <input type="hidden" name="<?php $id1 = 'id1' . $c; echo $id1; ?>" value="<?php echo $player['id']; ?>">
-              <?php
-                  }  endforeach;
+                <?php  }
+                endforeach;
               ?>
             </td>
-            <td><input type="number" min="0" max="3" class="text-center number-column" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>"></td>
-            <td>
+            <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>">
+            </td>
+            <td class="name-col">
               <?php
                 foreach ($players as $player):
                   if ($player['id'] == $result['player2_id']) { echo $player['fName'] . " " . $player['lName'];
               ?>
               <input type="hidden" name="<?php $id2 = 'id2' . $c; echo $id2; ?>" value="<?php echo $player['id']; ?>">
-              <?php
-                  } endforeach;
+              <?php  }
+                endforeach;
               ?>
             </td>
-            <td><input type="number" min="0" max="3" class="text-center number-column" name="<?php $num2 = 'p2'. $c; echo $num2; $c++ ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>"></td>
-            <td></td>
+            <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num2 = 'p2'. $c; echo $num2; ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>">
+            </td>
+            <td class="date-col">
+              <input type="number" min="0" max="31" class="date-input" name="<?php $date = 'date' . $c; echo $date; ?>" value="<?php echo set_value('$date', $result['date']); ?>">
+            </td>
+            <td class="day-col">
+              <?php
+                $sel = $result['day'];
+                if ($sel == "") {
+              ?>
+              <select name="<?php $day = 'day' . $c; echo $day; $c++; ?>">
+                <option value="d">Choose day</option>
+                <option value="Mon">Mon</option>
+                <option value="Tue">Tue</option>
+                <option value="Wed">Wed</option>
+                <option value="Thu">Thu</option>
+                <option value="Fri">Fri</option>
+                <option value="Sat">Sat</option>
+                <option value="Sun">Sun</option>
+              </select>
+              <?php } else { ?>
+                <input type="text" name="<?php $day = 'day' . $c; echo $day; $c++; ?>" class="form-control text-center" value="<?php echo $sel; ?>">
+              <?php } ?>
+            </td>
           </tr>
-          <?php } endforeach; ?>
+          <?php } endforeach;  ?>
         </tbody>
       </table>
+      <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
+      <?php echo form_close(); ?>
     </div>
-    <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
-    <?php echo form_close(); ?>
     <div class="col-md-6">
       <?php echo form_open('enter_results'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -227,43 +258,66 @@ if(isset($_SESSION['role']))
       <br><br>
       <table class="table table-responsive table-bordered">
         <thead>
-          <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Day</th></tr>
+          <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
         </thead>
         <tbody>
           <?php $c = 1; foreach ($results as $result):
             if ($result['division'] == 4) {
           ?>
           <tr>
-            <td>
+            <td class="name-col">
               <?php
                 foreach ($players as $player):
                   if ($player['id'] == $result['player1_id']) { echo $player['fName'] . " " . $player['lName'];
               ?>
               <input type="hidden" name="<?php $id1 = 'id1' . $c; echo $id1; ?>" value="<?php echo $player['id']; ?>">
-              <?php
-                  }  endforeach;
+                <?php  }
+                endforeach;
               ?>
             </td>
-            <td><input type="number" min="0" max="3" class="text-center number-column" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>"></td>
-            <td>
+            <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>">
+            </td>
+            <td class="name-col">
               <?php
                 foreach ($players as $player):
                   if ($player['id'] == $result['player2_id']) { echo $player['fName'] . " " . $player['lName'];
               ?>
               <input type="hidden" name="<?php $id2 = 'id2' . $c; echo $id2; ?>" value="<?php echo $player['id']; ?>">
-              <?php
-                  } endforeach;
+              <?php  }
+                endforeach;
               ?>
             </td>
-            <td><input type="number" min="0" max="3" class="text-center number-column" name="<?php $num2 = 'p2'. $c; echo $num2; $c++ ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>"></td>
-            <td></td>
+            <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num2 = 'p2'. $c; echo $num2; ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>">
+            </td>
+            <td class="date-col">
+              <input type="number" min="0" max="31" class="date-input" name="<?php $date = 'date' . $c; echo $date; ?>" value="<?php echo set_value('$date', $result['date']); ?>">
+            </td>
+            <td class="day-col">
+              <?php
+                $sel = $result['day'];
+                if ($sel == "") {
+              ?>
+              <select name="<?php $day = 'day' . $c; echo $day; $c++; ?>">
+                <option value="d">Choose day</option>
+                <option value="Mon">Mon</option>
+                <option value="Tue">Tue</option>
+                <option value="Wed">Wed</option>
+                <option value="Thu">Thu</option>
+                <option value="Fri">Fri</option>
+                <option value="Sat">Sat</option>
+                <option value="Sun">Sun</option>
+              </select>
+              <?php } else { ?>
+                <input type="text" name="<?php $day = 'day' . $c; echo $day; $c++; ?>" class="form-control text-center" value="<?php echo $sel; ?>">
+              <?php } ?>
+            </td>
           </tr>
-          <?php } endforeach; ?>
+          <?php } endforeach;  ?>
         </tbody>
       </table>
+      <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
+      <?php echo form_close(); ?>
     </div>
-    <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
-    <?php echo form_close(); ?>
   </div>
   <div class="row">
     <div class="col-md-6">
@@ -284,43 +338,66 @@ if(isset($_SESSION['role']))
       <br><br>
       <table class="table table-responsive table-bordered">
         <thead>
-          <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Day</th></tr>
+          <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
         </thead>
         <tbody>
           <?php $c = 1; foreach ($results as $result):
             if ($result['division'] == 5) {
           ?>
           <tr>
-            <td>
+            <td class="name-col">
               <?php
                 foreach ($players as $player):
                   if ($player['id'] == $result['player1_id']) { echo $player['fName'] . " " . $player['lName'];
               ?>
               <input type="hidden" name="<?php $id1 = 'id1' . $c; echo $id1; ?>" value="<?php echo $player['id']; ?>">
-              <?php
-                  }  endforeach;
+                <?php  }
+                endforeach;
               ?>
             </td>
-            <td><input type="number" min="0" max="3" class="text-center number-column" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>"></td>
-            <td>
+            <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>">
+            </td>
+            <td class="name-col">
               <?php
                 foreach ($players as $player):
                   if ($player['id'] == $result['player2_id']) { echo $player['fName'] . " " . $player['lName'];
               ?>
               <input type="hidden" name="<?php $id2 = 'id2' . $c; echo $id2; ?>" value="<?php echo $player['id']; ?>">
-              <?php
-                  } endforeach;
+              <?php  }
+                endforeach;
               ?>
             </td>
-            <td><input type="number" min="0" max="3" class="text-center number-column" name="<?php $num2 = 'p2'. $c; echo $num2; $c++ ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>"></td>
-            <td></td>
+            <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num2 = 'p2'. $c; echo $num2; ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>">
+            </td>
+            <td class="date-col">
+              <input type="number" min="0" max="31" class="date-input" name="<?php $date = 'date' . $c; echo $date; ?>" value="<?php echo set_value('$date', $result['date']); ?>">
+            </td>
+            <td class="day-col">
+              <?php
+                $sel = $result['day'];
+                if ($sel == "") {
+              ?>
+              <select name="<?php $day = 'day' . $c; echo $day; $c++; ?>">
+                <option value="d">Choose day</option>
+                <option value="Mon">Mon</option>
+                <option value="Tue">Tue</option>
+                <option value="Wed">Wed</option>
+                <option value="Thu">Thu</option>
+                <option value="Fri">Fri</option>
+                <option value="Sat">Sat</option>
+                <option value="Sun">Sun</option>
+              </select>
+              <?php } else { ?>
+                <input type="text" name="<?php $day = 'day' . $c; echo $day; $c++; ?>" class="form-control text-center" value="<?php echo $sel; ?>">
+              <?php } ?>
+            </td>
           </tr>
-          <?php } endforeach; ?>
+          <?php } endforeach;  ?>
         </tbody>
       </table>
+      <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
+      <?php echo form_close(); ?>
     </div>
-    <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
-    <?php echo form_close(); ?>
     <div class="col-md-6">
       <?php echo form_open('enter_results'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -339,44 +416,66 @@ if(isset($_SESSION['role']))
       <br><br>
       <table class="table table-responsive table-bordered">
         <thead>
-          <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Day</th></tr>
+          <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
         </thead>
         <tbody>
           <?php $c = 1; foreach ($results as $result):
             if ($result['division'] == 6) {
           ?>
           <tr>
-            <td>
+            <td class="name-col">
               <?php
                 foreach ($players as $player):
                   if ($player['id'] == $result['player1_id']) { echo $player['fName'] . " " . $player['lName'];
               ?>
               <input type="hidden" name="<?php $id1 = 'id1' . $c; echo $id1; ?>" value="<?php echo $player['id']; ?>">
-              <?php
-                  }  endforeach;
+                <?php  }
+                endforeach;
               ?>
             </td>
-            <td><input type="number" min="0" max="3" class="text-center number-column" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>"></td>
-            <td>
+            <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num1 = 'p1'. $c; echo $num1; ?>" value="<?php echo set_value('$num1', $result['player1_score']); ?>">
+            </td>
+            <td class="name-col">
               <?php
                 foreach ($players as $player):
                   if ($player['id'] == $result['player2_id']) { echo $player['fName'] . " " . $player['lName'];
               ?>
               <input type="hidden" name="<?php $id2 = 'id2' . $c; echo $id2; ?>" value="<?php echo $player['id']; ?>">
-              <?php
-                  } endforeach;
+              <?php  }
+                endforeach;
               ?>
             </td>
-            <td><input type="number" min="0" max="3" class="text-center number-column" name="<?php $num2 = 'p2'. $c; echo $num2; $c++ ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>"></td>
-            <td></td>
+            <td class="score-col"><input type="number" min="0" max="3" class="text-center score-input form-control" name="<?php $num2 = 'p2'. $c; echo $num2; ?>" value="<?php echo set_value('$num2', $result['player2_score']); ?>">
+            </td>
+            <td class="date-col">
+              <input type="number" min="0" max="31" class="date-input" name="<?php $date = 'date' . $c; echo $date; ?>" value="<?php echo set_value('$date', $result['date']); ?>">
+            </td>
+            <td class="day-col">
+              <?php
+                $sel = $result['day'];
+                if ($sel == "") {
+              ?>
+              <select name="<?php $day = 'day' . $c; echo $day; $c++; ?>">
+                <option value="d">Choose day</option>
+                <option value="Mon">Mon</option>
+                <option value="Tue">Tue</option>
+                <option value="Wed">Wed</option>
+                <option value="Thu">Thu</option>
+                <option value="Fri">Fri</option>
+                <option value="Sat">Sat</option>
+                <option value="Sun">Sun</option>
+              </select>
+              <?php } else { ?>
+                <input type="text" name="<?php $day = 'day' . $c; echo $day; $c++; ?>" class="form-control text-center" value="<?php echo $sel; ?>">
+              <?php } ?>
+            </td>
           </tr>
-
-          <?php } endforeach; ?>
+          <?php } endforeach;  ?>
         </tbody>
       </table>
+      <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
+      <?php echo form_close(); ?>
     </div>
-    <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
-    <?php echo form_close(); ?>
   </div>
   <br>
 </div>

@@ -42,24 +42,27 @@ table, th, td {
 .number-column {
   width: 98%;
 }
-.score-col {
-  width: 98%;
+.score-input {
+  width: 50px;
+}
+.date-input {
+  width: 50px;
 }
 .emphasis {
   color: red;
 }
 .name-col {
-  width: 24%;
+  width: 30%;
 }
-.num-col {
-  width: 3%;
+.score-col {
+  width: 10%;
 }
-.day-col {
+.day-date-col {
   width: 46%;
 }
 .date-col {
-  width: 45%;
+  width: 10%;
 }
-.month-col {
-  width: 55%;
+.day-col {
+  width: 10%;
 }
