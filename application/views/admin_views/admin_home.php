@@ -47,12 +47,6 @@ if(isset($_SESSION['role']))
    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   </div>
 <?php $divtoolarge_message = ''; } ?>
-<?php if (isset($results_message)) { ?>
- <div class="message-box alert alert-success">
-   <h3 style="color:green;"><?php echo $results_message; ?></h3>
-   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  </div>
-<?php $results_message = ''; } ?>
 
 <div class="container-fluid">
   <table class="table table-responsive table-bordered">

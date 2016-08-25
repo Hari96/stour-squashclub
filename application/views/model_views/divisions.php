@@ -1,7 +1,7 @@
 <h1>Divisions page</h1>
 <table class="table table-responsive table-bordered">
   <thead>
-    <tr><th>No.</th><th>Player</th><th>Number</th><th>Current league</th></tr>
+    <tr><th>No.</th><th>Player</th><th>Number</th><th>Current division</th></tr>
   </thead>
   <tbody>
   <?php foreach ($players as $player): echo "<tr><td>".$player['id']."</td><td>".

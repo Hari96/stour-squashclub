@@ -30,9 +30,15 @@
         }
         $this->insert_model->update_results($year, $month, $div, $player1_id, $player2_id, $player1_score, $player2_score, $date, $day);
       }
-      $data['results_message'] = "Results have been updated";
+      $order_field = "id";
+      $order_direction = "asc";
+      $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+      $data['results'] = $this->users_model->get_current_results($year, $month);
+      $data['results_message'] = "Results for division " . $div . " have been updated";
+      $data['year'] = $year;
+      $data['month'] = $month;
       $this->load->view('templates/header', $data);
-      $this->load->view('admin_views/admin_home', $data);
+      $this->load->view('admin_views/results_view', $data);
       $this->load->view('templates/footer', $data);
 
     }

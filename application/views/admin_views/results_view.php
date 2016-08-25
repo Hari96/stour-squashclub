@@ -1,6 +1,12 @@
 <?php
 if(isset($_SESSION['role']))
-{ ?>
+{
+   if (isset($results_message)) { ?>
+   <div class="message-box alert alert-success">
+     <h3 style="color:green;"><?php echo $results_message; ?></h3>
+     <a href="#" style="color:red;" class="close" data-dismiss="alert" aria-label="close">close &times;</a>
+    </div>
+  <?php $results_message = ''; } ?>
 <h1>Results for <?php echo ucfirst($month) . " " . $year;?></h1>
 <div class="container-fluid">
   <div class="row">
