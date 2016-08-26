@@ -59,65 +59,157 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
       <span class="lead"><strong>DIVISION 1</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
-          <tr><th>Blank</th><th>1st player</th><th>2nd player</th><th>3rd player</th><th>4th player</th><th>5th player</th><th>Total</th></tr>
+          <tr><th></th>
+          <?php $c = 0; $nameArr = array(); $idArr = array();
+            foreach ($players as $player):
+              if ($player['current_league'] == 1) {
+                $name = $player['fName'] . " " . $player['lName'];
+                $idArr[$c] = $player['id'];
+                echo "<th>" . $player['lName'] . "</th>";
+                $nameArr[$c] = $name;
+                $c++;
+            }
+            endforeach; ?>
+            <th>Total</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <?php
+          for ($i = 0; $i < $c; $i++) {
+            echo "<tr> <td>" . $nameArr[$i] . "</td>";
+            $total = 0;
+            for ($j = 0; $j < $c; $j++) {
+              echo "<td>";
+              if ($idArr[$i] == $idArr[$j]) {
+                echo "-";
+              } else {
+                foreach ($results as $result):
+                  if ($result['division'] == 1) {
+                    if ($idArr[$i] == $result['player1_id']) {
+                      if ($idArr[$j] == $result['player2_id']) {
+                        $total= $total + $result['player1_score'];
+                        echo $result['player1_score'];
+                      }
+                    }
+                    if ($idArr[$i] == $result['player2_id']) {
+                      if ($idArr[$j] == $result['player1_id']) {
+                        $total= $total + $result['player2_score'];
+                        echo $result['player2_score'];
+                      }
+                    }
+                  }
+                endforeach;
+              }
+              echo "</td>";
+              }
+              echo "<td>" . $total . "</td></tr>";
+            }
+          ?>
         </tbody>
       </table>
     </div>
-    <div class="col-md-6">
+  </div>
+    <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
       <span class="lead"><strong>DIVISION 2</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
-          <tr><th>Blank</th><th>1st player</th><th>2nd player</th><th>3rd player</th><th>4th player</th><th>5th player</th><th>Total</th></tr>
+          <tr><th></th>
+          <?php $c = 0; $nameArr = array(); foreach ($players as $player):
+            if ($player['current_league'] == 2) {
+              $name = $player['fName'] . " " . $player['lName'];
+              echo "<th>" . $player['lName'] . "</th>";
+              $nameArr[$c] = $name;
+              $c++;
+            }
+            endforeach; ?>
+            <th>Total</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <?php
+          for ($i = 0; $i < $c; $i++) {
+            echo "<tr> <td>" . $nameArr[$i] . "</td>";
+            for ($j = 0; $j < $c; $j++) {
+              echo "<td></td>";
+            }
+            echo "<td></td></tr>";
+          }
+          ?>
         </tbody>
       </table>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
       <span class="lead"><strong>DIVISION 3</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
-          <tr><th>Blank</th><th>1st player</th><th>2nd player</th><th>3rd player</th><th>4th player</th><th>5th player</th><th>Total</th></tr>
+          <tr><th></th>
+          <?php $c = 0; $nameArr = array(); foreach ($players as $player):
+            if ($player['current_league'] == 3) {
+              $name = $player['fName'] . " " . $player['lName'];
+              echo "<th>" . $player['lName'] . "</th>";
+              $nameArr[$c] = $name;
+              $c++;
+            }
+            endforeach; ?>
+            <th>Total</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <?php
+          for ($i = 0; $i < $c; $i++) {
+            echo "<tr> <td>" . $nameArr[$i] . "</td>";
+            for ($j = 0; $j < $c; $j++) {
+              echo "<td></td>";
+            }
+            echo "<td></td></tr>";
+          }
+          ?>
         </tbody>
       </table>
     </div>
-    <div class="col-md-6">
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
       <span class="lead"><strong>DIVISION 4</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
-          <tr><th>Blank</th><th>1st player</th><th>2nd player</th><th>3rd player</th><th>4th player</th><th>5th player</th><th>Total</th></tr>
+          <tr><th></th>
+          <?php $c = 0; $nameArr = array(); foreach ($players as $player):
+            if ($player['current_league'] == 4) {
+              $name = $player['fName'] . " " . $player['lName'];
+              echo "<th>" . $player['lName'] . "</th>";
+              $nameArr[$c] = $name;
+              $c++;
+            }
+            endforeach; ?>
+            <th>Total</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <?php
+          for ($i = 0; $i < $c; $i++) {
+            echo "<tr> <td>" . $nameArr[$i] . "</td>";
+            for ($j = 0; $j < $c; $j++) {
+              echo "<td></td>";
+            }
+            echo "<td></td></tr>";
+          }
+          ?>
         </tbody>
       </table>
     </div>
