@@ -92,7 +92,6 @@ class Users_model extends CI_Model {
     $this->db->order_by('division', 'asc');
     $query = $this->db->get('results');
     $row = $query->row();
-
     return $query->result_array();
   }
 
@@ -115,7 +114,12 @@ class Users_model extends CI_Model {
 
   }
 
-
+  public function get_leagues($year) {
+    $league_name = "leagues" . $year;
+    $query = $this->db->get($league_name);
+    $row = $query->row();
+    return $query->result_array();
+  }
 
 
 }

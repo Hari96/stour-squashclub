@@ -42,6 +42,8 @@ if(isset($_SESSION['role']))
           'dec' => 'Dec'
         );
         echo form_dropdown('month', $options, 'Choose the month', 'class="form-control"');
+        echo "<br>";
+        echo "<button type='submit' class='btn btn-info'>Update</button>";
         ?>
     </div>
     <div class="col-md-9">
@@ -59,7 +61,7 @@ if(isset($_SESSION['role']))
     </div>
     </div>
     <input type="hidden" name="num_records" value="<?php echo $c ?>">
-    <button type="submit" class="btn btn-info">Update</button>
+
     <?php echo form_close(); $c = 1; ?>
     <br>
   </div>

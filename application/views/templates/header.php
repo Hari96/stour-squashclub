@@ -33,7 +33,7 @@
         <li><a href="<?php echo base_url();?>pages/view/about">About</a></li>
         <li><a href="<?php echo base_url();?>model_views/view/divisions">Divisions</a></li>
         <li><a href="<?php echo base_url();?>display_results/initial_results">Results</a></li>
-        <li><a href="<?php echo base_url();?>model_views/view/tables">League tables</a></li>
+        <li><a href="<?php echo base_url();?>display_results/initial_tables">League tables</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<?php echo base_url();?>pages/view/contact">Contact</a></li>

@@ -1,5 +1,5 @@
 body {
-  padding-top: 100px;
+  padding-top: 105px;
 }
 #head {
   font-size: 1.3em;
@@ -24,6 +24,9 @@ table, th, td {
 }
 .spacing-top {
   margin-top: 15px;
+}
+.spacing-top-lg {
+  margin-top: 25px;
 }
 .required::after {
   content: " *";

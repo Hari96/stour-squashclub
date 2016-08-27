@@ -1,7 +1,7 @@
 <h1>Results</h1>
 <div class="container-fluid">
   <div class="row spacing-bottom">
-    <?php echo form_open('') ;?>
+    <?php echo form_open('display_results') ;?>
     <div class="col-md-2">
       <?php
       echo form_label('Choose Year:', 'inputYear');
@@ -57,25 +57,56 @@
     </div>
     <div class="col-md-6">
     </div>
+
   </div>
+  <br>
+  <span class="lead"><strong>DIVISION 1</strong></span>
   <div class="row">
     <div class="col-md-4">
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
+        </thead>
+        <tbody>
+          <?php
+          foreach ($results as $result):
+            if ($result['division'] == 1 && ($result['player1_score'] != 0 || $result['player2_score'] != 0)) {
+              foreach ($players as $player):
+                if ($player['id'] == $result['player1_id']) {
+                  $player1 = $player['fName'] . " " . $player['lName'];
+                }
+                if ($player['id'] == $result['player2_id']) {
+                  $player2 = $player['fName'] . " " . $player['lName'];
+                }
+              endforeach;
+            echo "<tr><td>" . $result['day'] . " " . $result['date'] . "</td><td>" . $player1 . "</td><td>" . $result['player1_score'] . "-" . $result['player2_score'] . "</td><td>" . $player2 . "</td></tr>";
+          }
+          endforeach;
+          ?>
+        </tbody>
+      </table>
     </div>
     <div class="col-md-8">
-      <span class="lead"><strong>DIVISION 1</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th></th>
           <?php $c = 0; $nameArr = array(); $idArr = array();
-            foreach ($players as $player):
-              if ($player['current_league'] == 1) {
-                $name = $player['fName'] . " " . $player['lName'];
-                $idArr[$c] = $player['id'];
-                echo "<th>" . $player['lName'] . "</th>";
-                $nameArr[$c] = $name;
-                $c++;
+          foreach ($leagues as $league):
+            if ($league[$month] == 1) {
+              foreach ($players as $player):
+                if($player['id'] == $league['user_id']) {
+                  $fName = $player['fName'];
+                  $lName = $player['lName'];
+                  $name = $fName . " " . $lName;
+                  $nameArr[$c] = $name;
+                  $idArr[$c] = $player['id'];
+                  $c++;
+                }
+              endforeach;
+              echo "<th>" . $lName . "</th>";
             }
-            endforeach; ?>
+          endforeach;
+          ?>
             <th>Total</th>
           </tr>
         </thead>
@@ -83,7 +114,7 @@
           <?php
           for ($i = 0; $i < $c; $i++) {
             echo "<tr> <td>" . $nameArr[$i] . "</td>";
-            $total = 0;
+            $total = 0; $player1_score = 0; $player2_score = 0;
             for ($j = 0; $j < $c; $j++) {
               echo "<td>";
               if ($idArr[$i] == $idArr[$j]) {
@@ -93,14 +124,68 @@
                   if ($result['division'] == 1) {
                     if ($idArr[$i] == $result['player1_id']) {
                       if ($idArr[$j] == $result['player2_id']) {
-                        $total= $total + $result['player1_score'];
-                        echo $result['player1_score'];
+                        if ($result['player1_score'] == 3){
+                          switch($result['player2_score']) {
+                            case 0:
+                            $player1_score = 6;
+                            $player2_score = 0;
+                            break;
+                            case 1:
+                            $player1_score = 5;
+                            $player2_score = 1;
+                            break;
+                            case 2:
+                            $player1_score = 4;
+                            $player2_score = 2;
+                          }
+                        }
+                        if ($result['player1_score'] == 2) {
+                          $player1_score = 2;
+                          $player2_score = 4;
+                        }
+                        if ($result['player1_score'] == 1) {
+                          $player1_score = 1;
+                          $player2_score = 5;
+                        }
+                        if ($result['player1_score'] == 0) {
+                          $player1_score = 0;
+                          $player2_score = 6;
+                        }
+                        $total= $total + $player1_score;
+                        echo $player1_score;
                       }
                     }
                     if ($idArr[$i] == $result['player2_id']) {
                       if ($idArr[$j] == $result['player1_id']) {
-                        $total= $total + $result['player2_score'];
-                        echo $result['player2_score'];
+                        if ($result['player2_score'] == 3){
+                          switch($result['player1_score']) {
+                            case 0:
+                            $player2_score = 6;
+                            $player1_score = 0;
+                            break;
+                            case 1:
+                            $player2_score = 5;
+                            $player1_score = 1;
+                            break;
+                            case 2:
+                            $player2_score = 4;
+                            $player1_score = 2;
+                          }
+                        }
+                        if ($result['player2_score'] == 2) {
+                          $player2_score = 2;
+                          $player1_score = 4;
+                        }
+                        if ($result['player2_score'] == 1) {
+                          $player2_score = 1;
+                          $player1_score = 5;
+                        }
+                        if ($result['player2_score'] == 0) {
+                          $player2_score = 0;
+                          $player1_score = 6;
+                        }
+                        $total= $total + $player2_score;
+                        echo $player2_score;
                       }
                     }
                   }
@@ -115,22 +200,55 @@
       </table>
     </div>
   </div>
+  <br>
+  <span class="lead"><strong>DIVISION 2</strong></span>
     <div class="row">
     <div class="col-md-4">
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
+        </thead>
+        <tbody>
+          <?php
+          foreach ($results as $result):
+            if ($result['division'] == 2 && ($result['player1_score'] != 0 || $result['player2_score'] != 0)) {
+              foreach ($players as $player):
+                if ($player['id'] == $result['player1_id']) {
+                  $player1 = $player['fName'] . " " . $player['lName'];
+                }
+                if ($player['id'] == $result['player2_id']) {
+                  $player2 = $player['fName'] . " " . $player['lName'];
+                }
+              endforeach;
+            echo "<tr><td>" . $result['day'] . " " . $result['date'] . "</td><td>" . $player1 . "</td><td>" . $result['player1_score'] . "-" . $result['player2_score'] . "</td><td>" . $player2 . "</td></tr>";
+          }
+          endforeach;
+          ?>
+        </tbody>
+      </table>
     </div>
     <div class="col-md-8">
-      <span class="lead"><strong>DIVISION 2</strong></span>
+
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th></th>
-          <?php $c = 0; $nameArr = array(); foreach ($players as $player):
-            if ($player['current_league'] == 2) {
-              $name = $player['fName'] . " " . $player['lName'];
-              echo "<th>" . $player['lName'] . "</th>";
-              $nameArr[$c] = $name;
-              $c++;
-            }
-            endforeach; ?>
+            <?php $c = 0; $nameArr = array(); $idArr = array();
+            foreach ($leagues as $league):
+              if ($league[$month] == 2) {
+                foreach ($players as $player):
+                  if($player['id'] == $league['user_id']) {
+                    $fName = $player['fName'];
+                    $lName = $player['lName'];
+                    $name = $fName . " " . $lName;
+                    $nameArr[$c] = $name;
+                    $idArr[$c] = $player['id'];
+                    $c++;
+                  }
+                endforeach;
+                echo "<th>" . $lName . "</th>";
+              }
+            endforeach;
+            ?>
             <th>Total</th>
           </tr>
         </thead>
@@ -138,32 +256,141 @@
           <?php
           for ($i = 0; $i < $c; $i++) {
             echo "<tr> <td>" . $nameArr[$i] . "</td>";
+            $total = 0; $player1_score = 0; $player2_score = 0;
             for ($j = 0; $j < $c; $j++) {
-              echo "<td></td>";
+              echo "<td>";
+              if ($idArr[$i] == $idArr[$j]) {
+                echo "-";
+              } else {
+                foreach ($results as $result):
+                  if ($result['division'] == 2) {
+                    if ($idArr[$i] == $result['player1_id']) {
+                      if ($idArr[$j] == $result['player2_id']) {
+                        if ($result['player1_score'] == 3){
+                          switch($result['player2_score']) {
+                            case 0:
+                            $player1_score = 6;
+                            $player2_score = 0;
+                            break;
+                            case 1:
+                            $player1_score = 5;
+                            $player2_score = 1;
+                            break;
+                            case 2:
+                            $player1_score = 4;
+                            $player2_score = 2;
+                          }
+                        }
+                        if ($result['player1_score'] == 2) {
+                          $player1_score = 2;
+                          $player2_score = 4;
+                        }
+                        if ($result['player1_score'] == 1) {
+                          $player1_score = 1;
+                          $player2_score = 5;
+                        }
+                        if ($result['player1_score'] == 0) {
+                          $player1_score = 0;
+                          $player2_score = 6;
+                        }
+                        $total= $total + $player1_score;
+                        echo $player1_score;
+                      }
+                    }
+                    if ($idArr[$i] == $result['player2_id']) {
+                      if ($idArr[$j] == $result['player1_id']) {
+                        if ($result['player2_score'] == 3){
+                          switch($result['player1_score']) {
+                            case 0:
+                            $player2_score = 6;
+                            $player1_score = 0;
+                            break;
+                            case 1:
+                            $player2_score = 5;
+                            $player1_score = 1;
+                            break;
+                            case 2:
+                            $player2_score = 4;
+                            $player1_score = 2;
+                          }
+                        }
+                        if ($result['player2_score'] == 2) {
+                          $player2_score = 2;
+                          $player1_score = 4;
+                        }
+                        if ($result['player2_score'] == 1) {
+                          $player2_score = 1;
+                          $player1_score = 5;
+                        }
+                        if ($result['player2_score'] == 0) {
+                          $player2_score = 0;
+                          $player1_score = 6;
+                        }
+                        $total= $total + $player2_score;
+                        echo $player2_score;
+                      }
+                    }
+                  }
+                endforeach;
+              }
+              echo "</td>";
+              }
+              echo "<td>" . $total . "</td></tr>";
             }
-            echo "<td></td></tr>";
-          }
           ?>
         </tbody>
       </table>
     </div>
   </div>
+  <br>
+  <span class="lead"><strong>DIVISION 3</strong></span>
   <div class="row">
     <div class="col-md-4">
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
+        </thead>
+        <tbody>
+          <?php
+          foreach ($results as $result):
+            if ($result['division'] == 3 && ($result['player1_score'] != 0 || $result['player2_score'] != 0)) {
+              foreach ($players as $player):
+                if ($player['id'] == $result['player1_id']) {
+                  $player1 = $player['fName'] . " " . $player['lName'];
+                }
+                if ($player['id'] == $result['player2_id']) {
+                  $player2 = $player['fName'] . " " . $player['lName'];
+                }
+              endforeach;
+            echo "<tr><td>" . $result['day'] . " " . $result['date'] . "</td><td>" . $player1 . "</td><td>" . $result['player1_score'] . "-" . $result['player2_score'] . "</td><td>" . $player2 . "</td></tr>";
+          }
+          endforeach;
+          ?>
+        </tbody>
+      </table>
     </div>
     <div class="col-md-8">
-      <span class="lead"><strong>DIVISION 3</strong></span>
+
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th></th>
-          <?php $c = 0; $nameArr = array(); foreach ($players as $player):
-            if ($player['current_league'] == 3) {
-              $name = $player['fName'] . " " . $player['lName'];
-              echo "<th>" . $player['lName'] . "</th>";
-              $nameArr[$c] = $name;
-              $c++;
-            }
-            endforeach; ?>
+            <?php $c = 0; $nameArr = array(); $idArr = array();
+            foreach ($leagues as $league):
+              if ($league[$month] == 3) {
+                foreach ($players as $player):
+                  if($player['id'] == $league['user_id']) {
+                    $fName = $player['fName'];
+                    $lName = $player['lName'];
+                    $name = $fName . " " . $lName;
+                    $nameArr[$c] = $name;
+                    $idArr[$c] = $player['id'];
+                    $c++;
+                  }
+                endforeach;
+                echo "<th>" . $lName . "</th>";
+              }
+            endforeach;
+            ?>
             <th>Total</th>
           </tr>
         </thead>
@@ -171,32 +398,140 @@
           <?php
           for ($i = 0; $i < $c; $i++) {
             echo "<tr> <td>" . $nameArr[$i] . "</td>";
+            $total = 0; $player1_score = 0; $player2_score = 0;
             for ($j = 0; $j < $c; $j++) {
-              echo "<td></td>";
+              echo "<td>";
+              if ($idArr[$i] == $idArr[$j]) {
+                echo "-";
+              } else {
+                foreach ($results as $result):
+                  if ($result['division'] == 3) {
+                    if ($idArr[$i] == $result['player1_id']) {
+                      if ($idArr[$j] == $result['player2_id']) {
+                        if ($result['player1_score'] == 3){
+                          switch($result['player2_score']) {
+                            case 0:
+                            $player1_score = 6;
+                            $player2_score = 0;
+                            break;
+                            case 1:
+                            $player1_score = 5;
+                            $player2_score = 1;
+                            break;
+                            case 2:
+                            $player1_score = 4;
+                            $player2_score = 2;
+                          }
+                        }
+                        if ($result['player1_score'] == 2) {
+                          $player1_score = 2;
+                          $player2_score = 4;
+                        }
+                        if ($result['player1_score'] == 1) {
+                          $player1_score = 1;
+                          $player2_score = 5;
+                        }
+                        if ($result['player1_score'] == 0) {
+                          $player1_score = 0;
+                          $player2_score = 6;
+                        }
+                        $total= $total + $player1_score;
+                        echo $player1_score;
+                      }
+                    }
+                    if ($idArr[$i] == $result['player2_id']) {
+                      if ($idArr[$j] == $result['player1_id']) {
+                        if ($result['player2_score'] == 3){
+                          switch($result['player1_score']) {
+                            case 0:
+                            $player2_score = 6;
+                            $player1_score = 0;
+                            break;
+                            case 1:
+                            $player2_score = 5;
+                            $player1_score = 1;
+                            break;
+                            case 2:
+                            $player2_score = 4;
+                            $player1_score = 2;
+                          }
+                        }
+                        if ($result['player2_score'] == 2) {
+                          $player2_score = 2;
+                          $player1_score = 4;
+                        }
+                        if ($result['player2_score'] == 1) {
+                          $player2_score = 1;
+                          $player1_score = 5;
+                        }
+                        if ($result['player2_score'] == 0) {
+                          $player2_score = 0;
+                          $player1_score = 6;
+                        }
+                        $total= $total + $player2_score;
+                        echo $player2_score;
+                      }
+                    }
+                  }
+                endforeach;
+              }
+              echo "</td>";
+              }
+              echo "<td>" . $total . "</td></tr>";
             }
-            echo "<td></td></tr>";
-          }
           ?>
         </tbody>
       </table>
     </div>
   </div>
+  <br>
+  <span class="lead"><strong>DIVISION 4</strong></span>
   <div class="row">
     <div class="col-md-4">
+      <table class="table table-responsive table-bordered">
+        <thead>
+          <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
+        </thead>
+        <tbody>
+          <?php
+          foreach ($results as $result):
+            if ($result['division'] == 4 && ($result['player1_score'] != 0 || $result['player2_score'] != 0)) {
+              foreach ($players as $player):
+                if ($player['id'] == $result['player1_id']) {
+                  $player1 = $player['fName'] . " " . $player['lName'];
+                }
+                if ($player['id'] == $result['player2_id']) {
+                  $player2 = $player['fName'] . " " . $player['lName'];
+                }
+              endforeach;
+            echo "<tr><td>" . $result['day'] . " " . $result['date'] . "</td><td>" . $player1 . "</td><td>" . $result['player1_score'] . "-" . $result['player2_score'] . "</td><td>" . $player2 . "</td></tr>";
+          }
+          endforeach;
+          ?>
+        </tbody>
+      </table>
     </div>
     <div class="col-md-8">
-      <span class="lead"><strong>DIVISION 4</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th></th>
-          <?php $c = 0; $nameArr = array(); foreach ($players as $player):
-            if ($player['current_league'] == 4) {
-              $name = $player['fName'] . " " . $player['lName'];
-              echo "<th>" . $player['lName'] . "</th>";
-              $nameArr[$c] = $name;
-              $c++;
-            }
-            endforeach; ?>
+            <?php $c = 0; $nameArr = array(); $idArr = array();
+            foreach ($leagues as $league):
+              if ($league[$month] == 4) {
+                foreach ($players as $player):
+                  if($player['id'] == $league['user_id']) {
+                    $fName = $player['fName'];
+                    $lName = $player['lName'];
+                    $name = $fName . " " . $lName;
+                    $nameArr[$c] = $name;
+                    $idArr[$c] = $player['id'];
+                    $c++;
+                  }
+                endforeach;
+                echo "<th>" . $lName . "</th>";
+              }
+            endforeach;
+            ?>
             <th>Total</th>
           </tr>
         </thead>
@@ -204,11 +539,87 @@
           <?php
           for ($i = 0; $i < $c; $i++) {
             echo "<tr> <td>" . $nameArr[$i] . "</td>";
+            $total = 0; $player1_score = 0; $player2_score = 0;
             for ($j = 0; $j < $c; $j++) {
-              echo "<td></td>";
+              echo "<td>";
+              if ($idArr[$i] == $idArr[$j]) {
+                echo "-";
+              } else {
+                foreach ($results as $result):
+                  if ($result['division'] == 4) {
+                    if ($idArr[$i] == $result['player1_id']) {
+                      if ($idArr[$j] == $result['player2_id']) {
+                        if ($result['player1_score'] == 3){
+                          switch($result['player2_score']) {
+                            case 0:
+                            $player1_score = 6;
+                            $player2_score = 0;
+                            break;
+                            case 1:
+                            $player1_score = 5;
+                            $player2_score = 1;
+                            break;
+                            case 2:
+                            $player1_score = 4;
+                            $player2_score = 2;
+                          }
+                        }
+                        if ($result['player1_score'] == 2) {
+                          $player1_score = 2;
+                          $player2_score = 4;
+                        }
+                        if ($result['player1_score'] == 1) {
+                          $player1_score = 1;
+                          $player2_score = 5;
+                        }
+                        if ($result['player1_score'] == 0) {
+                          $player1_score = 0;
+                          $player2_score = 6;
+                        }
+                        $total= $total + $player1_score;
+                        echo $player1_score;
+                      }
+                    }
+                    if ($idArr[$i] == $result['player2_id']) {
+                      if ($idArr[$j] == $result['player1_id']) {
+                        if ($result['player2_score'] == 3){
+                          switch($result['player1_score']) {
+                            case 0:
+                            $player2_score = 6;
+                            $player1_score = 0;
+                            break;
+                            case 1:
+                            $player2_score = 5;
+                            $player1_score = 1;
+                            break;
+                            case 2:
+                            $player2_score = 4;
+                            $player1_score = 2;
+                          }
+                        }
+                        if ($result['player2_score'] == 2) {
+                          $player2_score = 2;
+                          $player1_score = 4;
+                        }
+                        if ($result['player2_score'] == 1) {
+                          $player2_score = 1;
+                          $player1_score = 5;
+                        }
+                        if ($result['player2_score'] == 0) {
+                          $player2_score = 0;
+                          $player1_score = 6;
+                        }
+                        $total= $total + $player2_score;
+                        echo $player2_score;
+                      }
+                    }
+                  }
+                endforeach;
+              }
+              echo "</td>";
+              }
+              echo "<td>" . $total . "</td></tr>";
             }
-            echo "<td></td></tr>";
-          }
           ?>
         </tbody>
       </table>
