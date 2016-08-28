@@ -2,6 +2,7 @@
 <div class="container-fluid">
   <div class="row spacing-bottom">
     <?php echo form_open('display_results') ;?>
+    <input type="hidden" name="display" value="results">
     <div class="col-md-2">
       <?php
       echo form_label('Choose Year:', 'inputYear');
