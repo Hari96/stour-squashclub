@@ -64,9 +64,11 @@ echo ucfirst($month) . " " . $partYear;
 
   </div>
   <br>
-  <span class="lead"><strong>DIVISION 1</strong></span>
   <div class="row">
     <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+      <span class="lead"><strong>DIVISION 1</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
@@ -89,8 +91,6 @@ echo ucfirst($month) . " " . $partYear;
           ?>
         </tbody>
       </table>
-    </div>
-    <div class="col-md-8">
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th></th>
@@ -205,9 +205,11 @@ echo ucfirst($month) . " " . $partYear;
     </div>
   </div>
   <br>
-  <span class="lead"><strong>DIVISION 2</strong></span>
     <div class="row">
     <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+      <span class="lead"><strong>DIVISION 2</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
@@ -230,9 +232,6 @@ echo ucfirst($month) . " " . $partYear;
           ?>
         </tbody>
       </table>
-    </div>
-    <div class="col-md-8">
-
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th></th>
@@ -347,9 +346,11 @@ echo ucfirst($month) . " " . $partYear;
     </div>
   </div>
   <br>
-  <span class="lead"><strong>DIVISION 3</strong></span>
   <div class="row">
     <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+      <span class="lead"><strong>DIVISION 3</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
@@ -372,9 +373,6 @@ echo ucfirst($month) . " " . $partYear;
           ?>
         </tbody>
       </table>
-    </div>
-    <div class="col-md-8">
-
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th></th>
@@ -489,9 +487,11 @@ echo ucfirst($month) . " " . $partYear;
     </div>
   </div>
   <br>
-  <span class="lead"><strong>DIVISION 4</strong></span>
   <div class="row">
     <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+      <span class="lead"><strong>DIVISION 4</strong></span>
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
@@ -514,8 +514,6 @@ echo ucfirst($month) . " " . $partYear;
           ?>
         </tbody>
       </table>
-    </div>
-    <div class="col-md-8">
       <table class="table table-responsive table-bordered">
         <thead>
           <tr><th></th>

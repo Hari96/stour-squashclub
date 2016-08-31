@@ -31,13 +31,19 @@
       <ul class="nav navbar-nav">
         <li><a href="<?php echo base_url();?>pages/view/home">Home</a></li>
         <li><a href="<?php echo base_url();?>pages/view/about">About</a></li>
-        <li><a href="<?php echo base_url();?>model_views/view/divisions?year=">Divisions</a></li>
-        <li><a href="<?php echo base_url();?>display_results/initial_results">Results</a></li>
-        <li><a href="<?php echo base_url();?>display_results/initial_tables">League tables</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Competitions <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<?php echo base_url();?>model_views/view/divisions?year=">Current divisions</a></li>
+            <li><a href="<?php echo base_url();?>display_results/initial_results">Results</a></li>
+            <li><a href="<?php echo base_url();?>display_results/initial_tables">Tables</a></li>
+          </ul>
+            </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<?php echo base_url();?>pages/view/contact">Contact</a></li>
         <?php if(isset($_SESSION['email'])) { ?>
+          <li><a href="<?php echo base_url();?>user_update/user_account">Edit account</a></li>
           <li><a href="<?php echo base_url();?>user_login/user_logout">Logout</a></li>
         <?php }  else { ?>
         <li><a href="<?php echo base_url();?>model_views/view/login">Login</a></li>

@@ -16,7 +16,7 @@
       $this->form_validation->set_rules('inputEmail','Email','required|valid_email');
       //Validating Password Field
       $this->form_validation->set_rules('inputPassword','Password','required|min_length[8]|max_length[25]');
-      //Validating Password Field
+      //Validating confirmation Password Field
       $this->form_validation->set_rules('confirmPassword','Password confirmation','required|matches[inputPassword]');
       //Validating Mobile Field
       $this->form_validation->set_rules('inputMobile','Mobile Number','regex_match[/^[0-9]{11}$/]');

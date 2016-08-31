@@ -1,3 +1,17 @@
+<?php if (isset($email_message)) { ?>
+<div class="message-box alert alert-danger">
+  <h3 style="color:red;"><?php echo $email_message; ?></h3>
+  <a href="<?php echo base_url();?>user_update/user_account">Return to changing details</a>
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+</div>
+<?php $email_message = '';} ?>
+<?php if (isset($email_changed)) { ?>
+<div class="message-box alert alert-danger">
+  <h3 style="color:red;"><?php echo $email_changed; ?></h3>
+  <a href="<?php echo base_url();?>model_views/view/login">Go to login page</a>
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+</div>
+<?php $email_message = '';} ?>
 <div class="container">
 <h1>Home page</h1>
 </div>

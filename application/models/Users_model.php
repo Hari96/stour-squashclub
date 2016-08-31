@@ -49,7 +49,7 @@ class Users_model extends CI_Model {
   }
 
   public function check_other_emails($email, $user_id) {
-    $this->db->where('id !=',$user_id);
+    $this->db->where('id !=', $user_id);
     $this->db->where('email', $email);
     $query = $this->db->get('players');
     if($query->num_rows() == 1) {
@@ -119,6 +119,13 @@ class Users_model extends CI_Model {
     $query = $this->db->get($league_name);
     $row = $query->row();
     return $query->result_array();
+  }
+
+  public function getNamesFromEmail($email) {
+    $this->db->where('email', $email);
+    $query = $this->db->get('players');
+    $row = $query->row();
+    return $row;
   }
 
 

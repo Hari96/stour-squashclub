@@ -35,14 +35,14 @@ class User_login extends CI_Controller {
         } else {
           //successful login
           $user_data = array(
-            'email'     => '$email',
+            'email'     => $email,
             'logged_in' => TRUE
           );
           $this->session->set_userdata($user_data);
           if($this->users_model->get_role($email) == TRUE) {
             //admin user
             $admin_data = array(
-              'email' => '$email',
+              'email' => $email,
               'role' => 1,
               'logged_in' => TRUE
             );
@@ -70,4 +70,5 @@ class User_login extends CI_Controller {
     $this->load->view('pages/home');
     $this->load->view('templates/footer');
   }
+
 }
