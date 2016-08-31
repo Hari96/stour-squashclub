@@ -64,6 +64,7 @@ class User_login extends CI_Controller {
   }
   public function user_logout() {
     unset($_SESSION['email']);
+    unset($_SESSION['logged_in']);
     unset($_SESSION['role']);
     $this->load->view('templates/header');
     $this->load->view('pages/home');
