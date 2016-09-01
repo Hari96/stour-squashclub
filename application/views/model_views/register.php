@@ -1,12 +1,21 @@
 <h1>Register Page</h1>
-  <?php if ( validation_errors() !== '') {?>
-<div style="color:red;"><p>Registration failed due to following errors:</p><?php echo validation_errors(); ?></div>
+<?php if ( validation_errors() !== '') { ?>
+<div class="message-box alert alert-danger"><p>Registration failed due to following errors:</p>
+  <h3 style="color:red;"><?php echo validation_errors(); ?></h3>
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+</div>
 <?php } ?>
 <?php if (isset($email_message)) { ?>
-<h3 style="color:red;"><?php echo $email_message; ?></h3><br>
+<div class="message-box alert alert-danger">
+<h3 style="color:red;"><?php echo $email_message; ?></h3>
+<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+</div>
 <?php $email_message = '';} ?>
 <?php if (isset($message)) { ?>
-<h3 style="color:green;"><?php echo $message; ?></h3><br>
+<div class="message-box alert alert-success">
+<h3 style="color:green;"><?php echo $message; ?></h3>
+<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+</div>
 <?php $message = ''; } ?>
 <div class="container-fluid">
   <div class="row">

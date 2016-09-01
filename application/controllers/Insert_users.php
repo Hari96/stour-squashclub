@@ -54,7 +54,7 @@
         );
         //Transfering data to Model
         $this->insert_model->form_insert($data);
-        $data['message'] = 'Data Inserted Successfully';
+        $data['message'] = 'Registration successfull, you will receive an activation email soon';
         $code = uniqid('', true);
         $data_code = array(
           'activation_code' => $code,

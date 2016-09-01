@@ -40,7 +40,7 @@ class User_update extends CI_Controller {
         $this->load->view('templates/footer', $data);
       } else  {
         //creating new password if necessary
-        if ($this->input->post['inputPassword'] != "") {
+        if ($this->input->post('inputPassword') != "") {
           //hashing password
           $password = $this->input->post('inputPassword');
           $salt = file_get_contents('http://rgbmarketing.co.uk/_private69/salt.txt');
@@ -60,8 +60,11 @@ class User_update extends CI_Controller {
             unset($_SESSION['role']);
             $data['email_changed'] = "Since you have changed your email you will need to login again";
           }
-          $data['message'] = "Details updated";
+          $data['password_changed'] = "Please login again using your new password";
           $data['id'] = $user_id;
+          unset($_SESSION['email']);
+          unset($_SESSION['logged_in']);
+          unset($_SESSION['role']);
           //Loading Views
           $this->load->view('templates/header', $data);
           $this->load->view('pages/home', $data);
@@ -81,7 +84,7 @@ class User_update extends CI_Controller {
             unset($_SESSION['role']);
             $data['email_changed'] = "Since you have changed your email you will need to login again";
           }
-          $data['message'] = 'Details updated';
+          $data['success_message'] = 'Details updated';
           //Loading Views
           $this->load->view('templates/header', $data);
           $this->load->view('pages/home', $data);
