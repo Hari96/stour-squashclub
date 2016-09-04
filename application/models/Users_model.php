@@ -26,7 +26,7 @@ class Users_model extends CI_Model {
   public function check_password($email, $password) {
     $this->db->where('email', $email);
     $query = $this->db->get('players');
-    if($query->row(0)->password == $password) {
+    if($query->row(0)->password === $password) {
       return true;
     } else {
       return false;

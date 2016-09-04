@@ -31,7 +31,7 @@
         //checking for duplicate email
         $email = $this->input->post('inputEmail');
         if($this->users_model->check_for_email($email) == true) {
-          $data['email_message'] = 'Email address already exists, please input a different address';
+          $data['email_message'] = 'Email address already exists, login with that address, or input a different address';
           $this->load->view('templates/header', $data);
           $this->load->view('model_views/register', $data);
           $this->load->view('templates/footer', $data);

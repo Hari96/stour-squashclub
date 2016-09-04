@@ -36,11 +36,12 @@
                 $attributes = array(
                   'class' => 'required'
                 );
-                echo form_label('First Name', 'inputFirstName', $attributes);
+                echo form_label('First Name', 'firstName', $attributes);
                 $data = array(
                   'name' => 'inputFirstName',
                   'class' => 'form-control',
-                  'required' => 'required'
+                  'required' => 'required',
+                  'id' => 'firstName'
                 );
                 echo form_input($data);
               ?>
@@ -50,11 +51,12 @@
                 $attributes = array(
                   'class' => 'required'
                 );
-                echo form_label('Last Name', 'inputLastName', $attributes);
+                echo form_label('Last Name', 'lastName', $attributes);
                 $data = array(
                   'name' => 'inputLastName',
                   'class' => 'form-control',
-                  'required' => 'required'
+                  'required' => 'required',
+                  'id' => 'lastName'
                 );
                 echo form_input($data);
               ?>
@@ -66,12 +68,13 @@
                 $attributes = array(
                   'class' => 'required'
                 );
-                echo form_label('Email', 'inputEmail', $attributes);
+                echo form_label('Email', 'email', $attributes);
                 $data = array(
                   'type' => 'email',
                   'name' => 'inputEmail',
                   'class' => 'form-control',
-                  'required' => 'required'
+                  'required' => 'required',
+                  'id' => 'email'
                 );
                 echo form_input($data);
               ?>
@@ -81,13 +84,15 @@
             <div class="col-md-6">
               <?php
                 $attributes = array(
-                  'class' => 'required'
+                  'class' => 'required',
+                  'for' => 'password'
                 );
-                echo form_label('Password', 'inputPassword', $attributes);
+                echo form_label('Password', 'password', $attributes);
                 $data = array(
                   'name' => 'inputPassword',
                   'class' => 'form-control',
-                  'required' => 'required'
+                  'required' => 'required',
+                  'id' => 'password'
                 );
                 echo form_password($data);
               ?>
@@ -101,7 +106,8 @@
                 $data = array(
                   'name' => 'confirmPassword',
                   'class' => 'form-control',
-                  'required' => 'required'
+                  'required' => 'required',
+                  'id' => 'confirmPassword'
                 );
                 echo form_password($data);
               ?>
@@ -110,22 +116,24 @@
           <div class="row spacing-bottom">
             <div class="col-md-6">
               <?php
-                echo form_label('Mobile', 'inputMobile');
+                echo form_label('Mobile', 'mobile');
                 $data = array(
                   'type' => 'tel',
                   'name' => 'inputMobile',
-                  'class' => 'form-control'
+                  'class' => 'form-control',
+                  'id' => 'mobile'
                 );
                 echo form_input($data);
               ?>
             </div>
             <div class="col-md-6">
               <?php
-                echo form_label('Landline', 'inputLandline');
+                echo form_label('Landline', 'landline');
                 $data = array(
                   'type' => 'tel',
                   'name' => 'inputLandline',
-                  'class' => 'form-control'
+                  'class' => 'form-control',
+                  'id' => 'landline'
                 );
                 echo form_input($data);
               ?>
@@ -134,7 +142,7 @@
           <div class="row spacing-bottom">
             <div class="col-md-6">
               <?php
-                echo form_label('Age Group', 'inputAge');
+                echo form_label('Age Group', 'age');
                 $options = array(
                   '0' => 'Choose your age group',
                   '1' => 'Under 16',
@@ -142,12 +150,13 @@
                   '3' => '40 - Under 60',
                   '4' => '60 or Over 60'
                 );
-                echo form_dropdown('age', $options, 'Choose your age group', 'class="form-control"');
+                $id = 'id = "age"';
+                echo form_dropdown('age', $options, 'Choose your age group', 'class="form-control"', $id);
               ?>
             </div>
             <div class=col-md-6>
               <?php
-                echo form_label('Standard', 'inputStandard');
+                echo form_label('Standard', 'standard');
                 $options = array(
                   '0' => 'Choose your standard',
                   '1' => '1',
@@ -155,7 +164,8 @@
                   '3' => '3',
                   '4' => '4'
                 );
-                echo form_dropdown('standard', $options, 'Choose your standard', 'class="form-control"');
+                $id = 'id="standard"';
+                echo form_dropdown('standard', $options, 'Choose your standard', 'class="form-control"', $id);
               ?>
             </div>
           </div>

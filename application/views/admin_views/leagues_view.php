@@ -7,7 +7,7 @@ if(isset($_SESSION['role']))
     <div class="row">
       <div class="col-md-3">
         <?php
-        echo form_label('Year', 'inputYear');
+        echo form_label('Year', 'year');
         $options = array(
           '0' => 'Choose the year',
           '2016' => '2016',
@@ -23,9 +23,10 @@ if(isset($_SESSION['role']))
           '2026' => '2026',
           '2027' => '2027'
         );
-        echo form_dropdown('year', $options, 'Choose the year', 'class="form-control"');
+        $id = 'id="year"';
+        echo form_dropdown('year', $options, 'Choose the year', 'class="form-control"', $id);
         echo "<br>";
-        echo form_label('Month', 'inputMonth');
+        echo form_label('Month', 'month');
         $options = array(
           '0' => 'Choose the month',
           'jan' => 'Jan',
@@ -41,7 +42,8 @@ if(isset($_SESSION['role']))
           'nov' => 'Nov',
           'dec' => 'Dec'
         );
-        echo form_dropdown('month', $options, 'Choose the month', 'class="form-control"');
+        $id = 'id="month"';
+        echo form_dropdown('month', $options, 'Choose the month', 'class="form-control"', $id);
         echo "<br>";
         echo "<button type='submit' class='btn btn-info'>Update</button>";
         ?>

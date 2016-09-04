@@ -65,7 +65,9 @@
           );
           echo form_password($data);
         ?>
+        <a href="" style="color:red;">I forgot my password</a><br>
         <div class="spacing-top">
+
           <?php
             echo form_submit('user-login', 'Login', 'class="btn btn-primary"');
             echo form_reset('user-reset', 'Reset', 'class="btn btn-warning"');
