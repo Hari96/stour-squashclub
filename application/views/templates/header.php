@@ -35,7 +35,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Competitions <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?php echo base_url();?>model_views/view/divisions?year=">Current divisions</a></li>
+            <li><a href="<?php echo base_url();?>model_views/view/divisions">Current divisions</a></li>
             <li><a href="<?php echo base_url();?>display_results/initial_results">Results</a></li>
             <li><a href="<?php echo base_url();?>display_results/initial_tables">Tables</a></li>
           </ul>

@@ -3,8 +3,11 @@
   <div class="row">
     <section class="col-md-6">
       <?php if ( validation_errors() !== '') {?>
-      <div style="color:red;"><p>Login failed due to following errors:</p><?php echo validation_errors(); ?></div>
-      <?php } ?>
+      <div class="message-box alert alert-danger">
+      <p>Login failed due to following errors:</p><?php echo validation_errors(); ?>
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+      <?php } ?>  
       <?php if (isset($activation_message)) { ?>
       <h3 style="color:green;"><?php echo $activation_message; ?></h3><br>
       <?php $activation_message = '';} ?>
@@ -65,7 +68,7 @@
           );
           echo form_password($data);
         ?>
-        <a href="" style="color:red;">I forgot my password</a><br>
+        <a href="<?php echo base_url();?>model_views/view/forgot_password" style="color:red;">I forgot my password</a><br>
         <div class="spacing-top">
 
           <?php
