@@ -14,11 +14,7 @@
         <div class="panel-body">
           <p>Enter the email address or mobile number associated with your account</p>
           <?php
-          //session_start();
-          include($_SERVER['DOCUMENT_ROOT']."/assets/captcha/simple_captcha.php");
-          $_SESSION['captcha'] = simple_captcha();
-          var_dump($_SESSION['captcha']);
-          echo form_open('new_password');
+          echo form_open('');
           echo form_label('Email or mobile phone number', 'email');
           $data = array(
             'type' => 'text',
@@ -28,14 +24,30 @@
             'id' => 'email'
           );
           echo form_input($data);
-          ?>
-          <br>
-          <p>Enter the digits you see below</p>
-          <?php echo "<img src = '" . $_SERVER['DOCUMENT_ROOT'] . "" . $_SESSION['captcha']['image_src'] . "' alt='verification digits, type them in the box' width='80' height='24'><br><br>";?>
-          <label>Type numbers</label><br>
-          <input name="verif_box" type="text" id="verif_box" style="padding:2px; border:1px solid #CCCCCC; width:180px; height:24px;font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px;">
-          <br><br>
-          <?php echo form_submit('forgot_password', 'Continue', 'class="btn btn-primary"');
+          echo "<br>";
+          echo "<div class='image'>";
+          // $image is the index of $data array. which will sent by controller.
+          echo $image;
+          echo "</div>";
+          echo "<br>";
+          echo "<a href='#' class ='refresh'><img id = 'ref_symbol' src =".base_url()."img/refresh.png></a>Get new captcha image";
+
+          echo "<br>";
+          echo "<br>";
+
+          // Captcha word field.
+          echo form_label('Enter letters from above:');
+          echo "<br>";
+          $data_captcha = array(
+            'name' => 'captcha',
+            'class' => 'input_box',
+            'color' => 'white',
+            'placeholder' => '',
+            'id' => 'captcha'
+          );
+          echo form_input($data_captcha);
+          echo "<br><br>";
+          echo form_submit('forgot_password', 'Continue', 'class="btn btn-primary"');
           echo form_close(); ?>
         </div>
       </div>

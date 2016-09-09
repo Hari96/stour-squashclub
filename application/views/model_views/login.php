@@ -68,7 +68,7 @@
           );
           echo form_password($data);
         ?>
-        <a href="<?php echo base_url();?>lost_password/view/forgot_password" style="color:red; font-size: 1.1rem;">I forgot my password</a><br>
+        <a href="<?php echo base_url();?>captcha_controller/form" style="color:red; font-size: 1.1rem;">I forgot my password</a><br>
         <div class="spacing-top">
 
           <?php

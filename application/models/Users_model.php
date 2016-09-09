@@ -128,5 +128,13 @@ class Users_model extends CI_Model {
     return $row;
   }
 
+  public function get_id_from_email($email) {
+    $this->db->where('email', $email);
+    $query = $this->db->get('players');
+    $row = $query->row();
+    $id = $row->id;
+    return $id;
+  }
+
 
 }
