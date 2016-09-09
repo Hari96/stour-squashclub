@@ -10,7 +10,7 @@ if(isset($_SESSION['logged_in'])) {
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-2">
-      <h1> Edit account details </h1>
+      <h2> Edit account details </h2>
       <?php echo form_open('user_update'); ?>
       <input type="hidden" name="id" value="<?php echo set_value('id', $id); ?>">
       <div class="form-group">

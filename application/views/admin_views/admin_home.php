@@ -1,4 +1,4 @@
-<h1>Admin page</h1>
+<h2>Admin page</h2>
 <?php
 if(isset($_SESSION['role']))
 {

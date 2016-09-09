@@ -7,7 +7,7 @@ if(isset($_SESSION['role']))
      <a href="#" style="color:red;" class="close" data-dismiss="alert" aria-label="close">close &times;</a>
     </div>
   <?php $results_message = ''; } ?>
-<h1>Results for <?php echo ucfirst($month) . " " . $year;?></h1>
+<h2>Results for <?php echo ucfirst($month) . " " . $year;?></h2>
 <div class="container-fluid">
   <div class="row">
       <div class="col-md-6">

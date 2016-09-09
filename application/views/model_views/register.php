@@ -1,4 +1,4 @@
-<h1>Register Page</h1>
+<h2>Register Page</h2>
 <?php if ( validation_errors() !== '') { ?>
 <div class="message-box alert alert-danger"><p>Registration failed due to following errors:</p>
   <h3 style="color:red;"><?php echo validation_errors(); ?></h3>

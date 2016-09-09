@@ -1,4 +1,4 @@
-<h1>Delete player</h1>
+<h2>Delete player</h2>
 <?php
 if(isset($_SESSION['role']))
 { ?>

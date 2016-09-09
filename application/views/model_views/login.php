@@ -1,4 +1,4 @@
-<h1>Login Page</h1>
+<h2>Login Page</h2>
 <div class="container">
   <div class="row">
     <section class="col-md-6">
@@ -7,7 +7,7 @@
       <p>Login failed due to following errors:</p><?php echo validation_errors(); ?>
       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         </div>
-      <?php } ?>  
+      <?php } ?>
       <?php if (isset($activation_message)) { ?>
       <h3 style="color:green;"><?php echo $activation_message; ?></h3><br>
       <?php $activation_message = '';} ?>
@@ -68,7 +68,7 @@
           );
           echo form_password($data);
         ?>
-        <a href="<?php echo base_url();?>model_views/view/forgot_password" style="color:red;">I forgot my password</a><br>
+        <a href="<?php echo base_url();?>lost_password/view/forgot_password" style="color:red; font-size: 1.1rem;">I forgot my password</a><br>
         <div class="spacing-top">
 
           <?php

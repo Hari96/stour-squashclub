@@ -1,4 +1,4 @@
-<h1>Update players</h1>
+<h2>Update players</h2>
 <?php
 if(isset($_SESSION['role']))
 { ?>

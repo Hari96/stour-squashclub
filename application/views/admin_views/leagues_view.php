@@ -1,4 +1,4 @@
-<h1>Start new leagues</h1>
+<h2>Start new leagues</h2>
 <?php
 if(isset($_SESSION['role']))
   { ?>

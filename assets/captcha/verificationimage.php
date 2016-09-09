@@ -1,7 +1,5 @@
 <?php
-
-header('Content-type: image/jpeg');
-
+session_start();
 $width = 50;
 $height = 24;
 
@@ -22,7 +20,9 @@ $y = rand(1,10);
 $rand_string = rand(1000,9999);
 imagestring($my_image, 5, $x, $y, $rand_string, 0x000000);
 
-setcookie('tntcon',(md5($rand_string).'a4xn'), "/");
+$_SESSION['tntcon'] = md5($rand_string).'a4xn';
+//setcookie('tntcon',(md5($rand_string).'a4xn'), "/");
 
+header('Content-type: image/jpeg');
 imagejpeg($my_image);
 imagedestroy($my_image);

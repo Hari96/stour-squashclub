@@ -1,7 +1,7 @@
-<h1>Results for <?php
+<h2>Results for <?php
 $partYear = substr_replace($year, "'", 0, 2);
 echo ucfirst($month) . " " . $partYear;
-?></h1>
+?></h2>
 <div class="container-fluid">
   <div class="row spacing-bottom">
     <?php echo form_open('display_results') ;?>

@@ -26,5 +26,5 @@
 </div>
 <?php $email_message = '';} ?>
 <div class="container">
-<h1>Home page</h1>
+<h2>Home page</h2>
 </div>

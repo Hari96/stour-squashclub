@@ -1,7 +1,7 @@
-<h1>Divisions for <?php
+<h2>Divisions for <?php
 $partYear = substr_replace($year, "'", 0, 2);
 echo ucfirst($month) . " " . $partYear;
-?></h1>
+?></h2>
 <div class="container-fluid">
   <div class="row">
     <section class="col-md-4">
