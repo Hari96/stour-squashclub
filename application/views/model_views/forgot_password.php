@@ -1,10 +1,10 @@
-<?php if (isset($no_email_message)) { ?>
-<div class="message-box alert alert-danger">
-  <h3 style="color:red;"><?php echo $no_email_message; ?></h3>
-  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-</div>
-<?php $no_email_message = '';} ?>
 <div class="container-fluid">
+  <?php if (isset($no_email_message)) { ?>
+  <div class="message-box alert alert-danger">
+    <h3 style="color:red;"><?php echo $no_email_message; ?></h3>
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+  <?php $no_email_message = '';} ?>
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
       <div class="panel panel-info">
@@ -12,13 +12,13 @@
           <h3 class="panel-title text-center">Password assistance</h3>
         </div>
         <div class="panel-body">
-          <p>Enter the email address or mobile number associated with your account</p>
+          <p>Enter the email address associated with your account</p>
           <?php
           echo form_open('');
-          echo form_label('Email or mobile phone number', 'email');
+          echo form_label('Email address', 'email');
           $data = array(
             'type' => 'text',
-            'name' => 'inputEmail',
+            'name' => 'email',
             'class' => 'form-control',
             'required' => 'required',
             'id' => 'email'

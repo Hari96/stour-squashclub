@@ -4,19 +4,40 @@
     <section class="col-md-6">
       <?php if ( validation_errors() !== '') {?>
       <div class="message-box alert alert-danger">
-      <p>Login failed due to following errors:</p><?php echo validation_errors(); ?>
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        </div>
+        <p>Login failed due to following errors:</p><?php echo validation_errors(); ?>
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      </div>
       <?php } ?>
       <?php if (isset($activation_message)) { ?>
-      <h3 style="color:green;"><?php echo $activation_message; ?></h3><br>
+      <div class="message-box alert alert-info">
+        <h3 style="color:green;"><?php echo $activation_message; ?></h3>
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      </div>
       <?php $activation_message = '';} ?>
       <?php if (isset($no_email_message)) { ?>
-      <h3 style="color:red;"><?php echo $no_email_message; ?></h3><br>
+      <div class="message-box alert alert-danger">
+        <h3 style="color:red;"><?php echo $no_email_message; ?></h3>
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      </div>
       <?php $no_email_message = '';} ?>
       <?php if (isset($wrong_password_message)) { ?>
-      <h3 style="color:red;"><?php echo $wrong_password_message; ?></h3><br>
+      <div class="message-box alert alert-danger">
+        <h3 style="color:red;"><?php echo $wrong_password_message; ?></h3>
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      </div>
       <?php $wrong_password_message = '';} ?>
+      <?php if (isset($changed_password)) { ?>
+        <div class="message-box alert alert-success">
+          <p><?php echo $changed_password; ?></p>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        <?php $changed_password = ''; } ?>
+        <?php if (isset($email_sent)) { ?>
+        <div class="message-box alert alert-info">
+          <h3 style="color:green;"><?php echo $email_sent; ?></h3>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        <?php $email_sent = '';} ?>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tristique eros. Aliquam posuere turpis sapien, at condimentum ex tincidunt bibendum. Aliquam malesuada, orci in vehicula euismod, lorem lectus eleifend augue, vel sollicitudin ligula turpis quis metus. Nulla pellentesque purus neque, quis dapibus tortor interdum non. Mauris id sem malesuada, pharetra leo id, vulputate est. Cras at diam vehicula, sagittis leo a, blandit neque. Fusce ac lacus ac dolor interdum egestas.
 

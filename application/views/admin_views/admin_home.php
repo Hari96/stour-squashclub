@@ -51,23 +51,23 @@ if(isset($_SESSION['role']))
 <div class="container-fluid">
   <table class="table table-responsive table-bordered">
     <thead>
-      <tr><th>Task description</th><th colspan="3">Link</th></tr>
+      <tr><th style="width:40%;">Task description</th><th style="width:60%;" colspan="3">Link</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td>text, text, text, text, text, text  </td>
+        <td>You can update all player details except their password. Players can update their own details whilst logged in. </td>
         <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update">Update a player</a></td>
       </tr>
       <tr>
-        <td>text, text </td>
+        <td>You can delete a player and all their details. Be careful!</td>
         <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Delete a player</a></td>
       </tr>
       <tr>
-        <td>text, text</td>
+        <td>You can allocate players to divisions and setup new leagues. Their current division will be shown so you will only have to change a few.</td>
         <td colspan="3"><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Start new leagues</a></td>
       </tr>
       <tr>
-        <td>text, text</td>
+        <td>You can enter and update results for the current leagues.</td>
         <?php echo form_open('results_hub');?>
         <td>
           <?php

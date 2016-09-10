@@ -1,4 +1,10 @@
 <div class="container-fluid">
+  <?php if ( validation_errors() !== '') {?>
+  <div class="message-box alert alert-danger">
+  <p>Password creation failed due to following errors:</p><?php echo validation_errors(); ?>
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>
+  <?php } ?>
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
       <div class="panel panel-primary">
@@ -6,7 +12,7 @@
           <h3 class="panel-title text-center">Enter a new password</h3>
         </div>
         <div class="panel-body">
-          <?php echo form_open('');?>
+          <?php echo form_open('new_password');?>
           <input type="hidden" name="id" value="<?php echo set_value('id', $user_id); ?>">
           <?php
             $attributes = array(
@@ -18,7 +24,7 @@
               'class' => 'form-control',
               'required' => 'required'
             );
-            echo form_password($data);          
+            echo form_password($data);
             $attributes = array(
               'class' => 'required'
             );
@@ -30,6 +36,13 @@
             );
             echo form_password($data);
           ?>
+          <div class="spacing-top">
+            <?php
+              echo form_submit('password-create', 'Create', 'class="btn btn-primary"');
+              echo form_reset('password-reset', 'Reset', 'class="btn btn-warning"');
+              echo form_button('cancel', 'Cancel', 'class="btn btn-info" id="cancel-login"');
+            ?>
+          </div>
           <?php echo form_close(); ?>
         </div>
       </div>

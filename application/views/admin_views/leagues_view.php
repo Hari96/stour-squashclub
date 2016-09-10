@@ -51,7 +51,7 @@ if(isset($_SESSION['role']))
     <div class="col-md-9">
       <table class="table table-responsive table-bordered spacing-top">
         <thead>
-          <tr><th>Player</th><th>Number</th><th>Email</th><th>Current league</th></tr>
+          <tr><th>Player</th><th>Number</th><th>Email</th><th>Current division</th></tr>
         </thead>
 
         <tbody>

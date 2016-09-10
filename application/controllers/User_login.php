@@ -12,7 +12,7 @@ class User_login extends CI_Controller {
     $this->form_validation->set_rules('inputEmail','Email','required|valid_email');
     //Validating Password Field
     $this->form_validation->set_rules('inputPassword','Password','required|min_length[8]|max_length[25]');
-    //Validating Password Field
+    //Validating Confirm Password Field
     $this->form_validation->set_rules('confirmPassword','Password confirmation','required|matches[inputPassword]');
 
     if ($this->form_validation->run() == FALSE) {
