@@ -42,7 +42,7 @@
             </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo base_url();?>pages/view/contact">Contact</a></li>
+        <li><a href="<?php echo base_url();?>captcha_contact/form">Contact</a></li>
         <?php if(isset($_SESSION['email'])) { ?>
           <li><a href="<?php echo base_url();?>user_update/user_account">Edit account</a></li>
           <li><a href="<?php echo base_url();?>user_login/user_logout">Logout</a></li>

@@ -38,6 +38,12 @@
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         </div>
         <?php $email_sent = '';} ?>
+        <?php if (isset($email_wrong)) { ?>
+        <div class="message-box alert alert-danger">
+          <h3 style="color:red;"><?php echo $email_wrong; ?></h3>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        <?php $email_wrong = '';} ?>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tristique eros. Aliquam posuere turpis sapien, at condimentum ex tincidunt bibendum. Aliquam malesuada, orci in vehicula euismod, lorem lectus eleifend augue, vel sollicitudin ligula turpis quis metus. Nulla pellentesque purus neque, quis dapibus tortor interdum non. Mauris id sem malesuada, pharetra leo id, vulputate est. Cras at diam vehicula, sagittis leo a, blandit neque. Fusce ac lacus ac dolor interdum egestas.
 
@@ -89,7 +95,7 @@
           );
           echo form_password($data);
         ?>
-        <a href="<?php echo base_url();?>captcha_controller/form" style="color:red; font-size: 1.1rem;">I forgot my password</a><br>
+        <a href="<?php echo base_url();?>captcha_password/form" style="color:red; font-size: 1.1rem;">I forgot my password</a><br>
         <div class="spacing-top">
 
           <?php

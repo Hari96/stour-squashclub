@@ -1,10 +1,4 @@
-<div class="container-fluid">
-  <?php if (isset($no_email_message)) { ?>
-  <div class="message-box alert alert-danger">
-    <h3 style="color:red;"><?php echo $no_email_message; ?></h3>
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  </div>
-  <?php $no_email_message = '';} ?>
+<div class="container-fluid">  
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
       <div class="panel panel-info">

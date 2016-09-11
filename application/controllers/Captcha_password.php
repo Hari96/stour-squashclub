@@ -1,7 +1,7 @@
 <?php
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Captcha_Controller extends CI_Controller {
+class Captcha_password extends CI_Controller {
 
   // Load Helper in and Start session.
     function __construct() {
@@ -14,18 +14,18 @@ class Captcha_Controller extends CI_Controller {
     // This function show values in view page and check capcha value.
     public function form() {
         if(empty($_POST)){
-           $this->captcha_setting();
+          $this->captcha_setting();
         } else {
           // Case comparing values.
             if (strcasecmp($_SESSION['captchaWord'], $_POST['captcha']) == 0) {
               $email = $this->input->post('email');
               //Check email exists in system
               if($this->users_model->check_for_email($email) == FALSE) {
-                $data['no_email_message'] = "That email address is not in the system";
-                  $this->load->view('templates/header', $data);
-                  $this->load->view('model_views/forgot_password', $data);
-                  $this->load->view('templates/footer', $data);
-                }
+                $em_data['email_wrong'] = "That email address is not in the system";
+                $this->load->view('templates/header', $em_data);
+                $this->load->view('model_views/login', $em_data);
+                $this->load->view('templates/footer', $em_data);;
+                } else {
               //$this->captcha_setting();
               $code = $this->users_model->get_id_from_email($email);
               $message = "Enter a new password by going to: http://www.stoursquashclub.co.uk/new_password/view?code=" . $code;
@@ -34,8 +34,10 @@ class Captcha_Controller extends CI_Controller {
               $this->load->view('templates/header', $data);
               $this->load->view('model_views/login', $data);
               $this->load->view('templates/footer', $data);
+              }
                } else {
                  echo "<script type='text/javascript'> alert('Try Again'); </script>";
+                 $em_data['wrong'] = "Wrong letters - try again";
                    $this->captcha_setting();
                }
           }
