@@ -3,43 +3,43 @@
   <div class="row">
     <section class="col-md-6">
       <?php if ( validation_errors() !== '') {?>
-      <div class="message-box alert alert-danger">
+      <div class="message-box alert alert-danger alert-dismissible">
         <p>Login failed due to following errors:</p><?php echo validation_errors(); ?>
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
       </div>
       <?php } ?>
       <?php if (isset($activation_message)) { ?>
-      <div class="message-box alert alert-info">
+      <div class="message-box alert alert-info alert-dismissible">
         <h3 style="color:green;"><?php echo $activation_message; ?></h3>
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
       </div>
       <?php $activation_message = '';} ?>
       <?php if (isset($no_email_message)) { ?>
-      <div class="message-box alert alert-danger">
+      <div class="message-box alert alert-danger alert-dismissible">
         <h3 style="color:red;"><?php echo $no_email_message; ?></h3>
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
       </div>
       <?php $no_email_message = '';} ?>
       <?php if (isset($wrong_password_message)) { ?>
-      <div class="message-box alert alert-danger">
+      <div class="message-box alert alert-danger alert-dismissible">
         <h3 style="color:red;"><?php echo $wrong_password_message; ?></h3>
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
       </div>
       <?php $wrong_password_message = '';} ?>
       <?php if (isset($changed_password)) { ?>
-        <div class="message-box alert alert-success">
+        <div class="message-box alert alert-success alert-dismissible">
           <p><?php echo $changed_password; ?></p>
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         </div>
         <?php $changed_password = ''; } ?>
         <?php if (isset($email_sent)) { ?>
-        <div class="message-box alert alert-info">
+        <div class="message-box alert alert-info alert-dismissible">
           <h3 style="color:green;"><?php echo $email_sent; ?></h3>
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         </div>
         <?php $email_sent = '';} ?>
         <?php if (isset($email_wrong)) { ?>
-        <div class="message-box alert alert-danger">
+        <div class="message-box alert alert-danger alert-dismissible">
           <h3 style="color:red;"><?php echo $email_wrong; ?></h3>
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         </div>

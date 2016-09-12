@@ -3,7 +3,7 @@
 if(isset($_SESSION['role']))
 {
   if ( validation_errors() !== '') {?>
-  <div class="message-box alert alert-danger"><p><?php echo $val_message ?></p>
+  <div class="message-box alert alert-danger alert-dismissible"><p><?php echo $val_message ?></p>
     <?php echo validation_errors(); ?>
     <a href="<?php echo base_url(); echo $val_direct; ?>"> <?php echo $val_amessage; ?></a>
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -11,7 +11,7 @@ if(isset($_SESSION['role']))
   <?php } ?>
 <!-- successful update message-->
 <?php if (isset($message)) { ?>
-  <div class="message-box alert alert-success">
+  <div class="message-box alert alert-success alert-dismissible">
     <h3 style="color:green;"><?php echo $message; ?></h3>
     <a href="<?php echo base_url();?>player_admin/crud_view/user_update">Return to update page</a>
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -19,7 +19,7 @@ if(isset($_SESSION['role']))
 <?php $message = ''; } ?>
 <!-- repeated email address message-->
 <?php if (isset($email_message)) { ?>
-<div class="message-box alert alert-danger">
+<div class="message-box alert alert-danger alert-dismissible">
   <h3 style="color:red;"><?php echo $email_message; ?></h3>
   <a href="<?php echo base_url();?>player_admin/crud_view/user_update">Return to update</a>
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -27,21 +27,21 @@ if(isset($_SESSION['role']))
 <?php $email_message = '';} ?>
 <!-- successful delete message-->
 <?php if (isset($delete_message)) { ?>
-  <div class="message-box alert alert-success">
+  <div class="message-box alert alert-success alert-dismissible">
     <h3 style="color:green;"><?php echo $delete_message; ?></h3>
     <a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Return to delete page</a>
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
    </div>
 <?php $delete_message = ''; } ?>
 <?php if (isset($leagues_message)) { ?>
- <div class="message-box alert alert-success">
+ <div class="message-box alert alert-success alert-dismissible">
    <h3 style="color:green;"><?php echo $leagues_message; ?></h3>
    <a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Return to league page</a>
    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   </div>
 <?php $leagues_message = ''; } ?>
 <?php if (isset($divtoolarge_message)) { ?>
- <div class="message-box alert alert-danger">
+ <div class="message-box alert alert-danger alert-dismissible">
    <h3 style="color:red;"><?php echo $divtoolarge_message; ?></h3>
    <a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Return to league page</a>
    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -49,7 +49,8 @@ if(isset($_SESSION['role']))
 <?php $divtoolarge_message = ''; } ?>
 
 <div class="container-fluid">
-  <table class="table table-responsive table-bordered">
+  <div class="table-responsive">
+  <table class="table table-bordered">
     <thead>
       <tr><th style="width:40%;">Task description</th><th style="width:60%;" colspan="3">Link</th></tr>
     </thead>

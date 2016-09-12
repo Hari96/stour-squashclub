@@ -1,18 +1,18 @@
 <h2>Register Page</h2>
 <?php if ( validation_errors() !== '') { ?>
-<div class="message-box alert alert-danger"><p>Registration failed due to following errors:</p>
+<div class="message-box alert alert-danger alert-dismissible"><p>Registration failed due to following errors:</p>
   <h3 style="color:red;"><?php echo validation_errors(); ?></h3>
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>
 <?php } ?>
 <?php if (isset($email_message)) { ?>
-<div class="message-box alert alert-danger">
+<div class="message-box alert alert-danger alert-dismissible">
 <h3 style="color:red;"><?php echo $email_message; ?></h3>
 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>
 <?php $email_message = '';} ?>
 <?php if (isset($message)) { ?>
-<div class="message-box alert alert-success">
+<div class="message-box alert alert-success alert-dismissible">
 <h3 style="color:green;"><?php echo $message; ?></h3>
 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>

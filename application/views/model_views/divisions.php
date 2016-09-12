@@ -6,9 +6,9 @@ echo ucfirst($month) . " " . $partYear;
   <div class="row">
     <section class="col-md-4">
     </section>
-    <section class="col-md-8">
+    <section class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 1</strong></span>
-      <table class="table table-responsive table-bordered">
+      <table class="table table-bordered">
         <thead>
           <tr><th>Player</th><th>Number</th><th>Email</th></tr>
         </thead>
@@ -39,9 +39,9 @@ echo ucfirst($month) . " " . $partYear;
   <div class="row">
     <section class="col-md-4">
     </section>
-    <section class="col-md-8">
+    <section class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 2</strong></span>
-      <table class="table table-responsive table-bordered">
+      <table class="table table-bordered">
         <thead>
           <tr><th>Player</th><th>Number</th><th>Email</th></tr>
         </thead>
@@ -72,9 +72,9 @@ echo ucfirst($month) . " " . $partYear;
   <div class="row">
     <section class="col-md-4">
     </section>
-    <section class="col-md-8">
+    <section class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 3</strong></span>
-      <table class="table table-responsive table-bordered">
+      <table class="table table-bordered">
         <thead>
           <tr><th>Player</th><th>Number</th><th>Email</th></tr>
         </thead>
@@ -105,9 +105,9 @@ echo ucfirst($month) . " " . $partYear;
   <div class="row">
     <section class="col-md-4">
     </section>
-    <section class="col-md-8">
+    <section class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 4</strong></span>
-      <table class="table table-responsive table-bordered">
+      <table class="table table-bordered">
         <thead>
           <tr><th>Player</th><th>Number</th><th>Email</th></tr>
         </thead>

@@ -2,7 +2,7 @@
 if(isset($_SESSION['logged_in'])) {
 ?>
 <?php if ( validation_errors() !== '') {?>
-  <div class="message-box alert alert-danger">
+  <div class="message-box alert alert-danger alert-dismissible">
   <p>Update of details failed due to following errors:</p><?php echo validation_errors(); ?>
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>
@@ -12,6 +12,7 @@ if(isset($_SESSION['logged_in'])) {
     <div class="col-md-6 col-md-offset-2">
       <h2> Edit account details </h2>
       <?php echo form_open('user_update'); ?>
+      <label class="required-star">indicates required field</label>
       <input type="hidden" name="id" value="<?php echo set_value('id', $id); ?>">
       <div class="form-group">
         <?php

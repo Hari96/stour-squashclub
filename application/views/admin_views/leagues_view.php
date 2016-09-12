@@ -48,8 +48,8 @@ if(isset($_SESSION['role']))
         echo "<button type='submit' class='btn btn-info'>Update</button>";
         ?>
     </div>
-    <div class="col-md-9">
-      <table class="table table-responsive table-bordered spacing-top">
+    <div class="col-md-9 table-responsive">
+      <table class="table table-bordered spacing-top">
         <thead>
           <tr><th>Player</th><th>Number</th><th>Email</th><th>Current division</th></tr>
         </thead>

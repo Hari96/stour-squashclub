@@ -34,9 +34,14 @@ class User_login extends CI_Controller {
           $this->load->view('templates/footer', $data);
         } else {
           //successful login
+          $row = $this->users_model->getNamesFromEmail($email);
+          $fName = $row->fName;
+          $lName = $row->lName;
+          $fullName = $fName . " " . $lName;
           $user_data = array(
             'email'     => $email,
-            'logged_in' => TRUE
+            'logged_in' => TRUE,
+            'name' => $fullName
           );
           $this->session->set_userdata($user_data);
           if($this->users_model->get_role($email) == TRUE) {

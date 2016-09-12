@@ -20,18 +20,22 @@
                 'name' => 'inputName',
                 'class' => 'form-control',
                 'required' => 'required',
-                'id' => 'name'
+                'id' => 'name',
+                'value' => $_SESSION['name']
               );
               echo form_input($data);
+              echo "<br>";
               $attributes = array(
                 'class' => 'required'
               );
               echo form_label('Email', 'inputEmail', $attributes);
+              echo " <span class='small-comments'>&nbsp;(You can use another email if you wish.)</span>";
               $data = array(
                 'type' => 'email',
                 'name' => 'inputEmail',
                 'class' => 'form-control',
-                'required' => 'required'
+                'required' => 'required',
+                'value' => $_SESSION['email']
               );
               echo form_input($data); ?>
               <br>

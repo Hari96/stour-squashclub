@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta charset = "utf-8">
-    <title>Stour Centre Squash Club</title>
+    <title>Stour Centre Squash Club - Ashford, Kent</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" />
@@ -16,7 +16,7 @@
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
 
-      <h1 class="text-center" id="head">Stour Centre Squash Club</h1>
+      <h1 class="text-center" id="head">Stour Centre Squash Club - Ashford, Kent</h1>
 
       <div class="container">
         <div class="navbar-header">

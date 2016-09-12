@@ -3,9 +3,9 @@ $partYear = substr_replace($year, "'", 0, 2);
 echo ucfirst($month) . " " . $partYear;
 ?></h2>
 <div class="container-fluid">
+  <?php echo form_open('display_results') ;?>
+  <input type="hidden" name="display" value="tables">
   <div class="row spacing-bottom">
-    <?php echo form_open('display_results') ;?>
-    <input type="hidden" name="display" value="tables">
     <div class="col-md-2">
       <?php
       echo form_label('Choose Year:', 'inputYear');
@@ -66,9 +66,9 @@ echo ucfirst($month) . " " . $partYear;
   <div class="row">
     <div class="col-md-4">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 1</strong></span>
-      <table class="table table-responsive table-bordered">
+      <table class="table table-bordered">
         <thead>
           <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
         </thead>
@@ -171,9 +171,9 @@ echo ucfirst($month) . " " . $partYear;
 <div class="row">
   <div class="col-md-4">
   </div>
-  <div class="col-md-8">
+  <div class="col-md-8 table-responsive">
     <span class="lead"><strong>DIVISION 2</strong></span>
-    <table class="table table-responsive table-bordered">
+    <table class="table table-bordered">
       <thead>
         <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
       </thead>
@@ -276,9 +276,9 @@ echo ucfirst($month) . " " . $partYear;
 <div class="row">
   <div class="col-md-4">
   </div>
-  <div class="col-md-8">
+  <div class="col-md-8 table-responsive">
     <span class="lead"><strong>DIVISION 3</strong></span>
-    <table class="table table-responsive table-bordered">
+    <table class="table table-bordered">
       <thead>
         <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
       </thead>
@@ -381,9 +381,9 @@ echo ucfirst($month) . " " . $partYear;
 <div class="row">
   <div class="col-md-4">
   </div>
-  <div class="col-md-8">
+  <div class="col-md-8 table-responsive">
     <span class="lead"><strong>DIVISION 4</strong></span>
-    <table class="table table-responsive table-bordered">
+    <table class="table table-bordered">
       <thead>
         <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
       </thead>

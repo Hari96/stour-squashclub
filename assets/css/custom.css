@@ -69,3 +69,6 @@ table, th, td {
 .day-col {
   width: 10%;
 }
+.small-comments {
+  font-size: 0.9rem;
+}

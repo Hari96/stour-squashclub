@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <?php if ( validation_errors() !== '') {?>
-  <div class="message-box alert alert-danger">
+  <div class="message-box alert alert-danger alert-dismissible">
   <p>Password creation failed due to following errors:</p><?php echo validation_errors(); ?>
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     </div>
