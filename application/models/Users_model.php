@@ -136,5 +136,17 @@ class Users_model extends CI_Model {
     return $id;
   }
 
+  public function get_player_profiles($order_field, $order_direction) {
+    $this->db->order_by($order_field, $order_direction);
+    $query = $this->db->get('profiles');
+    return $query->result_array();
+  }
+
+  public function get_player_profile($user_id) {
+    $this->db->where('user_id', $user_id);
+    $query = $this->db->get('profiles');
+    $row = $query->row();
+    return $row;
+  }
 
 }

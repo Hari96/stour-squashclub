@@ -38,6 +38,7 @@
             <li><a href="<?php echo base_url();?>model_views/view/divisions">Current divisions</a></li>
             <li><a href="<?php echo base_url();?>display_results/initial_results">Results</a></li>
             <li><a href="<?php echo base_url();?>display_results/initial_tables">Tables</a></li>
+            <li><a href="<?php echo base_url();?>player_profiles/load_profiles">Player's Profiles</a></li>
           </ul>
             </li>
       </ul>

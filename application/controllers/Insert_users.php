@@ -81,7 +81,12 @@
   		  echo 'faulty';//message to produce goes to activate view?
   	  } else {
         $user_id = $this->insert_model->get_id_from_code($code);
-        $this->insert_model->activation_insert($user_id);
+        $this->insert_model->activation_insert($user_id);//initiates leagues (maybe not necessary?) and intiates profile
+        //Informing admin of new registration
+        $name = $this->users_model->get_name_from_id($user_id);
+        $email = "support@rgbmarketing.co.uk";// admin email (replace as necessary)
+        $message = "A new player has just signed up, the name is: " . $name;
+        mail($email, "New player registration", $message, "From: noreply@stoursquashclub.co.uk\n");
         $data['activation_message'] = "You are now activated and can login";
         $this->load->view('templates/header', $data);
         $this->load->view('model_views/login', $data);

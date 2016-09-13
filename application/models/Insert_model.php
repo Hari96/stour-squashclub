@@ -35,7 +35,8 @@
       );
       $this->db->where('id', $user_id);
       $this->db->update('players', $data);
-      $this->db->insert('leagues', $data_leagues);
+      $this->db->insert('leagues', $data_leagues);// maybe not necessary?
+      $this->db->insert('profiles', $data_leagues);//inserts user id into profiles table
 
     }
 
@@ -122,6 +123,21 @@
       'day' => $day
     );
     $this->db->update('results', $data);
+  }
+
+  public function update_profiles($user_id, $played, $won, $drawn, $lost, $average, $month, $day, $date) {
+    $this->db->where('user_id', $user_id);
+    $data = array(
+      'played' => $played,
+      'won' => $won,
+      'drawn' => $drawn,
+      'lost' => $lost,
+      'average' => $average,
+      'month' => $month,
+      'day' => $day,
+      'date' => $date
+    );
+    $this->db->update('profiles', $data);
   }
 
 }

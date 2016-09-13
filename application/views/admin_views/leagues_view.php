@@ -56,7 +56,7 @@ if(isset($_SESSION['role']))
 
         <tbody>
           <?php $c = 1; foreach ($players as $player): ?>
-            <tr> <input type="hidden" name="<?php $id = 'id' . $c; echo $id; ?>" value="<?php echo set_value('$id', $player['id']); ?>"></td><td><?php echo $player['fName'] . ", " . $player['lName']; ?><td> <?php echo $player['mobile']; ?></td><td><?php echo $player['email']; ?></td><td><input type="number" min="0" max="8" class="text-center number-column" name="<?php $num = 'curr'.$c; echo $num; $c++; ?>" value="<?php echo set_value('$num', $player['current_league']); ?>"></td></tr>
+            <tr><input type="hidden" name="<?php $id = 'id' . $c; echo $id; ?>" value="<?php echo set_value('$id', $player['id']); ?>"><td><?php echo $player['fName'] . ", " . $player['lName']; ?><td> <?php echo $player['mobile']; ?></td><td><?php echo $player['email']; ?></td><td><input type="number" min="0" max="8" class="text-center number-column" name="<?php $num = 'curr'.$c; echo $num; $c++; ?>" value="<?php echo set_value('$num', $player['current_league']); ?>"></td></tr>
           <?php endforeach; ?>
       </tbody>
       </table>
