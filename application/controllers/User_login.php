@@ -44,15 +44,22 @@ class User_login extends CI_Controller {
             'name' => $fullName
           );
           $this->session->set_userdata($user_data);
-          if($this->users_model->get_role($email) == TRUE) {
-            //admin user
+          if($this->users_model->get_role($email) == 1) {
+            //admin user also in leagues
             $admin_data = array(
               'email' => $email,
               'role' => 1,
               'logged_in' => TRUE
             );
             $this->session->set_userdata($admin_data);
-          } else {
+          } else if ($this->users_model->get_role($email) == 2) {
+              $admin_data = array(
+                'email' => $email,
+                'role' => 2,
+                'logged_in' => TRUE
+              );
+              $this->session->set_userdata($admin_data);
+            } else {
             unset($_SESSION['role']);
           }
           $this->load->view('templates/header');

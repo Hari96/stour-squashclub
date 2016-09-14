@@ -8,6 +8,7 @@ class Users_model extends CI_Model {
   public function get_players($order_field, $order_direction) {
     // ensure players are registered
     $this->db->where('activated', 1);
+    $this->db->where('role !=', 2);
     $this->db->order_by($order_field, $order_direction);
     $query = $this->db->get('players');
     return $query->result_array();
@@ -37,9 +38,13 @@ class Users_model extends CI_Model {
     $this->db->where('email', $email);
     $query = $this->db->get('players');
     if($query->row(0)->role == 1) {
-      return true;
-    } else {
-      return false;
+      $role = 1;
+      return $role;
+    } else if($query->row(0)->role == 2) {
+        $role = 2;
+        return $role;
+      } else {
+    return false;
     }
   }
 

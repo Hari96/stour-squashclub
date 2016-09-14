@@ -140,4 +140,29 @@
     $this->db->update('profiles', $data);
   }
 
+  public function update_role($email, $role) {
+    if ($role == 1) {
+      $role = 2;
+      $admin_data = array(
+        'email' => $email,
+        'role' => 2,
+        'logged_in' => TRUE
+      );
+      $this->session->set_userdata($admin_data);
+    } else if ($role == 2) {
+      $role = 1;
+      $admin_data = array(
+        'email' => $email,
+        'role' => 1,
+        'logged_in' => TRUE
+      );
+      $this->session->set_userdata($admin_data);
+    }
+    $this->db->where('email', $email);
+    $data = array(
+      'role' => $role
+    );
+    $this->db->update('players', $data);
+  }
+
 }

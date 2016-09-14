@@ -49,6 +49,16 @@ if(isset($_SESSION['role']))
 <?php $divtoolarge_message = ''; } ?>
 
 <div class="container-fluid">
+  <?php echo form_open('player_admin');
+    if ($_SESSION['role'] == 1) {
+  ?>
+  <span><strong>Currently you will be included in playing lists</strong></span>&nbsp;<button type="submit" class="btn btn-primary">Remove from lists</button>
+  <br><br>
+  <?php
+   } else if ($_SESSION['role'] == 2) { ?>
+  <span><strong>Currently you will NOT be included in playing lists</strong></span>&nbsp;<button type="submit" class="btn btn-primary">Add to lists</button>
+  <br><br>
+  <?php } echo form_close(); ?>
   <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
@@ -61,7 +71,7 @@ if(isset($_SESSION['role']))
       </tr>
       <tr>
         <td>You can delete a player and all their details. Be careful!</td>
-        <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Delete a player</a></td>
+        <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Go to player delete page</a></td>
       </tr>
       <tr>
         <td>You can allocate players to divisions and setup new leagues. Their current division will be shown so you will only have to change a few.</td>

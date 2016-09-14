@@ -145,16 +145,56 @@ echo ucfirst($month) . " " . $partYear;
                             }
                           }
                           if ($result['player1_score'] == 2) {
-                            $player1_score = 2;
-                            $player2_score = 4;
+                            switch($result['player2_score']) {
+                              case 0:
+                              $player1_score = 5;
+                              $Player2_score = 1;
+                              break;
+                              case 1:
+                              $player1_score = 4;
+                              $player2_score = 2;
+                              break;
+                              case 2:
+                              $player1_score = 3;
+                              $player2_score = 3;
+                              break;
+                              case 3:
+                              $player1_score = 2;
+                              $player2_score = 4;
+                            }
                           }
                           if ($result['player1_score'] == 1) {
-                            $player1_score = 1;
-                            $player2_score = 5;
+                            switch($result['player2_score']) {
+                              case 0:
+                              $player1_score = 4;
+                              $Player2_score = 2;
+                              break;
+                              case 1:
+                              $player1_score = 3;
+                              $player2_score = 3;
+                              break;
+                              case 2:
+                              $player1_score = 2;
+                              $player2_score = 4;
+                              case 3:
+                              $player1_score = 1;
+                              $player2_score = 5;
+                            }
                           }
                           if ($result['player1_score'] == 0) {
-                            $player1_score = 0;
-                            $player2_score = 6;
+                            switch($result['player2_score']) {
+                              case 1:
+                              $player1_score = 2;
+                              $Player2_score = 4;
+                              break;
+                              case 2:
+                              $player1_score = 1;
+                              $player2_score = 5;
+                              break;
+                              case 3:
+                              $player1_score = 0;
+                              $player2_score = 6;
+                            }
                           }
                           $total= $total + $player1_score;
                           echo $player1_score;
@@ -178,16 +218,57 @@ echo ucfirst($month) . " " . $partYear;
                             }
                           }
                           if ($result['player2_score'] == 2) {
-                            $player2_score = 2;
-                            $player1_score = 4;
+                            switch($result['player1_score']) {
+                              case 0:
+                              $player2_score = 5;
+                              $player1_score = 1;
+                              break;
+                              case 1:
+                              $player2_score = 4;
+                              $player1_score = 2;
+                              break;
+                              case 2:
+                              $player2_score = 3;
+                              $player1_score = 3;
+                              break;
+                              case 3:
+                              $player2_score = 2;
+                              $player1_score = 4;
+                            }
                           }
                           if ($result['player2_score'] == 1) {
-                            $player2_score = 1;
-                            $player1_score = 5;
+                            switch($result['player1_score']) {
+                              case 0:
+                              $player2_score = 4;
+                              $player1_score = 2;
+                              break;
+                              case 1:
+                              $player2_score = 3;
+                              $player1_score = 3;
+                              break;
+                              case 2:
+                              $player2_score = 2;
+                              $player1_score = 4;
+                              break;
+                              case 3:
+                              $player2_score = 1;
+                              $player1_score = 5;
+                            }
                           }
                           if ($result['player2_score'] == 0) {
-                            $player2_score = 0;
-                            $player1_score = 6;
+                            switch($result['player1_score']) {
+                              case 1:
+                              $player2_score = 2;
+                              $player1_score = 4;
+                              break;
+                              case 2:
+                              $player2_score = 1;
+                              $player1_score = 5;
+                              break;
+                              case 3:
+                              $player2_score = 0;
+                              $player1_score = 6;
+                            }
                           }
                           $total= $total + $player2_score;
                           echo $player2_score;

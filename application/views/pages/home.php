@@ -40,4 +40,20 @@
 <?php $message_sent = '';} ?>
 <div class="container">
 <h2>Home page</h2>
+<div class="row">
+  <div class="col-md-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere dictum leo, eget iaculis velit facilisis ut. Nulla mattis magna vel lacus gravida elementum condimentum et justo. Donec sed nibh enim. Fusce blandit diam congue mi finibus, id fermentum nisi scelerisque. Morbi at nisl neque. Donec eget nunc non erat cursus aliquet non sit amet quam. Donec quis commodo urna. Curabitur sollicitudin tincidunt sem, sed ultrices sapien faucibus sit amet. In consectetur aliquam ante eget volutpat. In hac habitasse platea dictumst. Nullam nec tincidunt nunc. Mauris scelerisque urna nec dui elementum sagittis.
+
+Etiam auctor pellentesque magna, a ultrices neque fringilla et. Aenean vitae turpis a tellus sodales ornare ut sed felis. Curabitur tristique blandit diam vitae scelerisque. Quisque et condimentum eros, id consectetur nibh. Cras vel condimentum nulla. Vestibulum posuere turpis id risus commodo, ut congue nisi tempus. Vivamus sollicitudin erat vel tortor aliquam placerat. Aliquam sed ornare nibh. Curabitur finibus placerat nibh, sit amet sagittis felis tincidunt vitae. Mauris vulputate tellus vitae ex blandit, non varius elit faucibus.
+
+  </div>
+  <div class="col-md-6">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere dictum leo, eget iaculis velit facilisis ut. Nulla mattis magna vel lacus gravida elementum condimentum et justo. Donec sed nibh enim. Fusce blandit diam congue mi finibus, id fermentum nisi scelerisque. Morbi at nisl neque. Donec eget nunc non erat cursus aliquet non sit amet quam. Donec quis commodo urna. Curabitur sollicitudin tincidunt sem, sed ultrices sapien faucibus sit amet. In consectetur aliquam ante eget volutpat. In hac habitasse platea dictumst. Nullam nec tincidunt nunc. Mauris scelerisque urna nec dui elementum sagittis.
+
+Etiam auctor pellentesque magna, a ultrices neque fringilla et. Aenean vitae turpis a tellus sodales ornare ut sed felis. Curabitur tristique blandit diam vitae scelerisque. Quisque et condimentum eros, id consectetur nibh. Cras vel condimentum nulla. Vestibulum posuere turpis id risus commodo, ut congue nisi tempus. Vivamus sollicitudin erat vel tortor aliquam placerat. Aliquam sed ornare nibh. Curabitur finibus placerat nibh, sit amet sagittis felis tincidunt vitae. Mauris vulputate tellus vitae ex blandit, non varius elit faucibus.
+
+Praesent blandit nulla finibus sapien tincidunt, sit amet malesuada dui dignissim. Mauris eu risus a lorem laoreet tincidunt. Pellentesque dignissim mi metus, a interdum metus dignissim sed. Phasellus eget nibh justo. Sed venenatis erat nunc, ut posuere quam maximus lobortis. Duis semper facilisis lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ante et nisl tincidunt imperdiet a ac eros. Sed ornare semper metus, nec egestas velit. Sed gravida efficitur fringilla. Nam tincidunt libero quam, vel rhoncus neque dignissim ac. Curabitur eget elementum sapien. Quisque eu ipsum dolor. Morbi sit amet ligula ornare, dictum orci in, condimentum tellus. Integer mollis augue est, eu condimentum augue bibendum a.
+
+  </div>
+</div>
 </div>
