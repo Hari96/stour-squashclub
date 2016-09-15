@@ -40,7 +40,13 @@
         $password = $this->input->post('inputPassword');
         $salt = file_get_contents('http://rgbmarketing.co.uk/_private69/salt.txt');
         $password = hash_hmac('whirlpool',$password, $salt);
-
+        // Checks to see if player wishes to play in league
+        $league_player = false;
+        if ( isset($_POST['league_player']) ) {
+          if ($this->input->post('league_player') == "league") {
+            $league_player = "true";
+          }
+        }
         //Setting values for table columns
         $data = array(
         'fname' => $this->input->post('inputFirstName'),
@@ -61,7 +67,7 @@
           'user_id' => $this->insert_model->get_user_id()
         );
         $this->insert_model->code_insert($data_code);
-        $message = "Activate your account with us by going to: http://www.stoursquashclub.co.uk/insert_users/complete_registration?activate_code=" . $code;
+        $message = "Activate your account with us by going to: http://www.stoursquashclub.co.uk/insert_users/complete_registration?activate_code=" . $code . "&league_player=" . $league_player;
 		    mail($email, "Activate your account today!", $message, "From: noreply@stoursquashclub.co.uk\n");
         //Loading View
         $this->load->view('templates/header', $data);
@@ -84,8 +90,14 @@
         $this->insert_model->activation_insert($user_id);//initiates leagues (maybe not necessary?) and intiates profile
         //Informing admin of new registration
         $name = $this->users_model->get_name_from_id($user_id);
+        $league_player = $this->input->get('league_player');
+        if ($league_player == true) {
+          $pl_message = "does wish to play in the league";
+        } else {
+          $pl_message = "Does NOT wish to play in the league";
+        }
         $email = "support@rgbmarketing.co.uk";// admin email (replace as necessary)
-        $message = "A new player has just signed up, the name is: " . $name;
+        $message = "A new player has just signed up, the name is: " . $name . ", who " . $pl_message;
         mail($email, "New player registration", $message, "From: noreply@stoursquashclub.co.uk\n");
         $data['activation_message'] = "You are now activated and can login";
         $this->load->view('templates/header', $data);

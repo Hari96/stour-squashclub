@@ -169,6 +169,19 @@
               ?>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <span><strong>Please <em>uncheck</em> if you DO NOT wish to be included in the league for next session:</strong></span>
+              <?php
+              $data = array(
+               'name' => 'league_player',
+               'value' => 'league',
+               'checked' => TRUE
+             );
+             echo form_checkbox($data);
+             ?>
+            </div>
+          </div>
           <div class="spacing-top">
             <?php
               echo form_submit('user-submit', 'Submit', 'class="btn btn-primary"');

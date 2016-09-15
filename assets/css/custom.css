@@ -1,5 +1,5 @@
 body {
-  padding-top: 110px;
+  padding-top: 120px;
 }
 #head {
   font-size: 1.3em;
@@ -71,4 +71,7 @@ table, th, td {
 }
 .small-comments {
   font-size: 0.9rem;
+}
+.squashed-list {
+  line-height: 0.9rem;
 }

@@ -39,11 +39,19 @@
             <li><a href="<?php echo base_url();?>display_results/initial_results">Results</a></li>
             <li><a href="<?php echo base_url();?>display_results/initial_tables">Tables</a></li>
             <li><a href="<?php echo base_url();?>player_profiles/load_profiles">Player's Profiles</a></li>
+            <li><a href="<?php echo base_url();?>pages/view/details">Details and Rules</a></li>
+            <li><a href="<?php echo base_url();?>pages/view/squash_rules">Rules of Squash</a></li>
           </ul>
-            </li>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo base_url();?>captcha_contact/form">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contacting<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<?php echo base_url();?>captcha_contact/form">Contact Form</a></li>
+            <li><a href="<?php echo base_url();?>captcha_results/form">Results Form</a></li>
+          </ul>
+        </li>
         <?php if(isset($_SESSION['email'])) { ?>
           <li><a href="<?php echo base_url();?>user_update/user_account">Edit account</a></li>
           <li><a href="<?php echo base_url();?>user_login/user_logout">Logout</a></li>

@@ -43,7 +43,7 @@ class Captcha_contact extends CI_Controller {
     }
   }
 
-    // This function generates CAPTCHA image and stores in "image folder".
+  // This function generates CAPTCHA image and stores in "image folder".
   public function captcha_setting() {
     $values = array(
       'word' => '',

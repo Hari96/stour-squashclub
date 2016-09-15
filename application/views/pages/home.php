@@ -47,7 +47,7 @@
 Etiam auctor pellentesque magna, a ultrices neque fringilla et. Aenean vitae turpis a tellus sodales ornare ut sed felis. Curabitur tristique blandit diam vitae scelerisque. Quisque et condimentum eros, id consectetur nibh. Cras vel condimentum nulla. Vestibulum posuere turpis id risus commodo, ut congue nisi tempus. Vivamus sollicitudin erat vel tortor aliquam placerat. Aliquam sed ornare nibh. Curabitur finibus placerat nibh, sit amet sagittis felis tincidunt vitae. Mauris vulputate tellus vitae ex blandit, non varius elit faucibus.
 
   </div>
-  <div class="col-md-6">
+  <div class="col-mod-8">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere dictum leo, eget iaculis velit facilisis ut. Nulla mattis magna vel lacus gravida elementum condimentum et justo. Donec sed nibh enim. Fusce blandit diam congue mi finibus, id fermentum nisi scelerisque. Morbi at nisl neque. Donec eget nunc non erat cursus aliquet non sit amet quam. Donec quis commodo urna. Curabitur sollicitudin tincidunt sem, sed ultrices sapien faucibus sit amet. In consectetur aliquam ante eget volutpat. In hac habitasse platea dictumst. Nullam nec tincidunt nunc. Mauris scelerisque urna nec dui elementum sagittis.
 
 Etiam auctor pellentesque magna, a ultrices neque fringilla et. Aenean vitae turpis a tellus sodales ornare ut sed felis. Curabitur tristique blandit diam vitae scelerisque. Quisque et condimentum eros, id consectetur nibh. Cras vel condimentum nulla. Vestibulum posuere turpis id risus commodo, ut congue nisi tempus. Vivamus sollicitudin erat vel tortor aliquam placerat. Aliquam sed ornare nibh. Curabitur finibus placerat nibh, sit amet sagittis felis tincidunt vitae. Mauris vulputate tellus vitae ex blandit, non varius elit faucibus.
