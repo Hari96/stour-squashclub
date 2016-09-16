@@ -154,4 +154,12 @@ class Users_model extends CI_Model {
     return $row;
   }
 
+  public function get_div_for_player($email) {
+    $this->db->where('email', $email);
+    $query = $this->db->get('players');
+    $row = $query->row();
+    $div = $row->current_league;
+    return $div;
+  }
+
 }
