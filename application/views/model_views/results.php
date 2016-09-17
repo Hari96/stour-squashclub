@@ -351,73 +351,154 @@ echo ucfirst($month) . " " . $partYear;
                 } else {
                   foreach ($results as $result):
                     if ($result['division'] == 2) {
-                      if ($idArr[$i] == $result['player1_id']) {
-                        if ($idArr[$j] == $result['player2_id']) {
-                          if ($result['player1_score'] == 3){
-                            switch($result['player2_score']) {
-                              case 0:
-                              $player1_score = 6;
-                              $player2_score = 0;
-                              break;
-                              case 1:
-                              $player1_score = 5;
-                              $player2_score = 1;
-                              break;
-                              case 2:
-                              $player1_score = 4;
-                              $player2_score = 2;
+                        if ($idArr[$i] == $result['player1_id']) {
+                          if ($idArr[$j] == $result['player2_id']) {
+                            if ($result['player1_score'] == 3){
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 6;
+                                $player2_score = 0;
+                                break;
+                                case 1:
+                                $player1_score = 5;
+                                $player2_score = 1;
+                                break;
+                                case 2:
+                                $player1_score = 4;
+                                $player2_score = 2;
+                              }
                             }
+                            if ($result['player1_score'] == 2) {
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 5;
+                                $Player2_score = 1;
+                                break;
+                                case 1:
+                                $player1_score = 4;
+                                $player2_score = 2;
+                                break;
+                                case 2:
+                                $player1_score = 3;
+                                $player2_score = 3;
+                                break;
+                                case 3:
+                                $player1_score = 2;
+                                $player2_score = 4;
+                              }
+                            }
+                            if ($result['player1_score'] == 1) {
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 4;
+                                $Player2_score = 2;
+                                break;
+                                case 1:
+                                $player1_score = 3;
+                                $player2_score = 3;
+                                break;
+                                case 2:
+                                $player1_score = 2;
+                                $player2_score = 4;
+                                case 3:
+                                $player1_score = 1;
+                                $player2_score = 5;
+                              }
+                            }
+                            if ($result['player1_score'] == 0) {
+                              switch($result['player2_score']) {
+                                case 1:
+                                $player1_score = 2;
+                                $Player2_score = 4;
+                                break;
+                                case 2:
+                                $player1_score = 1;
+                                $player2_score = 5;
+                                break;
+                                case 3:
+                                $player1_score = 0;
+                                $player2_score = 6;
+                              }
+                            }
+                            $total= $total + $player1_score;
+                            echo $player1_score;
                           }
-                          if ($result['player1_score'] == 2) {
-                            $player1_score = 2;
-                            $player2_score = 4;
+                        }
+                        if ($idArr[$i] == $result['player2_id']) {
+                          if ($idArr[$j] == $result['player1_id']) {
+                            if ($result['player2_score'] == 3){
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 6;
+                                $player1_score = 0;
+                                break;
+                                case 1:
+                                $player2_score = 5;
+                                $player1_score = 1;
+                                break;
+                                case 2:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                              }
+                            }
+                            if ($result['player2_score'] == 2) {
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 5;
+                                $player1_score = 1;
+                                break;
+                                case 1:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                                break;
+                                case 2:
+                                $player2_score = 3;
+                                $player1_score = 3;
+                                break;
+                                case 3:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                              }
+                            }
+                            if ($result['player2_score'] == 1) {
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                                break;
+                                case 1:
+                                $player2_score = 3;
+                                $player1_score = 3;
+                                break;
+                                case 2:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                                break;
+                                case 3:
+                                $player2_score = 1;
+                                $player1_score = 5;
+                              }
+                            }
+                            if ($result['player2_score'] == 0) {
+                              switch($result['player1_score']) {
+                                case 1:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                                break;
+                                case 2:
+                                $player2_score = 1;
+                                $player1_score = 5;
+                                break;
+                                case 3:
+                                $player2_score = 0;
+                                $player1_score = 6;
+                              }
+                            }
+                            $total= $total + $player2_score;
+                            echo $player2_score;
                           }
-                          if ($result['player1_score'] == 1) {
-                            $player1_score = 1;
-                            $player2_score = 5;
-                          }
-                          if ($result['player1_score'] == 0) {
-                            $player1_score = 0;
-                            $player2_score = 6;
-                          }
-                          $total= $total + $player1_score;
-                          echo $player1_score;
                         }
                       }
-                      if ($idArr[$i] == $result['player2_id']) {
-                        if ($idArr[$j] == $result['player1_id']) {
-                          if ($result['player2_score'] == 3){
-                            switch($result['player1_score']) {
-                              case 0:
-                              $player2_score = 6;
-                              $player1_score = 0;
-                              break;
-                              case 1:
-                              $player2_score = 5;
-                              $player1_score = 1;
-                              break;
-                              case 2:
-                              $player2_score = 4;
-                              $player1_score = 2;
-                            }
-                          }
-                          if ($result['player2_score'] == 2) {
-                            $player2_score = 2;
-                            $player1_score = 4;
-                          }
-                          if ($result['player2_score'] == 1) {
-                            $player2_score = 1;
-                            $player1_score = 5;
-                          }
-                          if ($result['player2_score'] == 0) {
-                            $player2_score = 0;
-                            $player1_score = 6;
-                          }
-                          $total= $total + $player2_score;
-                          echo $player2_score;
-                        }
-                      }
-                    }
                   endforeach;
                 }
                 echo "</td>";
@@ -494,73 +575,154 @@ echo ucfirst($month) . " " . $partYear;
                 } else {
                   foreach ($results as $result):
                     if ($result['division'] == 3) {
-                      if ($idArr[$i] == $result['player1_id']) {
-                        if ($idArr[$j] == $result['player2_id']) {
-                          if ($result['player1_score'] == 3){
-                            switch($result['player2_score']) {
-                              case 0:
-                              $player1_score = 6;
-                              $player2_score = 0;
-                              break;
-                              case 1:
-                              $player1_score = 5;
-                              $player2_score = 1;
-                              break;
-                              case 2:
-                              $player1_score = 4;
-                              $player2_score = 2;
+                        if ($idArr[$i] == $result['player1_id']) {
+                          if ($idArr[$j] == $result['player2_id']) {
+                            if ($result['player1_score'] == 3){
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 6;
+                                $player2_score = 0;
+                                break;
+                                case 1:
+                                $player1_score = 5;
+                                $player2_score = 1;
+                                break;
+                                case 2:
+                                $player1_score = 4;
+                                $player2_score = 2;
+                              }
                             }
+                            if ($result['player1_score'] == 2) {
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 5;
+                                $Player2_score = 1;
+                                break;
+                                case 1:
+                                $player1_score = 4;
+                                $player2_score = 2;
+                                break;
+                                case 2:
+                                $player1_score = 3;
+                                $player2_score = 3;
+                                break;
+                                case 3:
+                                $player1_score = 2;
+                                $player2_score = 4;
+                              }
+                            }
+                            if ($result['player1_score'] == 1) {
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 4;
+                                $Player2_score = 2;
+                                break;
+                                case 1:
+                                $player1_score = 3;
+                                $player2_score = 3;
+                                break;
+                                case 2:
+                                $player1_score = 2;
+                                $player2_score = 4;
+                                case 3:
+                                $player1_score = 1;
+                                $player2_score = 5;
+                              }
+                            }
+                            if ($result['player1_score'] == 0) {
+                              switch($result['player2_score']) {
+                                case 1:
+                                $player1_score = 2;
+                                $Player2_score = 4;
+                                break;
+                                case 2:
+                                $player1_score = 1;
+                                $player2_score = 5;
+                                break;
+                                case 3:
+                                $player1_score = 0;
+                                $player2_score = 6;
+                              }
+                            }
+                            $total= $total + $player1_score;
+                            echo $player1_score;
                           }
-                          if ($result['player1_score'] == 2) {
-                            $player1_score = 2;
-                            $player2_score = 4;
+                        }
+                        if ($idArr[$i] == $result['player2_id']) {
+                          if ($idArr[$j] == $result['player1_id']) {
+                            if ($result['player2_score'] == 3){
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 6;
+                                $player1_score = 0;
+                                break;
+                                case 1:
+                                $player2_score = 5;
+                                $player1_score = 1;
+                                break;
+                                case 2:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                              }
+                            }
+                            if ($result['player2_score'] == 2) {
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 5;
+                                $player1_score = 1;
+                                break;
+                                case 1:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                                break;
+                                case 2:
+                                $player2_score = 3;
+                                $player1_score = 3;
+                                break;
+                                case 3:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                              }
+                            }
+                            if ($result['player2_score'] == 1) {
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                                break;
+                                case 1:
+                                $player2_score = 3;
+                                $player1_score = 3;
+                                break;
+                                case 2:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                                break;
+                                case 3:
+                                $player2_score = 1;
+                                $player1_score = 5;
+                              }
+                            }
+                            if ($result['player2_score'] == 0) {
+                              switch($result['player1_score']) {
+                                case 1:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                                break;
+                                case 2:
+                                $player2_score = 1;
+                                $player1_score = 5;
+                                break;
+                                case 3:
+                                $player2_score = 0;
+                                $player1_score = 6;
+                              }
+                            }
+                            $total= $total + $player2_score;
+                            echo $player2_score;
                           }
-                          if ($result['player1_score'] == 1) {
-                            $player1_score = 1;
-                            $player2_score = 5;
-                          }
-                          if ($result['player1_score'] == 0) {
-                            $player1_score = 0;
-                            $player2_score = 6;
-                          }
-                          $total= $total + $player1_score;
-                          echo $player1_score;
                         }
                       }
-                      if ($idArr[$i] == $result['player2_id']) {
-                        if ($idArr[$j] == $result['player1_id']) {
-                          if ($result['player2_score'] == 3){
-                            switch($result['player1_score']) {
-                              case 0:
-                              $player2_score = 6;
-                              $player1_score = 0;
-                              break;
-                              case 1:
-                              $player2_score = 5;
-                              $player1_score = 1;
-                              break;
-                              case 2:
-                              $player2_score = 4;
-                              $player1_score = 2;
-                            }
-                          }
-                          if ($result['player2_score'] == 2) {
-                            $player2_score = 2;
-                            $player1_score = 4;
-                          }
-                          if ($result['player2_score'] == 1) {
-                            $player2_score = 1;
-                            $player1_score = 5;
-                          }
-                          if ($result['player2_score'] == 0) {
-                            $player2_score = 0;
-                            $player1_score = 6;
-                          }
-                          $total= $total + $player2_score;
-                          echo $player2_score;
-                        }
-                      }
-                    }
                   endforeach;
                 }
                 echo "</td>";
@@ -637,73 +799,154 @@ echo ucfirst($month) . " " . $partYear;
                 } else {
                   foreach ($results as $result):
                     if ($result['division'] == 4) {
-                      if ($idArr[$i] == $result['player1_id']) {
-                        if ($idArr[$j] == $result['player2_id']) {
-                          if ($result['player1_score'] == 3){
-                            switch($result['player2_score']) {
-                              case 0:
-                              $player1_score = 6;
-                              $player2_score = 0;
-                              break;
-                              case 1:
-                              $player1_score = 5;
-                              $player2_score = 1;
-                              break;
-                              case 2:
-                              $player1_score = 4;
-                              $player2_score = 2;
+                        if ($idArr[$i] == $result['player1_id']) {
+                          if ($idArr[$j] == $result['player2_id']) {
+                            if ($result['player1_score'] == 3){
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 6;
+                                $player2_score = 0;
+                                break;
+                                case 1:
+                                $player1_score = 5;
+                                $player2_score = 1;
+                                break;
+                                case 2:
+                                $player1_score = 4;
+                                $player2_score = 2;
+                              }
                             }
-                          }
-                          if ($result['player1_score'] == 2) {
-                            $player1_score = 2;
-                            $player2_score = 4;
-                          }
-                          if ($result['player1_score'] == 1) {
-                            $player1_score = 1;
-                            $player2_score = 5;
-                          }
-                          if ($result['player1_score'] == 0) {
-                            $player1_score = 0;
-                            $player2_score = 6;
-                          }
-                          $total= $total + $player1_score;
-                          echo $player1_score;
-                        }
-                      }
-                      if ($idArr[$i] == $result['player2_id']) {
-                        if ($idArr[$j] == $result['player1_id']) {
-                          if ($result['player2_score'] == 3){
-                            switch($result['player1_score']) {
-                              case 0:
-                              $player2_score = 6;
-                              $player1_score = 0;
-                              break;
-                              case 1:
-                              $player2_score = 5;
-                              $player1_score = 1;
-                              break;
-                              case 2:
-                              $player2_score = 4;
-                              $player1_score = 2;
+                            if ($result['player1_score'] == 2) {
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 5;
+                                $Player2_score = 1;
+                                break;
+                                case 1:
+                                $player1_score = 4;
+                                $player2_score = 2;
+                                break;
+                                case 2:
+                                $player1_score = 3;
+                                $player2_score = 3;
+                                break;
+                                case 3:
+                                $player1_score = 2;
+                                $player2_score = 4;
+                              }
                             }
+                            if ($result['player1_score'] == 1) {
+                              switch($result['player2_score']) {
+                                case 0:
+                                $player1_score = 4;
+                                $Player2_score = 2;
+                                break;
+                                case 1:
+                                $player1_score = 3;
+                                $player2_score = 3;
+                                break;
+                                case 2:
+                                $player1_score = 2;
+                                $player2_score = 4;
+                                case 3:
+                                $player1_score = 1;
+                                $player2_score = 5;
+                              }
+                            }
+                            if ($result['player1_score'] == 0) {
+                              switch($result['player2_score']) {
+                                case 1:
+                                $player1_score = 2;
+                                $Player2_score = 4;
+                                break;
+                                case 2:
+                                $player1_score = 1;
+                                $player2_score = 5;
+                                break;
+                                case 3:
+                                $player1_score = 0;
+                                $player2_score = 6;
+                              }
+                            }
+                            $total= $total + $player1_score;
+                            echo $player1_score;
                           }
-                          if ($result['player2_score'] == 2) {
-                            $player2_score = 2;
-                            $player1_score = 4;
-                          }
-                          if ($result['player2_score'] == 1) {
-                            $player2_score = 1;
-                            $player1_score = 5;
-                          }
-                          if ($result['player2_score'] == 0) {
-                            $player2_score = 0;
-                            $player1_score = 6;
-                          }
-                          $total= $total + $player2_score;
-                          echo $player2_score;
                         }
-                      }
-                    }
+                        if ($idArr[$i] == $result['player2_id']) {
+                          if ($idArr[$j] == $result['player1_id']) {
+                            if ($result['player2_score'] == 3){
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 6;
+                                $player1_score = 0;
+                                break;
+                                case 1:
+                                $player2_score = 5;
+                                $player1_score = 1;
+                                break;
+                                case 2:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                              }
+                            }
+                            if ($result['player2_score'] == 2) {
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 5;
+                                $player1_score = 1;
+                                break;
+                                case 1:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                                break;
+                                case 2:
+                                $player2_score = 3;
+                                $player1_score = 3;
+                                break;
+                                case 3:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                              }
+                            }
+                            if ($result['player2_score'] == 1) {
+                              switch($result['player1_score']) {
+                                case 0:
+                                $player2_score = 4;
+                                $player1_score = 2;
+                                break;
+                                case 1:
+                                $player2_score = 3;
+                                $player1_score = 3;
+                                break;
+                                case 2:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                                break;
+                                case 3:
+                                $player2_score = 1;
+                                $player1_score = 5;
+                              }
+                            }
+                            if ($result['player2_score'] == 0) {
+                              switch($result['player1_score']) {
+                                case 1:
+                                $player2_score = 2;
+                                $player1_score = 4;
+                                break;
+                                case 2:
+                                $player2_score = 1;
+                                $player1_score = 5;
+                                break;
+                                case 3:
+                                $player2_score = 0;
+                                $player1_score = 6;
+                              }
+                            }
+                            $total= $total + $player2_score;
+                            echo $player2_score;
+                          }
+                        }
+                      }                        
                   endforeach;
                 }
                 echo "</td>";

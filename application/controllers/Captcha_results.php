@@ -16,7 +16,25 @@ class Captcha_results extends CI_Controller {
          $this->captcha_setting();
       } else {
         if (strcasecmp($_SESSION['captchaWord'], $_POST['captcha']) == 0) {
-
+          $sc_arr = array();
+          $name_arr = array();
+          $c = 0;
+          $end = $this->input->post('count');
+          for ($i = 0; $i < $end; $i++ ) {
+            if ($this->input->post('r' . $i) != '0') {
+              $result = $this->input->post('r' . $i);
+              $sc_arr[$c] = $result;
+              $name = $this->input->post('n' . $i);
+              $name_arr[$c] = $name;
+              $c++;
+            }
+          }
+          $message = "Result(s) from " . $_SESSION['name'] . " are:\n\n";
+          for ($j = 0; $j < $c; $j++) {
+            $message .= "Against " . $name_arr[$j] . " the result is: " . $sc_arr[$j] . "\n";
+          }
+          $to = "support@rgbmarketing.co.uk";//admin email address
+          mail($to, "Squash League Result", $message, "From: noreply@stoursquashclub.co.uk\n");
         } else {
           echo "<script type='text/javascript'> alert('Try Again'); </script>";
           $em_data['wrong'] = "Wrong letters - try again";

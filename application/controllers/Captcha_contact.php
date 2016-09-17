@@ -24,7 +24,7 @@ class Captcha_contact extends CI_Controller {
             $this->load->view('pages/home');
             $this->load->view('templates/footer');
           } else {
-          $to = "support@rgbmarketing.co.uk";
+          $to = "support@rgbmarketing.co.uk";//admin email address
           $name = $this->input->post('inputName');
           $email = $this->input->post('inputEmail');
           $message = $this->input->post('inputText');
