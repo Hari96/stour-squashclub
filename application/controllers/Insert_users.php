@@ -8,6 +8,7 @@
     }
 
     public function index() {
+      $this->session->set_userdata('registration');
       //Validating First Name Field
       $this->form_validation->set_rules('inputFirstName','First Name','required|min_length[2]|max_length[30]');
       //Validating Last Name Field
@@ -69,6 +70,7 @@
         $this->insert_model->code_insert($data_code);
         $message = "Activate your account with us by going to: http://www.stoursquashclub.co.uk/insert_users/complete_registration?activate_code=" . $code . "&league_player=" . $league_player;
 		    mail($email, "Activate your account today!", $message, "From: noreply@stoursquashclub.co.uk\n");
+        $this->session->unset_userdata('registration');
         //Loading View
         $this->load->view('templates/header', $data);
         $this->load->view('model_views/register', $data);
@@ -87,10 +89,10 @@
   		  echo 'faulty';//message to produce goes to activate view?
   	  } else {
         $user_id = $this->insert_model->get_id_from_code($code);
-        $this->insert_model->activation_insert($user_id);//initiates leagues (maybe not necessary?) and intiates profile
-        //Informing admin of new registration
         $name = $this->users_model->get_name_from_id($user_id);
         $league_player = $this->input->get('league_player');
+        $this->insert_model->activation_insert($user_id, $league_player);//initiates leagues (maybe not necessary?) and intiates profile
+        //Informing admin of new registration
         if ($league_player == true) {
           $pl_message = "does wish to play in the league";
         } else {

@@ -8,7 +8,6 @@ class Captcha_contact extends CI_Controller {
     parent::__construct();
     $this->load->helper('captcha');
     $this->load->model('users_model');
-    //session_start();
   }
 
   // This function show values in view page and check capcha value.
@@ -20,8 +19,9 @@ class Captcha_contact extends CI_Controller {
         if (strcasecmp($_SESSION['captchaWord'], $_POST['captcha']) == 0) {
           $this->form_validation->set_rules('inputEmail','Email','required|valid_email');
           if ($this->form_validation->run() == FALSE) {
+            $data['announcements'] = $this->users_model->get_announcements();
             $this->load->view('templates/header');
-            $this->load->view('pages/home');
+            $this->load->view('pages/home', $data);
             $this->load->view('templates/footer');
           } else {
           $to = "support@rgbmarketing.co.uk";//admin email address
@@ -31,6 +31,7 @@ class Captcha_contact extends CI_Controller {
           $message .= "\nSender's email: " . $email;
           mail($to, "Message from " . $name, $message, "From: noreply@stoursquashclub.co.uk\n");
           $data['message_sent'] = "Your message has been sent";
+          $data['announcements'] = $this->users_model->get_announcements();
           $this->load->view('templates/header', $data);
           $this->load->view('pages/home', $data);
           $this->load->view('templates/footer', $data);

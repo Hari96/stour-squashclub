@@ -38,14 +38,20 @@
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>
 <?php $message_sent = '';} ?>
-<div class="container">
 <h2>Home page</h2>
-<div class="row">
-  <div class="col-md-4">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere dictum leo, eget iaculis velit facilisis ut. Nulla mattis magna vel lacus gravida elementum condimentum et justo. Donec sed nibh enim. Fusce blandit diam congue mi finibus, id fermentum nisi scelerisque. Morbi at nisl neque. Donec eget nunc non erat cursus aliquet non sit amet quam. Donec quis commodo urna. Curabitur sollicitudin tincidunt sem, sed ultrices sapien faucibus sit amet. In consectetur aliquam ante eget volutpat. In hac habitasse platea dictumst. Nullam nec tincidunt nunc. Mauris scelerisque urna nec dui elementum sagittis.
-
-Etiam auctor pellentesque magna, a ultrices neque fringilla et. Aenean vitae turpis a tellus sodales ornare ut sed felis. Curabitur tristique blandit diam vitae scelerisque. Quisque et condimentum eros, id consectetur nibh. Cras vel condimentum nulla. Vestibulum posuere turpis id risus commodo, ut congue nisi tempus. Vivamus sollicitudin erat vel tortor aliquam placerat. Aliquam sed ornare nibh. Curabitur finibus placerat nibh, sit amet sagittis felis tincidunt vitae. Mauris vulputate tellus vitae ex blandit, non varius elit faucibus.
-
+<div class="container-fluid">
+<div class="row spacing-sides">
+  <div class="col-md-4 table-responsive">
+    <h3>Admin Announcements</h3>
+      <?php echo form_open('');
+      foreach ($announcements as $announcement):
+      ?>
+      <table class="table table-bordered">
+      <tr><td><strong>Date:</strong><?php $date = date('d-m-Y', strtotime($announcement['date'])); echo " " . $date; ?></td><td><strong>Title:</strong><?php echo " " . $announcement['title']; ?></td></tr>
+      <tr><td colspan="2"><strong>Announcement:</strong><?php echo " " . $announcement['comment']; ?></td></tr>
+      </table>
+      <hr class="line-style">
+      <?php endforeach; echo form_close(); ?>
   </div>
   <div class="col-mod-8">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere dictum leo, eget iaculis velit facilisis ut. Nulla mattis magna vel lacus gravida elementum condimentum et justo. Donec sed nibh enim. Fusce blandit diam congue mi finibus, id fermentum nisi scelerisque. Morbi at nisl neque. Donec eget nunc non erat cursus aliquet non sit amet quam. Donec quis commodo urna. Curabitur sollicitudin tincidunt sem, sed ultrices sapien faucibus sit amet. In consectetur aliquam ante eget volutpat. In hac habitasse platea dictumst. Nullam nec tincidunt nunc. Mauris scelerisque urna nec dui elementum sagittis.

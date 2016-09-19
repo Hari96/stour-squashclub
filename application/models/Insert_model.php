@@ -23,21 +23,27 @@
       return $id;
     }
 
-    public function activation_insert($user_id) {
+    public function activation_insert($user_id, $league_player) {
       //$this->load->helper('date');
       $date = date('Y-m-d');
+      $data_leagues = array(
+        'user_id' => $user_id
+      );
+      if ($league_player == true) {
       $data = array(
         'activated' => 1,
         'JoinDate' => $date
       );
-      $data_leagues = array(
-        'user_id' => $user_id
-      );
-      $this->db->where('id', $user_id);
-      $this->db->update('players', $data);
       $this->db->insert('leagues', $data_leagues);// maybe not necessary?
       $this->db->insert('profiles', $data_leagues);//inserts user id into profiles table
-
+    } else {
+      $data = array(
+        'activated' => 2,
+        'JoinDate' => $date
+      );
+    }
+      $this->db->where('id', $user_id);
+      $this->db->update('players', $data);
     }
 
     public function update_users($data, $user_id) {

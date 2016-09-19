@@ -35,6 +35,7 @@ class User_update extends CI_Controller {
       $email = $this->input->post('inputEmail');
       if($this->users_model->check_other_emails($email, $user_id) == true) {
         $data['email_message'] = 'Email address already exists, please input a different address';
+        $data['announcements'] = $this->users_model->get_announcements();
         $this->load->view('templates/header', $data);
         $this->load->view('pages/home', $data);
         $this->load->view('templates/footer', $data);
@@ -66,6 +67,7 @@ class User_update extends CI_Controller {
           unset($_SESSION['logged_in']);
           unset($_SESSION['role']);
           //Loading Views
+          $data['announcements'] = $this->users_model->get_announcements();
           $this->load->view('templates/header', $data);
           $this->load->view('pages/home', $data);
           $this->load->view('templates/footer', $data);
@@ -85,6 +87,7 @@ class User_update extends CI_Controller {
             $data['email_changed'] = "Since you have changed your email you will need to login again";
           }
           $data['success_message'] = 'Details updated';
+          $data['announcements'] = $this->users_model->get_announcements();
           //Loading Views
           $this->load->view('templates/header', $data);
           $this->load->view('pages/home', $data);

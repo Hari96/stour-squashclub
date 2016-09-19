@@ -10,6 +10,7 @@ class admin_announcements extends CI_Controller {
   }
 
   public function index() {
+    $this->session->set_userdata('announcements');
     $this->insert_model->empty_announcements();
     $latest_title = $this->input->post('title1');
     $latest_comment = $this->input->post('content1');
@@ -33,6 +34,7 @@ class admin_announcements extends CI_Controller {
        $this->insert_model->insert_announcements($data);
     }
     $data['announcement_message'] = "Latest announcement posted and oldest deleted";
+    $this->session->unset_userdata('announcements');
     $this->load->view('templates/header', $data);
     $this->load->view('admin_views/admin_home', $data);
     $this->load->view('templates/footer', $data);

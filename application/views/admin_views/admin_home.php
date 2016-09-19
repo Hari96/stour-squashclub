@@ -144,7 +144,7 @@ if(isset($_SESSION['role']))
             <?php echo form_close(); ?>
           </tr>
           <tr>
-            <td>Admin announcements can be made, which will be shown on the home page. You will have a maximum of FOUR slots available.</td>
+            <td>Admin announcements can be made, which will be shown on the home page. The latest FOUR announcements are shown, the previous ones are deleted.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/announcement_view/announcements_view">Admin announcements</a></td>
           </tr>
         </tbody>

@@ -28,6 +28,10 @@ table, th, td {
 .spacing-top-lg {
   margin-top: 25px;
 }
+.spacing-sides {
+  margin-left: 8px;
+  margin-right: 8px;
+}
 .required::after {
   content: " *";
   color: red;
@@ -74,4 +78,10 @@ table, th, td {
 }
 .squashed-list {
   line-height: 0.9rem;
+}
+.line-style {
+  color: #f00;
+  background-color: #f00;
+  height: 4px;
+  width: 90%;
 }

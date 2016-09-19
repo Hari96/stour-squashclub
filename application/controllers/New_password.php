@@ -4,7 +4,6 @@ class New_password extends CI_Controller {
 
   function __construct() {
     parent::__construct();
-    $this->load->helper('url_helper');
     $this->load->model('users_model');
     $this->load->model('insert_model');
   }

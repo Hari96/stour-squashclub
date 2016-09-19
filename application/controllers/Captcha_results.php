@@ -62,6 +62,7 @@ class Captcha_results extends CI_Controller {
         'grid' => array(255, 40, 40)
       )
     );
+    if (isset($_SESSION['logged_in'])) {
     $email = $_SESSION['email'];
     $div = $this->users_model->get_div_for_player($email);
     $table_data['players'] = $this->users_model->find_players_in_div($div);
@@ -72,6 +73,12 @@ class Captcha_results extends CI_Controller {
     $this->load->view('templates/results_form_table', $table_data);
     $this->load->view('pages/results_form', $data);
     $this->load->view('templates/footer', $data);
+    } else {
+      $this->load->view('templates/header');
+      $this->load->view('templates/results_form_table');
+      $this->load->view('pages/results_form');
+      $this->load->view('templates/footer');
+    }
   }
 
   // For new image on click refresh button.

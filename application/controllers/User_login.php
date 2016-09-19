@@ -62,9 +62,10 @@ class User_login extends CI_Controller {
             } else {
             unset($_SESSION['role']);
           }
-          $this->load->view('templates/header');
-          $this->load->view('pages/home');
-          $this->load->view('templates/footer');
+          $data['announcements'] = $this->users_model->get_announcements();
+          $this->load->view('templates/header', $data);
+          $this->load->view('pages/home', $data);
+          $this->load->view('templates/footer', $data);
         }
       } else {
         $data['no_email_message'] = "No user with that email address exists";
@@ -78,9 +79,10 @@ class User_login extends CI_Controller {
     unset($_SESSION['email']);
     unset($_SESSION['logged_in']);
     unset($_SESSION['role']);
-    $this->load->view('templates/header');
-    $this->load->view('pages/home');
-    $this->load->view('templates/footer');
+    $data['announcements'] = $this->users_model->get_announcements();
+    $this->load->view('templates/header', $data);
+    $this->load->view('pages/home', $data);
+    $this->load->view('templates/footer', $data);
   }
 
 }
