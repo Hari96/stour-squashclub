@@ -165,4 +165,13 @@
     $this->db->update('players', $data);
   }
 
+  public function empty_announcements() {
+    $this->db->empty_table('admin_announcements');
+    $this->db->query("ALTER TABLE admin_announcements AUTO_INCREMENT = 1");
+  }
+
+  public function insert_announcements($data) {
+    $this->db->insert('admin_announcements', $data);
+  }
+
 }

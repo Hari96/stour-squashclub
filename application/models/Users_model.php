@@ -162,4 +162,9 @@ class Users_model extends CI_Model {
     return $div;
   }
 
+  public function get_announcements() {
+    $query = $this->db->get('admin_announcements');
+    return $query->result_array();
+  }
+
 }

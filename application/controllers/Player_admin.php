@@ -61,4 +61,17 @@ class Player_admin extends CI_Controller {
     $this->load->view('templates/footer', $data);
 
   }
+
+  public function announcement_view($page="announcements_view") {
+    if (!file_exists(APPPATH.'views/admin_views/'.$page.'.php')) {
+      // whoops don't have a page for that!
+      show_404();
+    }
+
+     $data['comments'] = $this->users_model->get_announcements();
+
+     $this->load->view('templates/header', $data);
+     $this->load->view('admin_views/'.$page, $data);
+     $this->load->view('templates/footer', $data);
+  }
 }
