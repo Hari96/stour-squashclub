@@ -41,7 +41,7 @@
 <h2>Home page</h2>
 <div class="container-fluid">
 <div class="row spacing-sides">
-  <div class="col-md-4 table-responsive">
+  <div class="col-md-4 table-responsive scroll">
     <h3>Admin Announcements</h3>
       <?php echo form_open('');
       foreach ($announcements as $announcement):
@@ -54,12 +54,19 @@
       <?php endforeach; echo form_close(); ?>
   </div>
   <div class="col-mod-8">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere dictum leo, eget iaculis velit facilisis ut. Nulla mattis magna vel lacus gravida elementum condimentum et justo. Donec sed nibh enim. Fusce blandit diam congue mi finibus, id fermentum nisi scelerisque. Morbi at nisl neque. Donec eget nunc non erat cursus aliquet non sit amet quam. Donec quis commodo urna. Curabitur sollicitudin tincidunt sem, sed ultrices sapien faucibus sit amet. In consectetur aliquam ante eget volutpat. In hac habitasse platea dictumst. Nullam nec tincidunt nunc. Mauris scelerisque urna nec dui elementum sagittis.
-
-Etiam auctor pellentesque magna, a ultrices neque fringilla et. Aenean vitae turpis a tellus sodales ornare ut sed felis. Curabitur tristique blandit diam vitae scelerisque. Quisque et condimentum eros, id consectetur nibh. Cras vel condimentum nulla. Vestibulum posuere turpis id risus commodo, ut congue nisi tempus. Vivamus sollicitudin erat vel tortor aliquam placerat. Aliquam sed ornare nibh. Curabitur finibus placerat nibh, sit amet sagittis felis tincidunt vitae. Mauris vulputate tellus vitae ex blandit, non varius elit faucibus.
-
-Praesent blandit nulla finibus sapien tincidunt, sit amet malesuada dui dignissim. Mauris eu risus a lorem laoreet tincidunt. Pellentesque dignissim mi metus, a interdum metus dignissim sed. Phasellus eget nibh justo. Sed venenatis erat nunc, ut posuere quam maximus lobortis. Duis semper facilisis lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ante et nisl tincidunt imperdiet a ac eros. Sed ornare semper metus, nec egestas velit. Sed gravida efficitur fringilla. Nam tincidunt libero quam, vel rhoncus neque dignissim ac. Curabitur eget elementum sapien. Quisque eu ipsum dolor. Morbi sit amet ligula ornare, dictum orci in, condimentum tellus. Integer mollis augue est, eu condimentum augue bibendum a.
-
+    <p>Welcome to the Stour Centre Squash Club, games are played at:</p>
+    <p><strong>The Stour Centre, Station Approach, Ashford, Kent, TN23 1ET</strong>.</p>
+    <p>Stour Centre reception <strong>01233 663503</strong>, then press 0 to make a booking.</p>
+    <p>If you are a member of the Stour Centre you should be able to check availability, and book via:</p><p> <a href="https://ashfordleisuretrust.leisurecloud.net/Connect/mrmlogin.aspx">Ashford Leisure Trust</a></p>
+    <br><br>
+    <p>You are welcome to join this site by signing up, where you will be asked for a live email address and a password as a minimum.</p>
+    <p>After signing up an activation link will be sent to your email address - once you have activated your acount you will be able</p>
+    <p>to login and view the full site.</p>
+    <br>
+    <p>When signing up you can choose whether you wish to be included in future competitions.</p>
+    <p>Once you are activated the admin will automatically be informed and, if you have opted to be included in competitions,</p>
+    <p>the admin will include you in a future league. Initially you will be placed in a lower league but please see:</p>
+    <p><a href="<?php echo base_url(); ?>pages/view/details">General Details</a> for information about possibly joining a higher league.</p>
   </div>
 </div>
 </div>

@@ -85,3 +85,8 @@ table, th, td {
   height: 4px;
   width: 90%;
 }
+.scroll {
+  height: 600px;
+  overflow: scroll;
+  margin-right: 10px;
+}
