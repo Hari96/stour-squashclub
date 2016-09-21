@@ -4,15 +4,7 @@
 
     public function form_insert($data) {
       $this->db->insert('players', $data);
-    }
-
-
-    public function get_id_from_code($code) {
-      $this->db->where('activation_code', $code);
-      $query = $this->db->get('activation');
-      return $query->row(0)->user_id;
-
-    }
+    }    
 
     public function code_insert($data_code) {
       $this->db->insert('activation', $data_code);
@@ -178,6 +170,11 @@
 
   public function insert_announcements($data) {
     $this->db->insert('admin_announcements', $data);
+  }
+
+  public function wordpress_insert($data) {
+    $db2 = $this->load->database('db2', TRUE);
+    $db2->insert('wp_users', $data);
   }
 
 }

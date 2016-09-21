@@ -32,6 +32,11 @@ class User_login extends CI_Controller {
           $this->load->view('templates/header', $data);
           $this->load->view('model_views/login', $data);
           $this->load->view('templates/footer', $data);
+        } else if ($this->users_model->check_if_activated($email) == false) {
+          $data['not_activated_message'] = "You have not activated your account, please check your email";
+          $this->load->view('templates/header', $data);
+          $this->load->view('model_views/login', $data);
+          $this->load->view('templates/footer', $data);
         } else {
           //successful login
           $row = $this->users_model->getNamesFromEmail($email);

@@ -44,6 +44,12 @@
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         </div>
         <?php $email_wrong = '';} ?>
+        <?php if (isset($not_activated_message)) { ?>
+        <div class="message-box alert alert-danger alert-dismissible">
+          <h3 style="color:red;"><?php echo $not_activated_message; ?></h3>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        <?php $not_activated_message = '';} ?>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tristique eros. Aliquam posuere turpis sapien, at condimentum ex tincidunt bibendum. Aliquam malesuada, orci in vehicula euismod, lorem lectus eleifend augue, vel sollicitudin ligula turpis quis metus. Nulla pellentesque purus neque, quis dapibus tortor interdum non. Mauris id sem malesuada, pharetra leo id, vulputate est. Cras at diam vehicula, sagittis leo a, blandit neque. Fusce ac lacus ac dolor interdum egestas.
 

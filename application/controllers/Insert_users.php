@@ -39,6 +39,7 @@
         } else {
         //hashing password
         $password = $this->input->post('inputPassword');
+        $wordpress_pass = $password;
         $salt = file_get_contents('http://rgbmarketing.co.uk/_private69/salt.txt');
         $password = hash_hmac('whirlpool',$password, $salt);
         // Checks to see if player wishes to play in league
@@ -49,9 +50,12 @@
           }
         }
         //Setting values for table columns
+        $fName = $this->input->post('inputFirstName');
+        $lName = $this->input->post('inputLastName');
+        $name = $fName . " " . $lName;
         $data = array(
-        'fname' => $this->input->post('inputFirstName'),
-        'lName' => $this->input->post('inputLastName'),
+        'fname' => $fName,
+        'lName' => $lName,
         'email' => $email,
         'password' => $password,
         'mobile' => $this->input->post('inputMobile'),
@@ -61,7 +65,19 @@
         );
         //Transfering data to Model
         $this->insert_model->form_insert($data);
-        $data['message'] = 'Registration successfull, you will receive an activation email soon';
+        //Inserting user into wordpress forum
+        require(APPPATH.'libraries/wordpress_hash.php');
+        $wp_hasher = new PasswordHash(34, true);   // 34 digit hashing password
+        $pass = $wp_hasher->HashPassword(trim($wordpress_pass));
+        $data = array(
+          'user_login' => $name,
+          'user_pass' => $pass,
+          'user_nicename' => $name,
+          'display_name' => $name,
+          'user_email' => $email
+        );
+        $this->insert_model->wordpress_insert($data);
+        $data['message'] = 'Registration successful, you will receive an activation email soon';
         $code = uniqid('', true);
         $data_code = array(
           'activation_code' => $code,
@@ -88,7 +104,7 @@
       if(empty($code)) {
   		  echo 'faulty';//message to produce goes to activate view?
   	  } else {
-        $user_id = $this->insert_model->get_id_from_code($code);
+        $user_id = $this->users_model->get_id_from_code($code);
         $name = $this->users_model->get_name_from_id($user_id);
         $league_player = $this->input->get('league_player');
         $this->insert_model->activation_insert($user_id, $league_player);//initiates leagues (maybe not necessary?) and intiates profile

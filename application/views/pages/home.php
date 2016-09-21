@@ -58,7 +58,7 @@
     <p><strong>The Stour Centre, Station Approach, Ashford, Kent, TN23 1ET</strong>.</p>
     <p>Stour Centre reception <strong>01233 663503</strong>, then press 0 to make a booking.</p>
     <p>If you are a member of the Stour Centre you should be able to check availability, and book via:</p><p> <a href="https://ashfordleisuretrust.leisurecloud.net/Connect/mrmlogin.aspx">Ashford Leisure Trust</a></p>
-    <br><br>
+    <br>
     <p>You are welcome to join this site by signing up, where you will be asked for a live email address and a password as a minimum.</p>
     <p>After signing up an activation link will be sent to your email address - once you have activated your acount you will be able</p>
     <p>to login and view the full site.</p>
@@ -67,6 +67,8 @@
     <p>Once you are activated the admin will automatically be informed and, if you have opted to be included in competitions,</p>
     <p>the admin will include you in a future league. Initially you will be placed in a lower league but please see:</p>
     <p><a href="<?php echo base_url(); ?>pages/view/details">General Details</a> for information about possibly joining a higher league.</p>
+    <br>
+    <h3>Coaching</h3>
   </div>
 </div>
 </div>

@@ -5,6 +5,12 @@ class Users_model extends CI_Model {
     $this->load->database();
   }
 
+  public function get_id_from_code($code) {
+    $this->db->where('activation_code', $code);
+    $query = $this->db->get('activation');
+    return $query->row(0)->user_id;
+  }
+
   public function get_players($order_field, $order_direction) {
     // ensure players are registered
     $this->db->where('activated', 1);
@@ -28,6 +34,16 @@ class Users_model extends CI_Model {
     $this->db->where('email', $email);
     $query = $this->db->get('players');
     if($query->row(0)->password === $password) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public function check_if_activated($email) {
+    $this->db->where('email', $email);
+    $query = $this->db->get('players');
+    if($query->row(0)->activated == 1 || $query->row(0)->activated == 2) {
       return true;
     } else {
       return false;
@@ -108,7 +124,6 @@ class Users_model extends CI_Model {
     $lname = $row->lName;
     $player_name = $fname . " " . $lname;
     return $player_name;
-
   }
 
   public function get_current_period() {
