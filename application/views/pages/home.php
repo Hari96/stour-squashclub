@@ -60,8 +60,8 @@
     <p>If you are a member of the Stour Centre you should be able to check availability, and book via:</p><p> <a href="https://ashfordleisuretrust.leisurecloud.net/Connect/mrmlogin.aspx">Ashford Leisure Trust</a></p>
     <br>
     <p>You are welcome to join this site by signing up, where you will be asked for a live email address and a password as a minimum.</p>
-    <p>After signing up an activation link will be sent to your email address - once you have activated your acount you will be able</p>
-    <p>to login and view the full site.</p>
+    <p>After signing up, an activation link will be sent to your email address - once you have activated your acount you will be able
+    to login and view the full site.</p>
     <br>
     <p>When signing up you can choose whether you wish to be included in future competitions.</p>
     <p>Once you are activated the admin will automatically be informed and, if you have opted to be included in competitions,</p>

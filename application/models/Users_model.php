@@ -12,8 +12,15 @@ class Users_model extends CI_Model {
   }
 
   public function get_players($order_field, $order_direction) {
-    // ensure players are registered
+    // ensure players are activated
     $this->db->where('activated', 1);
+    $this->db->where('role !=', 2);
+    $this->db->order_by($order_field, $order_direction);
+    $query = $this->db->get('players');
+    return $query->result_array();
+  }
+
+  public function get_all_players($order_field, $order_direction) {
     $this->db->where('role !=', 2);
     $this->db->order_by($order_field, $order_direction);
     $query = $this->db->get('players');

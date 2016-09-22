@@ -27,7 +27,7 @@ class Player_admin extends CI_Controller {
     }
     $order_field = "lName";//which field to order by
     $order_direction = "asc";// direction of sort
-    $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+    $data['players'] = $this->users_model->get_all_players($order_field, $order_direction);
 
     $this->load->view('templates/header', $data);
     $this->load->view('admin_views/'.$page, $data);

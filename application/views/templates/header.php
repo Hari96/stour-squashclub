@@ -43,6 +43,9 @@
             <li><a href="<?php echo base_url();?>pages/view/squash_rules">Rules of Squash</a></li>
           </ul>
         </li>
+        <?php if(isset($_SESSION['email'])) { ?>
+        <li><a href="http://www.stoursquashclub.co.uk/sqcl-forum">Forum</a></li>
+        <?php } ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

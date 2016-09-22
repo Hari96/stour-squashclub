@@ -18,11 +18,10 @@ class admin_announcements extends CI_Controller {
     $data = array(
       'title' => $latest_title,
       'comment' => $latest_comment,
-      'date' => $date,
-      'number' => 1
+      'date' => $date
     );
     $this->insert_model->insert_announcements($data);
-    for ($i = 2; $i <= 4; $i++) {
+    for ($i = 2; $i <= 5; $i++) {
        $title = $this->input->post('title' . $i);
        $comment = $this->input->post('content' . $i);
        $data = array(

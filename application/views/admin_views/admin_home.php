@@ -10,13 +10,21 @@ if(isset($_SESSION['role']))
   </div>
   <?php } ?>
 <!-- successful update message-->
-<?php if (isset($message)) { ?>
+<?php if (isset($update_message)) { ?>
   <div class="message-box alert alert-success alert-dismissible">
-    <h3 style="color:green;"><?php echo $message; ?></h3>
+    <h3 style="color:green;"><?php echo $update_message; ?></h3>
     <a href="<?php echo base_url();?>player_admin/crud_view/user_update">Return to update page</a>
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
    </div>
-<?php $message = ''; } ?>
+<?php $update_message = ''; } ?>
+<!-- successful update2 message-->
+<?php if (isset($update2_message)) { ?>
+  <div class="message-box alert alert-success alert-dismissible">
+    <h3 style="color:green;"><?php echo $update2_message; ?></h3>
+    <a href="<?php echo base_url();?>player_admin/crud_view/user_update2">Return to update page</a>
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+   </div>
+<?php $update2_message = ''; } ?>
 <!-- repeated email address message-->
 <?php if (isset($email_message)) { ?>
 <div class="message-box alert alert-danger alert-dismissible">
@@ -74,10 +82,14 @@ if(isset($_SESSION['role']))
         </thead>
         <tbody>
           <tr>
-            <td>You can update all player details except their password. Players can also update their own details whilst logged in. </td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update">Update a player</a></td>
+            <td>You can update the main player details: <em>Names, mobile and email.</em> </td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update">Update main player details</a></td>
           </tr>
           <tr>
+            <tr>
+              <td>You can update other player details: <em>Landline, age, level and league status (active or non-active).</em> </td>
+              <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update2">Update other player details</a></td>
+            </tr>
             <td>You can delete a player and all their details. Be careful!</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Go to player delete page</a></td>
           </tr>
@@ -144,7 +156,7 @@ if(isset($_SESSION['role']))
             <?php echo form_close(); ?>
           </tr>
           <tr>
-            <td>Admin announcements can be made, which will be shown on the home page. The latest FOUR announcements are shown, the previous ones are deleted.</td>
+            <td>Admin announcements can be made, which will be shown on the home page. The latest FIVE announcements are shown, the previous ones are deleted.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/announcement_view/announcements_view">Admin announcements</a></td>
           </tr>
         </tbody>
