@@ -25,4 +25,15 @@ $(document).ready(function() {
                     });
                 });
 
+    $("#all-email").click(function(){
+       var list = document.getElementsByClassName("choose");
+       for (var i = 0; i < list.length; i++) {
+         if (list[i].checked == false) {
+           list[i].checked = true;
+         } else {
+           list[i].checked = false;
+         }
+       }
+    });
+
     });

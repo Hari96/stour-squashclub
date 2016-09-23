@@ -26,7 +26,15 @@ if(isset($_SESSION['role']))
               <td class="narrow"><input type="text" class="form-control text-center" name="age" value="<?php echo set_value('age', $player['age']); ?>"></td>
               <td class="narrow"><input type="text" class="form-control text-center" name="standard" value="<?php echo set_value('standard', $player['standard']); ?>"></td>
               <?php if ($player['activated'] == 1) {$active = "Yes";} else {$active = "No";} ?>
-              <td class="narrow"><input type="text" class="form-control text-center" name="activated" value="<?php echo set_value('activated', $active); ?>"></td>
+              <td>
+                <?php
+                $options = array(
+                  'Yes' => 'Yes',
+                  'No' => 'No'
+                );
+                echo form_dropdown('activated', $options, $active, 'class="form-control"')
+                ?>                
+              </td>
               <td class=="narrow"><button type="submit" class="glyphicon glyphicon-ok" aria-hidden="true"></button><span class="sr-only">Update:</span></td>
             </tr>
         </div>

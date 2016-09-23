@@ -62,6 +62,13 @@ if(isset($_SESSION['role']))
    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   </div>
 <?php $announcement_message = ''; } ?>
+<?php if (isset($mail_sent_message)) { ?>
+ <div class="message-box alert alert-info alert-dismissible">
+   <h3 style="color:green;"><?php echo $mail_sent_message; ?></h3>
+   <a href="<?php echo base_url();?>player_admin/send_mail">Return to sending email page</a>
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+<?php $mail_sent_message = ''; } ?>
 
 <div class="container-fluid">
   <class="row">
@@ -86,10 +93,10 @@ if(isset($_SESSION['role']))
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update">Update main player details</a></td>
           </tr>
           <tr>
-            <tr>
-              <td>You can update other player details: <em>Landline, age, level and league status (active or non-active).</em> </td>
-              <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update2">Update other player details</a></td>
-            </tr>
+            <td>You can update other player details: <em>Landline, age, level and league status (active or non-active).</em> </td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update2">Update other player details</a></td>
+          </tr>
+          <tr>
             <td>You can delete a player and all their details. Be careful!</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Go to player delete page</a></td>
           </tr>
@@ -158,6 +165,10 @@ if(isset($_SESSION['role']))
           <tr>
             <td>Admin announcements can be made, which will be shown on the home page. The latest FIVE announcements are shown, the previous ones are deleted.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/announcement_view/announcements_view">Admin announcements</a></td>
+          </tr>
+          <tr>
+            <td>You can send emails to all, or some of the players.</td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/send_mail">Send mail</a></td>
           </tr>
         </tbody>
       </table>
