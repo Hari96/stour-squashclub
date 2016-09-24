@@ -69,17 +69,24 @@ if(isset($_SESSION['role']))
    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   </div>
 <?php $mail_sent_message = ''; } ?>
+<?php if (isset($all_mail_sent_message)) { ?>
+ <div class="message-box alert alert-info alert-dismissible">
+   <h3 style="color:green;"><?php echo $all_mail_sent_message; ?></h3>
+   <a href="<?php echo base_url();?>player_admin/mail_all">Return to sending email to all page</a>
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+<?php $all_mail_sent_message = ''; } ?>
 
 <div class="container-fluid">
   <class="row">
     <div class="col-md-10 col-md-offset-1 table-responsive">
       <?php echo form_open('player_admin');
-        if ($_SESSION['role'] == 1) {
+        if ($_SESSION['role'] == 1 || $_SESSION['activated'] == 1) {
       ?>
       <span><strong>Currently you will be included in playing lists</strong></span>&nbsp;<button type="submit" class="btn btn-primary">Remove from lists</button>
       <br><br>
       <?php
-       } else if ($_SESSION['role'] == 2) { ?>
+    } else if ($_SESSION['role'] == 2 || $_SESSION['activated'] == 2) { ?>
          <span><strong>Currently you will NOT be included in playing lists</strong></span>&nbsp;<button type="submit" class="btn btn-primary">Add to lists</button>
          <br><br>
       <?php } echo form_close(); ?>
@@ -167,8 +174,12 @@ if(isset($_SESSION['role']))
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/announcement_view/announcements_view">Admin announcements</a></td>
           </tr>
           <tr>
-            <td>You can send emails to all, or some of the players.</td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/send_mail">Send mail</a></td>
+            <td>You can send emails to all, one, or some of the players. Copy will be sent to admin.</td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/send_mail">Send an email to players</a></td>
+          </tr>
+          <tr>
+            <td>This will send your mail to ALL users, including anyone not playing in leagues. Copy will be sent to admin.</td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/mail_all">Send an email to all</a></td>
           </tr>
         </tbody>
       </table>

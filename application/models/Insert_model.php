@@ -4,7 +4,7 @@
 
     public function form_insert($data) {
       $this->db->insert('players', $data);
-    }    
+    }
 
     public function code_insert($data_code) {
       $this->db->insert('activation', $data_code);
@@ -144,7 +144,8 @@
       $admin_data = array(
         'email' => $email,
         'role' => 2,
-        'logged_in' => TRUE
+        'logged_in' => TRUE,
+        'activated' => 2
       );
       $this->session->set_userdata($admin_data);
     } else if ($role == 2) {
@@ -152,7 +153,8 @@
       $admin_data = array(
         'email' => $email,
         'role' => 1,
-        'logged_in' => TRUE
+        'logged_in' => TRUE,
+        'activated' => 1
       );
       $this->session->set_userdata($admin_data);
     }

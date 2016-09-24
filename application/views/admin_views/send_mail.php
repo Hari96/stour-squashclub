@@ -33,13 +33,14 @@ if(isset($_SESSION['role']))
         );
         echo form_textarea($data);
         ?>
+        <input type="hidden" name="mail-type" value="players">
       </div>
     </div>
   </div>
   <p><strong>Choose player or players:</strong></p>
   <div class="table-responsive">
       <table class="table table-bordered">
-        <thead>          
+        <thead>
           <tr><th>Last Name</th><th>First Name</th><th>Email</th><th>Current division</th><th><label>Tick all&nbsp; </label><input type="checkbox" id="all-email"></th></tr>
         </thead>
         <tbody>

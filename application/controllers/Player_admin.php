@@ -83,4 +83,10 @@ class Player_admin extends CI_Controller {
     $this->load->view('admin_views/send_mail', $data);
     $this->load->view('templates/footer', $data);
   }
+
+  public function mail_all() {
+    $this->load->view('templates/header');
+    $this->load->view('admin_views/mail_all');
+    $this->load->view('templates/footer');
+  }
 }

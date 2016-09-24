@@ -42,11 +42,13 @@ class User_login extends CI_Controller {
           $row = $this->users_model->getNamesFromEmail($email);
           $fName = $row->fName;
           $lName = $row->lName;
+          $activation = $row->activated;
           $fullName = $fName . " " . $lName;
           $user_data = array(
             'email'     => $email,
             'logged_in' => TRUE,
-            'name' => $fullName
+            'name' => $fullName,
+            'activated' => $activation
           );
           $this->session->set_userdata($user_data);
           if($this->users_model->get_role($email) == 1) {
@@ -54,14 +56,16 @@ class User_login extends CI_Controller {
             $admin_data = array(
               'email' => $email,
               'role' => 1,
-              'logged_in' => TRUE
+              'logged_in' => TRUE,
+              'activated' => $activation
             );
             $this->session->set_userdata($admin_data);
           } else if ($this->users_model->get_role($email) == 2) {
               $admin_data = array(
                 'email' => $email,
                 'role' => 2,
-                'logged_in' => TRUE
+                'logged_in' => TRUE,
+                'activated' => $activation
               );
               $this->session->set_userdata($admin_data);
             } else {
