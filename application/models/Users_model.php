@@ -28,6 +28,12 @@ class Users_model extends CI_Model {
     return $query->result_array();
   }
 
+  public function get_all_players_and_admins($order_field, $order_direction) {
+    $this->db->order_by($order_field, $order_direction);
+    $query = $this->db->get('players');
+    return $query->result_array();
+  }
+
   public function check_for_email($email) {
     $this->db->where('email', $email);
     $query = $this->db->get('players');

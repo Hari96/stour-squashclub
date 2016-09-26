@@ -99,7 +99,7 @@
     $this->db->insert('months', $months_data);//insert month and year into 'months' table
   }
 
-  public function get_id_from_results($year, $month, $rowNum) {
+  public function get_id_from_results($year, $month, $rowNum) {// not using this function? - to be reomoved
     $this->db->where('year', $year);
     $this->db->where('month', $month);
     $query = $this->db->get('results');
@@ -177,6 +177,21 @@
   public function wordpress_insert($data) {
     $db2 = $this->load->database('db2', TRUE);
     $db2->insert('wp_users', $data);
+  }
+
+  public function set_admin($id) {
+    $this->db->where('id', $id);
+    $query = $this->db->get('players');
+    $activated_val = $query->row(0)->activated;
+    $role = 1;
+    if ($activated_val == 2) {
+      $role = 2;
+    }
+    $data = array(
+      'role' => $role
+    );
+    $this->db->where('id', $id);
+    $this->db->update('players', $data);
   }
 
 }

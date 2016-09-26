@@ -40,6 +40,10 @@ table, th, td {
   content: "* ";
   color: red;
 }
+.admin-star {
+  color: red;
+  font-size: 1.2em;
+}
 .message-box {
   border: 1px solid black;
   width: 50%;

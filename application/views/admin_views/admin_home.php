@@ -181,10 +181,17 @@ if(isset($_SESSION['role']))
             <td>This will send your mail to ALL users, including anyone not playing in leagues. Copy will be sent to admin.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/mail_all">Send an email to all</a></td>
           </tr>
+          <tr>
+            <td>You can make a player an admin, permanent or as a temporary measure</td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/create_admin">Make player an admin</a></td>
+          </tr>
         </tbody>
       </table>
   </div>
+  <?php } else { ?>
+  <div class="spacing-sides">
+  <img src="<?php echo base_url();?>images/web-lock.png"><br><br>
+  <p class="text-warning">You are not an admin, so you do not have access to this page</p><br>
+  <?php } ?>
+  </div>
 </div>
-<?php } else {
-  echo "You are not an admin, so you do not have access to this page <br>";
-} ?>

@@ -72,7 +72,10 @@ if(isset($_SESSION['role']))
 
     <?php echo form_close(); $c = 1; ?>
     <br>
+    <?php } else { ?>
+    <div class="spacing-sides">
+    <img src="<?php echo base_url();?>images/web-lock.png"><br><br>
+    <p class="text-warning">You are not an admin, so you do not have access to this page</p><br>
+    <?php } ?>
+    </div>
   </div>
-<?php } else {
-  echo "You are not an admin, so you do not have access to this page <br>";
-} ?>
