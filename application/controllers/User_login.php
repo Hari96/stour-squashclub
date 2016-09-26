@@ -25,7 +25,7 @@ class User_login extends CI_Controller {
       if($this->users_model->check_for_email($email) == TRUE) {
         // check password is correct for this user
         $password = $this->input->post('inputPassword');
-        $salt = file_get_contents('http://rgbmarketing.co.uk/_private69/salt.txt');
+        $salt = file_get_contents('http://www.rgbmarketing.co.uk/_private69/salt.txt');
         $password = hash_hmac('whirlpool', $password, $salt);
         if($this->users_model->check_password($email, $password) == FALSE) {
           $data['wrong_password_message'] = "The password is incorrect, please try again";

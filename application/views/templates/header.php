@@ -14,7 +14,7 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top bg-navbar">
 
       <h1 class="text-center" id="head"><img src="<?php echo base_url();?>images/squash-racquets.png">Stour Centre Squash Club - Ashford, Kent<img src="<?php echo base_url();?>images/squash-racquets.png"></h1>
 
@@ -30,10 +30,10 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="<?php echo base_url();?>pages/home_view">Home</a></li>
-        <li><a href="<?php echo base_url();?>pages/view/about">About</a></li>
+        <li><a href="<?php echo base_url();?>pages/home_view"><strong>Home</strong></a></li>
+        <li><a href="<?php echo base_url();?>pages/view/about"><strong>About</strong></a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Competitions <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Competitions</strong> <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo base_url();?>model_views/view/divisions">Current divisions</a></li>
             <li><a href="<?php echo base_url();?>display_results/initial_results">Results</a></li>
@@ -44,26 +44,26 @@
           </ul>
         </li>
         <?php if(isset($_SESSION['email'])) { ?>
-        <li><a href="http://www.stoursquashclub.co.uk/sqcl-forum">Forum</a></li>
+        <li><a href="http://www.stoursquashclub.co.uk/sqcl-forum"><strong>Forum</strong></a></li>
         <?php } ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contacting<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Contacting</strong><span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo base_url();?>captcha_contact/form">Contact Form</a></li>
             <li><a href="<?php echo base_url();?>captcha_results/form">Results Form</a></li>
           </ul>
         </li>
         <?php if(isset($_SESSION['email'])) { ?>
-          <li><a href="<?php echo base_url();?>user_update/user_account">Edit account</a></li>
-          <li><a href="<?php echo base_url();?>user_login/user_logout">Logout</a></li>
+          <li><a href="<?php echo base_url();?>user_update/user_account"><strong>Edit account</strong></a></li>
+          <li><a href="<?php echo base_url();?>user_login/user_logout"><strong>Logout</strong></a></li>
         <?php }  else { ?>
-        <li><a href="<?php echo base_url();?>model_views/view/login">Login</a></li>
-        <li><a href="<?php echo base_url();?>model_views/view/register">Signup</a></li>
+        <li><a href="<?php echo base_url();?>model_views/view/login"><strong>Login</strong></a></li>
+        <li><a href="<?php echo base_url();?>model_views/view/register"><strong>Signup</strong></a></li>
         <?php }
         if(isset($_SESSION['role'])) { ?>
-        <li><a href="<?php echo base_url();?>player_admin/crud_view/admin_home">Admin</a></li>
+        <li><a href="<?php echo base_url();?>player_admin/crud_view/admin_home"><strong>Admin</strong></a></li>
         <?php } ?>
       </ul>
       </div><!-- navbar-collapse-->

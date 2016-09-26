@@ -1,0 +1,267 @@
+[25-Jul-2016 19:03:10 UTC] PHP Fatal error:  Cannot redeclare News::index() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/News.php on line 29
+[25-Jul-2016 19:05:07 UTC] PHP Fatal error:  Cannot redeclare News::index() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/News.php on line 29
+[25-Jul-2016 19:05:10 UTC] PHP Fatal error:  Cannot redeclare News::index() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/News.php on line 29
+[29-Jul-2016 20:54:37 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/templates/header.php on line 7
+[29-Jul-2016 20:56:59 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/templates/header.php on line 7
+[31-Jul-2016 23:25:23 UTC] PHP Parse error:  syntax error, unexpected '=', expecting ']' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Model_views.php on line 40
+[31-Jul-2016 23:26:43 UTC] PHP Fatal error:  Call to a member function create_users() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Model_views.php on line 37
+[03-Aug-2016 14:08:22 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/register.php on line 24
+[03-Aug-2016 22:16:09 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/register.php on line 3
+[04-Aug-2016 16:43:03 UTC] PHP Fatal error:  Call to undefined method Insert_model::get_mails() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 39
+[04-Aug-2016 17:33:02 UTC] PHP Fatal error:  Can't use function return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/register.php on line 5
+[05-Aug-2016 17:06:41 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 32
+[05-Aug-2016 17:06:46 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 32
+[05-Aug-2016 17:06:46 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 32
+[05-Aug-2016 17:07:28 UTC] PHP Fatal error:  Call to undefined method Insert_model::isDuplicate() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 32
+[05-Aug-2016 17:10:56 UTC] PHP Fatal error:  Call to undefined method Insert_model::isDuplicate() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 32
+[05-Aug-2016 22:58:09 UTC] PHP Fatal error:  Call to undefined function where() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 21
+[05-Aug-2016 22:58:18 UTC] PHP Fatal error:  Call to undefined function where() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 21
+[05-Aug-2016 22:58:18 UTC] PHP Fatal error:  Call to undefined function where() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 21
+[07-Aug-2016 13:22:24 UTC] PHP Parse error:  syntax error, unexpected '%' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 38
+[07-Aug-2016 13:22:24 UTC] PHP Parse error:  syntax error, unexpected '%' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 38
+[07-Aug-2016 13:22:30 UTC] PHP Parse error:  syntax error, unexpected '%' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 38
+[07-Aug-2016 13:25:42 UTC] PHP Parse error:  syntax error, unexpected '%' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 38
+[07-Aug-2016 14:28:40 UTC] PHP Fatal error:  Call to a member function view() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 84
+[07-Aug-2016 14:28:45 UTC] PHP Fatal error:  Call to a member function view() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 84
+[07-Aug-2016 14:28:45 UTC] PHP Fatal error:  Call to a member function view() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 84
+[07-Aug-2016 20:13:43 UTC] PHP Fatal error:  Call to a member function check_for_email() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 20
+[07-Aug-2016 20:16:47 UTC] PHP Fatal error:  Call to a member function check_for_email() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 20
+[07-Aug-2016 21:13:39 UTC] PHP Fatal error:  Call to a member function row() on array in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 29
+[07-Aug-2016 21:25:54 UTC] PHP Fatal error:  Call to a member function result() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 29
+[07-Aug-2016 21:28:04 UTC] PHP Fatal error:  Call to a member function result() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 29
+[07-Aug-2016 21:45:33 UTC] PHP Fatal error:  Call to a member function result() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 29
+[07-Aug-2016 21:53:46 UTC] PHP Fatal error:  Call to a member function result() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 28
+[07-Aug-2016 21:55:05 UTC] PHP Fatal error:  Call to a member function result() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 28
+[07-Aug-2016 21:56:21 UTC] PHP Fatal error:  Call to undefined method stdClass::result() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 28
+[08-Aug-2016 22:13:30 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 28
+[08-Aug-2016 22:13:35 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 28
+[08-Aug-2016 22:13:35 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 28
+[09-Aug-2016 20:53:31 UTC] PHP Parse error:  syntax error, unexpected '$query' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 12
+[09-Aug-2016 22:53:57 UTC] PHP Fatal error:  Call to undefined method CI_Loader::admin_view() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 18
+[09-Aug-2016 22:54:07 UTC] PHP Fatal error:  Call to undefined method CI_Loader::admin_view() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 18
+[09-Aug-2016 22:54:07 UTC] PHP Fatal error:  Call to undefined method CI_Loader::admin_view() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 18
+[09-Aug-2016 22:55:11 UTC] PHP Fatal error:  Call to undefined method CI_Loader::admin_view() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 19
+[10-Aug-2016 14:06:58 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 17
+[10-Aug-2016 14:46:28 UTC] PHP Parse error:  syntax error, unexpected 'glyphicon' (T_STRING), expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/user_details.php on line 7
+[10-Aug-2016 14:46:32 UTC] PHP Parse error:  syntax error, unexpected 'glyphicon' (T_STRING), expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/user_details.php on line 7
+[10-Aug-2016 14:46:32 UTC] PHP Parse error:  syntax error, unexpected 'glyphicon' (T_STRING), expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/user_details.php on line 7
+[11-Aug-2016 12:21:38 UTC] PHP Fatal error:  Call to a member function delete_user() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Delete_users.php on line 11
+[11-Aug-2016 12:21:46 UTC] PHP Fatal error:  Call to a member function delete_user() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Delete_users.php on line 11
+[11-Aug-2016 12:21:48 UTC] PHP Fatal error:  Call to a member function delete_user() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Delete_users.php on line 11
+[11-Aug-2016 12:22:23 UTC] PHP Fatal error:  Call to a member function delete_user() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Delete_users.php on line 11
+[11-Aug-2016 17:40:13 UTC] PHP Fatal error:  Call to undefined function var_dumps() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Delete_users.php on line 12
+[11-Aug-2016 18:47:49 UTC] PHP Parse error:  syntax error, unexpected 'id' (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/user_delete.php on line 18
+[11-Aug-2016 18:47:54 UTC] PHP Parse error:  syntax error, unexpected 'id' (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/user_delete.php on line 18
+[11-Aug-2016 18:47:54 UTC] PHP Parse error:  syntax error, unexpected 'id' (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/user_delete.php on line 18
+[12-Aug-2016 16:11:02 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 53
+[12-Aug-2016 16:11:07 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 53
+[12-Aug-2016 16:11:08 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 53
+[12-Aug-2016 16:11:42 UTC] PHP Fatal error:  Call to a member function check_other_emails() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_users.php on line 29
+[12-Aug-2016 16:14:39 UTC] PHP Fatal error:  Call to a member function check_other_emails() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_users.php on line 29
+[12-Aug-2016 16:23:01 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_users.php on line 35
+[12-Aug-2016 16:28:48 UTC] PHP Fatal error:  Call to a member function check_other_emails() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_users.php on line 30
+[12-Aug-2016 16:32:59 UTC] PHP Fatal error:  Call to a member function check_other_emails() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_users.php on line 30
+[12-Aug-2016 16:33:53 UTC] PHP Fatal error:  Call to a member function check_other_emails() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_users.php on line 30
+[14-Aug-2016 20:16:38 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/leagues_view.php on line 10
+[15-Aug-2016 17:35:04 UTC] PHP Fatal error:  Call to undefined method Insert_model::update_leagues() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 63
+[15-Aug-2016 17:35:09 UTC] PHP Fatal error:  Call to undefined method Insert_model::update_leagues() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 63
+[15-Aug-2016 17:35:09 UTC] PHP Fatal error:  Call to undefined method Insert_model::update_leagues() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 63
+[15-Aug-2016 17:36:14 UTC] PHP Fatal error:  Call to undefined method Insert_model::update_leagues() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 63
+[15-Aug-2016 18:03:13 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 40
+[15-Aug-2016 18:03:20 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 40
+[15-Aug-2016 18:03:20 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 40
+[15-Aug-2016 23:23:20 UTC] PHP Parse error:  syntax error, unexpected ''leagues;' (T_ENCAPSED_AND_WHITESPACE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 54
+[16-Aug-2016 12:58:58 UTC] PHP Fatal error:  Call to undefined method Insert_model::get() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 56
+[16-Aug-2016 13:45:57 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 72
+[16-Aug-2016 15:18:16 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/admin_home.php on line 2
+[16-Aug-2016 15:18:16 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/admin_home.php on line 2
+[16-Aug-2016 15:18:16 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/admin_home.php on line 2
+[16-Aug-2016 15:18:21 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/admin_home.php on line 2
+[16-Aug-2016 15:18:21 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/admin_home.php on line 2
+[17-Aug-2016 21:16:04 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/results_view.php on line 26
+[18-Aug-2016 16:14:12 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/admin_home.php on line 8
+[18-Aug-2016 16:22:10 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 15
+[18-Aug-2016 16:24:18 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 15
+[18-Aug-2016 16:26:50 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 15
+[18-Aug-2016 16:31:24 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 15
+[18-Aug-2016 17:00:22 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/admin_home.php on line 8
+[18-Aug-2016 17:08:02 UTC] PHP Parse error:  syntax error, unexpected '$val_direct' (T_VARIABLE), expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/admin_home.php on line 8
+[18-Aug-2016 17:10:39 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 17
+[18-Aug-2016 17:10:48 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 17
+[18-Aug-2016 17:10:49 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 17
+[18-Aug-2016 17:53:51 UTC] PHP Fatal error:  Call to undefined method Users_model::get_current_results() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 23
+[18-Aug-2016 18:04:26 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 24
+[18-Aug-2016 18:04:59 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 24
+[18-Aug-2016 19:31:55 UTC] PHP Fatal error:  Call to undefined method Users_model::get_names_from_id() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 26
+[19-Aug-2016 18:42:49 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' or '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 73
+[19-Aug-2016 18:42:54 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' or '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 73
+[19-Aug-2016 18:42:54 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' or '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 73
+[19-Aug-2016 18:57:47 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' or '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 73
+[19-Aug-2016 19:54:01 UTC] PHP Fatal error:  Call to undefined function find_players_in_div() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 41
+[20-Aug-2016 13:13:12 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 52
+[20-Aug-2016 13:54:27 UTC] PHP Fatal error:  Call to undefined method Insert_model::update_reults_info() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 207
+[20-Aug-2016 13:55:53 UTC] PHP Fatal error:  Call to undefined method Insert_model::update_reults_info() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 207
+[20-Aug-2016 16:41:04 UTC] PHP Fatal error:  Call to a member function row() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 107
+[20-Aug-2016 16:48:50 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 85
+[20-Aug-2016 16:49:27 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 164
+[20-Aug-2016 16:50:00 UTC] PHP Fatal error:  Call to a member function row() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 107
+[20-Aug-2016 18:05:31 UTC] PHP Fatal error:  Call to a member function update() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 113
+[20-Aug-2016 18:06:27 UTC] PHP Fatal error:  Call to a member function update() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 113
+[20-Aug-2016 18:19:49 UTC] PHP Fatal error:  Call to undefined method Insert_model::update_reults_info() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 227
+[21-Aug-2016 11:17:32 UTC] PHP Fatal error:  Call to undefined function get_id_from_results() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 113
+[21-Aug-2016 14:10:45 UTC] PHP Fatal error:  Call to undefined method Users_model::delete_set_of_players() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_leagues.php on line 183
+[21-Aug-2016 18:24:02 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/results_view.php on line 93
+[21-Aug-2016 20:05:02 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 51
+[21-Aug-2016 20:05:06 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 51
+[21-Aug-2016 20:05:06 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 51
+[22-Aug-2016 10:57:58 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/results_view.php on line 232
+[22-Aug-2016 14:36:03 UTC] PHP Fatal error:  Call to undefined method Users_model::get_name_from_id() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 31
+[22-Aug-2016 14:36:30 UTC] PHP Fatal error:  Call to undefined method Users_model::get_name_from_id() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 31
+[22-Aug-2016 14:50:06 UTC] PHP Fatal error:  Call to a member function row() on array in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 29
+[22-Aug-2016 16:11:15 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 24
+[22-Aug-2016 16:11:16 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 24
+[22-Aug-2016 16:11:16 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Results_hub.php on line 24
+[23-Aug-2016 14:34:41 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Enter_results.php on line 25
+[23-Aug-2016 14:34:47 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Enter_results.php on line 25
+[23-Aug-2016 14:34:47 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Enter_results.php on line 25
+[24-Aug-2016 13:52:27 UTC] PHP Parse error:  syntax error, unexpected 'day' (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/results_view.php on line 70
+[24-Aug-2016 13:58:16 UTC] PHP Parse error:  syntax error, unexpected 'date' (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/results_view.php on line 71
+[24-Aug-2016 19:48:53 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/results_view.php on line 96
+[26-Aug-2016 15:33:57 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/results.php on line 84
+[26-Aug-2016 21:00:49 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/results.php on line 90
+[26-Aug-2016 21:01:57 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/results.php on line 105
+[27-Aug-2016 16:59:44 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/results.php on line 87
+[27-Aug-2016 16:59:54 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/results.php on line 87
+[27-Aug-2016 16:59:54 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/results.php on line 87
+[28-Aug-2016 15:54:12 UTC] PHP Fatal error:  Can't use method return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Display_results.php on line 19
+[28-Aug-2016 15:54:20 UTC] PHP Fatal error:  Can't use method return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Display_results.php on line 19
+[28-Aug-2016 15:54:20 UTC] PHP Fatal error:  Can't use method return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Display_results.php on line 19
+[30-Aug-2016 23:20:34 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/divisions.php on line 123
+[30-Aug-2016 23:20:38 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/divisions.php on line 123
+[30-Aug-2016 23:20:38 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/divisions.php on line 123
+[31-Aug-2016 17:22:43 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_update.php on line 15
+[31-Aug-2016 18:13:45 UTC] PHP Fatal error:  Call to undefined function all_userdata() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_update.php on line 15
+[31-Aug-2016 18:30:30 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/myaccount.php on line 48
+[31-Aug-2016 18:32:05 UTC] PHP Fatal error:  Call to undefined method Users_model::getNamesFromEmail() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_update.php on line 17
+[31-Aug-2016 21:39:40 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_update.php on line 34
+[31-Aug-2016 22:14:47 UTC] PHP Fatal error:  Call to a member function update_users() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_update.php on line 70
+[04-Sep-2016 17:57:18 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Lost_password.php on line 20
+[04-Sep-2016 17:57:24 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Lost_password.php on line 20
+[04-Sep-2016 17:57:24 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Lost_password.php on line 20
+[08-Sep-2016 20:36:01 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:36:08 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:36:08 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:38:36 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:41:57 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:43:34 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:45:01 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 18
+[08-Sep-2016 20:48:28 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:58:12 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:59:21 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:59:22 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:59:22 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 20:59:48 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:00:21 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:01:42 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:04:03 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:04:45 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:25:17 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:25:24 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:25:24 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:32:20 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:45:30 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:46:48 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 21:48:01 UTC] PHP Fatal error:  Call to undefined function simple_captcha() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 19
+[08-Sep-2016 22:38:42 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/assets/captcha/simple_captcha.php on line 79
+[08-Sep-2016 22:38:46 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/assets/captcha/simple_captcha.php on line 79
+[08-Sep-2016 22:38:46 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/assets/captcha/simple_captcha.php on line 79
+[09-Sep-2016 00:46:23 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Lost_password.php on line 20
+[09-Sep-2016 00:46:28 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Lost_password.php on line 20
+[09-Sep-2016 00:46:28 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Lost_password.php on line 20
+[09-Sep-2016 00:55:12 UTC] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 34
+[09-Sep-2016 17:32:58 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 49
+[09-Sep-2016 17:32:58 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 49
+[09-Sep-2016 17:32:58 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 49
+[09-Sep-2016 18:13:38 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_controller.php on line 31
+[09-Sep-2016 18:13:47 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_controller.php on line 31
+[09-Sep-2016 18:13:47 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_controller.php on line 31
+[09-Sep-2016 19:40:26 UTC] PHP Fatal error:  Call to a member function check_for_email() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_controller.php on line 22
+[09-Sep-2016 20:20:47 UTC] PHP Parse error:  syntax error, unexpected '');' (T_CONSTANT_ENCAPSED_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 40
+[09-Sep-2016 20:20:49 UTC] PHP Parse error:  syntax error, unexpected '');' (T_CONSTANT_ENCAPSED_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 40
+[09-Sep-2016 20:20:49 UTC] PHP Parse error:  syntax error, unexpected '');' (T_CONSTANT_ENCAPSED_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/forgot_password.php on line 40
+[10-Sep-2016 17:33:42 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/New_password.php on line 32
+[11-Sep-2016 16:51:08 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/pages/contact.php on line 23
+[11-Sep-2016 18:42:54 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_contact.php on line 34
+[11-Sep-2016 18:42:59 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_contact.php on line 34
+[11-Sep-2016 18:42:59 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_contact.php on line 34
+[12-Sep-2016 20:20:19 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/pages/contact.php on line 24
+[12-Sep-2016 20:30:39 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE), expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/pages/contact.php on line 32
+[13-Sep-2016 14:45:39 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/profiles.php on line 17
+[13-Sep-2016 14:45:44 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/profiles.php on line 17
+[13-Sep-2016 14:45:44 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/profiles.php on line 17
+[13-Sep-2016 19:15:43 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 140
+[13-Sep-2016 19:15:47 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 140
+[13-Sep-2016 19:15:47 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 140
+[13-Sep-2016 19:20:38 UTC] PHP Fatal error:  Call to a member function get() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 147
+[13-Sep-2016 19:21:55 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 149
+[14-Sep-2016 11:10:20 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 48
+[14-Sep-2016 12:31:50 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 146
+[14-Sep-2016 12:31:54 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 146
+[14-Sep-2016 12:31:54 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 146
+[14-Sep-2016 12:34:00 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 63
+[14-Sep-2016 12:34:05 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 63
+[14-Sep-2016 12:34:05 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 63
+[14-Sep-2016 22:54:31 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/results.php on line 276
+[14-Sep-2016 22:56:36 UTC] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/results.php on line 277
+[15-Sep-2016 15:17:11 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_results.php on line 48
+[15-Sep-2016 15:17:15 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_results.php on line 48
+[15-Sep-2016 15:17:15 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_results.php on line 48
+[16-Sep-2016 08:43:00 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/pages/results_form.php on line 18
+[16-Sep-2016 08:43:05 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/pages/results_form.php on line 18
+[16-Sep-2016 08:43:05 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/pages/results_form.php on line 18
+[16-Sep-2016 08:44:28 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/pages/results_form.php on line 21
+[16-Sep-2016 08:44:30 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/pages/results_form.php on line 21
+[16-Sep-2016 22:08:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/templates/results_form_table.php on line 18
+[16-Sep-2016 22:43:29 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/templates/results_form_table.php on line 19
+[17-Sep-2016 11:38:22 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Captcha_results.php on line 28
+[17-Sep-2016 18:34:27 UTC] PHP Parse error:  syntax error, unexpected '$gamesPlayed' (T_VARIABLE), expecting case (T_CASE) or default (T_DEFAULT) or '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/tables.php on line 117
+[17-Sep-2016 18:34:30 UTC] PHP Parse error:  syntax error, unexpected '$gamesPlayed' (T_VARIABLE), expecting case (T_CASE) or default (T_DEFAULT) or '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/tables.php on line 117
+[17-Sep-2016 18:34:31 UTC] PHP Parse error:  syntax error, unexpected '$gamesPlayed' (T_VARIABLE), expecting case (T_CASE) or default (T_DEFAULT) or '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/tables.php on line 117
+[17-Sep-2016 18:42:13 UTC] PHP Parse error:  syntax error, unexpected '$gamesWon' (T_VARIABLE), expecting case (T_CASE) or default (T_DEFAULT) or '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/tables.php on line 117
+[18-Sep-2016 19:08:01 UTC] PHP Fatal error:  Call to undefined method Users_model::get_announcements() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 71
+[18-Sep-2016 19:08:05 UTC] PHP Fatal error:  Call to undefined method Users_model::get_announcements() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 71
+[18-Sep-2016 19:08:05 UTC] PHP Fatal error:  Call to undefined method Users_model::get_announcements() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 71
+[18-Sep-2016 19:08:38 UTC] PHP Fatal error:  Call to a member function result_array() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 167
+[18-Sep-2016 19:51:09 UTC] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/announcements_view.php on line 10
+[18-Sep-2016 19:51:58 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/announcements_view.php on line 10
+[18-Sep-2016 22:51:54 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting identifier (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Admin_announcements.php on line 11
+[18-Sep-2016 22:52:00 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting identifier (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Admin_announcements.php on line 11
+[18-Sep-2016 22:52:00 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting identifier (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Admin_announcements.php on line 11
+[19-Sep-2016 00:56:28 UTC] PHP Parse error:  syntax error, unexpected 'TABLE' (T_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 170
+[21-Sep-2016 12:57:59 UTC] PHP Parse error:  syntax error, unexpected '$wp_hasher' (T_VARIABLE), expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Hash_wordpress.php on line 7
+[21-Sep-2016 12:59:45 UTC] PHP Fatal error:  require(): Failed opening required '../libraries/wordpress_hash.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Hash_wordpress.php on line 4
+[21-Sep-2016 13:06:05 UTC] PHP Parse error:  syntax error, unexpected 'require' (T_REQUIRE), expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Hash_wordpress.php on line 6
+[21-Sep-2016 13:06:52 UTC] PHP Fatal error:  require(): Failed opening required 'APPPATH.libraries/wordpress_hash.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Hash_wordpress.php on line 4
+[21-Sep-2016 13:21:04 UTC] PHP Fatal error:  Class 'PasswordHash' not found in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Hash_wordpress.php on line 8
+[21-Sep-2016 19:36:59 UTC] PHP Parse error:  syntax error, unexpected '$name' (T_VARIABLE), expecting ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 75
+[21-Sep-2016 21:21:54 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 110
+[21-Sep-2016 22:01:39 UTC] PHP Fatal error:  Can't use method return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 35
+[21-Sep-2016 22:02:21 UTC] PHP Fatal error:  Can't use method return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 35
+[21-Sep-2016 22:02:37 UTC] PHP Fatal error:  Can't use method return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 35
+[21-Sep-2016 22:08:08 UTC] PHP Fatal error:  Can't use method return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 35
+[21-Sep-2016 22:24:40 UTC] PHP Fatal error:  Can't use method return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/User_login.php on line 35
+[22-Sep-2016 17:32:53 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_users2.php on line 46
+[23-Sep-2016 17:21:39 UTC] PHP Parse error:  syntax error, unexpected '$email' (T_VARIABLE), expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Send_mails.php on line 20
+[23-Sep-2016 17:22:44 UTC] PHP Parse error:  syntax error, unexpected '$email' (T_VARIABLE), expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Send_mails.php on line 20
+[23-Sep-2016 20:27:56 UTC] PHP Parse error:  syntax error, unexpected '"Hi "' (T_CONSTANT_ENCAPSED_STRING) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Send_mails.php on line 26
+[23-Sep-2016 20:28:29 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Send_mails.php on line 31
+[26-Sep-2016 00:05:01 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[26-Sep-2016 00:12:39 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[26-Sep-2016 00:13:08 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[26-Sep-2016 00:14:38 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[26-Sep-2016 00:15:13 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[26-Sep-2016 00:15:17 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[26-Sep-2016 00:15:29 UTC] PHP Fatal error:  Function name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[26-Sep-2016 00:17:11 UTC] PHP Fatal error:  Method name must be a string in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 185
+[26-Sep-2016 00:17:48 UTC] PHP Fatal error:  Call to undefined function update() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 193
+[26-Sep-2016 12:50:03 UTC] PHP Parse error:  syntax error, unexpected ':' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/create_admin.php on line 8

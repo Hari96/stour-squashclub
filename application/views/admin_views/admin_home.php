@@ -77,6 +77,20 @@ if(isset($_SESSION['role']))
   </div>
 <?php $all_mail_sent_message = ''; } ?>
 
+<?php if (isset($admin_create_message)) { ?>
+ <div class="message-box alert alert-info alert-dismissible">
+   <h3 style="color:green;"><?php echo $admin_create_message; ?></h3>
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+<?php $admin_create_message = ''; } ?>
+
+<?php if (isset($admin_unset_message)) { ?>
+ <div class="message-box alert alert-info alert-dismissible">
+   <h3 style="color:green;"><?php echo $admin_unset_message; ?></h3>
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+<?php $admin_unset_message = ''; } ?>
+
 <div class="container-fluid">
   <class="row">
     <div class="col-md-10 col-md-offset-1 table-responsive">
@@ -182,8 +196,8 @@ if(isset($_SESSION['role']))
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/mail_all">Send an email to all</a></td>
           </tr>
           <tr>
-            <td>You can make a player an admin, permanent or as a temporary measure</td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/create_admin">Make player an admin</a></td>
+            <td>You can make a player an admin, permanent or as a temporary measure. And also unset a current admin. A maximum of TWO admins are allowed at one time. You must create an admin before unsetting yourself!</td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/admin_control">Create/delete an admin</a></td>
           </tr>
         </tbody>
       </table>

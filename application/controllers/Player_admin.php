@@ -90,12 +90,12 @@ class Player_admin extends CI_Controller {
     $this->load->view('templates/footer');
   }
 
-  public function create_admin() {
+  public function admin_control() {
     $order_field = "lName";//which field to order by
     $order_direction = "asc";// direction of sort
     $data['players'] = $this->users_model->get_all_players_and_admins($order_field, $order_direction);
     $this->load->view('templates/header', $data);
-    $this->load->view('admin_views/create_admin', $data);
+    $this->load->view('admin_views/admin_control', $data);
     $this->load->view('templates/footer', $data);
   }
 

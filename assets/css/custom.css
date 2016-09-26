@@ -1,5 +1,11 @@
 body {
   padding-top: 120px;
+  background-color: #FCF4D9;
+}
+
+.bg-navbar {
+  background-color: #FFB85F;
+  color: #FF7A5A;
 }
 #head {
   font-size: 1.3em;

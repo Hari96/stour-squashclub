@@ -194,4 +194,12 @@
     $this->db->update('players', $data);
   }
 
+  public function unset_admin($id) {
+    $this->db->where('id', $id);
+    $data = array(
+      'role' => 0
+    );
+    $this->db->update('players', $data);
+  }
+
 }

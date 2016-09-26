@@ -40,7 +40,7 @@
         //hashing password
         $password = $this->input->post('inputPassword');
         $wordpress_pass = $password;
-        $salt = file_get_contents('http://rgbmarketing.co.uk/_private69/salt.txt');
+        $salt = file_get_contents('http://www.rgbmarketing.co.uk/_private69/salt.txt');
         $password = hash_hmac('whirlpool',$password, $salt);
         // Checks to see if player wishes to play in league
         $league_player = false;
@@ -69,12 +69,14 @@
         require(APPPATH.'libraries/wordpress_hash.php');
         $wp_hasher = new PasswordHash(34, true);   // 34 digit hashing password
         $pass = $wp_hasher->HashPassword(trim($wordpress_pass));
+        $date = date('Y-m-d\TH:i:sO');
         $data = array(
           'user_login' => $name,
           'user_pass' => $pass,
           'user_nicename' => $name,
           'display_name' => $name,
-          'user_email' => $email
+          'user_email' => $email,
+          'user_registered' => $date
         );
         $this->insert_model->wordpress_insert($data);
         $data['message'] = 'Registration successful, you will receive an activation email soon';

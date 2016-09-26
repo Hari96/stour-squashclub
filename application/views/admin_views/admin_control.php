@@ -4,8 +4,24 @@ if(isset($_SESSION['role']))
 { ?>
 <div class="container-fluid">
   <?php
-  echo form_open('create_admin');
-  echo form_submit('new_admin', 'Create New Admin', 'class="btn btn-primary pull-right"');
+  echo form_open('admin_control');
+  $count = 0;
+  foreach ($players as $player):
+    if ($player['role'] == 1 || $player['role'] == 2) {
+      $count++;
+    }
+  endforeach;
+  if ($count == 2) {
+    ?>
+    <input type= "hidden" name="admin_choice" value="d">
+    <?php
+    echo form_submit('del_admin', 'Unset Admin', 'class="btn btn-primary pull-right"');
+  } else {
+    ?>
+    <input type="hidden" name="admin_choice" value="c">
+    <?php
+    echo form_submit('new_admin', 'Create New Admin', 'class="btn btn-primary pull-right"');
+        }
   ?>
   <br clear="all"><br>
   <div class="row">
@@ -31,7 +47,7 @@ if(isset($_SESSION['role']))
               <td> <input type="text" name="<?php echo 'fn'.$c; ?>" value="<?php echo set_value('fn'.$c, $player['fName']); ?>"></td>
               <td><?php echo form_radio($data); ?></td></tr>
               <?php $id = 'ch' .$c; ?>
-              <input type="hidden" name="<?php echo $id; ?>" value="<?php echo set_value('$id', $player['id']); ?>"
+              <input type="hidden" name="<?php echo $id; ?>" value="<?php echo set_value('$id', $player['id']); ?>">
             </tr>
           <?php $c++; endforeach; ?>
           <input type="hidden" name="num" value="<?php echo $c; ?>">
