@@ -2,9 +2,18 @@ body {
   padding-top: 120px;
   background-color: #FCF4D9;
 }
-
 .bg-navbar {
   background-color: #FFB85F;
+  color: #FF7A5A;
+}
+.panel {
+  background-color: #8ED2C9;
+}
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #8ED2C9;
+ }
+.table-striped>tbody>tr>td>a {
   color: #FF7A5A;
 }
 #head {

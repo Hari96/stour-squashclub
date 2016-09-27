@@ -69,7 +69,7 @@ echo ucfirst($month) . " " . $partYear;
     </div>
     <div class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 1</strong></span>
-      <table class="table table-bordered">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
         </thead>
@@ -92,7 +92,7 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr><th></th>
             <?php $c = 0; $nameArr = array(); $idArr = array();
@@ -293,7 +293,7 @@ echo ucfirst($month) . " " . $partYear;
     </div>
     <div class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 2</strong></span>
-      <table class="table table-bordered">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
         </thead>
@@ -316,7 +316,7 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr><th></th>
               <?php $c = 0; $nameArr = array(); $idArr = array();
@@ -517,7 +517,7 @@ echo ucfirst($month) . " " . $partYear;
     </div>
     <div class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 3</strong></span>
-      <table class="table table-bordered">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
         </thead>
@@ -540,7 +540,7 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr><th></th>
               <?php $c = 0; $nameArr = array(); $idArr = array();
@@ -741,7 +741,7 @@ echo ucfirst($month) . " " . $partYear;
     </div>
     <div class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 4</strong></span>
-      <table class="table table-bordered">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr><th colspan="4"><span class="pull-left"><?php echo ucfirst($month) . " " . $year; ?></span></th></tr>
         </thead>
@@ -764,7 +764,7 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr><th></th>
               <?php $c = 0; $nameArr = array(); $idArr = array();
@@ -946,7 +946,7 @@ echo ucfirst($month) . " " . $partYear;
                             echo $player2_score;
                           }
                         }
-                      }                        
+                      }
                   endforeach;
                 }
                 echo "</td>";

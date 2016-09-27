@@ -21,13 +21,17 @@
       $data_leagues = array(
         'user_id' => $user_id
       );
+      $data_profiles = array(
+        'user_id' => $user_id,
+        'active' => 1
+      );
       if ($league_player == true) {
       $data = array(
         'activated' => 1,
         'JoinDate' => $date
       );
       $this->db->insert('leagues', $data_leagues);// maybe not necessary?
-      $this->db->insert('profiles', $data_leagues);//inserts user id into profiles table
+      $this->db->insert('profiles', $data_profiles);//inserts user id into profiles table
     } else {
       $data = array(
         'activated' => 2,

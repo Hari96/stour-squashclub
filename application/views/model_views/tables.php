@@ -68,7 +68,7 @@ echo ucfirst($month) . " " . $partYear;
     </div>
     <div class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 1</strong></span>
-      <table class="table table-bordered">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
         </thead>
@@ -239,7 +239,7 @@ echo ucfirst($month) . " " . $partYear;
   </div>
   <div class="col-md-8 table-responsive">
     <span class="lead"><strong>DIVISION 2</strong></span>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
       <thead>
         <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
       </thead>
@@ -410,7 +410,7 @@ echo ucfirst($month) . " " . $partYear;
   </div>
   <div class="col-md-8 table-responsive">
     <span class="lead"><strong>DIVISION 3</strong></span>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
       <thead>
         <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
       </thead>
@@ -581,7 +581,7 @@ echo ucfirst($month) . " " . $partYear;
   </div>
   <div class="col-md-8 table-responsive">
     <span class="lead"><strong>DIVISION 4</strong></span>
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
       <thead>
         <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
       </thead>

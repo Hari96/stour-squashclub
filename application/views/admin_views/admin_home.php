@@ -176,7 +176,7 @@ if(isset($_SESSION['role']))
                 'id' => 'yearmonth',
                 'type' => 'submit',
                 'content' => 'Show results',
-                'class' => 'btn btn-info'
+                'class' => 'btn btn-primary'
               );
               echo form_button($data);
               ?>

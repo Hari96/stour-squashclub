@@ -25,7 +25,18 @@ if(isset($_SESSION['role']))
                 <td class="wide"><input type="text" class="form-control text-center" name="landline" value="<?php echo set_value('landline', $player['landline']); ?>"></td>
                 <td class="narrow"><input type="text" class="form-control text-center" name="age" value="<?php echo set_value('age', $player['age']); ?>"></td>
                 <td class="narrow"><input type="text" class="form-control text-center" name="standard" value="<?php echo set_value('standard', $player['standard']); ?>"></td>
-                <?php if ($player['activated'] == 1) {$active = "Yes";} else {$active = "No";} ?>
+                <?php if ($player['activated'] == 1) {
+                        foreach ($profiles as $profile):
+                          if ($player['id'] == $profile['user_id']) {
+                            if ($profile['active'] == 1) {
+                              $active = "Yes";
+                            } else {
+                              $active = "No";
+                            }
+                          }
+                        endforeach;
+                      }
+                   ?>
                 <td>
                   <?php
                   $options = array(

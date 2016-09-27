@@ -13,7 +13,7 @@
             <?php foreach ($players as $player):
               if ($player['id'] == $profile['user_id']) {
                 $name = $player['fName'] . " " . $player['lName'];
-                echo "<td>" . $name . "</t>";
+                echo "<td>" . $name . "</td>";
               }
              endforeach;
             ?>
