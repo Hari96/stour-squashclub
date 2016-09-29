@@ -36,12 +36,13 @@
           'landline' => $this->input->post('landline'),
           'age' => $this->input->post('age'),
           'standard' => $this->input->post('standard'),
-          'active' => $active
+          'active' => $active,
+          'activated' => 1
           );
           $profile_data = array(
             'active' => $active
           );
-          $this->insert_model_>activate_profile($profile_data, $user_id);
+          $this->insert_model->activate_profile($profile_data, $user_id);
           $this->insert_model->update_users($user_data, $user_id);
           $data['update2_message'] = 'Record Updated Successfully';
           //Loading View

@@ -11,7 +11,7 @@ class Users_model extends CI_Model {
     return $query->row(0)->user_id;
   }
 
-  public function get_players($order_field, $order_direction) {//gets active players
+  public function get_players($order_field, $order_direction) {//gets active players, including active admins
     $this->db->where('activated', 1);
     $this->db->where('active', 1);
     $this->db->where('role !=', 2);
@@ -20,9 +20,19 @@ class Users_model extends CI_Model {
     return $query->result_array();
   }
 
-  public function get_all_players($order_field, $order_direction) {//gets all players,
-    //not new players who have not yet been active
-    $this->db->where('activated', 1);
+  public function get_players_for_profile($order_field, $order_direction) {//gets players who have been active
+    $this->db->where('activated !=', 2);//will include players who have left but were active
+    $this->db->where('active !=', 3);//exclude players who have left but were never active
+    $this->db->where('role !=', 2);//exclude admins not active - needs to be changed!!
+    $this->db->order_by($order_field, $order_direction);
+    $query = $this->db->get('players');
+    return $query->result_array();
+  }
+
+  public function get_all_players($order_field, $order_direction) {//gets all players, not admins and not those who have left
+    $this->db->where('role', 0);
+    $this->db->where('active !=', 2);//not players who left and were active
+    $this->db->where('active !=', 3);//not players who left but were never active
     $this->db->order_by($order_field, $order_direction);
     $query = $this->db->get('players');
     return $query->result_array();
@@ -186,6 +196,7 @@ class Users_model extends CI_Model {
   }
 
   public function check_id_in_profiles($user_id) {
+    $this->db->where('user_id', $user_id);
     $query = $this->db->get('profiles');
     if(empty($query->result())) {
       return false;

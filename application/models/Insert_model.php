@@ -208,9 +208,19 @@
 
   public function unactivate_user($user_id) {
     $this->db->where('id', $user_id);
-    $data = array(
-      'activated' => 0
-    );
+    $query = $this->db->get('players');
+    if ($query->row(0)->activated == 1) {
+      $data = array(
+        'activated' => 0,
+        'active' => 2//someone who was once registered
+      );
+    } else {
+      $data = array(
+        'activated' => 0,
+        'active' => 3//someone who was once registered, but was NEVER active
+      );
+    }
+    $this->db->where('id', $user_id);
     $this->db->update('players', $data);
   }
 
