@@ -21,17 +21,17 @@
       $data_leagues = array(
         'user_id' => $user_id
       );
-      $data_profiles = array(
-        'user_id' => $user_id,
-        'active' => 1
-      );
       if ($league_player == true) {
       $data = array(
         'activated' => 1,
         'JoinDate' => $date
       );
+      $data_profiles = array(
+        'user_id' => $user_id,
+        'active' => 1
+      );
       $this->db->insert('leagues', $data_leagues);// maybe not necessary?
-      $this->db->insert('profiles', $data_profiles);//inserts user id into profiles table
+      $this->db->insert('profiles', $data_profiles);//inserts user id into profiles table + indicates playing in league
     } else {
       $data = array(
         'activated' => 2,
@@ -204,6 +204,26 @@
       'role' => 0
     );
     $this->db->update('players', $data);
+  }
+
+  public function unactivate_user($user_id) {
+    $this->db->where('id', $user_id);
+    $data = array(
+      'activated' => 0
+    );
+    $this->db->update('players', $data);
+  }
+
+  public function insert_id_in_profiles($user_id) {
+    $data = array(
+      'user_id' => $user_id
+    );
+    $this->db->insert('profiles', $data);
+  }
+
+  public function activate_profile($data, $user_id) {
+    $this->db->where('user_id', $user_id);
+    $this->db->update('profiles', $data);
   }
 
 }

@@ -11,18 +11,18 @@ class Users_model extends CI_Model {
     return $query->row(0)->user_id;
   }
 
-  public function get_players($order_field, $order_direction) {
-    // ensure players are activated
+  public function get_players($order_field, $order_direction) {//gets active players
     $this->db->where('activated', 1);
+    $this->db->where('active', 1);
     $this->db->where('role !=', 2);
     $this->db->order_by($order_field, $order_direction);
     $query = $this->db->get('players');
     return $query->result_array();
   }
 
-  public function get_all_players($order_field, $order_direction) {
-    $this->db->where('role !=', 2);
-    $this->db->where('role !=', 1);
+  public function get_all_players($order_field, $order_direction) {//gets all players,
+    //not new players who have not yet been active
+    $this->db->where('activated', 1);
     $this->db->order_by($order_field, $order_direction);
     $query = $this->db->get('players');
     return $query->result_array();
@@ -78,9 +78,11 @@ class Users_model extends CI_Model {
     }
   }
 
-  public function delete_user($user_id) {
+  public function delete_user($user_id) {//needs lot more thought!!
     $this->db->where('id', $user_id);
     $this->db->delete('players');
+    $this->db->where('user_id', $user_id);
+    $this->delete('profiles');
   }
 
   public function check_other_emails($email, $user_id) {
@@ -181,6 +183,15 @@ class Users_model extends CI_Model {
     $query = $this->db->get('profiles');
     $row = $query->row();
     return $row;
+  }
+
+  public function check_id_in_profiles($user_id) {
+    $query = $this->db->get('profiles');
+    if(empty($query->result())) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   public function get_div_for_player($email) {

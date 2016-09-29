@@ -23,20 +23,26 @@
       } else {
           //Setting values for table columns
           if ($this->input->post('activated') == "Yes") {
-            $activated = 1;
+            $active = 1;
+            if ($this->users_model->check_id_in_profiles($user_id) == false) {
+              $this->insert_model->insert_id_in_profiles($user_id);
+            }
           } else {
-            $activated = 2;
+            $active = 0;
           }
-          $data = array(
+          $user_data = array(
           'fname' => $this->input->post('firstName'),
           'lName' => $this->input->post('lastName'),
           'landline' => $this->input->post('landline'),
           'age' => $this->input->post('age'),
           'standard' => $this->input->post('standard'),
-          'activated' => $activated
+          'active' => $active
           );
-          //Transfering data to Model
-          $this->insert_model->update_users($data, $user_id);
+          $profile_data = array(
+            'active' => $active
+          );
+          $this->insert_model_>activate_profile($profile_data, $user_id);
+          $this->insert_model->update_users($user_data, $user_id);
           $data['update2_message'] = 'Record Updated Successfully';
           //Loading View
           $this->load->view('templates/header', $data);

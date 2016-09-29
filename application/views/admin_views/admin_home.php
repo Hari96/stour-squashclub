@@ -91,6 +91,13 @@ if(isset($_SESSION['role']))
   </div>
 <?php $admin_unset_message = ''; } ?>
 
+<?php if (isset($remove_login_message)) { ?>
+ <div class="message-box alert alert-info alert-dismissible">
+   <h3 style="color:green;"><?php echo $remove_login_message; ?></h3>
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+<?php $remove_login_message = ''; } ?>
+
 <div class="container-fluid">
   <class="row">
     <div class="col-md-10 col-md-offset-1 table-responsive">
@@ -118,8 +125,8 @@ if(isset($_SESSION['role']))
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update2">Update other player details</a></td>
           </tr>
           <tr>
-            <td>You can delete a player and all their details. Be careful!</td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Go to player delete page</a></td>
+            <td>When a player leaves their login facility can be removed, but their results will still be part of the database for at least 2 years.</td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/remove_login">Remove player login</a></td>
           </tr>
           <tr>
             <td>You can allocate players to divisions and setup new leagues. Their current division will be shown so you will only have to change a few.</td>
@@ -188,7 +195,7 @@ if(isset($_SESSION['role']))
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/announcement_view/announcements_view">Admin announcements</a></td>
           </tr>
           <tr>
-            <td>You can send emails to all, one, or some of the players. Copy will be sent to admin.</td>
+            <td>You can send emails to all, one, or some of the <em>active</em> players. Copy will be sent to admin.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/send_mail">Send an email to players</a></td>
           </tr>
           <tr>
@@ -198,6 +205,10 @@ if(isset($_SESSION['role']))
           <tr>
             <td>You can make a player an admin, permanent or as a temporary measure. And also unset a current admin. A maximum of TWO admins are allowed at one time. You must create an admin before unsetting yourself!</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/admin_control">Create/delete an admin</a></td>
+          </tr>
+          <tr>
+            <td>You can delete a player and all their details. <span class="text-danger">ONLY TO BE DONE A MINIMUM OF 2 YEARS AFTER A PLAYER LEAVES!</span></td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Go to player delete page</a></td>
           </tr>
         </tbody>
       </table>
