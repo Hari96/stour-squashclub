@@ -102,12 +102,12 @@ if(isset($_SESSION['role']))
   <class="row">
     <div class="col-md-10 col-md-offset-1 table-responsive">
       <?php echo form_open('player_admin');
-        if ($_SESSION['role'] == 1 || $_SESSION['activated'] == 1) {
+        if ($_SESSION['active'] == 1) {
       ?>
       <span><strong>Currently you will be included in playing lists</strong></span>&nbsp;<button type="submit" class="btn btn-primary">Remove from lists</button>
       <br><br>
       <?php
-    } else if ($_SESSION['role'] == 2 || $_SESSION['activated'] == 2) { ?>
+    } else if ($_SESSION['active'] == 0) { ?>
          <span><strong>Currently you will NOT be included in playing lists</strong></span>&nbsp;<button type="submit" class="btn btn-primary">Add to lists</button>
          <br><br>
       <?php } echo form_close(); ?>

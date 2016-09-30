@@ -142,7 +142,36 @@
     $this->db->update('profiles', $data);
   }
 
-  public function update_role($email, $role) {
+  public function update_active($email, $active) {//changes admin from active to inactive and vice versa
+    if ($active == 1) {
+      $active = 0;
+      $admin_data = array(
+        'email' => $email,
+        'role' => 1,
+        'logged_in' => TRUE,
+        'activated' => 1,
+        'active' => 0
+      );
+      $this->session->set_userdata($admin_data);
+    } else {
+      $active = 1;
+      $admin_data = array(
+        'email' => $email,
+        'role' => 1,
+        'logged_in' => TRUE,
+        'activated' => 1,
+        'active' => 1
+      );
+      $this->session->set_userdata($admin_data);
+    }
+    $this->db->where('email', $email);
+    $data = array(
+      'active' => $active
+    );
+    $this->db->update('players', $data);
+  }
+
+  /*public function update_role($email, $role) {
     if ($role == 1) {
       $role = 2;
       $admin_data = array(
@@ -167,7 +196,7 @@
       'role' => $role
     );
     $this->db->update('players', $data);
-  }
+  }*/
 
   public function empty_announcements() {
     $this->db->empty_table('admin_announcements');
@@ -184,15 +213,8 @@
   }
 
   public function set_admin($id) {
-    $this->db->where('id', $id);
-    $query = $this->db->get('players');
-    $activated_val = $query->row(0)->activated;
-    $role = 1;
-    if ($activated_val == 2) {
-      $role = 2;
-    }
     $data = array(
-      'role' => $role
+      'role' => 1
     );
     $this->db->where('id', $id);
     $this->db->update('players', $data);

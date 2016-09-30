@@ -10,8 +10,8 @@ class Player_admin extends CI_Controller {
 
   public function index() {
     $email = $_SESSION['email'];
-    $role = $_SESSION['role'];
-    $this->insert_model->update_role($email, $role);
+    $active = $_SESSION['active'];
+    $this->insert_model->update_active($email, $active);
     $order_field = "lName";//which field to order by
     $order_direction = "asc";// direction of sort
     $data['players'] = $this->users_model->get_players($order_field, $order_direction);

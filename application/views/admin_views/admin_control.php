@@ -7,7 +7,7 @@ if(isset($_SESSION['role']))
   echo form_open('admin_control');
   $count = 0;
   foreach ($players as $player):
-    if ($player['role'] == 1 || $player['role'] == 2) {
+    if ($player['role'] == 1) {
       $count++;
     }
   endforeach;

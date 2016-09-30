@@ -16,6 +16,12 @@ body {
 .table-striped>tbody>tr>td>a {
   color: #FF7A5A;
 }
+.bg-even {
+  background-color: #8ED2C9;
+}
+.bg-odd {
+  background-color: #FFB85F;
+}
 #head {
   font-size: 1.3em;
 }

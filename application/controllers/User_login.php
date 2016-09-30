@@ -43,32 +43,28 @@ class User_login extends CI_Controller {
           $fName = $row->fName;
           $lName = $row->lName;
           $activation = $row->activated;
+          $active = $row->active;
           $fullName = $fName . " " . $lName;
+          if($this->users_model->get_role($email) == 0) {
           $user_data = array(
             'email'     => $email,
             'logged_in' => TRUE,
             'name' => $fullName,
-            'activated' => $activation
+            'activated' => $activation,
+            'active' => $active
           );
           $this->session->set_userdata($user_data);
-          if($this->users_model->get_role($email) == 1) {
-            //admin user also in leagues
+        } elseif($this->users_model->get_role($email) == 1) {
+            //admin user either active in leagues or inactive
             $admin_data = array(
               'email' => $email,
               'role' => 1,
               'logged_in' => TRUE,
-              'activated' => $activation
+              'activated' => $activation,
+              'active' => $active
             );
             $this->session->set_userdata($admin_data);
-          } else if ($this->users_model->get_role($email) == 2) {
-              $admin_data = array(
-                'email' => $email,
-                'role' => 2,
-                'logged_in' => TRUE,
-                'activated' => $activation
-              );
-              $this->session->set_userdata($admin_data);
-            } else {
+          } else {
             unset($_SESSION['role']);
           }
           $data['announcements'] = $this->users_model->get_announcements();

@@ -10,7 +10,7 @@ if(isset($_SESSION['role']))
 <h2>Results for <?php echo ucfirst($month) . " " . $year;?></h2>
 <div class="container-fluid">
   <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-10 col-md-offset-1">
         <?php echo form_open('enter_results'); ?>
         <input type="hidden" name="year" value="<?php echo $year; ?>">
         <input type="hidden" name="month" value="<?php echo $month; ?>">
@@ -27,7 +27,7 @@ if(isset($_SESSION['role']))
         ?>
         <br><br>
         <div class="table-responsive">
-          <table class="table table-bordered">
+          <table class="table table-bordered table-striped">
             <thead>
               <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
             </thead>
@@ -90,7 +90,9 @@ if(isset($_SESSION['role']))
         <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
         <?php echo form_close(); ?>
       </div>
-      <div class="col-md-6">
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
         <?php echo form_open('enter_results'); ?>
         <input type="hidden" name="year" value="<?php echo $year; ?>">
         <input type="hidden" name="month" value="<?php echo $month; ?>">
@@ -107,7 +109,7 @@ if(isset($_SESSION['role']))
         ?>
         <br><br>
         <div class="table-responsive">
-          <table class="table table-bordered">
+          <table class="table table-bordered table-striped">
             <thead>
               <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
             </thead>
@@ -172,7 +174,7 @@ if(isset($_SESSION['role']))
       </div>
     </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('enter_results'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
       <input type="hidden" name="month" value="<?php echo $month; ?>">
@@ -189,7 +191,7 @@ if(isset($_SESSION['role']))
       ?>
       <br><br>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
           </thead>
@@ -252,7 +254,9 @@ if(isset($_SESSION['role']))
       <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
       <?php echo form_close(); ?>
     </div>
-    <div class="col-md-6">
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('enter_results'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
       <input type="hidden" name="month" value="<?php echo $month; ?>">
@@ -269,7 +273,7 @@ if(isset($_SESSION['role']))
       ?>
       <br><br>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
           </thead>
@@ -334,7 +338,7 @@ if(isset($_SESSION['role']))
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('enter_results'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
       <input type="hidden" name="month" value="<?php echo $month; ?>">
@@ -351,7 +355,7 @@ if(isset($_SESSION['role']))
       ?>
       <br><br>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
           </thead>
@@ -414,7 +418,9 @@ if(isset($_SESSION['role']))
       <input type="hidden" name="num_records" value="<?php echo $c - 1; ?>">
       <?php echo form_close(); ?>
     </div>
-    <div class="col-md-6">
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('enter_results'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
       <input type="hidden" name="month" value="<?php echo $month; ?>">
@@ -431,7 +437,7 @@ if(isset($_SESSION['role']))
       ?>
       <br><br>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
           <thead>
             <tr><th>First Player</th><th>Score</th><th>Second Player</th><th>Score</th><th>Date</th><th>Day</th></tr>
           </thead>

@@ -55,8 +55,10 @@ if(isset($_SESSION['role']))
         </thead>
 
         <tbody>
-          <?php $c = 1; foreach ($players as $player): ?>
-            <tr>
+          <?php $c = 1; foreach ($players as $player):
+            if ($player['current_league']%2 == 0) { $divclass = "bg-even"; } else { $divclass = "bg-odd"; }
+          ?>
+            <tr class="<?php echo $divclass ?>">
               <input type="hidden" name="<?php $id = 'id' . $c; echo $id; ?>" value="<?php echo set_value('$id', $player['id']); ?>">
               <td><?php echo $player['fName'] . ", " . $player['lName']; ?></td>
               <td> <?php echo $player['mobile']; ?></td>

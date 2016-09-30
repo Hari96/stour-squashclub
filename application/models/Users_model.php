@@ -14,16 +14,14 @@ class Users_model extends CI_Model {
   public function get_players($order_field, $order_direction) {//gets active players, including active admins
     $this->db->where('activated', 1);
     $this->db->where('active', 1);
-    $this->db->where('role !=', 2);
     $this->db->order_by($order_field, $order_direction);
     $query = $this->db->get('players');
     return $query->result_array();
   }
 
-  public function get_players_for_profile($order_field, $order_direction) {//gets players who have been active
-    $this->db->where('activated !=', 2);//will include players who have left but were active
+  public function get_players_for_profile($order_field, $order_direction) {//gets players who are active or have been active
+    $this->db->where('activated !=', 2);//excluding players who have never become active
     $this->db->where('active !=', 3);//exclude players who have left but were never active
-    $this->db->where('role !=', 2);//exclude admins not active - needs to be changed!!
     $this->db->order_by($order_field, $order_direction);
     $query = $this->db->get('players');
     return $query->result_array();

@@ -92,6 +92,7 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
       <div class="table-responsive">
+        <h4>Scores</h4>
         <table class="table table-bordered table-striped">
           <thead>
             <tr><th></th>
@@ -316,6 +317,7 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
       <div class="table-responsive">
+        <h4>Scores</h4>
         <table class="table table-bordered table-striped">
           <thead>
             <tr><th></th>
@@ -540,6 +542,7 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
       <div class="table-responsive">
+        <h4>Scores</h4>
         <table class="table table-bordered table-striped">
           <thead>
             <tr><th></th>
@@ -764,6 +767,7 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
       <div class="table-responsive">
+        <h4>Scores</h4>
         <table class="table table-bordered table-striped">
           <thead>
             <tr><th></th>
