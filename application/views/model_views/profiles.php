@@ -1,8 +1,10 @@
 <h2>Player's profiles</h2>
 <div class="container-fluid">
+  <p>Includes players who have left, or are no longer active. Results will be kept for at least two years after a player leaves the club. </p>
+  <p><strong>Click on a player to view all their results and their player profile.</strong></p>
   <div class="row">
   <div class="col-md-12 table-responsive">
-    <table class="table table-bordered spacing-top">
+    <table class="table table-bordered table-striped spacing-top">
       <thead>
         <tr><th>Rank</th><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Average</th><th>Last Played</th></tr>
       </thead>
@@ -12,9 +14,11 @@
             <td><?php echo $c . "."; ?></td>
             <?php foreach ($players as $player):
               if ($player['id'] == $profile['user_id']) {
+                $user_id = $player['id'];
                 $name = $player['fName'] . " " . $player['lName'];
-                echo "<td>" . $name . "</td>";
-              }
+                ?>
+                <td><a href="<?php echo site_url('player_profiles/player_profile/?user_id='.$user_id); ?>"><?php echo $name; ?></a></td>
+            <?php  }
              endforeach;
             ?>
             <td><?php echo $profile['played']; ?></td>

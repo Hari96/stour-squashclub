@@ -131,6 +131,12 @@ class Users_model extends CI_Model {
     return $query->result_array();
   }
 
+  public function get_results_from_recent() {
+    $this->db->order_by("id", "desc");
+    $query = $this->db->get('results');
+    return $query->result_array();
+  }
+
   public function get_current_results($year, $month) {
     $this->db->where('year', $year);
     $this->db->where('month', $month);
@@ -148,6 +154,14 @@ class Users_model extends CI_Model {
     $lname = $row->lName;
     $player_name = $fname . " " . $lname;
     return $player_name;
+  }
+
+  public function get_mobile_from_id($player_id) {
+    $this->db->where('id', $player_id);
+    $query = $this->db->get('players');
+    $row = $query->row();
+    $mobile = $row->mobile;
+    return $mobile;
   }
 
   public function get_current_period() {

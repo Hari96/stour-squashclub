@@ -22,6 +22,9 @@ body {
 .bg-odd {
   background-color: #FFB85F;
 }
+.bg-lgrey {
+  background-color: lightgrey;
+}
 #head {
   font-size: 1.3em;
 }
@@ -114,4 +117,7 @@ table, th, td {
   height: 600px;
   overflow: scroll;
   margin-right: 10px;
+}
+#profile-div {
+  font-size: 0.9rem;
 }

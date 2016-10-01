@@ -60,6 +60,7 @@ class User_login extends CI_Controller {
               'email' => $email,
               'role' => 1,
               'logged_in' => TRUE,
+              'name' => $fullName,
               'activated' => $activation,
               'active' => $active
             );

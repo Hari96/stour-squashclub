@@ -20,11 +20,12 @@
 <div class="container-fluid">
   <div class="row">
     <section class="col-md-5">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tristique eros. Aliquam posuere turpis sapien, at condimentum ex tincidunt bibendum. Aliquam malesuada, orci in vehicula euismod, lorem lectus eleifend augue, vel sollicitudin ligula turpis quis metus. Nulla pellentesque purus neque, quis dapibus tortor interdum non. Mauris id sem malesuada, pharetra leo id, vulputate est. Cras at diam vehicula, sagittis leo a, blandit neque. Fusce ac lacus ac dolor interdum egestas.
-
-        Suspendisse sollicitudin sapien nulla, eu condimentum enim feugiat et. Etiam hendrerit sagittis pharetra. Sed in justo et nisl hendrerit pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris condimentum ex non quam suscipit porta. Vestibulum elementum, erat eu tincidunt aliquet, lorem libero dignissim magna, a varius risus arcu quis ipsum. Vestibulum id sem sit amet justo dapibus sollicitudin. Praesent vestibulum magna vel libero tincidunt posuere id feugiat elit. Mauris massa ligula, posuere a accumsan eget, finibus vitae eros. Nullam pellentesque tempor risus, id malesuada risus sollicitudin a. Curabitur bibendum mattis commodo. Donec non tellus quis metus dictum sodales id non neque. Phasellus non elit venenatis tortor convallis rhoncus.
-      </p>
+      <p>Welcome to our registration page. If you are wanting to play squash regularly, whatever your standard, please register.</p>
+      <p>By registering you will be able to login to gain access to our forum and see contact details for any opponents</p>
+      <p><em>Please include a mobile number.</em> It is not a compulsory part of registering but is the main (and the most convenient) way for players to communicate with each other.</p>
+      <p>You don't necessarily have to play in one of our leagues when you register, you can opt not to be in a league, at least initially, by unchecking the option at bottom of the form.</p>
+      <p>After registering you will be sent an activation link to the provided email address. Once you have clicked on this link you will be able to login.</p>
+      <p>If want to visit the forum, you can login using your email address as your username.</p>
     </section><!--end of left hand section-->
     <section class="col-md-7">
       <?php echo form_open('insert_users'); ?>
