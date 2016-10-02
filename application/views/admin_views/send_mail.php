@@ -39,7 +39,7 @@ if(isset($_SESSION['role']))
   </div>
   <p><strong>Choose player or players:</strong></p>
   <div class="table-responsive">
-      <table class="table table-bordered">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr><th>Last Name</th><th>First Name</th><th>Email</th><th>Current division</th><th><label>Tick all&nbsp; </label><input type="checkbox" id="all-email"></th></tr>
         </thead>

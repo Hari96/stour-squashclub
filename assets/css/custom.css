@@ -25,6 +25,18 @@ body {
 .bg-lgrey {
   background-color: lightgrey;
 }
+.bg-green {
+  background-color: green;
+  color: white;
+}
+.bg-red {
+  background-color: red;
+  color: white;
+}
+.bg-blue {
+  background-color: blue;
+  color: white;
+}
 #head {
   font-size: 1.3em;
 }
@@ -119,5 +131,5 @@ table, th, td {
   margin-right: 10px;
 }
 #profile-div {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }

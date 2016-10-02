@@ -20,10 +20,10 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'rgbmarke_squash-forum');
+define('DB_NAME', 'rgbmarke_squashforum');
 
 /** MySQL database username */
-define('DB_USER', 'rgbmarke_sqforum');
+define('DB_USER', 'rgbmarke_sforum');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'skw0zhK£L&b');

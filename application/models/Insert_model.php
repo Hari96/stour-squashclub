@@ -34,8 +34,9 @@
       $this->db->insert('profiles', $data_profiles);//inserts user id into profiles table + indicates playing in league
     } else {
       $data = array(
-        'activated' => 2,
-        'JoinDate' => $date
+        'activated' => 1,
+        'JoinDate' => $date,
+        'active' => 0
       );
     }
       $this->db->where('id', $user_id);
@@ -171,33 +172,6 @@
     $this->db->update('players', $data);
   }
 
-  /*public function update_role($email, $role) {
-    if ($role == 1) {
-      $role = 2;
-      $admin_data = array(
-        'email' => $email,
-        'role' => 2,
-        'logged_in' => TRUE,
-        'activated' => 2
-      );
-      $this->session->set_userdata($admin_data);
-    } else if ($role == 2) {
-      $role = 1;
-      $admin_data = array(
-        'email' => $email,
-        'role' => 1,
-        'logged_in' => TRUE,
-        'activated' => 1
-      );
-      $this->session->set_userdata($admin_data);
-    }
-    $this->db->where('email', $email);
-    $data = array(
-      'role' => $role
-    );
-    $this->db->update('players', $data);
-  }*/
-
   public function empty_announcements() {
     $this->db->empty_table('admin_announcements');
     $this->db->query("ALTER TABLE admin_announcements AUTO_INCREMENT = 1");
@@ -207,9 +181,13 @@
     $this->db->insert('admin_announcements', $data);
   }
 
-  public function wordpress_insert($data) {
+  public function wordpress_insert($data, $email) {
     $db2 = $this->load->database('db2', TRUE);
+    $db2->where('user_email', $email);
+    $query = $db2->get('wp_users');
+    if ($query->num_rows() == 0) {
     $db2->insert('wp_users', $data);
+    }
   }
 
   public function set_admin($id) {

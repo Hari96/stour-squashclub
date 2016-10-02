@@ -78,7 +78,7 @@
           'user_email' => $email,
           'user_registered' => $date
         );
-        $this->insert_model->wordpress_insert($data);
+        $this->insert_model->wordpress_insert($data, $email);
         $data['message'] = 'Registration successful, you will receive an activation email soon';
         $code = uniqid('', true);
         $data_code = array(

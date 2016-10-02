@@ -10,7 +10,7 @@ if(isset($_SESSION['role']))
   </div>
   <?php } ?>
   <div class="table-responsive">
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
       <thead>
         <tr><th class="wide">Surname</th><th class="wide">First Name</th><th class="wide">Mobile</th><th class="wider">Email</th><th class="narrow">Update</th></tr>
       </thead>
@@ -26,10 +26,9 @@ if(isset($_SESSION['role']))
                 <td class="wider"><input type="text" class="form-control text-center" name="email" value="<?php echo set_value('email', $player['email']); ?>"></td>
                 <td class=="narrow"><button type="submit" class="glyphicon glyphicon-ok" aria-hidden="true"></button><span class="sr-only">Update:</span></td>
               </tr>
-          </div>
+            </div>
           <?php echo form_close(); ?>
           <?php endforeach; ?>
-
         </tbody>
     </table>
   </div>
