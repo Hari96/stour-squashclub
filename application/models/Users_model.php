@@ -42,6 +42,12 @@ class Users_model extends CI_Model {
     return $query->result_array();
   }
 
+  public function get_all_forum_members() {
+    $db2 = $this->load->database('db2', TRUE);
+    $query = $db2->get('wp_wpforo_profiles');
+    return $query->result_array();
+  }
+
   public function check_for_email($email) {
     $this->db->where('email', $email);
     $query = $this->db->get('players');

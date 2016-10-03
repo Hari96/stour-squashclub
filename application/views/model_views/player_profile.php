@@ -39,6 +39,13 @@
             } else {
               $opponent_id = $result['player1_id'];
               $score = $result['player2_score'] . "-" . $result['player1_score'];
+              if ($result['player2_score'] > $result['player1_score']) {
+                $bg = "bg-green";
+                $res = "WIN";
+              } else if ($result['player2_score'] < $result['player1_score']) {
+                $bg = "bg-red";
+                $res = "LOSS";
+              } else { $bg = "bg-blue"; $res = "DRAW"; }
               $year = $result['year'];
               foreach ($players as $player):
                 if ($player['id'] == $opponent_id) {
@@ -53,7 +60,7 @@
           } else { echo "<td></td>"; } ?>
           <td><?php echo $result['day'] . " " . $result['date'] . " " . ucfirst($result['month']); ?></td>
           <?php echo "<td class=" .$bg .">" . $res . " " .$score . "</td>"; ?>
-          <td><?php echo $name; ?></td>
+          <td><a href="<?php echo site_url('player_profiles/player_profile/?user_id='.$opponent_id); ?>"><?php echo $name; ?></a></td>
         </tr>
         <?php  $month = $result['month']; }
         ?>

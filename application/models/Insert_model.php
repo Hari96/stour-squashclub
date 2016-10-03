@@ -187,6 +187,17 @@
     $query = $db2->get('wp_users');
     if ($query->num_rows() == 0) {
     $db2->insert('wp_users', $data);
+    $db2->select_max('userid');
+	  $query2 = $db2->get('wp_wpforo_profiles');
+	  $row = $query2->row_array();
+	  $id = $row['userid'] + 1;
+    $profile_data = array(
+      'userid' => $id,
+      'title' => 'member',
+      'username' => $email,
+      'groupid' => 3
+    );
+    $db2->insert('wp_wpforo_profiles', $profile_data);
     }
   }
 
@@ -204,6 +215,24 @@
       'role' => 0
     );
     $this->db->update('players', $data);
+  }
+
+  public function set_forum_admin($email) {
+    $db2 = $this->load->database('db2', TRUE);
+    $data = array(
+      'groupid' => 1
+    );
+    $db2->where('username', $email);
+    $db2->update('wp_wpforo_profiles', $data);
+  }
+
+  public function unset_forum_admin($email) {
+    $db2 = $this->load->database('db2', TRUE);
+    $db2->where('id', $email);
+    $data = array(
+      'groupid' => 3
+    );
+    $db2->update('wp_wpforo_profiles', $data);
   }
 
   public function unactivate_user($user_id) {

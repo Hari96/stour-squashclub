@@ -76,6 +76,15 @@ table, th, td {
   content: "* ";
   color: red;
 }
+.warning {
+  color: red;
+  font-size: 1.3em;
+  font-style: oblique;
+}
+.not-activated-star {
+  color: red;
+  font-size: 1.3em;
+}
 .admin-star {
   color: red;
   font-size: 1.2em;
@@ -94,9 +103,6 @@ table, th, td {
 }
 .date-input {
   width: 50px;
-}
-.emphasis {
-  color: red;
 }
 .name-col {
   width: 30%;

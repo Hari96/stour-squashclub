@@ -10,7 +10,7 @@ if(isset($_SESSION['role']))
   </div>
   <?php } ?>
   <div class="table-responsive">
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered"><!--class 'table-striped' doesn't work here! -->
       <thead>
         <tr><th class="wide">Surname</th><th class="wide">First Name</th><th class="wide">Mobile</th><th class="wider">Email</th><th class="narrow">Update</th></tr>
       </thead>

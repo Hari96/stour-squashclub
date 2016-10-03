@@ -1,13 +1,13 @@
-<h2>Creating new admin</h2>
+<h2>Creating new Forum admin</h2>
 <?php
 if(isset($_SESSION['role']))
 { ?>
 <div class="container-fluid">
   <?php
-  echo form_open('admin_control');
+  echo form_open('forum_admin_control');
   $count = 0;
-  foreach ($players as $player):
-    if ($player['role'] == 1) {
+  foreach ($forum_members as $forum_member):
+    if ($forum_member['groupid'] == 1) {//one admin is website owner/designer
       $count++;
     }
   endforeach;
@@ -20,7 +20,7 @@ if(isset($_SESSION['role']))
     ?>
     <input type="hidden" name="admin_choice" value="c">
     <?php
-    echo form_submit('new_admin', 'Create New Admin', 'class="btn btn-primary pull-right"');
+    echo form_submit('new_admin', 'Create New Forum Admin', 'class="btn btn-primary pull-right"');
         }
   ?>
   <br clear="all"><br>
@@ -41,13 +41,19 @@ if(isset($_SESSION['role']))
                 'class' => 'admin',
                 'value' => 'ch'.$c
               );
+              $groupid = 0;
+              foreach ($forum_members as $forum_member):
+                if ($forum_member['username'] == $player['email']) {
+                  $groupid = $forum_member['groupid'];
+                }
+              endforeach;
             ?>
             <tr>
-              <td><input type="text" name="<?php echo 'ln'.$c; ?>" value="<?php echo set_value('ln'.$c, $player['lName']); ?>"><?php if ($player['role'] == 1) { echo "<span class='admin-star'>&nbsp;*</span>"; } ?></td>
+              <td><input type="text" name="<?php echo 'ln'.$c; ?>" value="<?php echo set_value('ln'.$c, $player['lName']); ?>"><?php if ($groupid == 1) { echo "<span class='admin-star'>&nbsp;*</span>"; } ?></td>
               <td> <input type="text" name="<?php echo 'fn'.$c; ?>" value="<?php echo set_value('fn'.$c, $player['fName']); ?>"></td>
               <td><?php echo form_radio($data); ?></td></tr>
               <?php $id = 'ch' .$c; ?>
-              <input type="hidden" name="<?php echo $id; ?>" value="<?php echo set_value('$id', $player['id']); ?>">
+              <input type="hidden" name="<?php echo $id; ?>" value="<?php echo set_value('$id', $player['email']); ?>">
             </tr>
           <?php $c++; endforeach; ?>
           <input type="hidden" name="num" value="<?php echo $c; ?>">

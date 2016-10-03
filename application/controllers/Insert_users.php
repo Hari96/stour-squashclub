@@ -8,7 +8,13 @@
     }
 
     public function index() {
-      $this->session->set_userdata('registration');
+      $email = $this->input->post('inputEmail');
+      if ($_SESSION['mail'] == $email) {
+        $data['announcements'] = $this->users_model->get_announcements();
+        $this->load->view('templates/header', $data);
+        $this->load->view('pages/home', $data);
+        $this->load->view('templates/footer', $data);
+      }
       //Validating First Name Field
       $this->form_validation->set_rules('inputFirstName','First Name','required|min_length[2]|max_length[30]');
       //Validating Last Name Field
@@ -37,6 +43,10 @@
           $this->load->view('model_views/register', $data);
           $this->load->view('templates/footer', $data);
         } else {
+          $reg_data = array(
+            'mail' => $email
+          );
+          $this->session->set_userdata($reg_data);
         //hashing password
         $password = $this->input->post('inputPassword');
         $wordpress_pass = $password;
@@ -79,7 +89,7 @@
           'user_registered' => $date
         );
         $this->insert_model->wordpress_insert($data, $email);
-        $data['message'] = 'Registration successful, you will receive an activation email soon';
+        $data['reg_message'] = 'Registration successful, you will receive an activation email soon';
         $code = uniqid('', true);
         $data_code = array(
           'activation_code' => $code,
@@ -88,10 +98,11 @@
         $this->insert_model->code_insert($data_code);
         $message = "Activate your account with us by going to: http://www.stoursquashclub.co.uk/insert_users/complete_registration?activate_code=" . $code . "&league_player=" . $league_player;
 		    mail($email, "Activate your account today!", $message, "From: noreply@stoursquashclub.co.uk\n");
-        $this->session->unset_userdata('registration');
+        //unset($_SESSION['reg']);
         //Loading View
+        $data['announcements'] = $this->users_model->get_announcements();
         $this->load->view('templates/header', $data);
-        $this->load->view('model_views/register', $data);
+        $this->load->view('pages/home', $data);
         $this->load->view('templates/footer', $data);
         }//end of second else
       }//end of first else

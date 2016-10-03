@@ -102,4 +102,14 @@ class Player_admin extends CI_Controller {
     $this->load->view('templates/footer', $data);
   }
 
+  public function forum_admin_control() {
+    $order_field = "lName";//which field to order by
+    $order_direction = "asc";// direction of sort
+    $data['players'] = $this->users_model->get_all_players_and_admins($order_field, $order_direction);
+    $data['forum_members'] = $this->users_model->get_all_forum_members();
+    $this->load->view('templates/header', $data);
+    $this->load->view('admin_views/forum-admin_control', $data);
+    $this->load->view('templates/footer', $data);
+  }
+
 }

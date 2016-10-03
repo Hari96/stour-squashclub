@@ -11,12 +11,6 @@
 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>
 <?php $email_message = '';} ?>
-<?php if (isset($message)) { ?>
-<div class="message-box alert alert-success alert-dismissible">
-<h3 style="color:green;"><?php echo $message; ?></h3>
-<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-</div>
-<?php $message = ''; } ?>
 <div class="container-fluid">
   <div class="row">
     <section class="col-md-5">
@@ -25,7 +19,7 @@
       <p><em>Please include a mobile number.</em> It is not a compulsory part of registering but is the main (and the most convenient) way for players to communicate with each other.</p>
       <p>You don't necessarily have to play in one of our leagues when you register, you can opt not to be in a league, at least initially, by unchecking the option at bottom of the form.</p>
       <p>After registering you will be sent an activation link to the provided email address. Once you have clicked on this link you will be able to login.</p>
-      <p>If want to visit the forum, you can login using your email address as your username.</p>
+      <p>If you want to visit the forum, you can login using your email address as your username.</p>
     </section><!--end of left hand section-->
     <section class="col-md-7">
       <?php echo form_open('insert_users'); ?>
