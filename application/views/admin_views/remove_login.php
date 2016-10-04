@@ -14,7 +14,7 @@ if(isset($_SESSION['role']))
             <td class=""><?php echo $player['lName']; ?></td>
             <td class=""><?php echo $player['fName']; ?></td>
             <td class=""><?php echo $player['email']; ?></td>
-            <td class="remove-submit"><?php $user_id = $player['id']; ?> <a href="<?php echo site_url('remove_login/?user_id='.$user_id);?>"><button class="btn btn-warning">Delete</button></a></td>
+            <td class="remove-submit"><?php $user_id = $player['id']; ?> <a href="<?php echo site_url('remove_login/?user_id='.$user_id);?>"><button class="btn btn-warning">Unactivate</button></a></td>
           </tr>
         <?php endforeach; ?>
       </tbody>

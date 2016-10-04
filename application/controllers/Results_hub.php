@@ -23,7 +23,7 @@
         $data['results'] = $this->users_model->get_current_results($year, $month);
         $order_field = "id";
         $order_direction = "asc";
-        $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+        $data['players'] = $this->users_model->get_players_for_profile($order_field, $order_direction);
         $data['year'] = $year;
         $data['month'] = $month;
         //$results = $this->users_model->get_current_results($year, $month);

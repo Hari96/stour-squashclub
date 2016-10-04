@@ -77,7 +77,8 @@ echo ucfirst($month) . " " . $partYear;
           $c = 0;
           foreach ($leagues as $league):
             if ($league[$month] == 1) {
-              $gamesWon = 0; $gamesLost = 0; $gamesDrawn = 0; $gamesPlayed = 0; $score= 0; $tScore = 0;
+              $gamesWon = 0; $gamesLost = 0; $gamesDrawn = 0; $gamesPlayed = 0; $score= 0;
+              $tScore = 0; $name = "";
               echo "<tr>";
               foreach ($players as $player):
                 if ($player['id'] == $league['user_id']) {

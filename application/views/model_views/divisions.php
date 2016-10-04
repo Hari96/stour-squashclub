@@ -33,7 +33,7 @@ echo ucfirst($month) . " " . $partYear;
           <?php $c = 0;
             foreach ($leagues as $league):
               if ($league[$month] == 1) {
-                $c++;
+                $c++; $name = ""; $email = ""; $mobile = "";
                 foreach ($players as $player):
                   if ($player['id'] == $league['user_id']) {
                     $name = $player['fName'] . " " . $player['lName'];
@@ -61,7 +61,7 @@ echo ucfirst($month) . " " . $partYear;
       <span class="lead"><strong>DIVISION 2</strong></span>
       <table class="table table-bordered table-striped">
         <thead>
-          <tr><th>Player</th><th>Number</th><th>Email</th></tr>
+          <tr><th>No.</th><th>Player</th><th>Number</th><th>Email</th></tr>
         </thead>
         <tbody>
           <?php $c = 0;
@@ -95,7 +95,7 @@ echo ucfirst($month) . " " . $partYear;
       <span class="lead"><strong>DIVISION 3</strong></span>
       <table class="table table-bordered table-striped">
         <thead>
-          <tr><th>Player</th><th>Number</th><th>Email</th></tr>
+          <tr><th>No.</th><th>Player</th><th>Number</th><th>Email</th></tr>
         </thead>
         <tbody>
           <?php $c = 0;
@@ -129,7 +129,7 @@ echo ucfirst($month) . " " . $partYear;
       <span class="lead"><strong>DIVISION 4</strong></span>
       <table class="table table-bordered table-striped">
         <thead>
-          <tr><th>Player</th><th>Number</th><th>Email</th></tr>
+          <tr><th>No.</th><th>Player</th><th>Number</th><th>Email</th></tr>
         </thead>
         <tbody>
           <?php $c = 0;

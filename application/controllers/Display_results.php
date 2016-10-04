@@ -13,7 +13,7 @@
       $data['month'] = $month;
       $order_field = "id";
       $order_direction = "asc";
-      $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+      $data['players'] = $this->users_model->get_players_for_profile($order_field, $order_direction);//ensures inactive players are included in results
       $data['results'] = $this->users_model->get_current_results($year, $month);
       $data['leagues'] = $this->users_model->get_leagues($year);
       if ($this->input->post('display') == "results") {
@@ -36,7 +36,7 @@
       $data['month'] = $month;
       $order_field = "id";
       $order_direction = "asc";
-      $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+      $data['players'] = $this->users_model->get_players_for_profile($order_field, $order_direction);
       $data['results'] = $this->users_model->get_current_results($year, $month);
       $data['leagues'] = $this->users_model->get_leagues($year);
       $this->load->view('templates/header', $data);
@@ -52,7 +52,7 @@
       $data['month'] = $month;
       $order_field = "id";
       $order_direction = "asc";
-      $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+      $data['players'] = $this->users_model->get_players_for_profile($order_field, $order_direction);
       $data['results'] = $this->users_model->get_current_results($year, $month);
       $data['leagues'] = $this->users_model->get_leagues($year);
       $this->load->view('templates/header', $data);
