@@ -51,6 +51,14 @@
     public function update_leagues($data_leagues, $user_id, $year) {
       $this->db->where('user_id', $user_id);
       $league_name = 'leagues' . $year;
+      $query = $this->db->get($league_name);
+      if($query->num_rows() == 0 && $user_id != "") {
+        $data = array(
+          'user_id' => $user_id
+        );
+        $this->db->insert($league_name, $data);
+      }
+      $this->db->where('user_id', $user_id);
       $this->db->update($league_name, $data_leagues);
 
     }
