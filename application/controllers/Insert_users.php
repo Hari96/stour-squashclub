@@ -9,11 +9,13 @@
 
     public function index() {
       $email = $this->input->post('inputEmail');
-      if ($_SESSION['mail'] == $email) {
-        $data['announcements'] = $this->users_model->get_announcements();
-        $this->load->view('templates/header', $data);
-        $this->load->view('pages/home', $data);
-        $this->load->view('templates/footer', $data);
+      if(isset($_SESSION['mail'])) {
+        if ($_SESSION['mail'] == $email) {
+          $data['announcements'] = $this->users_model->get_announcements();
+          $this->load->view('templates/header', $data);
+          $this->load->view('pages/home', $data);
+          $this->load->view('templates/footer', $data);
+        }
       }
       //Validating First Name Field
       $this->form_validation->set_rules('inputFirstName','First Name','required|min_length[2]|max_length[30]');
@@ -61,8 +63,11 @@
         }
         //Setting values for table columns
         $fName = $this->input->post('inputFirstName');
+        $fName = ucfirst(strtolower($fName));
         $lName = $this->input->post('inputLastName');
+        $lName = ucfirst(strtolower($lName));
         $name = $fName . " " . $lName;
+        $date = date('Y-m-d');
         $data = array(
         'fname' => $fName,
         'lName' => $lName,
@@ -71,7 +76,8 @@
         'mobile' => $this->input->post('inputMobile'),
         'landline' => $this->input->post('inputLandline'),
         'age' => $this->input->post('age'),
-        'standard' => $this->input->post('standard')
+        'standard' => $this->input->post('standard'),
+        'SignUpDate' => $date
         );
         //Transfering data to Model
         $this->insert_model->form_insert($data);
@@ -89,7 +95,7 @@
           'user_registered' => $date
         );
         $this->insert_model->wordpress_insert($data, $email);
-        $data['reg_message'] = 'Registration successful, you will receive an activation email soon';
+        $data['reg_message'] = "Registration successful, you will receive an activation email soon.\nNote: You may need to look in your junk folder!";
         $code = uniqid('', true);
         $data_code = array(
           'activation_code' => $code,

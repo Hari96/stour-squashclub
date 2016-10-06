@@ -204,15 +204,19 @@ if(isset($_SESSION['role']))
           </tr>
           <tr>
             <td>You can make a player an admin, permanent or as a temporary measure. And also unset a current admin. A maximum of TWO admins are allowed at one time. You must create an admin before unsetting yourself!</td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/admin_control">Create/delete an admin</a></td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/admin_control">Create/unset an admin</a></td>
           </tr>
           <tr>
             <td>You can make a player a Forum Admin. And also unset a current admin. Only one Forum Admin is allowed at one time.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/forum_admin_control">Create/delete a Forum Admin</a></td>
           </tr>
           <tr>
-            <td>You can delete a player and all their details. <span class="text-danger">ONLY TO BE DONE A MINIMUM OF 2 YEARS AFTER A PLAYER LEAVES!</span></td>
+            <td>You can delete an unactivated player and all their details.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Go to player delete page</a></td>
+          </tr>
+          <tr>
+            <td>You can delete old data. Needs to be done rarely - further back than two years.</td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/delete_old_data">Go to delete old data page</a></td>
           </tr>
         </tbody>
       </table>

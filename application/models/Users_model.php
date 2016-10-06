@@ -92,22 +92,9 @@ class Users_model extends CI_Model {
     }
   }
 
-  public function delete_user($user_id, $year) {//still need to delete all results and league?(going back two years) and activation code??
+  public function delete_user($user_id) {
     $this->db->where('id', $user_id);
     $this->db->delete('players');
-    $this->db->where('user_id', $user_id);
-    $query = $this->db->get('profiles');
-    if($query->num_rows() != 0) {
-      $this->delete('profiles');
-    }
-    $league = "leagues" . $year;
-    if($this->db->table_exists($league)) {
-      $query = $this->db->get($league);
-      if($query->num_rows() != 0) {
-        $this->db->where('user_id', $user_id);
-        $this->delete($league);
-      }
-    }
   }
 
   public function check_other_emails($email, $user_id) {

@@ -30,7 +30,7 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="<?php echo base_url();?>pages/home_view"><strong>Home</strong></a></li>
+        <li><a href="<?php echo base_url();?>pages/view"><strong>Home</strong></a></li>
         <li><a href="<?php echo base_url();?>pages/view/about"><strong>About</strong></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Competitions</strong> <span class="caret"></span></a>
