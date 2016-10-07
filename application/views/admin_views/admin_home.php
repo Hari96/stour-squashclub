@@ -212,11 +212,11 @@ if(isset($_SESSION['role']))
           </tr>
           <tr>
             <td>You can delete an unactivated player and all their details.</td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Go to player delete page</a></td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_delete">Unactivated player delete page</a></td>
           </tr>
           <tr>
             <td>You can delete old data. Needs to be done rarely - further back than two years.</td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/delete_old_data">Go to delete old data page</a></td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/delete_old_data">Delete old data page</a></td>
           </tr>
         </tbody>
       </table>

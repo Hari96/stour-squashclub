@@ -13,6 +13,8 @@ if(isset($_SESSION['role']))
 <p>The list below is players who have not activated since registering.</p>
 <p>If someone loses their activation link for some reason, their account will need to be deleted before
   they can re-register with the same email address.</p>
+  <p>It is also possible that someone initially tried to register with the wrong email address and then went on to register with the correct email.
+    The data with the wrong email address will be stored in the database and need deleting.</p>
 </div>
 <br>
 <div class="container-fluid">

@@ -1,4 +1,6 @@
 <?php
+if (!defined('BASEPATH')) exit('No direct script access allowed');
+
   class Delete_users extends CI_Controller {
 
     function __construct() {

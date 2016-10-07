@@ -34,6 +34,10 @@ $(document).ready(function() {
            list[i].checked = false;
          }
        }
-    });    
+    });
+
+    $("#del_old_data").click(function() {
+     return confirm("You are about to delete old data - are you sure you wish to do this? Check dates chosen are correct!");
+    });
 
     });

@@ -1,13 +1,24 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
 body {
   padding-top: 120px;
   background-color: #FCF4D9;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 1.5rem;
 }
 .bg-navbar {
   background-color: #FFB85F;
   color: #FF7A5A;
+  font-size: 1.7rem;
 }
 .panel {
   background-color: #8ED2C9;
+}
+a {
+  color: #FF7A5A;
+}
+a:hover {
+  color: red;
 }
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
@@ -126,8 +137,8 @@ table, th, td {
   line-height: 0.9rem;
 }
 .line-style {
-  color: #f00;
-  background-color: #f00;
+  color: #FF7A5A;
+  background-color: #FF7A5A;
   height: 4px;
   width: 90%;
 }
