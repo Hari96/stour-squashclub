@@ -19,7 +19,7 @@ class Delete_old_data extends CI_Controller {
       $date = date('Y-m-d');
       $year = date('Y', strtotime($date));
       $chosen_year = $this->input->post('year');
-      $chosen_year = $chosen_year - 1;
+      $from_year = $chosen_year - 1;
       //need to build function 'delete_all_data'
       $data['not_ready_message'] = "Too early for this to be working - please speak to Bob Blake.";
       $this->load->view('templates/header', $data);

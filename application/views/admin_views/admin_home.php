@@ -195,11 +195,11 @@ if(isset($_SESSION['role']))
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/announcement_view/announcements_view">Admin announcements</a></td>
           </tr>
           <tr>
-            <td>You can send emails to all, one, or some of the <em>active</em> players. Copy will be sent to admin.</td>
+            <td>You can send emails to all, one, or some of the <em>active</em> players. Copy will be sent to the main admin.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/send_mail">Send an email to players</a></td>
           </tr>
           <tr>
-            <td>This will send your mail to ALL users, including anyone not playing in leagues. Copy will be sent to admin.</td>
+            <td>This will send your mail to ALL users, including anyone not playing in leagues. Copy will be sent to the main admin.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/mail_all">Send an email to all</a></td>
           </tr>
           <tr>

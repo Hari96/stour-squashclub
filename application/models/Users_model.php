@@ -234,22 +234,26 @@ class Users_model extends CI_Model {
     return $query->result_array();
   }
 
-  public function delete_all_data($chosen_year) {
+  public function delete_all_data($from_year) {
     $this->load->dbforge();//needed for dropping tables
     $i = 0; $league_exists = true;
     while ($league_exists == true) {
-      $chosen_year = $chosen_year - $i;
-      $league_name = "leagues" . $chosen_year;
+      $from_year = $from_year - $i;
+      $league_name = "leagues" . $from_year;
       $i++;
       if ($this->db->table_exists($league_name)) {
         $this->dbforge->drop_table($league_name);
+        //delete results
+        $this->db->where('year', $from_year);
+        $this->db->delete('results');
       } else {
         $num_leagues = $i;
         $league_exists = false;
       }
     }
     //delete results
-    //delete profile(s)
+    $this->db->where('year', $from_year);
+    //profile(s): needs a big re-think
     //delete individual players who have left the club
   }
 

@@ -247,18 +247,24 @@
     $this->db->where('id', $user_id);
     $query = $this->db->get('players');
     if ($query->row(0)->activated == 1) {
-      $data = array(
+      $player_data = array(
         'activated' => 0,
-        'active' => 2//someone who was once registered
+        'active' => 2//someone who was once registered and active
       );
     } else {
-      $data = array(
+      $player_data = array(
         'activated' => 0,
         'active' => 3//someone who was once registered, but was NEVER active
       );
     }
+    $profile_data = array(
+      'active' => 0
+    );
     $this->db->where('id', $user_id);
     $this->db->update('players', $data);
+    $this->db->where('user_id', $user_id);
+    $this->db->update('profiles', $profile_data);
+    //forum login needs cancelling!
   }
 
   public function insert_id_in_profiles($user_id) {
