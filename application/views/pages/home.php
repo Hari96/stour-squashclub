@@ -70,9 +70,10 @@
     to login and view the full site.</p>
     <br>
     <p>When signing up you can choose whether you wish to be included in future competitions.</p>
-    <p>Once you are activated the admin will automatically be informed and, if you have opted to be included in competitions,</p>
-    <p>the admin will include you in a future league. Initially you will be placed in a lower league but please see:</p>
-    <p><a href="<?php echo base_url(); ?>pages/view/details">General Details</a> for information about possibly joining a higher league.</p>
+    <p>Once you are activated the admin will automatically be informed and, if you have opted to be included in competitions,
+    the admin will include you in a future league.</p>
+    <p>Initially you will be placed in a lower league but please see:
+    <a href="<?php echo base_url(); ?>pages/view/details">General Details</a> for information about possibly joining a higher league.</p>
     <br>
     <h3>Coaching</h3>
   </div>

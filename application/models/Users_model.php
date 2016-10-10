@@ -251,7 +251,6 @@ class Users_model extends CI_Model {
         $league_exists = false;
       }
     }
-    //delete results
     $this->db->where('year', $from_year);
     //profile(s): needs a big re-think
     //delete individual players who have left the club

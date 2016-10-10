@@ -18,9 +18,9 @@
     public function activation_insert($user_id, $league_player) {
       //$this->load->helper('date');
       $date = date('Y-m-d');
-      $data_leagues = array(
-        'user_id' => $user_id
-      );
+      //$data_leagues = array(
+        //'user_id' => $user_id
+      //);
       if ($league_player == true) {
       $data = array(
         'activated' => 1,
@@ -30,7 +30,7 @@
         'user_id' => $user_id,
         'active' => 1
       );
-      $this->db->insert('leagues', $data_leagues);// maybe not necessary?
+      //$this->db->insert('leagues', $data_leagues);// maybe not necessary?
       $this->db->insert('profiles', $data_profiles);//inserts user id into profiles table + indicates playing in league
     } else {
       $data = array(

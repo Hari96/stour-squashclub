@@ -2,6 +2,7 @@
 <div class="container-fluid">
   <p>Includes players who have left, or are no longer active. Results will be kept for at least two years after a player leaves the club. </p>
   <p><strong>Click on a player to view all their results and their player profile.</strong></p>
+  <p>Individual player analysis is based on this year plus previous two years.</p>
   <div class="row">
   <div class="col-md-12 table-responsive">
     <table class="table table-bordered table-striped spacing-top">
@@ -25,7 +26,7 @@
             <td><?php echo $profile['won']; ?></td>
             <td><?php echo $profile['drawn']; ?></td>
             <td><?php echo $profile['lost']; ?></td>
-            <td><?php echo $profile['average']; ?></td>
+            <td><?php echo $profile['average'] . "%"; ?></td>
             <?php $last_played = $profile['day'] . " " . $profile['date'] . " " . $profile['month']; ?>
             <td><?php echo $last_played; ?></td>
           </tr>
