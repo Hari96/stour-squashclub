@@ -126,7 +126,7 @@
         $user_id = $this->users_model->get_id_from_code($code);
         $name = $this->users_model->get_name_from_id($user_id);//TO DELETE ACTIVATION CODE AFTER ACTIVATION??
         $league_player = $this->input->get('league_player');//true or false
-        $this->insert_model->activation_insert($user_id, $league_player);//initiates leagues (maybe not necessary?) and intiates profile
+        $this->insert_model->activation_insert($user_id, $league_player);//updates players table and intiates profile
         //Informing admin of new registration
         if ($league_player == true) {
           $pl_message = "does wish to play in the league";

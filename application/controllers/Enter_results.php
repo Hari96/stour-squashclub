@@ -32,21 +32,23 @@
         // Entering results into profiles table
         //decide whether each player has won, drawn or lost
         if ($player1_score == $player2_score) {
-          $month = ucfirst($month);
-          $row = $this->users_model->get_player_profile($player1_id);
-          $played = $row->played + 1;
-          $won = $row->won;
-          $drawn = $row->drawn + 1;
-          $lost = $row->lost;
-          $average = ($won / $played) * 100;
-          $this->insert_model->update_profiles($player1_id, $played, $won, $drawn, $lost, $average, $month, $day, $date);
-          $row = $this->users_model->get_player_profile($player2_id);
-          $played = $row->played + 1;
-          $won = $row->won;
-          $drawn = $row->drawn + 1;
-          $lost = $row->lost;
-          $average = ($row->won / $played) * 100;
-          $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $day, $date);
+          if (!($player1_score == 0 && $player2_score == 0)) {//if both scores are zero they have not played!
+            $month = ucfirst($month);
+            $row = $this->users_model->get_player_profile($player1_id);
+            $played = $row->played + 1;
+            $won = $row->won;
+            $drawn = $row->drawn + 1;
+            $lost = $row->lost;
+            $average = ($won / $played) * 100;
+            $this->insert_model->update_profiles($player1_id, $played, $won, $drawn, $lost, $average, $month, $day, $date);
+            $row = $this->users_model->get_player_profile($player2_id);
+            $played = $row->played + 1;
+            $won = $row->won;
+            $drawn = $row->drawn + 1;
+            $lost = $row->lost;
+            $average = ($row->won / $played) * 100;
+            $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $day, $date);
+          }
         }
         if ($player1_score > $player2_score) {
           $month = ucfirst($month);

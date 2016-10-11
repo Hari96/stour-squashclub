@@ -34,59 +34,61 @@
         foreach($results as $result):
           if ($result['year'] >= ($year - 2)) {//previous 2 years plus this year
             if ($result['player1_id'] == $id || $result['player2_id'] == $id) {
-            if ($result['player1_id'] == $id) {
-              $opponent_id = $result['player2_id'];
-              $score = $result['player1_score'] . "-" . $result['player2_score'];
-              if ($result['player1_score'] > $result['player2_score']) {
-                $bg = "bg-green";
-                $res = "WIN";
-                $w++; $p++;
-              } else if ($result['player1_score'] < $result['player2_score']) {
-                $bg = "bg-red";
-                $res = "LOSS";
-                $l++; $p++;
-              } else { $bg = "bg-blue"; $res = "DRAW"; $d++; $p++; }
-              $year = $result['year'];
-              foreach ($players as $player):
-                if ($player['id'] == $opponent_id) {
-                  $name = $player['fName'] . " " . $player['lName'];
-                }
-              endforeach;
-            } else {
-              $opponent_id = $result['player1_id'];
-              $score = $result['player2_score'] . "-" . $result['player1_score'];
-              if ($result['player2_score'] > $result['player1_score']) {
-                $bg = "bg-green";
-                $res = "WIN";
-                $w++; $p++;
-              } else if ($result['player2_score'] < $result['player1_score']) {
-                $bg = "bg-red";
-                $res = "LOSS";
-                $l++; $p++;
-              } else { $bg = "bg-blue"; $res = "DRAW"; $d++; $p++;}
-              $year = $result['year'];
-              foreach ($players as $player):
-                if ($player['id'] == $opponent_id) {
-                  $name = $player['fName'] . " " . $player['lName'];
-                }
-              endforeach;
-            }
-            $partYear = substr_replace($year, "'", 0, 2);
-        ?>
-        <tr>
-          <?php if ($month != $result['month']) { echo "<td class='bg-lgrey'><strong>" . ucfirst($result['month']) . $partYear . "</strong><br><span id='profile-div'>Division " . $result['division'] . "</span></td>";
-          } else { echo "<td></td>"; } ?>
-          <td><?php echo $result['day'] . " " . $result['date'] . " " . ucfirst($result['month']); ?></td>
-          <?php echo "<td class=" .$bg .">" . $res . " " .$score . "</td>"; ?>
-          <td><a href="<?php echo site_url('player_profiles/player_profile/?user_id='.$opponent_id); ?>"><?php echo $name; ?></a></td>
-        </tr>
-        <?php  $month = $result['month'];
+              if (!($result['player1_score'] == 0 && $result['player2_score'] == 0)) {
+              if ($result['player1_id'] == $id) {
+                $opponent_id = $result['player2_id'];
+                $score = $result['player1_score'] . "-" . $result['player2_score'];
+                if ($result['player1_score'] > $result['player2_score']) {
+                  $bg = "bg-green";
+                  $res = "WIN";
+                  $w++; $p++;
+                } else if ($result['player1_score'] < $result['player2_score']) {
+                  $bg = "bg-red";
+                  $res = "LOSS";
+                  $l++; $p++;
+                } else { $bg = "bg-blue"; $res = "DRAW"; $d++; $p++; }
+                $year = $result['year'];
+                foreach ($players as $player):
+                  if ($player['id'] == $opponent_id) {
+                    $name = $player['fName'] . " " . $player['lName'];
+                  }
+                endforeach;
+              } else {
+                $opponent_id = $result['player1_id'];
+                $score = $result['player2_score'] . "-" . $result['player1_score'];
+                if ($result['player2_score'] > $result['player1_score']) {
+                  $bg = "bg-green";
+                  $res = "WIN";
+                  $w++; $p++;
+                } else if ($result['player2_score'] < $result['player1_score']) {
+                  $bg = "bg-red";
+                  $res = "LOSS";
+                  $l++; $p++;
+                } else { $bg = "bg-blue"; $res = "DRAW"; $d++; $p++;}
+                $year = $result['year'];
+                foreach ($players as $player):
+                  if ($player['id'] == $opponent_id) {
+                    $name = $player['fName'] . " " . $player['lName'];
+                  }
+                endforeach;
+              }
+              $partYear = substr_replace($year, "'", 0, 2);
+          ?>
+          <tr>
+            <?php if ($month != $result['month']) { echo "<td class='bg-lgrey'><strong>" . ucfirst($result['month']) . $partYear . "</strong><br><span id='profile-div'>Division " . $result['division'] . "</span></td>";
+            } else { echo "<td></td>"; } ?>
+            <td><?php echo $result['day'] . " " . $result['date'] . " " . ucfirst($result['month']); ?></td>
+            <?php echo "<td class=" .$bg .">" . $res . " " .$score . "</td>"; ?>
+            <td><a href="<?php echo site_url('player_profiles/player_profile/?user_id='.$opponent_id); ?>"><?php echo $name; ?></a></td>
+          </tr>
+          <?php  $month = $result['month'];
+          }
         }
       }
         endforeach; ?>
         </tbody>
       </table>
-      <?php echo form_open(''); $a = $w/$p * 100; $a = round($a, 2); ?>
+      <?php echo form_open(''); if ($p == 0) { $a = 0; } else {$a = $w/$p * 100; $a = round($a, 2);} ?>
       <input type="hidden" id="pl" value="<?php echo $p; ?>">
       <input type="hidden" id="w" value="<?php echo $w; ?>">
       <input type="hidden" id="l" value="<?php echo $l; ?>">

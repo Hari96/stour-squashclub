@@ -24,7 +24,8 @@
       if ($league_player == true) {
       $data = array(
         'activated' => 1,
-        'JoinDate' => $date
+        'JoinDate' => $date,
+        'active' => 1
       );
       $data_profiles = array(
         'user_id' => $user_id,
