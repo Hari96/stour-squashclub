@@ -1,8 +1,9 @@
 <h2>Player's profiles</h2>
 <div class="container-fluid">
   <p>Includes players who have left, or are no longer active. Results will be kept for at least two years after a player leaves the club. </p>
-  <p><strong>Click on a player to view all their results and their player profile.</strong></p>
-  <p>Individual player analysis is based on this year plus previous two years.</p>
+  <p>Analysis given here runs over the full period since site started.</p>
+  <p><strong>Click on a player to view all their results and their player profile</strong>
+  (Individual player profiles run over this year plus previous year).</p>
   <div class="row">
   <div class="col-md-12 table-responsive">
     <table class="table table-bordered table-striped spacing-top">

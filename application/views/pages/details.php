@@ -4,7 +4,7 @@
     <div class="col-md-8 col-md-offset-2">
       <section class="panel panel-info">
         <div class="panel-heading">
-          <h3 class="panel-title">General Details</h3>
+          <h3 class="panel-title text-center">General Details</h3>
         </div>
         <div class="panel-body">
           <p>The League will be divided into divisions, with a maximum number of five players in each division. Each player is responsible for contacting another two players in his/her division, i.e:</p>
@@ -48,7 +48,7 @@
   <div class="col-md-8 col-md-offset-2">
     <section class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title">Rules</h3>
+        <h3 class="panel-title text-center">Rules</h3>
       </div>
       <div class="panel-body">
         <ol>

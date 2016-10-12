@@ -1,9 +1,12 @@
-<h2>Player profile</h2>
+<?php
+$date = date('Y-m-d');
+$year = date('Y', strtotime($date));
+?>
+<h2>Player profile <?php echo $year;?></h2>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">
-    <p>Analysis runs over previous year plus this year.</p>
-    <p>Clicking on <em>Show Current Profile</em> will show this year's analysis.</p>
+    <p>Profile based on this year's results only.</p>
     <p><small>[Please note: If you have JavaScript disabled you will not see the overall analysis.]</small></p>
     </div>
     <div class="col-md-7 table-responsive">
@@ -15,10 +18,6 @@
       ?>
         <span>contact: <a href="<?php echo base_url(); ?>model_views/view/login">Log in/Register</a> to view contact details</span>
       <?php } ?>
-      <br><br>
-      <div>
-        <a class="btn btn-info" href="<?php echo site_url('player_profiles/current_year_profile/?user_id='.$id); ?>">Show Current Profile</a>
-      </div>
       <table class="table table-bordered table-striped spacing-top">
         <thead>
           <tr class=""><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Average</th></tr>
@@ -34,10 +33,8 @@
       <tbody>
         <?php
         $month = ""; $p = 0; $w = 0; $l = 0; $d = 0; $a = 0;//played, win, loss, draw and average variables
-        $date = date('Y-m-d');
-        $year = date('Y', strtotime($date));
         foreach($results as $result):
-          if ($result['year'] >= ($year - 1)) {//previous 1 year plus this year
+          if ($result['year'] == $year) {//just this year's results
             if ($result['player1_id'] == $id || $result['player2_id'] == $id) {
               if (!($result['player1_score'] == 0 && $result['player2_score'] == 0)) {
               if ($result['player1_id'] == $id) {
@@ -84,7 +81,7 @@
             } else { echo "<td></td>"; } ?>
             <td><?php echo $result['day'] . " " . $result['date'] . " " . ucfirst($result['month']); ?></td>
             <?php echo "<td class=" .$bg .">" . $res . " " .$score . "</td>"; ?>
-            <td><a href="<?php echo site_url('player_profiles/player_profile/?user_id='.$opponent_id); ?>"><?php echo $name; ?></a></td>
+            <td><a href="<?php echo site_url('player_profiles/current_year_profile/?user_id='.$opponent_id); ?>"><?php echo $name; ?></a></td>
           </tr>
           <?php  $month = $result['month'];
           }

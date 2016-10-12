@@ -16,7 +16,8 @@
   <body>
     <nav class="navbar navbar-default navbar-fixed-top bg-navbar">
 
-      <h1 class="text-center" id="head"><img src="<?php echo base_url();?>images/squash-racquets.png">Stour Centre Squash Club - Ashford, Kent<img src="<?php echo base_url();?>images/squash-racquets.png"></h1>
+      <h1 class="text-center" id="head"><img src="<?php echo base_url();?>images/squash-racquets.png" alt="left header image">
+        Stour Centre Squash Club - Ashford, Kent<img src="<?php echo base_url();?>images/squash-racquets.png" alt="right header image"></h1>
 
       <div class="container">
         <div class="navbar-header">

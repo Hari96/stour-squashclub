@@ -10,11 +10,11 @@ echo ucfirst($month) . " " . $partYear;
       <p>The League will be divided into divisions, with a maximum number of five players in each division.
         Each player is responsible for contacting another two players in his/her division, i.e:</p>
       <ul>
-      <li>Player Number 1 contacts Numbers 2 and 3</li>
-      <li>Player Number 2 contacts Numbers 3 and 4</li>
-      <li>Player Number 3 contacts Numbers 4 and 5</li>
-      <li>Player Number 4 contacts Numbers 5 and 1</li>
-      <li>Player Number 5 contacts Numbers 1 and 2</li>
+        <li>Player Number 1 contacts Numbers 2 and 3</li>
+        <li>Player Number 2 contacts Numbers 3 and 4</li>
+        <li>Player Number 3 contacts Numbers 4 and 5</li>
+        <li>Player Number 4 contacts Numbers 5 and 1</li>
+        <li>Player Number 5 contacts Numbers 1 and 2</li>
       </ul>
       <p>Opponents should be contacted at least one whole week before the session ends.</p>
       <p>Matches are to be played as agreed by the two players. If you are not contacted within the specified time you may claim the match 3-0.</p>

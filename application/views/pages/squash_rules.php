@@ -5,7 +5,7 @@
     <div class="col-md-8 col-md-offset-2">
       <section class="panel panel-info">
         <div class="panel-heading">
-          <h3 class="panel-title">Main Rules</h3>
+          <h3 class="panel-title text-center">Main Rules</h3>
         </div>
         <div class="panel-body">
           <p>There are clear right of way rules on squash which are designed to prevent traffic jams.</p>
@@ -69,8 +69,8 @@
           <div>
             <ul>
               <li>the incoming striker is in position to win the rally but suffers interference.</li>
-              <li>the incoming striker would have struck the opponent with the ball going directly</li>
-              <li>to ANY PART of the front wall.</li>
+              <li>the incoming striker would have struck the opponent with the ball going directly
+                  to ANY PART of the front wall.</li>
               <li>the outgoing player did not make every effort to clear</li>
             </ul>
           <p>A stroke is awarded if the interference was the fault of the outgoing player;
