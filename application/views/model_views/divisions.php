@@ -20,8 +20,9 @@ echo ucfirst($month) . " " . $partYear;
       <p>Matches are to be played as agreed by the two players. If you are not contacted within the specified time you may claim the match 3-0.</p>
       <p><em>Booking courts:</em></p>
       <p>Ring Stour Centre reception 01233 663503, then press 0 to make a booking.</p>
-      <p>If you are a member of the Stour Centre you should be able to check availability, and book via:</p>
-      <p> <a href="https://ashfordleisuretrust.leisurecloud.net/Connect/mrmlogin.aspx">Ashford Leisure Trust</a></p>
+      <p>If you are a member of the Stour Centre you should be able to check availability, and book via:
+      <a href="https://ashfordleisuretrust.leisurecloud.net/Connect/mrmlogin.aspx">Ashford Leisure Trust</a></p>
+      <p>Please report results using <a href="<?php echo base_url();?>captcha_results/form">Results Form.</a></p>
     </section>
     <section class="col-md-8 table-responsive">
       <span class="lead"><strong>DIVISION 1</strong></span>

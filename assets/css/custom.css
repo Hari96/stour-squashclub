@@ -4,7 +4,7 @@ body {
   padding-top: 120px;
   background-color: #FCF4D9;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .bg-navbar {
   background-color: #FFB85F;
@@ -49,7 +49,7 @@ a:hover {
   color: white;
 }
 #head {
-  font-size: 1.3em;
+  font-size: 1.8rem;
 }
 table {
   width: 98%;
@@ -89,16 +89,16 @@ table, th, td {
 }
 .warning {
   color: red;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-style: oblique;
 }
 .not-activated-star {
   color: red;
-  font-size: 1.3em;
+  font-size: 1.4rem;
 }
 .admin-star {
   color: red;
-  font-size: 1.2em;
+  font-size: 1.5rem;
 }
 .message-box {
   border: 1px solid black;

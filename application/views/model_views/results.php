@@ -68,6 +68,8 @@ echo ucfirst($month) . " " . $partYear;
     <div class="col-md-4">
     </div>
     <div class="col-md-8 table-responsive">
+      <p>Please report results using <a href="<?php echo base_url();?>captcha_results/form">Results Form.</a></p>
+      <p><em>Contact details for all players can be found on the Divisions page (only if you are logged in).</em></p>
       <span class="lead"><strong>DIVISION 1</strong></span>
       <table class="table table-bordered table-striped">
         <thead>

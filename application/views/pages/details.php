@@ -19,7 +19,7 @@
           Each league session will last for one calendar month. During that time players are expected to play four matches. Opponents should be contacted at least one whole week before the session ends. Please use the above mentioned guide to make the necessary contacts. Matches are to be played as agreed by the two players. If you are not contacted within the specified time you may claim the match 3-0.
         </p>
         <p>
-        All match results are to be submitted using the <em>Results Form</em>. Please do not enter results directly onto the League match sheets. The admin will update the match sheets (outside the courts) as often as possible. At the end of each League period, promotion and demotion will be carried out as follows:
+        All match results are to be submitted using the <a href="<?php echo base_url();?>captcha_results/form">Results Form.</a></p> Please do not enter results directly onto the League match sheets. The admin will update the match sheets (outside the courts) as often as possible. At the end of each League period, promotion and demotion will be carried out as follows:
         <p>
 
         <p>
