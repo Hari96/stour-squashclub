@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
   <head>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Stour Centre Squash Club - Ashford, Kent</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/custom.css" />
+    <!-- SCRIPTS PLACED AT BOTTOM OF BODY
     <script src ="<?php echo base_url();?>assets/js/jquery.js"></script>
     <script src ="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
     <script src ="<?php echo base_url();?>assets/js/custom.js"></script>
-
+  -->
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top bg-navbar">

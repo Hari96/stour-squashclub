@@ -1,5 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
+/* A possibility to improve incremental changes, but need to change all other rem font-sizes
+html {
+  font-size: calc(1em + 1vw);
+}
+*/
 body {
   padding-top: 120px;
   background-color: #FCF4D9;
@@ -8,7 +13,7 @@ body {
 }
 .bg-navbar {
   background-color: #FFB85F;
-  color: #FF7A5A;
+  color: #FF7A5A;  
   font-size: 1.7rem;
 }
 .panel {
