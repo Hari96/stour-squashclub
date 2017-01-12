@@ -176,11 +176,53 @@ class Users_model extends CI_Model {
 
   }
 
-  public function get_leagues($year) {
+  public function get_leagues($year) {//probably do not need this function
     $league_name = "leagues" . $year;
     $query = $this->db->get($league_name);
     $row = $query->row();
     return $query->result_array();
+  }
+
+  public function get_month($num) {
+    switch($num) {
+      case '01':
+      $month = 'jan';
+      break;
+      case '02':
+      $month = 'feb';
+      break;
+      case '03':
+      $month = 'mar';
+      break;
+      case '04':
+      $month = 'apr';
+      break;
+      case '05':
+      $month = 'may';
+      break;
+      case '06':
+      $month = 'jun';
+      break;
+      case '07':
+      $month = 'jul';
+      break;
+      case '08':
+      $month = 'aug';
+      break;
+      case '09':
+      $month = 'sep';
+      break;
+      case '10':
+      $month = 'oct';
+      break;
+      case '11':
+      $month = 'nov';
+      break;
+      case '12':
+      $month = 'dec';
+      break;
+    }
+    return $month;
   }
 
   public function getNamesFromEmail($email) {

@@ -11,7 +11,6 @@ class Admin_announcements extends CI_Controller {
 
   public function index() {
     $this->session->set_userdata('announcements');
-    $this->insert_model->empty_announcements();
     $latest_title = $this->input->post('title1');
     $latest_comment = $this->input->post('content1');
     $date = date('Y-m-d');
@@ -20,6 +19,7 @@ class Admin_announcements extends CI_Controller {
       'comment' => $latest_comment,
       'date' => $date
     );
+    $this->insert_model->empty_announcements();
     $this->insert_model->insert_announcements($data);
     for ($i = 2; $i <= 5; $i++) {
        $title = $this->input->post('title' . $i);
@@ -27,8 +27,8 @@ class Admin_announcements extends CI_Controller {
        $data = array(
          'title' => $title,
          'comment' => $comment,
-         'date' => $date,
-         'number' => $i
+         'date' => $date
+         //'number' => $i
        );
        $this->insert_model->insert_announcements($data);
     }

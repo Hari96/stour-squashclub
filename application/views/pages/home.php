@@ -1,9 +1,15 @@
+<?php if (isset($results_sent_message)) { ?>
+<div class="message-box alert alert-success alert-dismissible">
+<h3 style="color:green;"><?php echo $results_sent_message; ?></h3>
+<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+</div>
+<?php $results_sent_message = ''; } ?>
 <?php if (isset($reg_message)) { ?>
 <div class="message-box alert alert-success alert-dismissible">
 <h3 style="color:green;"><?php echo $reg_message; ?></h3>
 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>
-<?php $message = ''; } ?>
+<?php $reg_message = ''; } ?>
 <?php if (isset($success_message)) { ?>
 <div class="message-box alert alert-success">
   <h3 style="color:green;"><?php echo $success_message; ?></h3>

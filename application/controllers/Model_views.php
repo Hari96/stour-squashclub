@@ -13,22 +13,31 @@ class Model_views extends CI_Controller {
       show_404();
     }
 
-    $order_field= "lName";// field to order by
-    $order_direction = "asc";//direction of sort
+    if ($page !== 'register' && $page !== 'login') {
+      $order_field= "lName";// field to order by
+      $order_direction = "asc";//direction of sort
 
-    $row = $this->users_model->get_current_period();
-    $year = $row->year;
-    $month = $row->month;
-    $data['year'] = $year;
-    $data['month'] = $month;
+      //$row = $this->users_model->get_current_period();
+      //$year = $row->year;
+      //$month = $row->month;
+      $year = date("Y");
+      $month_num = date("m");
+      $month = $this->users_model->get_month($month_num);
+      $data['year'] = $year;
+      $data['month'] = $month;
 
-    $data['players'] = $this->users_model->get_players($order_field, $order_direction);
-    $data['leagues'] = $this->users_model->get_leagues($year);
-    
-    $this->load->view('templates/header', $data);
-    $this->load->view('model_views/'.$page, $data);
-    $this->load->view('templates/footer', $data);
+      $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+      $data['leagues'] = $this->users_model->get_leagues($year);
 
+      $this->load->view('templates/header', $data);
+      $this->load->view('model_views/'.$page, $data);
+      $this->load->view('templates/footer', $data);
+    }
+    else {
+      $this->load->view('templates/header');
+      $this->load->view('model_views/'.$page);
+      $this->load->view('templates/footer');
+    }
   }
 
 }

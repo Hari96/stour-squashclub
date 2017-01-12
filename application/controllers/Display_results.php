@@ -29,9 +29,10 @@
     }
 
     public function initial_results() {
-      $row = $this->users_model->get_current_period();
-      $year = $row->year;
-      $month = $row->month;
+      //$row = $this->users_model->get_current_period();
+      $year = date('Y');
+      $month_num = date("m");
+      $month = $this->users_model->get_month($month_num);
       $data['year'] = $year;
       $data['month'] = $month;
       $order_field = "id";
@@ -45,9 +46,10 @@
     }
 
     public function initial_tables() {
-      $row = $this->users_model->get_current_period();
-      $year = $row->year;
-      $month = $row->month;
+      //$row = $this->users_model->get_current_period();
+      $year = date('Y');
+      $month_num = date("m");
+      $month = $this->users_model->get_month($month_num);
       $data['year'] = $year;
       $data['month'] = $month;
       $order_field = "id";
@@ -59,5 +61,4 @@
       $this->load->view('model_views/tables', $data);
       $this->load->view('templates/footer', $data);
     }
-
   }

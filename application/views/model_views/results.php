@@ -179,6 +179,7 @@ echo ucfirst($month) . " " . $partYear;
                               case 2:
                               $player1_score = 2;
                               $player2_score = 4;
+                              break;
                               case 3:
                               $player1_score = 1;
                               $player2_score = 5;
@@ -404,6 +405,7 @@ echo ucfirst($month) . " " . $partYear;
                                 case 2:
                                 $player1_score = 2;
                                 $player2_score = 4;
+                                break;
                                 case 3:
                                 $player1_score = 1;
                                 $player2_score = 5;
@@ -629,6 +631,7 @@ echo ucfirst($month) . " " . $partYear;
                                 case 2:
                                 $player1_score = 2;
                                 $player2_score = 4;
+                                break;
                                 case 3:
                                 $player1_score = 1;
                                 $player2_score = 5;
@@ -854,6 +857,7 @@ echo ucfirst($month) . " " . $partYear;
                                 case 2:
                                 $player1_score = 2;
                                 $player2_score = 4;
+                                break;
                                 case 3:
                                 $player1_score = 1;
                                 $player2_score = 5;

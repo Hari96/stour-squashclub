@@ -33,12 +33,23 @@
       $this->form_validation->set_rules('inputLandline','Landline Number','regex_match[/^[0-9]{11}$/]');
 
       if ($this->form_validation->run() == FALSE) {
-        $this->load->view('templates/header');
-        $this->load->view('model_views/register');
-        $this->load->view('templates/footer');
+        $data = array(
+          'fName' => $this->input->post('inputFirstName'),
+          'lName' => $this->input->post('inputLastName'),
+          'email' => $this->input->post('inputEmail'),
+          'mobile' => $this->input->post('inputMobile'),
+          'landline' => $this->input->post('inputLandline'),
+          'age' => $this->input->post('age'),
+          'standard' => $this->input->post('standard')
+        );
+        $this->load->view('templates/header', $data);
+        $this->load->view('model_views/register2', $data);
+        $this->load->view('templates/footer', $data);
       } else {
         //checking for duplicate email
         $email = $this->input->post('inputEmail');
+        $password = $this->input->post('inputPassword');
+        $email = strtolower($email);
         if($this->users_model->check_for_email($email) == true) {
           $data['email_message'] = 'Email address already exists, login with that address, or input a different address';
           $this->load->view('templates/header', $data);

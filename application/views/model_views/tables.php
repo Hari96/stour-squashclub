@@ -89,6 +89,7 @@ echo ucfirst($month) . " " . $partYear;
               foreach ($results as $result):
                 if ($result['division'] == 1) {
                   if ($result['player1_id'] == $league['user_id']) {
+                    //start of player1's scores
                     if ($result['player1_score'] == 3) {
                       $gamesWon++;
                       $gamesPlayed++;
@@ -113,7 +114,7 @@ echo ucfirst($month) . " " . $partYear;
                           break;
                         }
                         $tScore = $tScore + $score;
-                      } else if ($result['player1_score'] == 2) {
+                      } else if ($result['player1_score'] == 2 && $result['player2_score'] < 2) {
                         $gamesWon++;
                         $gamesPlayed++;
                         switch ($result['player2_score']) {
@@ -123,34 +124,25 @@ echo ucfirst($month) . " " . $partYear;
                           break;
                         }
                         $tScore = $tScore + $score;
-                      } else if ($result['player1_score'] == 1) {
+                      } else if ($result['player1_score'] == 1 && $result['player2_score'] == 0) {
                         $gamesWon++;
                         $gamesPlayed++;
-                        switch ($result['player2_score']) {
-
-                          case 0: $score = 4;
-                          break;
-                        }
+                        $score = 4;
                         $tScore = $tScore + $score;
-                      } else if ($result['player2_score'] == 2) {
-                        $gamesWon++;
+                      } else if ($result['player2_score'] == 2 && $result['player1_score'] < 2) {
+                        $gamesLost++;
                         $gamesPlayed++;
                         switch ($result['player1_score']) {
-
-                          case 0: $score = 1;
-                          break;
                           case 1: $score = 2;
                           break;
-                        }
-                        $tScore = $tScore + $score;
-                      } else if ($result['player2_score'] == 1) {
-                        $gamesWon++;
-                        $gamesPlayed++;
-                        switch ($result['player1_score']) {
-
-                          case 0: $score = 2;
+                          case 0: $score = 1;
                           break;
                         }
+                        $tScore = $tScore + $score;
+                      } else if ($result['player2_score'] == 1 && $result['player1_score'] == 0) {
+                        $gamesLost++;
+                        $gamesPlayed++;
+                        $score = 2;
                         $tScore = $tScore + $score;
                       } else if (($result['player1_score'] == $result['player2_score']) && ($result['player1_score'] != 0 && $result['player2_score'] != 0)) {
                           $gamesDrawn++;
@@ -159,6 +151,7 @@ echo ucfirst($month) . " " . $partYear;
                         }
                       }//end of player1's scoring
                       if ($result['player2_id'] == $league['user_id']) {
+                        //start of player2's scoring
                         if ($result['player2_score'] == 3) {
                           $gamesWon++;
                           $gamesPlayed++;
@@ -183,7 +176,7 @@ echo ucfirst($month) . " " . $partYear;
                               break;
                             }
                             $tScore = $tScore + $score;
-                          } else if ($result['player2_score'] == 2) {
+                          } else if ($result['player2_score'] == 2 && $result['player1_score'] < 2) {
                               $gamesWon++;
                               $gamesPlayed++;
                               switch ($result['player1_score']) {
@@ -193,15 +186,12 @@ echo ucfirst($month) . " " . $partYear;
                                 break;
                               }
                               $tScore = $tScore + $score;
-                            } else if ($result['player2_score'] == 1) {
+                            } else if ($result['player2_score'] == 1 && $result['player1_score'] == 0) {
                                 $gamesWon++;
                                 $gamesPlayed++;
-                                switch ($result['player1_score']) {
-                                  case 0: $score = 4;
-                                  break;
-                                }
+                                $score = 4;
                                 $tScore = $tScore + $score;
-                              } else if ($result['player1_score'] == 2) {
+                              } else if ($result['player1_score'] == 2 && $result['player2_score'] < 2) {
                                 $gamesLost++;
                                 $gamesPlayed++;
                                 switch ($result['player2_score']) {
@@ -210,13 +200,10 @@ echo ucfirst($month) . " " . $partYear;
                                   case 1: $score = 2;
                                 }
                                 $tScore = $tScore + $score;
-                              } else if ($result['player1_score'] == 1) {
+                              } else if ($result['player1_score'] == 1 && $result['player2_score'] == 0) {
                                 $gamesLost++;
                                 $gamesPlayed++;
-                                switch ($result['player2_score']) {
-                                  case 0: $score = 2;
-                                  break;
-                                }
+                                $score = 2;
                                 $tScore = $tScore + $score;
                               } else if (($result['player2_score'] == $result['player1_score']) && ($result['player2_score'] != 0 && $result['player1_score'] != 0)) {
                               $gamesDrawn++;

@@ -1,9 +1,8 @@
 <?php
-  class Results_hub extends CI_Controller {
+  class Profiles_update extends CI_Controller {
 
     function __construct() {
       parent::__construct();
-      $this->load->model('insert_model');
       $this->load->model('users_model');
     }
 
@@ -25,9 +24,10 @@
         $data['year'] = $year;
         $data['month'] = $month;
         $this->load->view('templates/header', $data);
-        $this->load->view('admin_views/results_view', $data);
+        $this->load->view('admin_views/profiles_update_view', $data);
         $this->load->view('templates/footer', $data);
 
       }
     }
+
   }

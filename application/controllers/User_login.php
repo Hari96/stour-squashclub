@@ -16,9 +16,13 @@ class User_login extends CI_Controller {
     $this->form_validation->set_rules('confirmPassword','Password confirmation','required|matches[inputPassword]');
 
     if ($this->form_validation->run() == FALSE) {
-      $this->load->view('templates/header');
-      $this->load->view('model_views/login');
-      $this->load->view('templates/footer');
+      $email = $this->input->post('inputEmail');
+      $data = array(
+        'email' => $email
+      );
+      $this->load->view('templates/header', $data);
+      $this->load->view('model_views/login2', $data);
+      $this->load->view('templates/footer', $data);
     } else {
       //checking for existence of email
       $email = $this->input->post('inputEmail');
@@ -74,9 +78,12 @@ class User_login extends CI_Controller {
           $this->load->view('templates/footer', $data);
         }
       } else {
-        $data['no_email_message'] = "No user with that email address exists";
+        $data = array(
+          'email' => $email,
+          'no_email_message' => "No user with that email address exists"
+        );
           $this->load->view('templates/header', $data);
-          $this->load->view('model_views/login', $data);
+          $this->load->view('model_views/login2', $data);
           $this->load->view('templates/footer', $data);
       }
     }

@@ -31,7 +31,8 @@
         $this->insert_model->update_results($year, $month, $div, $player1_id, $player2_id, $player1_score, $player2_score, $date, $day);
         // Entering results into profiles table
         //decide whether each player has won, drawn or lost
-        if ($player1_score == $player2_score) {
+        //**--profile update to be left until end of each period--**
+        /*if ($player1_score == $player2_score) {
           if (!($player1_score == 0 && $player2_score == 0)) {//if both scores are zero they have not played!
             $month = ucfirst($month);
             $row = $this->users_model->get_player_profile($player1_id);
@@ -83,7 +84,7 @@
           $lost = $row->lost;
           $average = ($won / $played) * 100;
           $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $day, $date);
-        }
+        }*/
       }
       $order_field = "id";
       $order_direction = "asc";

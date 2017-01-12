@@ -54,7 +54,7 @@
         <ol>
           <li><p>Courts are to be booked in the usual way. Membership of the League will not entitle a player to any concessions regarding bookings or cost of courts.</p></li>
           <li>
-            <p>2 Matches are to be played over a 40-minute period or as agreed by both players before the start of the first game. Each match will be the best of five games, ie: the player to win three games will be the winner of the match. In the event of neither player winning the match in the specified time, points will be scored for completed games only. Possible final results are:
+            <p>Matches are to be played over a 40-minute period or as agreed by both players before the start of the first game. Each match will be the best of five games, ie: the player to win three games will be the winner of the match. In the event of neither player winning the match in the specified time, points will be scored for completed games only. Possible final results are:
             </p>
           <div class="squashed-list">
             <p><em>Games:</em></p>

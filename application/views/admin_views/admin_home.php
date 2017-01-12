@@ -5,7 +5,6 @@ if(isset($_SESSION['role']))
   if ( validation_errors() !== '') {?>
   <div class="message-box alert alert-danger alert-dismissible"><p><?php echo $val_message ?></p>
     <?php echo validation_errors(); ?>
-    <a href="<?php echo base_url(); echo $val_direct; ?>"> <?php echo $val_amessage; ?></a>
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   </div>
   <?php } ?>
@@ -117,15 +116,15 @@ if(isset($_SESSION['role']))
         </thead>
         <tbody>
           <tr>
-            <td>You can update the main player details: <em>Names, mobile and email.</em> </td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update">Update main player details</a></td>
+            <td>You can update players' main details: <em>Names, mobile and email.</em> </td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update">Update player's main details</a></td>
           </tr>
           <tr>
-            <td>You can update other player details: <em>Landline, age, level and league status (active or non-active).</em> </td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update2">Update other player details</a></td>
+            <td>You can update players' other details: <em>Landline, age, level and league status (active or non-active).</em> </td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update2">Update players' other details</a></td>
           </tr>
           <tr>
-            <td>When a player leaves their login facility can be removed, but their results will still be part of the database for at least 2 years.</td>
+            <td>When a player leaves the club their login facility can be removed, but their results will still be part of the database for at least 2 years.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/remove_login">Remove player login</a></td>
           </tr>
           <tr>
@@ -189,6 +188,64 @@ if(isset($_SESSION['role']))
               ?>
             </td>
             <?php echo form_close(); ?>
+          </tr>
+          <tr>
+            <td>Player Profiles can be updated. PROFILES SHOULD ONLY BE UPDATED AT END OF EACH MONTH, ONCE ALL RESULTS ARE ENTERED. <strong>Note:</strong> <em>If any results are changed after Profiles have been updated then the profiles can only be changed by the Web Master.</em>
+            </td>
+            <?php echo form_open('profiles_update'); ?>
+            <td>
+              <?php
+              echo form_label('Choose Year:', 'inputYear');
+              $options = array(
+                '0' => 'Choose the year',
+                '2016' => '2016',
+                '2017' => '2017',
+                '2018' => '2018',
+                '2019' => '2019',
+                '2020' => '2020',
+                '2021' => '2021',
+                '2022' => '2022',
+                '2023' => '2023',
+                '2024' => '2024',
+                '2025' => '2025',
+                '2026' => '2026',
+                '2027' => '2027'
+              );
+              echo form_dropdown('year', $options, 'Choose the year', 'class="form-control"');
+              ?>
+            </td>
+            <td>
+              <?php
+              echo form_label('Choose Month:', 'inputMonth');
+              $options = array(
+                '0' => 'Choose the month',
+                'jan' => 'Jan',
+                'feb' => 'Feb',
+                'mar' => 'Mar',
+                'apr' => 'Apr',
+                'may' => 'May',
+                'jun' => 'Jun',
+                'jul' => 'Jul',
+                'aug' => 'Aug',
+                'sep' => 'Sep',
+                'oct' => 'Oct',
+                'nov' => 'Nov',
+                'dec' => 'Dec'
+              );
+              echo form_dropdown('month', $options, 'Choose the month', 'class="form-control"');
+              ?>
+            </td>
+            <td>
+              <?php
+              $data = array(
+                'id' => 'yearmonth',
+                'type' => 'submit',
+                'content' => 'Update Profiles',
+                'class' => 'btn btn-primary'
+              );
+              echo form_button($data);
+              ?>
+            </td>
           </tr>
           <tr>
             <td>Admin announcements can be made, which will be shown on the home page. The latest FIVE announcements are shown, the previous ones are deleted.</td>

@@ -39,7 +39,8 @@
                   'name' => 'inputFirstName',
                   'class' => 'form-control',
                   'required' => 'required',
-                  'id' => 'firstName'
+                  'id' => 'firstName',
+                  'value' => $fName
                 );
                 echo form_input($data);
               ?>
@@ -54,7 +55,8 @@
                   'name' => 'inputLastName',
                   'class' => 'form-control',
                   'required' => 'required',
-                  'id' => 'lastName'
+                  'id' => 'lastName',
+                  'value' => $lName
                 );
                 echo form_input($data);
               ?>
@@ -72,7 +74,8 @@
                   'name' => 'inputEmail',
                   'class' => 'form-control',
                   'required' => 'required',
-                  'id' => 'email'
+                  'id' => 'email',
+                  'value' => $email
                 );
                 echo form_input($data);
               ?>
@@ -119,7 +122,8 @@
                   'type' => 'tel',
                   'name' => 'inputMobile',
                   'class' => 'form-control',
-                  'id' => 'mobile'
+                  'id' => 'mobile',
+                  'value' => $mobile
                 );
                 echo form_input($data);
               ?>
@@ -131,7 +135,8 @@
                   'type' => 'tel',
                   'name' => 'inputLandline',
                   'class' => 'form-control',
-                  'id' => 'landline'
+                  'id' => 'landline',
+                  'value' => $landline
                 );
                 echo form_input($data);
               ?>

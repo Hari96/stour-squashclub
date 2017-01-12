@@ -35,6 +35,11 @@ class Captcha_results extends CI_Controller {
           }
           $to = "support@rgbmarketing.co.uk";//admin email address
           mail($to, "Squash League Result", $message, "From: noreply@stoursquashclub.co.uk\n");
+          $data['announcements'] = $this->users_model->get_announcements();
+          $data['results_sent_message'] = "Results successfully sent";
+          $this->load->view('templates/header', $data);
+          $this->load->view('pages/home', $data);
+          $this->load->view('templates/footer', $data);
         } else {
           echo "<script type='text/javascript'> alert('Try Again'); </script>";
           $em_data['wrong'] = "Wrong letters - try again";
