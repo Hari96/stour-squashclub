@@ -85,7 +85,7 @@
                   'class' => 'required',
                   'for' => 'password'
                 );
-                echo form_label('Password', 'password', $attributes);
+                echo form_label('Password (8 or more characters)', 'password', $attributes);
                 $data = array(
                   'name' => 'inputPassword',
                   'class' => 'form-control',
