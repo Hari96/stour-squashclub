@@ -23,6 +23,7 @@
         $data['players'] = $this->users_model->get_players_for_profile($order_field, $order_direction);
         $data['year'] = $year;
         $data['month'] = $month;
+        $data['divisions'] = $this->users_model->get_divs($year, $month);
         $this->load->view('templates/header', $data);
         $this->load->view('admin_views/profiles_update_view', $data);
         $this->load->view('templates/footer', $data);

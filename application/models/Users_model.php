@@ -183,6 +183,17 @@ class Users_model extends CI_Model {
     return $query->result_array();
   }
 
+  public function check_existence_of_results($year, $month) {
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $query = $this->db->get('results');
+    if($query->num_rows() > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public function get_month($num) {
     switch($num) {
       case '01':
@@ -269,6 +280,13 @@ class Users_model extends CI_Model {
     $row = $query->row();
     $div = $row->current_league;
     return $div;
+  }
+
+  public function get_divs($year, $month) {//used for keeping record of profile updates
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $query = $this->db->get('divisions');
+    return $query->result_array();
   }
 
   public function get_announcements() {

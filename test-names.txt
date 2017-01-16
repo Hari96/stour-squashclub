@@ -5,10 +5,10 @@
 > 6. Etsuko Alleman  football etsuko@test.com 01233456789 07977666555 63
 > 7. Brenton Vasko  letmein0 brenton@test.com 07977111999 24
 > 8. Lenita Kerns  69696969 lenita@test.com 07977222888 32
-Wilburn Tebo  superman
-Elane Easterlington  letters11
-Karrie Mahler  sunshine
-Loyd Rippe  123456789
+> 9. Wilburn Tebo  superman wilburn@test.com 01233987654 07977111777 26
+> 10. Elane Easterlington  letters11 elane@test.com 07966444333 56
+> 11. Karrie Mahler  sunshine karrie@test.com 07966222333 61
+> 12. Lloyd Rippe  123456789 lloyd@test.com 07966111444 15 - not taking part in leagues
 Clementine Jamal  987654321
 Berneice Zebrowski  computer
 Libby Geren  tottenham

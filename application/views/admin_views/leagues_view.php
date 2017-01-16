@@ -24,7 +24,7 @@ if(isset($_SESSION['role']))
           '2027' => '2027'
         );
         $id = 'id="year"';
-        echo form_dropdown('year', $options, 'Choose the year', 'class="form-control"', $id);
+        echo form_dropdown('year', $options, $year, 'class="form-control"', $id);
         echo "<br>";
         echo form_label('Month', 'month');
         $options = array(
@@ -43,7 +43,7 @@ if(isset($_SESSION['role']))
           'dec' => 'Dec'
         );
         $id = 'id="month"';
-        echo form_dropdown('month', $options, 'Choose the month', 'class="form-control"', $id);
+        echo form_dropdown('month', $options, $month, 'class="form-control"', $id);
         echo "<br>";
         echo "<button type='submit' class='btn btn-info'>Update</button>";
         ?>

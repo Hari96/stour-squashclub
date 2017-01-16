@@ -21,7 +21,7 @@ class Update_profiles extends CI_Controller {
       $c++;
     }
     $lastDay = array();//array for storing day of latest match
-    for ($i = 1; $i <= $max; $i++) {
+    for ($i = 1; $i <= $max; $i++) {//problem somehwere - should I use $c rather than $max???
       $num1 = 'p1' . $i;
       $id1 = 'id1' . $i;
       $player1_score = $this->input->post($num1);
@@ -104,8 +104,10 @@ class Update_profiles extends CI_Controller {
     }
     $order_field = "id";
     $order_direction = "asc";
+    $this->insert_model->record_profile_update($div);
     $data['players'] = $this->users_model->get_players($order_field, $order_direction);
     $data['results'] = $this->users_model->get_current_results($year, $month);
+    $data['divisions'] =  $this->users_model->get_divs($year, $month);
     $data['profiles_update_message'] = "Profiles for division " . $div . " have been updated";
     $data['year'] = $year;
     $data['month'] = $month;

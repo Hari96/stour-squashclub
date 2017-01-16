@@ -8,8 +8,10 @@ if(isset($_SESSION['role']))
    </div>
  <?php $profiles_update_messages = ''; } ?>
 <h2>Results for <?php echo ucfirst($month) . " " . $year;?></h2>
+<p class="warning"><strong>Please be sure that results are complete and accurate before updating profiles for each division.</strong></p>
 <div class="container-fluid">
   <div class="row">
+    <?php $updated = 0; //initialises 'profile updated' indicator ?>
     <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -17,6 +19,12 @@ if(isset($_SESSION['role']))
       <input type="hidden" name="div" value="1">
       <span class="lead"><strong>DIVISION 1</strong></span>
       <?php
+      foreach ($divisions as $division):
+        if ($division['division'] == 1) {
+          $updated = $division['profile_update'];//checks whether profile has been updated for this division
+        }
+    endforeach;
+    if ($updated == 0) {
       $data = array(
         'id' => 'div1',
         'type' => 'submit',
@@ -24,6 +32,10 @@ if(isset($_SESSION['role']))
         'class' => 'btn btn-info pull-right'
       );
       echo form_button($data);
+    } else { ?>
+      <button class="btn btn-success pull-right" disabled>Division 1 - profiles updated</button>
+      <?php
+    }
       ?>
       <br>
       <div class="table-responsive">
@@ -82,6 +94,7 @@ if(isset($_SESSION['role']))
     </div>
   </div>
   <div class="row">
+    <?php $updated = 0; //initialises 'profile updated' indicator ?>
     <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -89,6 +102,12 @@ if(isset($_SESSION['role']))
       <input type="hidden" name="div" value="1">
       <span class="lead"><strong>DIVISION 2</strong></span>
       <?php
+      foreach ($divisions as $division):
+        if ($division['division'] == 2) {
+          $updated = $division['profile_update'];//checks whether profile has been updated for this division
+        }
+    endforeach;
+    if ($updated == 0) {
       $data = array(
         'id' => 'div1',
         'type' => 'submit',
@@ -96,7 +115,10 @@ if(isset($_SESSION['role']))
         'class' => 'btn btn-info pull-right'
       );
       echo form_button($data);
-      ?>
+    } else {  ?>
+      <button class="btn btn-success pull-right" disabled>Division 2 - profiles updated</button>
+      <?php
+    } ?>
       <br>
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
@@ -154,6 +176,7 @@ if(isset($_SESSION['role']))
     </div>
   </div>
   <div class="row">
+    <?php $updated = 0; //initialises 'profile updated' indicator ?>
     <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -161,6 +184,12 @@ if(isset($_SESSION['role']))
       <input type="hidden" name="div" value="1">
       <span class="lead"><strong>DIVISION 3</strong></span>
       <?php
+      foreach ($divisions as $division):
+        if ($division['division'] == 3) {
+          $updated = $division['profile_update'];//checks whether profile has been updated for this division
+        }
+    endforeach;
+    if ($updated == 0) {
       $data = array(
         'id' => 'div1',
         'type' => 'submit',
@@ -168,6 +197,9 @@ if(isset($_SESSION['role']))
         'class' => 'btn btn-info pull-right'
       );
       echo form_button($data);
+    } else { ?>
+      <button class = "btn btn-success pull-right" disabled>Division 3 - profiles uopdated</button>
+      <?php }
       ?>
       <br>
       <div class="table-responsive">
@@ -226,6 +258,7 @@ if(isset($_SESSION['role']))
     </div>
   </div>
   <div class="row">
+    <?php $updated = 0; //initialises 'profile updated' indicator ?>
     <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -233,6 +266,12 @@ if(isset($_SESSION['role']))
       <input type="hidden" name="div" value="1">
       <span class="lead"><strong>DIVISION 4</strong></span>
       <?php
+      foreach ($divisions as $division):
+        if ($division['division'] == 4) {
+          $updated = $division['profile_update'];//checks whether profile has been updated for this division
+        }
+    endforeach;
+    if ($updated == 0) {
       $data = array(
         'id' => 'div1',
         'type' => 'submit',
@@ -240,6 +279,9 @@ if(isset($_SESSION['role']))
         'class' => 'btn btn-info pull-right'
       );
       echo form_button($data);
+    } else { ?>
+      <button class = "btn btn-success pull-right" disabled>Division 4 - profiles updated</button>
+      <?php }
       ?>
       <br>
       <div class="table-responsive">
@@ -298,6 +340,7 @@ if(isset($_SESSION['role']))
     </div>
   </div>
   <div class="row">
+    <?php $updated = 0; //initialises 'profile updated' indicator ?>
     <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -305,6 +348,12 @@ if(isset($_SESSION['role']))
       <input type="hidden" name="div" value="1">
       <span class="lead"><strong>DIVISION 5</strong></span>
       <?php
+      foreach ($divisions as $division):
+        if ($division['division'] == 5) {
+          $updated = $division['profile_update'];//checks whether profile has been updated for this division
+        }
+    endforeach;
+    if ($updated == 0) {
       $data = array(
         'id' => 'div1',
         'type' => 'submit',
@@ -312,6 +361,9 @@ if(isset($_SESSION['role']))
         'class' => 'btn btn-info pull-right'
       );
       echo form_button($data);
+    } else { ?>
+      <button class="btn btn-success pull-right" disabled>Division 5 - profiles updated</button>
+      <?php }
       ?>
       <br>
       <div class="table-responsive">
@@ -370,6 +422,7 @@ if(isset($_SESSION['role']))
     </div>
   </div>
   <div class="row">
+    <?php $updated = 0; //initialises 'profile updated' indicator ?>
     <div class="col-md-10 col-md-offset-1">
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
@@ -377,6 +430,12 @@ if(isset($_SESSION['role']))
       <input type="hidden" name="div" value="1">
       <span class="lead"><strong>DIVISION 6</strong></span>
       <?php
+      foreach ($divisions as $division):
+        if ($division['division'] == 6) {
+          $updated = $division['profile_update'];//checks whether profile has been updated for this division
+        }
+    endforeach;
+    if ($updated == 0) {
       $data = array(
         'id' => 'div1',
         'type' => 'submit',
@@ -384,6 +443,9 @@ if(isset($_SESSION['role']))
         'class' => 'btn btn-info pull-right'
       );
       echo form_button($data);
+    } else { ?>
+      <button class="btn btn-success pull-right" disabled>Division 6 - profiles updated</button>
+      <?php }
       ?>
       <br>
       <div class="table-responsive">

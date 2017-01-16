@@ -45,7 +45,11 @@ class Player_admin extends CI_Controller {
     $order_field = "current_league";//which field to order by
     $order_direction = "asc";// direction of sort
     $data['players'] = $this->users_model->get_players($order_field, $order_direction);
-
+    $year = date('Y');
+    $month_num = date("m");
+    $month = $this->users_model->get_month($month_num);
+    $data['year'] = $year;
+    $data['month'] = $month;    
     $this->load->view('templates/header', $data);
     $this->load->view('admin_views/'.$page, $data);
     $this->load->view('templates/footer', $data);

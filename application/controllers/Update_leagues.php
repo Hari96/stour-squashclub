@@ -41,7 +41,7 @@
         $player_check = true;
         $end = false;
         // first check for divs too large
-        for ($div = 0; $div <= 6; $div++) {
+        for ($div = 1; $div <= 6; $div++) {
           if ($this->users_model->find_players_in_div($div) !== false) {
             $player_array = $this->users_model->find_players_in_div($div);//finds players in each div and sorts by last name
             $c = 0;
@@ -54,16 +54,10 @@
           }
         }
         if ($end !== true) {
-          //find if month and year does not already exist in results table - then insert, else update
-        if ($this->insert_model->check_existence_of_results($year, $month) == false) {
-          $this->insert_model->initiate_month_year($year, $month);
-        } else {
-          $this->users_model->delete_set_of_players($year, $month);// deletes current set from year and month, also resets id
-        }
           for ($divs = 1; $divs <= 6; $divs++) {
-            if ($this->users_model->find_players_in_div($divs) !== false) {
+            $player_array = $this->users_model->find_players_in_div($divs);//finds players in each div and sorts by last name
+            if ($player_array !== false) {
               $player_arr = array();
-              $player_array = $this->users_model->find_players_in_div($divs);//finds players in each div and sorts by last name
               $c = 0;
               foreach ($player_array as $row) {
                 $player_arr[$c] = $row['id'];
@@ -192,7 +186,8 @@
                   $this->insert_model->insert_into_results($year, $month, $divs, $player1_id, $player2_id);
                   break;
                 }
-                $num = 0;
+                $num = 0;// is this needed??
+                $this->insert_model->initialise_divisions($year, $month, $divs);// adds div to divisions ready for profile update
               }
             }// end of for loop
           }

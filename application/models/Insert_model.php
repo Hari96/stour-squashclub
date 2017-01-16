@@ -83,37 +83,26 @@
     }
   }
 
-  public function check_existence_of_results($year, $month) {
+  public function insert_into_results($year, $month, $divs, $player1_id, $player2_id) {// if pairing of players not present insert
     $this->db->where('year', $year);
     $this->db->where('month', $month);
-    $query = $this->db->get('months');
-    if($query->num_rows() == 1) {
-      return true;
-    } else {
-      return false;
+    $this->db->where('division', $divs);
+    $this->db->where('player1_id', $player1_id);
+    $this->db->where('player2_id', $player2_id);
+    $query_div = $this->db->get('results');
+    if ($query_div->num_rows() == 0) {
+      $data = array(
+        'year' => $year,
+        'month' => $month,
+        'division' => $divs,
+        'player1_id' => $player1_id,
+        'player2_id' => $player2_id
+      );
+      $this->db->insert('results', $data);
     }
   }
 
-  public function insert_into_results($year, $month, $divs, $player1_id, $player2_id) {
-    $data = array(
-      'year' => $year,
-      'month' => $month,
-      'division' => $divs,
-      'player1_id' => $player1_id,
-      'player2_id' => $player2_id
-    );
-    $this->db->insert('results', $data);
-  }
-
-  public function initiate_month_year($year, $month) {
-    $months_data = array(
-      'year' => $year,
-      'month' => $month
-    );
-    $this->db->insert('months', $months_data);//insert month and year into 'months' table
-  }
-
-  public function get_id_from_results($year, $month, $rowNum) {// not using this function? - to be reomoved
+  public function get_id_from_results($year, $month, $rowNum) {// not using this function? - to be removed
     $this->db->where('year', $year);
     $this->db->where('month', $month);
     $query = $this->db->get('results');
@@ -129,12 +118,12 @@
     $this->db->where('player1_id', $player1_id);
     $this->db->where('player2_id', $player2_id);
     $data = array(
-      'player1_score' => $player1_score,
-      'player2_score' => $player2_score,
-      'date' => $date,
-      'day' => $day
-    );
-    $this->db->update('results', $data);
+        'player1_score' => $player1_score,
+        'player2_score' => $player2_score,
+        'date' => $date,
+        'day' => $day
+      );
+      $this->db->update('results', $data);
   }
 
   public function update_profiles($user_id, $played, $won, $drawn, $lost, $average, $month, $day, $date) {
@@ -150,6 +139,29 @@
       'date' => $date
     );
     $this->db->update('profiles', $data);
+  }
+
+  public function initialise_divisions($year, $month, $div) {
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $this->db->where('division', $div);
+    $query_div = $this->db->get('divisions');
+    if ($query_div->num_rows() == 0) {
+      $data = array(
+        'year' => $year,
+        'month' => $month,
+        'division' => $div
+      );
+      $this->db->insert('divisions', $data);
+    }
+  }
+
+  public function record_profile_update($div) {
+    $this->db->where('division', $div);
+    $data = array(
+      'profile_update' => 1
+    );
+    $this->db->update('divisions', $data);
   }
 
   public function update_active($email, $active) {//changes admin from active to inactive and vice versa

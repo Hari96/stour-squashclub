@@ -13,7 +13,7 @@ body {
 }
 .bg-navbar {
   background-color: #FFB85F;
-  color: #FF7A5A;  
+  color: #FF7A5A;
   font-size: 1.7rem;
 }
 .panel {
@@ -94,7 +94,7 @@ table, th, td {
 }
 .warning {
   color: red;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-style: oblique;
 }
 .not-activated-star {
