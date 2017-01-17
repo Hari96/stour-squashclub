@@ -22,12 +22,19 @@
                 <td><a href="<?php echo site_url('player_profiles/player_profile/?user_id='.$user_id); ?>"><?php echo $name; ?></a></td>
             <?php  }
              endforeach;
+             $average1 = $profile['average'];
+             $average2 = round($average1, 1);
+             if ($average2 == round($average1)) {
+               $average3 = round($average1);
+             } else {
+               $average3 = $average2;
+             }
             ?>
             <td><?php echo $profile['played']; ?></td>
             <td><?php echo $profile['won']; ?></td>
             <td><?php echo $profile['drawn']; ?></td>
             <td><?php echo $profile['lost']; ?></td>
-            <td><?php echo $profile['average'] . "%"; ?></td>
+            <td><?php echo $average3 . "%"; ?></td>
             <?php $last_played = $profile['day'] . " " . $profile['date'] . " " . $profile['month']; ?>
             <td><?php echo $last_played; ?></td>
           </tr>

@@ -692,4 +692,323 @@ echo ucfirst($month) . " " . $partYear;
     </table>
   </div>
 </div>
+<br>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-8 table-responsive">
+    <span class="lead"><strong>DIVISION 5</strong></span>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
+      </thead>
+      <tbody>
+        <?php
+        $c = 0;
+        foreach ($leagues as $league):
+          if ($league[$month] == 5) {
+            $gamesWon = 0; $gamesLost = 0; $gamesDrawn = 0; $gamesPlayed = 0; $score= 0;
+            $tScore = 0; $name = "";
+            echo "<tr>";
+            foreach ($players as $player):
+              if ($player['id'] == $league['user_id']) {
+                $name = $player['fName'] . " " . $player['lName'];
+                echo "<td>" . $name . "</td>";
+              }
+            endforeach;
+            foreach ($results as $result):
+              if ($result['division'] == 5) {
+                if ($result['player1_id'] == $league['user_id']) {
+                  //start of player1's scores
+                  if ($result['player1_score'] == 3) {
+                    $gamesWon++;
+                    $gamesPlayed++;
+                    switch ($result['player2_score']) {
+                      case 0: $score = 6;
+                      break;
+                      case 1: $score = 5;
+                      break;
+                      case 2: $score = 4;
+                      break;
+                    }
+                    $tScore = $tScore + $score;
+                    } else if ($result['player2_score'] == 3) {
+                      $gamesLost++;
+                      $gamesPlayed++;
+                      switch ($result['player1_score']) {
+                        case 0: $score = 0;
+                        break;
+                        case 1: $score = 1;
+                        break;
+                        case 2: $score = 2;
+                        break;
+                      }
+                      $tScore = $tScore + $score;
+                    } else if ($result['player1_score'] == 2 && $result['player2_score'] < 2) {
+                      $gamesWon++;
+                      $gamesPlayed++;
+                      switch ($result['player2_score']) {
+                        case 0: $score = 5;
+                        break;
+                        case 1: $score = 4;
+                        break;
+                      }
+                      $tScore = $tScore + $score;
+                    } else if ($result['player1_score'] == 1 && $result['player2_score'] == 0) {
+                      $gamesWon++;
+                      $gamesPlayed++;
+                      $score = 4;
+                      $tScore = $tScore + $score;
+                    } else if ($result['player2_score'] == 2 && $result['player1_score'] < 2) {
+                      $gamesLost++;
+                      $gamesPlayed++;
+                      switch ($result['player1_score']) {
+                        case 1: $score = 2;
+                        break;
+                        case 0: $score = 1;
+                        break;
+                      }
+                      $tScore = $tScore + $score;
+                    } else if ($result['player2_score'] == 1 && $result['player1_score'] == 0) {
+                      $gamesLost++;
+                      $gamesPlayed++;
+                      $score = 2;
+                      $tScore = $tScore + $score;
+                    } else if (($result['player1_score'] == $result['player2_score']) && ($result['player1_score'] != 0 && $result['player2_score'] != 0)) {
+                        $gamesDrawn++;
+                        $gamesPlayed++;
+                        $tScore = $tScore + 3;
+                      }
+                    }//end of player1's scoring
+                    if ($result['player2_id'] == $league['user_id']) {
+                      //start of player2's scoring
+                      if ($result['player2_score'] == 3) {
+                        $gamesWon++;
+                        $gamesPlayed++;
+                        switch ($result['player1_score']) {
+                          case 0: $score = 6;
+                          break;
+                          case 1: $score = 5;
+                          break;
+                          case 2: $score = 4;
+                          break;
+                        }
+                        $tScore = $tScore + $score;
+                      } else if ($result['player1_score'] == 3) {
+                          $gamesLost++;
+                          $gamesPlayed++;
+                          switch ($result['player2_score']) {
+                            case 0: $score = 0;
+                            break;
+                            case 1: $score = 1;
+                            break;
+                            case 2: $score = 2;
+                            break;
+                          }
+                          $tScore = $tScore + $score;
+                        } else if ($result['player2_score'] == 2 && $result['player1_score'] < 2) {
+                            $gamesWon++;
+                            $gamesPlayed++;
+                            switch ($result['player1_score']) {
+                              case 0: $score = 5;
+                              break;
+                              case 1: $score = 4;
+                              break;
+                            }
+                            $tScore = $tScore + $score;
+                          } else if ($result['player2_score'] == 1 && $result['player1_score'] == 0) {
+                              $gamesWon++;
+                              $gamesPlayed++;
+                              $score = 4;
+                              $tScore = $tScore + $score;
+                            } else if ($result['player1_score'] == 2 && $result['player2_score'] < 2) {
+                              $gamesLost++;
+                              $gamesPlayed++;
+                              switch ($result['player2_score']) {
+                                case 0: $score = 1;
+                                break;
+                                case 1: $score = 2;
+                              }
+                              $tScore = $tScore + $score;
+                            } else if ($result['player1_score'] == 1 && $result['player2_score'] == 0) {
+                              $gamesLost++;
+                              $gamesPlayed++;
+                              $score = 2;
+                              $tScore = $tScore + $score;
+                            } else if (($result['player2_score'] == $result['player1_score']) && ($result['player2_score'] != 0 && $result['player1_score'] != 0)) {
+                            $gamesDrawn++;
+                            $gamesPlayed++;
+                            $tScore = $tScore + 3;
+                          }
+                       }
+                   }
+                   endforeach;
+                   echo "<td>" . $gamesPlayed . "</td><td>" . $gamesWon . "</td><td>" . $gamesDrawn . "</td><td>" . $gamesLost . "</td><td>" . $tScore . "</td></tr>";
+                  }
+                  endforeach;
+                  ?>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-8 table-responsive">
+    <span class="lead"><strong>DIVISION 6</strong></span>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr><th>Player</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Points</th></tr>
+      </thead>
+      <tbody>
+        <?php
+        $c = 0;
+        foreach ($leagues as $league):
+          if ($league[$month] == 6) {
+            $gamesWon = 0; $gamesLost = 0; $gamesDrawn = 0; $gamesPlayed = 0; $score= 0;
+            $tScore = 0; $name = "";
+            echo "<tr>";
+            foreach ($players as $player):
+              if ($player['id'] == $league['user_id']) {
+                $name = $player['fName'] . " " . $player['lName'];
+                echo "<td>" . $name . "</td>";
+              }
+            endforeach;
+            foreach ($results as $result):
+              if ($result['division'] == 6) {
+                if ($result['player1_id'] == $league['user_id']) {
+                  //start of player1's scores
+                  if ($result['player1_score'] == 3) {
+                    $gamesWon++;
+                    $gamesPlayed++;
+                    switch ($result['player2_score']) {
+                      case 0: $score = 6;
+                      break;
+                      case 1: $score = 5;
+                      break;
+                      case 2: $score = 4;
+                      break;
+                    }
+                    $tScore = $tScore + $score;
+                    } else if ($result['player2_score'] == 3) {
+                      $gamesLost++;
+                      $gamesPlayed++;
+                      switch ($result['player1_score']) {
+                        case 0: $score = 0;
+                        break;
+                        case 1: $score = 1;
+                        break;
+                        case 2: $score = 2;
+                        break;
+                      }
+                      $tScore = $tScore + $score;
+                    } else if ($result['player1_score'] == 2 && $result['player2_score'] < 2) {
+                      $gamesWon++;
+                      $gamesPlayed++;
+                      switch ($result['player2_score']) {
+                        case 0: $score = 5;
+                        break;
+                        case 1: $score = 4;
+                        break;
+                      }
+                      $tScore = $tScore + $score;
+                    } else if ($result['player1_score'] == 1 && $result['player2_score'] == 0) {
+                      $gamesWon++;
+                      $gamesPlayed++;
+                      $score = 4;
+                      $tScore = $tScore + $score;
+                    } else if ($result['player2_score'] == 2 && $result['player1_score'] < 2) {
+                      $gamesLost++;
+                      $gamesPlayed++;
+                      switch ($result['player1_score']) {
+                        case 1: $score = 2;
+                        break;
+                        case 0: $score = 1;
+                        break;
+                      }
+                      $tScore = $tScore + $score;
+                    } else if ($result['player2_score'] == 1 && $result['player1_score'] == 0) {
+                      $gamesLost++;
+                      $gamesPlayed++;
+                      $score = 2;
+                      $tScore = $tScore + $score;
+                    } else if (($result['player1_score'] == $result['player2_score']) && ($result['player1_score'] != 0 && $result['player2_score'] != 0)) {
+                        $gamesDrawn++;
+                        $gamesPlayed++;
+                        $tScore = $tScore + 3;
+                      }
+                    }//end of player1's scoring
+                    if ($result['player2_id'] == $league['user_id']) {
+                      //start of player2's scoring
+                      if ($result['player2_score'] == 3) {
+                        $gamesWon++;
+                        $gamesPlayed++;
+                        switch ($result['player1_score']) {
+                          case 0: $score = 6;
+                          break;
+                          case 1: $score = 5;
+                          break;
+                          case 2: $score = 4;
+                          break;
+                        }
+                        $tScore = $tScore + $score;
+                      } else if ($result['player1_score'] == 3) {
+                          $gamesLost++;
+                          $gamesPlayed++;
+                          switch ($result['player2_score']) {
+                            case 0: $score = 0;
+                            break;
+                            case 1: $score = 1;
+                            break;
+                            case 2: $score = 2;
+                            break;
+                          }
+                          $tScore = $tScore + $score;
+                        } else if ($result['player2_score'] == 2 && $result['player1_score'] < 2) {
+                            $gamesWon++;
+                            $gamesPlayed++;
+                            switch ($result['player1_score']) {
+                              case 0: $score = 5;
+                              break;
+                              case 1: $score = 4;
+                              break;
+                            }
+                            $tScore = $tScore + $score;
+                          } else if ($result['player2_score'] == 1 && $result['player1_score'] == 0) {
+                              $gamesWon++;
+                              $gamesPlayed++;
+                              $score = 4;
+                              $tScore = $tScore + $score;
+                            } else if ($result['player1_score'] == 2 && $result['player2_score'] < 2) {
+                              $gamesLost++;
+                              $gamesPlayed++;
+                              switch ($result['player2_score']) {
+                                case 0: $score = 1;
+                                break;
+                                case 1: $score = 2;
+                              }
+                              $tScore = $tScore + $score;
+                            } else if ($result['player1_score'] == 1 && $result['player2_score'] == 0) {
+                              $gamesLost++;
+                              $gamesPlayed++;
+                              $score = 2;
+                              $tScore = $tScore + $score;
+                            } else if (($result['player2_score'] == $result['player1_score']) && ($result['player2_score'] != 0 && $result['player1_score'] != 0)) {
+                            $gamesDrawn++;
+                            $gamesPlayed++;
+                            $tScore = $tScore + 3;
+                          }
+                       }
+                   }
+                   endforeach;
+                   echo "<td>" . $gamesPlayed . "</td><td>" . $gamesWon . "</td><td>" . $gamesDrawn . "</td><td>" . $gamesLost . "</td><td>" . $tScore . "</td></tr>";
+                  }
+                  endforeach;
+                  ?>
+      </tbody>
+    </table>
+  </div>
+</div>
 </div>
