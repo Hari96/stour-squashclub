@@ -99,7 +99,7 @@ if(isset($_SESSION['role']))
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
       <input type="hidden" name="month" value="<?php echo $month; ?>">
-      <input type="hidden" name="div" value="1">
+      <input type="hidden" name="div" value="2">
       <span class="lead"><strong>DIVISION 2</strong></span>
       <?php
       foreach ($divisions as $division):
@@ -181,7 +181,7 @@ if(isset($_SESSION['role']))
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
       <input type="hidden" name="month" value="<?php echo $month; ?>">
-      <input type="hidden" name="div" value="1">
+      <input type="hidden" name="div" value="3">
       <span class="lead"><strong>DIVISION 3</strong></span>
       <?php
       foreach ($divisions as $division):
@@ -263,7 +263,7 @@ if(isset($_SESSION['role']))
       <?php echo form_open('update_profiles'); ?>
       <input type="hidden" name="year" value="<?php echo $year; ?>">
       <input type="hidden" name="month" value="<?php echo $month; ?>">
-      <input type="hidden" name="div" value="1">
+      <input type="hidden" name="div" value="4">
       <span class="lead"><strong>DIVISION 4</strong></span>
       <?php
       foreach ($divisions as $division):

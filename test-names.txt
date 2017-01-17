@@ -9,10 +9,10 @@
 > 10. Elane Easterlington  letters11 elane@test.com 07966444333 56
 > 11. Karrie Mahler  sunshine karrie@test.com 07966222333 61
 > 12. Lloyd Rippe  123456789 lloyd@test.com 07966111444 15 - not taking part in leagues
-Clementine Jamal  987654321
-Berneice Zebrowski  computer
-Libby Geren  tottenham
-Dann Emberton  mypassword
+> 13. Clementine Jamal  987654321 clementine@test.com 07966222111 43
+> 14. Berneice Zebrowski  computer berneice@test.com 01233665544 07966555444 21
+> 15. Libby Geren  tottenham libby@test.com 07988111333 35
+> 16. Dann Emberton  mypassword dann@test.co.uk 07988444555 44
 Hildegard Perreault  dragon96
 Jennefer Ricotta  baseball
 Bethanie Collom  qwerty123

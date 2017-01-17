@@ -12,16 +12,14 @@ class Update_profiles extends CI_Controller {
     $month = $this->input->post('month');
     $div = $this->input->post('div');
     $max = $this->input->post('num_records');
-    $player_arr = array();
+    //$player_arr = array();
     $player_array = $this->users_model->find_players_in_div($div);//finds players in each div and sorts by last name
-    $c = 0;
     foreach ($player_array as $row) {
       $player_id = $row['id'];
       $lastDate[$player_id] = 0;//initialises each player with date of zero
-      $c++;
+      $lastDay[$player_id] = "";//array for storing day of latest match
     }
-    $lastDay = array();//array for storing day of latest match
-    for ($i = 1; $i <= $max; $i++) {//problem somehwere - should I use $c rather than $max???
+    for ($i = 1; $i <= $max; $i++) {
       $num1 = 'p1' . $i;
       $id1 = 'id1' . $i;
       $player1_score = $this->input->post($num1);
