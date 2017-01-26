@@ -38,7 +38,7 @@ class Update_profiles extends CI_Controller {
       if ($date > $lastDate[$player1_id]) {//ensures date and day of latest match is stored
         $lastDate[$player1_id] = $date;
         $lastDay[$player1_id] = $day;
-      }
+      }      
       if ($date > $lastDate[$player2_id]) {
         $lastDate[$player2_id] = $date;
         $lastDay[$player2_id] = $day;
