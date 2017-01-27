@@ -18,6 +18,7 @@
         $this->load->view('admin_views/admin_home', $data);
         $this->load->view('templates/footer', $data);
       } else {
+        $leagues = $this->input->post('leagues');
         $year = $this->input->post('year');
         $this->insert_model->create_new_league($year);//checks if league already exists
         $month = $this->input->post('month');
@@ -197,6 +198,9 @@
             $data['divtoolarge_message'] = 'Sorry there canot be more than 6 in a group';
         } else {
           $data['leagues_message'] = 'Leagues changed successfully';
+          $data['leagues'] = $leagues;
+          $data['year'] = $year;
+          $data['month'] = $month;
         }
         //Loading View
         $this->load->view('templates/header', $data);

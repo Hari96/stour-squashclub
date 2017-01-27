@@ -43,7 +43,12 @@ if(isset($_SESSION['role']))
 <?php if (isset($leagues_message)) { ?>
  <div class="message-box alert alert-success alert-dismissible">
    <h3 style="color:green;"><?php echo $leagues_message; ?></h3>
-   <a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Return to league page</a>
+   <?php if($leagues == "old") { ?>
+     <a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Return to league page</a>
+   <?php } else { ?>
+     <a href="<?php echo base_url();?>player_admin/league_view/new_leagues_view">Return to league page</a>
+   <?php } ?>
+
    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   </div>
 <?php $leagues_message = ''; } ?>
@@ -125,11 +130,13 @@ if(isset($_SESSION['role']))
           </tr>
           <tr>
             <td>When a player leaves the club their login facility can be removed, but their results will still be part of the database for at least 2 years.</td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/remove_login">Remove player login</a></td>
+            <td colspan="3><a href="<?php echo base_url();?>player_admin/crud_view/remove_login">Remove player login</a></td>
           </tr>
           <tr>
-            <td>You can allocate players to divisions and setup new leagues. Their current division will be shown so you will only have to change a few.</td>
-            <td colspan="3"><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Start new leagues</a></td>
+            <td>You can allocate players to divisions and setup new leagues. You are also able to edit a new league if not yet complete.</td>
+            <td><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Update current month's league</a></td>
+            <td><a href="<?php echo base_url();?>player_admin/league_view/new_leagues_view">Create next month's league</a></td>
+            <td></td>
           </tr>
           <tr>
             <td>You can enter and update results for the current leagues.</td>

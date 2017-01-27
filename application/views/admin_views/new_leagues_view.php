@@ -1,4 +1,4 @@
-<h2>Update current month's league</h2>
+<h2>Start next month's league</h2>
 <?php
 if(isset($_SESSION['role']))
   { ?>
@@ -7,7 +7,7 @@ if(isset($_SESSION['role']))
     <div class="row">
       <div class="col-md-3">
         <?php
-        echo form_hidden('leagues', 'old');
+        echo form_hidden('leagues', 'new');
         echo form_label('Year: '.$year, 'year');
         echo form_hidden('year', $year);
         echo "<br><br>";

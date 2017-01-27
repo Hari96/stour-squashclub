@@ -37,22 +37,43 @@ class Player_admin extends CI_Controller {
     $this->load->view('templates/footer', $data);
   }
 
-  public function league_view($page="league_view") {
+  public function league_view($page="leagues_view") {
     if (!file_exists(APPPATH.'views/admin_views/'.$page.'.php')) {
       // whoops don't have a page for that!
       show_404();
     }
-    $order_field = "current_league";//which field to order by
-    $order_direction = "asc";// direction of sort
-    $data['players'] = $this->users_model->get_players($order_field, $order_direction);
-    $year = date('Y');
-    $month_num = date("m");
-    $month = $this->users_model->get_month($month_num);
-    $data['year'] = $year;
-    $data['month'] = $month;    
-    $this->load->view('templates/header', $data);
-    $this->load->view('admin_views/'.$page, $data);
-    $this->load->view('templates/footer', $data);
+    if ($page == "leagues_view") {
+      $order_field = "current_league";//which field to order by
+      $order_direction = "asc";// direction of sort
+      $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+      $year = date('Y');
+      $month_num = date("m");
+      $month = $this->users_model->get_month($month_num);
+      $data['year'] = $year;
+      $data['month'] = $month;
+      $this->load->view('templates/header', $data);
+      $this->load->view('admin_views/'.$page, $data);
+      $this->load->view('templates/footer', $data);
+    } else {
+      $order_field = "current_league";//which field to order by
+      $order_direction = "asc";// direction of sort
+      $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+      $year = date('Y');
+      $month_num = date("m");
+      if($month_num == '12') {
+        $year ++;
+        $month_num = '01';
+      } else {
+        $month_num = intval($month_num) + 1;
+        $month_num = ($month_num < 10) ? '0'.strval($month_num): strval($month_num);
+      }
+            $month = $this->users_model->get_month($month_num);
+      $data['year'] = $year;
+      $data['month'] = $month;
+      $this->load->view('templates/header', $data);
+      $this->load->view('admin_views/'.$page, $data);
+      $this->load->view('templates/footer', $data);
+    }
   }
 
   public function result_view($page="results_view") {
