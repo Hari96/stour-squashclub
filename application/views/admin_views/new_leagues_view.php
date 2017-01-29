@@ -1,4 +1,4 @@
-<h2>Start next month's league</h2>
+<h2>Start/update next month's league</h2>
 <?php
 if(isset($_SESSION['role']))
   { ?>

@@ -61,7 +61,8 @@ class Player_admin extends CI_Controller {
       $year = date('Y');
       $month_num = date("m");
       if($month_num == '12') {
-        $year ++;
+        $nextyear = intval($year) + 1;
+        $year = strval($nextyear);
         $month_num = '01';
       } else {
         $month_num = intval($month_num) + 1;

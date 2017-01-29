@@ -1,4 +1,4 @@
-<h2>Creating new admin</h2>
+<h2>Creating or unsetting admin</h2>
 <?php
 if(isset($_SESSION['role']))
 { ?>

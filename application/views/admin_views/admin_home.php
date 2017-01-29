@@ -130,12 +130,12 @@ if(isset($_SESSION['role']))
           </tr>
           <tr>
             <td>When a player leaves the club their login facility can be removed, but their results will still be part of the database for at least 2 years.</td>
-            <td colspan="3><a href="<?php echo base_url();?>player_admin/crud_view/remove_login">Remove player login</a></td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/remove_login">Remove player login</a></td>
           </tr>
           <tr>
-            <td>You can allocate players to divisions and setup new leagues. You are also able to edit a new league if not yet complete.</td>
-            <td><a href="<?php echo base_url();?>player_admin/league_view/leagues_view">Update current month's league</a></td>
-            <td><a href="<?php echo base_url();?>player_admin/league_view/new_leagues_view">Create next month's league</a></td>
+            <td>You can allocate players to divisions and setup new leagues. You are also able to edit a new league if not yet complete. <br> <em>You can only update/create current month's league between 1st and 5th of month; and next month's league between 26th and end of month.</em></td>
+            <td><a <?php $day = date('d'); if(intval($day) < 6) { ?> href="<?php echo base_url();?>player_admin/league_view/leagues_view"<?php } else { ?>href=""<?php }?>>Update/create current month's league</a></td>
+            <td><a <?php $day = date('d'); if(intval($day) > 25) { ?> href="<?php echo base_url();?>player_admin/league_view/new_leagues_view"<?php } else { ?>href=""<?php } ?>>Create/update next month's league</a></td>
             <td></td>
           </tr>
           <tr>
