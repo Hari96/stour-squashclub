@@ -68,7 +68,7 @@ class Player_admin extends CI_Controller {
         $month_num = intval($month_num) + 1;
         $month_num = ($month_num < 10) ? '0'.strval($month_num): strval($month_num);
       }
-            $month = $this->users_model->get_month($month_num);
+      $month = $this->users_model->get_month($month_num);
       $data['year'] = $year;
       $data['month'] = $month;
       $this->load->view('templates/header', $data);

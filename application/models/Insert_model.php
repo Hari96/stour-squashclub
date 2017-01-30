@@ -90,7 +90,7 @@
     $this->db->where('player1_id', $player1_id);
     $this->db->where('player2_id', $player2_id);
     $query_div = $this->db->get('results');
-    if ($query_div->num_rows() == 0) {
+    if ($query_div->num_rows() == 0) {// this NOT needed anymore??
       $data = array(
         'year' => $year,
         'month' => $month,
@@ -99,6 +99,18 @@
         'player2_id' => $player2_id
       );
       $this->db->insert('results', $data);
+    }
+  }
+
+  public function update_viewable($year, $month) {//updates division table 'viewable' column
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $query = $this->db->get('divisions');
+    foreach ($query->result() as $row) {
+      $data = array(
+        'viewable' => 1
+      );
+      $this->db->update('divisions', $data);
     }
   }
 

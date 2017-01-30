@@ -30,4 +30,24 @@
 
       }
     }
+
+    public function make_viewable() {
+      $year = date('Y');
+      $month_num = date('m');
+      if($month_num == '12') {
+        $nextyear = intval($year) + 1;
+        $year = strval($nextyear);
+        $month_num = '01';
+      } else {
+        $month_num = intval($month_num) + 1;
+        $month_num = ($month_num < 10) ? '0'.strval($month_num): strval($month_num);
+      }
+      $month = $this->users_model->get_month($month_num);
+      $this->insert_model->update_viewable($year, $month);
+      $data['divs_made_viewable'] = "Next month's divisions made viewable";
+      $this->load->view('templates/header', $data);
+      $this->load->view('admin_views/admin_home', $data);
+      $this->load->view('templates/footer', $data);
+    }
+
   }

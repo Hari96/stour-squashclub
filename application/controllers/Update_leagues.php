@@ -55,6 +55,7 @@
           }
         }
         if ($end !== true) {
+          $this->users_model->delete_result_pairings($year, $month);//if result pairings have already been set deletes them.
           for ($divs = 1; $divs <= 6; $divs++) {
             $player_array = $this->users_model->find_players_in_div($divs);//finds players in each div and sorts by last name
             if ($player_array !== false) {

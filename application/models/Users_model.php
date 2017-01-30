@@ -119,15 +119,20 @@ class Users_model extends CI_Model {
     }
   }
 
-  public function delete_set_of_players($year, $month) {
+  public function delete_result_pairings($year, $month) {//deletes all pairings (if there) before updating result pairings for new month
     $this->db->where('year', $year);
     $this->db->where('month', $month);
-    $this->db->delete('results');
-    $query = $this->db->query("SELECT MAX(id) AS id FROM results");
-    $row = $query->row();
-    $max = $row->id;
-    $max = $max + 1;
-    $query = $this->db->query("ALTER TABLE results AUTO_INCREMENT = $max");//ensures id continues from last, without gap
+    $query = $this->db->get('results');
+    if($query->num_rows() > 0) {
+      $this->db->where('year', $year);
+      $this->db->where('month', $month);
+      $this->db->delete('results');
+      $query = $this->db->query("SELECT MAX(id) AS id FROM results");
+      $row = $query->row();
+      $max = $row->id;
+      $max = $max + 1;
+      $query = $this->db->query("ALTER TABLE results AUTO_INCREMENT = $max");//ensures id continues from last, without gap
+    }
   }
 
   public function get_results() {
