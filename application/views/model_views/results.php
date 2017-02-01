@@ -1,7 +1,8 @@
 <h2>Results for <?php
 $partYear = substr_replace($year, "'", 0, 2);
 echo ucfirst($month) . " " . $partYear;
-?></h2>
+?></h2><br>
+<button onclick="printFunction()">Print</button>
 <div class="container-fluid">
   <?php echo form_open('display_results') ;?>
   <input type="hidden" name="display" value="results">
@@ -1421,3 +1422,8 @@ echo ucfirst($month) . " " . $partYear;
     </div>
   </div>
 </div>
+<script>
+function printFunction() {
+  window.print();
+}
+</script>

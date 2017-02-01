@@ -181,7 +181,7 @@ class Users_model extends CI_Model {
 
   }
 
-  public function get_leagues($year) {//probably do not need this function
+  public function get_leagues($year) {//may find a way not to need this function later
     $league_name = "leagues" . $year;
     $query = $this->db->get($league_name);
     $row = $query->row();
@@ -197,6 +197,20 @@ class Users_model extends CI_Model {
     } else {
       return false;
     }
+  }
+
+  public function get_viewable_state($year, $month) {
+    $this->db->where('year', $year);
+    $this->db->where('month', $month);
+    $query = $this->db->get('divisions');
+    if($query->num_rows != 0) {
+      if($query->row(0)->viewable == 1) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    return false;
   }
 
   public function get_month($num) {

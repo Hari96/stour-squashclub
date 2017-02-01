@@ -1,8 +1,7 @@
 <h2>Divisions for <?php
 $partYear = substr_replace($year, "'", 0, 2);
 echo ucfirst($month) . " " . $partYear;
-?></h2><br>
-<?php if($viewable == true) { ?><a class="btn btn-primary" href="<?php echo base_url();?>model_views/view/next_divisions">View next month's</a><?php } ?>
+?></h2>
 <div class="container-fluid">
   <div class="row">
     <section class="col-md-4 bg-lgrey spacing-top">
@@ -53,7 +52,13 @@ echo ucfirst($month) . " " . $partYear;
           ?>
         </tbody>
       </table>
+    <!--</section> -->
+  <!--</div>-->
   <br>
+  <!--<div class="row">-->
+    <!--<section class="col-md-4">
+    </section>-->
+    <!--<section class="col-md-8 table-responsive">-->
       <span class="lead"><strong>DIVISION 2</strong></span>
       <table class="table table-bordered table-striped">
         <thead>
@@ -81,7 +86,13 @@ echo ucfirst($month) . " " . $partYear;
           ?>
         </tbody>
       </table>
+  <!--  </section>-->
+  <!--</div>-->
   <br>
+<!--  <div class="row">
+    <section class="col-md-4">
+    </section>
+    <section class="col-md-8 table-responsive">-->
       <span class="lead"><strong>DIVISION 3</strong></span>
       <table class="table table-bordered table-striped">
         <thead>
@@ -109,7 +120,13 @@ echo ucfirst($month) . " " . $partYear;
           ?>
         </tbody>
       </table>
+    <!--</section>
+  </div>-->
   <br>
+  <!--<div class="row">
+    <section class="col-md-4">
+    </section>
+    <section class="col-md-8 table-responsive">-->
       <span class="lead"><strong>DIVISION 4</strong></span>
       <table class="table table-bordered table-striped">
         <thead>
@@ -166,33 +183,33 @@ echo ucfirst($month) . " " . $partYear;
         </tbody>
       </table>
   <br>
-      <span class="lead"><strong>DIVISION 6</strong></span>
-      <table class="table table-bordered table-striped">
-        <thead>
-          <tr><th>No.</th><th>Player</th><th>Number</th><th>Email</th></tr>
-        </thead>
-        <tbody>
-          <?php $c = 0;
-            foreach ($leagues as $league):
-              if ($league[$month] == 6) {
-                $c++; $name = ""; $email = ""; $mobile = "";
-                foreach ($players as $player):
-                  if ($player['id'] == $league['user_id']) {
-                    $name = $player['fName'] . " " . $player['lName'];
-                    $mobile = $player['mobile'];
-                    $email = $player['email'];
-                  }
-                endforeach;
-                if(isset($_SESSION['logged_in'])) {
-                  echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td>" . $mobile . "</td><td>" . $email . "</td></tr>";
-                } else {
-                  echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td><a href='login'>Login/Register</a> to view contact details</td><td><a href='login'>Login/Register</a> to view contact details</td></tr>";
-                }
+  <span class="lead"><strong>DIVISION 6</strong></span>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr><th>No.</th><th>Player</th><th>Number</th><th>Email</th></tr>
+    </thead>
+    <tbody>
+      <?php $c = 0;
+        foreach ($leagues as $league):
+          if ($league[$month] == 6) {
+            $c++; $name = ""; $email = ""; $mobile = "";
+            foreach ($players as $player):
+              if ($player['id'] == $league['user_id']) {
+                $name = $player['fName'] . " " . $player['lName'];
+                $mobile = $player['mobile'];
+                $email = $player['email'];
               }
             endforeach;
-          ?>
-        </tbody>
-      </table>
+            if(isset($_SESSION['logged_in'])) {
+              echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td>" . $mobile . "</td><td>" . $email . "</td></tr>";
+            } else {
+              echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td><a href='login'>Login/Register</a> to view contact details</td><td><a href='login'>Login/Register</a> to view contact details</td></tr>";
+            }
+          }
+        endforeach;
+      ?>
+    </tbody>
+  </table>
     </section><!-- end of 8 col section -->
   </div><!-- end of row-->
 </div><!-- end of container -->

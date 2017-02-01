@@ -189,7 +189,7 @@
                   break;
                 }
                 $num = 0;// is this needed??
-                $this->insert_model->initialise_divisions($year, $month, $divs);// adds div to divisions ready for profile update
+                $this->insert_model->initialise_divisions($year, $month, $divs);// adds div to divisions ready for profile update and making divs viewable
               }
             }// end of for loop
           }
