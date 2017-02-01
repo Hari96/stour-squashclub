@@ -38,7 +38,7 @@ class Update_profiles extends CI_Controller {
       if ($date > $lastDate[$player1_id]) {//ensures date and day of latest match is stored
         $lastDate[$player1_id] = $date;
         $lastDay[$player1_id] = $day;
-      }      
+      }
       if ($date > $lastDate[$player2_id]) {
         $lastDate[$player2_id] = $date;
         $lastDay[$player2_id] = $day;
@@ -55,14 +55,14 @@ class Update_profiles extends CI_Controller {
           $drawn = $row->drawn + 1;
           $lost = $row->lost;
           $average = ($won / $played) * 100;
-          $this->insert_model->update_profiles($player1_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player1_id], $lastDate[$player1_id]);
+          $this->insert_model->update_profiles($player1_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player1_id], $lastDate[$player1_id], $year);
           $row = $this->users_model->get_player_profile($player2_id);
           $played = $row->played + 1;
           $won = $row->won;
           $drawn = $row->drawn + 1;
           $lost = $row->lost;
           $average = ($row->won / $played) * 100;
-          $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player2_id], $lastDate[$player2_id]);
+          $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player2_id], $lastDate[$player2_id], $year);
         }
       }
       if ($player1_score > $player2_score) {
@@ -73,14 +73,14 @@ class Update_profiles extends CI_Controller {
         $drawn = $row->drawn;
         $lost = $row->lost;
         $average = ($won / $played) * 100;
-        $this->insert_model->update_profiles($player1_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player1_id], $lastDate[$player1_id]);
+        $this->insert_model->update_profiles($player1_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player1_id], $lastDate[$player1_id], $year);
         $row = $this->users_model->get_player_profile($player2_id);
         $played = $row->played + 1;
         $won = $row->won;
         $drawn = $row->drawn;
         $lost = $row->lost + 1;
         $average = ($won / $played) * 100;
-        $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player2_id], $lastDate[$player2_id]);
+        $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player2_id], $lastDate[$player2_id], $year);
       }
       if ($player2_score > $player1_score) {
         $month = ucfirst($month);
@@ -90,14 +90,14 @@ class Update_profiles extends CI_Controller {
         $drawn = $row->drawn;
         $lost = $row->lost + 1;
         $average = ($won / $played) * 100;
-        $this->insert_model->update_profiles($player1_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player1_id], $lastDate[$player1_id]);
+        $this->insert_model->update_profiles($player1_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player1_id], $lastDate[$player1_id], $year);
         $row = $this->users_model->get_player_profile($player2_id);
         $played = $row->played + 1;
         $won = $row->won + 1;
         $drawn = $row->drawn;
         $lost = $row->lost;
         $average = ($won / $played) * 100;
-        $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player2_id], $lastDate[$player2_id]);
+        $this->insert_model->update_profiles($player2_id, $played, $won, $drawn, $lost, $average, $month, $lastDay[$player2_id], $lastDate[$player2_id], $year);
       }
     }
     $order_field = "id";

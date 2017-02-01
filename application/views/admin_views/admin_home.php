@@ -266,6 +266,10 @@ if(isset($_SESSION['role']))
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/announcement_view/announcements_view">Admin announcements</a></td>
           </tr>
           <tr>
+            <td>Sends an email to all division players indicating that new divisions are ready (includes link to logon page).</td>
+            <td colspan="3"><a href="<?php echo base_url();?>player_admin/divs_ready">Send 'New divisions are ready' Mail</a></td>
+          </tr>
+          <tr>
             <td>You can send emails to all, one, or some of the <em>active</em> players. Copy will be sent to the main admin.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/send_mail">Send an email to players</a></td>
           </tr>

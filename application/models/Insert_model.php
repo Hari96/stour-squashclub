@@ -138,7 +138,7 @@
       $this->db->update('results', $data);
   }
 
-  public function update_profiles($user_id, $played, $won, $drawn, $lost, $average, $month, $day, $date) {
+  public function update_profiles($user_id, $played, $won, $drawn, $lost, $average, $month, $day, $date, $year) {
     $this->db->where('user_id', $user_id);
     $data = array(
       'played' => $played,
@@ -148,7 +148,8 @@
       'average' => $average,
       'month' => $month,
       'day' => $day,
-      'date' => $date
+      'date' => $date,
+      'year' => $year
     );
     $this->db->update('profiles', $data);
   }

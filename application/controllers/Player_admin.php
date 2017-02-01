@@ -119,6 +119,15 @@ class Player_admin extends CI_Controller {
     $this->load->view('templates/footer');
   }
 
+  public function divs_ready() {//sends mail saying divisions are ready
+    $order_field = "current_league";//which field to order by
+    $order_direction = "asc";// direction of sort
+    $data['players'] = $this->users_model->get_players($order_field, $order_direction);
+    $this->load->view('templates/header', $data);
+    $this->load->view('admin_views/send_mail_div', $data);
+    $this->load->view('templates/footer', $data);
+  }
+
   public function admin_control() {
     $order_field = "lName";//which field to order by
     $order_direction = "asc";// direction of sort

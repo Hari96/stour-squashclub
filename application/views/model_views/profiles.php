@@ -35,7 +35,10 @@
             <td><?php echo $profile['drawn']; ?></td>
             <td><?php echo $profile['lost']; ?></td>
             <td><?php echo $average3 . "%"; ?></td>
-            <?php $last_played = $profile['day'] . " " . $profile['date'] . " " . $profile['month']; ?>
+            <?php $year = date('Y'); $partYear = substr_replace($year, "'", 0, 2); if($profile['year'] < $year && $profile['year'] != 0) {
+              $last_played = $profile['day'] . " " . $profile['date'] . " " . $profile['month'] . " " . $partYear; } else {
+              $last_played = $profile['day'] . " " . $profile['date'] . " " . $profile['month']; }
+            ?>
             <td><?php echo $last_played; ?></td>
           </tr>
         <?php $c++; endforeach; ?>
