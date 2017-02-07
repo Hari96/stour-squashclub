@@ -38,8 +38,15 @@
             If you did not originally indicate that you wanted to play in the league, please contact the admin so that you can be included in the next session.
           </p>
           <p>
-          If you wish to join the League without starting at the bottom why not attempt a flying challenge. Challenge, play and beat someone in any league position and you will be entered in the league as near as possible to the beaten player’s position. A maximum of 3 challenges are allowed. Use the <em>Results Form</em> to inform the admin..
+          If you wish to join the League without starting at the bottom why not attempt a flying challenge. Challenge, play and beat someone in any league position and you will be entered in the league as near as possible to the beaten player’s position. A maximum of 3 challenges are allowed. Use the <em>Contact Form</em> to inform the admin.
           </p>
+          <h4>Standard (for new members when registering)</h4>
+          <ol>
+            <li>Beginner - you may have played the odd game, but no real experience.</li>
+            <li>Played a fair amount, may have played in a league previously.</li>
+            <li>Good club player, played regularly in leagues before.</li>
+            <li>County player or stronger.</li>
+          </ol>
         </div>
       </section>
     </div>

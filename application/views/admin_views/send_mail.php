@@ -1,7 +1,18 @@
 <h2>Sending mail</h2>
 <?php
-if(isset($_SESSION['role']))
-{ ?>
+if(isset($_SESSION['role'])) {
+  if (isset($mail_no_content)) { ?>
+ <div class="message-box alert alert-danger alert-dismissible">
+   <h3 style="color:red;"><?php echo $mail_no_content; ?></h3>
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+ </div>
+ <?php $mail_no_content = ''; } ?>
+ <?php if (isset($mail_no_subject)) { ?>
+   <div class="message-box alert alert-danger alert-dismissible">
+     <h3 style="color:red;"><?php echo $mail_no_subject; ?></h3>
+     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+   </div>
+   <?php $mail_no_subject = ''; } ?>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -50,7 +61,7 @@ if(isset($_SESSION['role']))
             $data = array(
               'name' => 'ch' . $c,
               'class' => 'choose',
-              'value' => 'y',
+              //'value' => 'y',
               'checked' => false
              );
              ?>

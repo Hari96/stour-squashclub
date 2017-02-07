@@ -1,12 +1,19 @@
 <?php
 if(isset($_SESSION['role']))
 {
-   if (isset($results_message)) { ?>
+   if (isset($results_message)) {
+     if ($faulty_score == true) { ?>
+       <div class="message-box alert alert-danger alert-dismissible">
+         <h3 style="color:red;"><?php echo $results_message; ?></h3>
+       <?php } else {?>
    <div class="message-box alert alert-success alert-dismissible">
      <h3 style="color:green;"><?php echo $results_message; ?></h3>
+     <?php } ?>     
      <a href="#" style="color:red;" class="close" data-dismiss="alert" aria-label="close">close &times;</a>
     </div>
-  <?php $results_message = ''; } ?>
+  <?php $results_message = '';
+  } ?>
+
 <h2>Results for <?php echo ucfirst($month) . " " . $year;?></h2>
 <div class="container-fluid">
   <div class="row">

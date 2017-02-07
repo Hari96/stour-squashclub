@@ -80,6 +80,13 @@ if(isset($_SESSION['role']))
    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   </div>
 <?php $all_mail_sent_message = ''; } ?>
+<?php if (isset($mail_divs_sent_message)) { ?>
+ <div class="message-box alert alert-info alert-dismissible">
+   <h3 style="color:green;"><?php echo $mail_divs_sent_message; ?></h3>
+   <a href="<?php echo base_url();?>player_admin/divs_ready">Return to sending email page</a>
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  </div>
+<?php $mail_divs_sent_message = ''; } ?>
 
 <?php if (isset($admin_create_message)) { ?>
  <div class="message-box alert alert-info alert-dismissible">
@@ -251,13 +258,18 @@ if(isset($_SESSION['role']))
             </td>
             <td>
               <?php
-              $data = array(
-                'id' => 'yearmonth',
-                'type' => 'submit',
-                'content' => 'Update Profiles',
-                'class' => 'btn btn-primary'
-              );
-              echo form_button($data);
+              $day = date('d');
+              if(intval($day) > 25) {
+                $data = array(
+                  'id' => 'yearmonth',
+                  'type' => 'submit',
+                  'content' => 'Update Profiles',
+                  'class' => 'btn btn-primary'
+                );
+                echo form_button($data);
+              } else {
+                echo "Update button will appear <br> after 25th of the month.";
+              }
               ?>
             </td>
           </tr>

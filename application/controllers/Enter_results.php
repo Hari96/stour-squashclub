@@ -12,6 +12,7 @@
       $month = $this->input->post('month');
       $div = $this->input->post('div');
       $max = $this->input->post('num_records');
+      $faulty_score = false;
       for ($i = 1; $i <= $max; $i++) {
         $num1 = 'p1' . $i;
         $id1 = 'id1' . $i;
@@ -21,6 +22,9 @@
         $id2 = 'id2' . $i;
         $player2_score = $this->input->post($num2);
         $player2_id = $this->input->post($id2);
+        if ($player1_score == 3 && $player2_score == 3) {
+          $faulty_score = true;
+        }
         $dat = 'date' . $i;
         $date = $this->input->post($dat);
         $d = 'day' . $i;
@@ -90,7 +94,13 @@
       $order_direction = "asc";
       $data['players'] = $this->users_model->get_players($order_field, $order_direction);
       $data['results'] = $this->users_model->get_current_results($year, $month);
-      $data['results_message'] = "Results for division " . $div . " have been updated";
+      if ($faulty_score == true) {
+        $data['faulty_score'] = true;
+        $data['results_message'] = "WARNING: Results for division " . $div . " have been updated, but at least one of them is scored as 3-3";
+      } else {
+        $data['faulty_score'] = false;
+        $data['results_message'] = "Results for division " . $div . " have been updated";
+      }
       $data['year'] = $year;
       $data['month'] = $month;
       $this->load->view('templates/header', $data);

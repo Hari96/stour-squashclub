@@ -19,7 +19,8 @@
       <p><strong>Important:</strong></p>
       <ul>
         <li>Please include a mobile number. It is not a compulsory part of registering but is the main (and the most convenient) way for players to communicate with each other.</li>
-        <li>You don't necessarily have to play in one of our leagues when you register, you can opt not to be in a league, at least initially, by <em>unchecking</em> the option at bottom of the form</li>
+        <li>You don't necessarily have to play in one of our leagues when you register, you can <em>opt not to be in a league</em>, at least initially, by <strong><em>unchecking</em></strong> the option at bottom of the form.</li>
+        <li>If you are brand new to the club you may wish to give an indication of your standard (definitely not necessary). Please look at <a href="<?php echo base_url();?>pages/view/details">The details page</a> to help decide which number to use.</li>
       </ul>
       <p>After registering you will be sent an activation link to the provided email address. Once you have clicked on this link you will be able to login.</p>
       <p>If you want to visit the forum, you can login using your email address as your username.</p>

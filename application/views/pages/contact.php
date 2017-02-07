@@ -1,6 +1,5 @@
 <h2>Contact Page</h2>
 <div class="container">
-  <?php if(isset($_SESSION['logged_in'])) { ?>
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
       <div class="panel panel-info">
@@ -21,21 +20,20 @@
               'class' => 'form-control',
               'required' => 'required',
               'id' => 'name',
-              'value' => $_SESSION['name']
+              //'value' => $_SESSION['name']
             );
             echo form_input($data);
             echo "<br>";
             $attributes = array(
               'class' => 'required'
             );
-            echo form_label('Email', 'inputEmail', $attributes);
-            echo " <span class='small-comments'>&nbsp;(You can use another email if you wish.)</span>";
+            echo form_label('Email', 'inputEmail', $attributes);            
             $data = array(
               'type' => 'email',
               'name' => 'inputEmail',
               'class' => 'form-control',
               'required' => 'required',
-              'value' => $_SESSION['email']
+              //'value' => $_SESSION['email']
             );
             echo form_input($data); ?>
             <br>
@@ -82,7 +80,4 @@
       </div>
     </div>
   </div>
-  <?php } else {
-    echo "You need to be logged in to use the contact form";
-  }?>
 </div>
