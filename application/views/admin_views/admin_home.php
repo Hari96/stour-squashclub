@@ -135,7 +135,6 @@ if(isset($_SESSION['role']))
         </thead>
         <tbody>
           <tr>
-            <td>You can update players' main details: <em>Names, mobile and email.</em> </td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/crud_view/user_update">Update player's main details</a></td>
           </tr>
           <tr>

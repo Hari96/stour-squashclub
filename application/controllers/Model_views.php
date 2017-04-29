@@ -17,7 +17,7 @@ class Model_views extends CI_Controller {
     $year = date("Y");
     $month_num = date("m");
     if ($page !== 'register' && $page !== 'login') {
-      if($page=="divisions") {
+      if($page == 'divisions') {
       $month = $this->users_model->get_month($month_num);
       $data['year'] = $year;
       $data['month'] = $month;
@@ -31,7 +31,7 @@ class Model_views extends CI_Controller {
         $month_num = intval($month_num) + 1;
         $month_num = ($month_num < 10) ? '0'.strval($month_num): strval($month_num);
       }
-      $month = $this->users_model->get_month($month_num);
+      $month = $this->users_model->get_month($month_num);      
       $data['viewable'] = $this->users_model->get_viewable_state($year, $month);//check to see if next month's league is available
       $this->load->view('templates/header', $data);
       $this->load->view('model_views/'.$page, $data);
@@ -45,7 +45,7 @@ class Model_views extends CI_Controller {
         $month_num = intval($month_num) + 1;
         $month_num = ($month_num < 10) ? '0'.strval($month_num): strval($month_num);
       }
-      $month = $this->users_model->get_month($month_num);      
+      $month = $this->users_model->get_month($month_num);
       $data['year'] = $year;
       $data['month'] = $month;
       $data['players'] = $this->users_model->get_players($order_field, $order_direction);

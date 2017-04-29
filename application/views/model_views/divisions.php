@@ -8,8 +8,8 @@ echo ucfirst($month) . " " . $partYear;
     <section class="col-md-4 bg-lgrey spacing-top">
       <br>
       <p>Games to be played between first and last day of the above month.</p>
-      <p>The League will be divided into divisions, with a maximum number of five players in each division.
-        Each player is responsible for contacting another two players in his/her division, i.e:</p>
+      <p>The League will be divided into divisions, with four, five or six players in each division.</p>
+      <p>Usually divisions will contain 5 players and, in this case, each player should contact two players from their division:-</p>
       <ul>
         <li>Player Number 1 contacts Numbers 2 and 3</li>
         <li>Player Number 2 contacts Numbers 3 and 4</li>
@@ -17,7 +17,8 @@ echo ucfirst($month) . " " . $partYear;
         <li>Player Number 4 contacts Numbers 5 and 1</li>
         <li>Player Number 5 contacts Numbers 1 and 2</li>
       </ul>
-      <p>Opponents should be contacted at least one whole week before the session ends.</p>
+      <p><em>For divisions with 4 or 6 players please see <a href="<?php echo base_url();?>pages/view/details">Details and Rules</a>.</em>
+      <p>Opponents should be contacted within the first two weeks.</p>
       <p>Matches are to be played as agreed by the two players. If you are not contacted within the specified time you may claim the match 3-0.</p>
       <p><em>Booking courts:</em></p>
       <p>Ring Stour Centre reception 01233 663503, then press 0 to make a booking.</p>

@@ -7,29 +7,47 @@
           <h3 class="panel-title text-center">General Details</h3>
         </div>
         <div class="panel-body">
-          <p>The League will be divided into divisions, with a maximum number of five players in each division. Each player is responsible for contacting another two players in his/her division, i.e:</p>
-          <div class="squashed-list">
-          <p>Player Number 1 contacts Numbers 2 and 3</p>
-          <p>Player Number 2 contacts Numbers 3 and 4</p>
-          <p>Player Number 3 contacts Numbers 4 and 5</p>
-          <p>Player Number 4 contacts Numbers 5 and 1</p>
-          <p>Player Number 5 contacts Numbers 1 and 2</p>
-        </div>
+          <p>The League will be divided into divisions, with four, five or six players in each division.</p>
+          <p>Usually each division will contain 5 players and, in this case, each player should contact two players from their division:-</p>
+          <ul>
+            <li>Player Number 1 contacts Numbers 2 and 3</li>
+            <li>Player Number 2 contacts Numbers 3 and 4</li>
+            <li>Player Number 3 contacts Numbers 4 and 5</li>
+            <li>Player Number 4 contacts Numbers 5 and 1</li>
+            <li>Player Number 5 contacts Numbers 1 and 2</li>
+          </ul>
+          <p>If there are 4 players in your division then contact players:-</p>
+          <ul>
+            <li>Player Number 1 contacts Numbers 2 and 3</li>
+            <li>Player Number 2 contacts Number 3 and 4</li>
+            <li>Player Number 3 contacts Number 4</li>
+            <li>Player Number 4 contacts Number 1</li>
+          </ul>
+          <p>If there are 6 players in your division then contact players:-</p>
+          <ul>
+            <li>Player Number 1 contacts Numbers 2, 3 and 4</li>
+            <li>Player Number 2 contacts Numbers 3, 4 and 5</li>
+            <li>Player Number 3 contacts Numbers 4, 5 and 6</li>
+            <li>Player Number 4 contacts Numbers 5 and 6</li>
+            <li>Player Number 5 contacts Numbers 6 and 1</li>
+            <li>Player Number 6 contacts Numbers 1 and 2</li>
+          </ul>
           <p>
-          Each league session will last for one calendar month. During that time players are expected to play four matches. Opponents should be contacted at least one whole week before the session ends. Please use the above mentioned guide to make the necessary contacts. Matches are to be played as agreed by the two players. If you are not contacted within the specified time you may claim the match 3-0.
+          Each league session will last for one calendar month. During that time players are expected to play each other player once. Opponents should be contacted during the first two weeks of the month. Please use the above mentioned guide to make the necessary contacts. Matches are to be played as agreed by the two players. If you are not contacted by halfway through the month, then please make contact yourself. If you are not contacted, or replied to, within the specified time you may claim the match 3-0.
         </p>
         <p>
-        All match results are to be submitted using the <a href="<?php echo base_url();?>captcha_results/form">Results Form.</a></p> Please do not enter results directly onto the League match sheets. The admin will update the match sheets (outside the courts) as often as possible. At the end of each League period, promotion and demotion will be carried out as follows:
+        All match results are to be submitted using the <a href="<?php echo base_url();?>captcha_results/form">Results Form.</a></p>
+        <p>Please do not enter results directly onto the League match sheets (normally pinned on notice board outside courts at beginning of month). At the end of each League period, promotion and demotion will be carried out as follows:
+        </p>
         <p>
-
-        <p>
-          a) The two top players in each Division will be promoted and the bottom two will be demoted, with the following provisos:
+          a) The top player in each Division will be promoted and the bottom one will be demoted, with the following provisos:
         </p>
         <ol type="i">
           <li>To be promoted you must win at least two matches.</li>
           <li>Win maximum points and you could be moved up by two Divisions.</li>
           <li>Win no points and you could be demoted by two Divisions.</li>
           <li>Win no matches and you could be demoted by one Division.</li>
+          <li>The admin can decide to promote, or demote, others, but will give a reason to any players this affects.</li>
         </ol>
         <p>
           b) Failure to play at least two matches will be a sufficient reason for you to be dropped from the next League session. Dropped players could rejoin later.

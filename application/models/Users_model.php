@@ -203,14 +203,15 @@ class Users_model extends CI_Model {
     $this->db->where('year', $year);
     $this->db->where('month', $month);
     $query = $this->db->get('divisions');
-    if($query->num_rows !== 0) {
+    if($query->num_rows() < 1) {
+      return false;
+    } else {
       if($query->row(0)->viewable == 1) {
         return true;
       } else {
         return false;
       }
     }
-    return false;
   }
 
   public function get_month($num) {

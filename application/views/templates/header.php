@@ -45,7 +45,7 @@
           </ul>
         </li>
         <?php if(isset($_SESSION['email'])) { ?>
-        <li><a href="http://www.stoursquashclub.co.uk/sqcl-forum"><strong>Forum</strong></a></li>
+        <li><a href="http://www.stoursquashclub.co.uk/sqcl-forum/community"><strong>Forum</strong></a></li>
         <?php } ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
