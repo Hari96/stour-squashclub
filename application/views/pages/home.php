@@ -50,9 +50,8 @@
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>
 <?php $message_sent = '';} ?>
-<h2>Home page</h2>
 <div class="container-fluid">
-  <div class="row spacing-sides">
+  <div class="row spacing-sides spacing-top">
     <div class="col-md-4 table-responsive scroll">
       <h3>Admin Announcements</h3>
         <?php echo form_open('');
@@ -65,11 +64,13 @@
         <hr class="line-style">
         <?php endforeach; echo form_close(); ?>
     </div>
-    <div class="col-mod-8">
-      <p>Welcome to the Stour Centre Squash Club, games are played at:</p>
-      <p><strong>The Stour Centre, Station Approach, Ashford, Kent, TN23 1ET</strong>.</p>
-      <p>Stour Centre reception <strong>01233 663503</strong>, then press 0 to make a booking.</p>
-      <p>If you are a member of the Stour Centre you should be able to check availability, and book via: &nbsp;<a href="https://ashfordleisuretrust.leisurecloud.net/Connect/mrmlogin.aspx">Ashford Leisure Trust</a></p>
+    <div class="col-md-7">
+      <div class="well text-center">
+        <p>Welcome to the Stour Centre Squash Club, games are played at:</p>
+        <p><strong>The Stour Centre, Station Approach, Ashford, Kent, TN23 1ET</strong>.</p>
+        <p>Stour Centre reception: <strong>01233 663503</strong>, then press 0 to make a booking.</p>
+        <p>If you are a member of the Stour Centre you should be able to check availability, and book via: <br><a class="larger" href="https://ashfordleisuretrust.leisurecloud.net/Connect/mrmlogin.aspx">Ashford Leisure Trust</a></p>
+        </div>
       <br>
       <p>You are welcome to join this site by <a href="<?php echo base_url();?>model_views/view/register">signing up</a>, where you will be asked for a live email address and a password as a minimum.</p>
       <p>After signing up, an activation link will be sent to your email address - once you have activated your acount you will be able
@@ -82,6 +83,7 @@
       <a href="<?php echo base_url(); ?>pages/view/details">General Details</a> for information about possibly joining a higher league.</p>
       <br>
       <h3>Coaching</h3>
+      Coaching takes place regularly on a Saturday - details to follow.
     </div>
   </div>
 </div>

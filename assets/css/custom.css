@@ -11,6 +11,9 @@ body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1.6rem;
 }
+.larger {
+  font-size: 2rem;
+}
 .bg-navbar {
   background-color: #FFB85F;
   color: #FF7A5A;
