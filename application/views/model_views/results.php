@@ -2,7 +2,11 @@
 $partYear = substr_replace($year, "'", 0, 2);
 echo ucfirst($month) . " " . $partYear;
 ?></h2><br>
+<?php
+if(isset($_SESSION['role']))
+{ ?>
 <button onclick="printFunction()">Print</button>
+<?php } ?>
 <div class="container-fluid">
   <?php echo form_open('display_results') ;?>
   <input type="hidden" name="display" value="results">
@@ -68,8 +72,12 @@ echo ucfirst($month) . " " . $partYear;
     <div class="col-md-4">
     </div>
     <div class="col-md-8 table-responsive">
+      <?php
+            if ($year == date('Y') && $month_num == date('m')) {
+      ?>
       <p>Please report results using <a href="<?php echo base_url();?>captcha_results/form">Results Form.</a></p>
       <p><em>Contact details for all players can be found on the Divisions page (only if you are logged in).</em></p>
+      <?php } ?>
       <span class="lead"><strong>DIVISION 1</strong></span>
       <table class="table table-bordered table-striped">
         <thead>

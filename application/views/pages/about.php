@@ -1,4 +1,4 @@
-<h2>About page</h2>
+<h2 class="text-center">About this site</h2>
 <div class="container-fluid">
   <p>This site is used by the Stour Squash Club, Ashford, Kent.</p>
   <p>Once registered, players can take part in regular competitions, see their opponent's contact details and view their results.</p>

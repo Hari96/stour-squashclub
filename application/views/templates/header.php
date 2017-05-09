@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Stour Centre Squash Club - Ashford, Kent</title>
+    <meta name="description"
+	content="Stour Centre Squash Club and League situated in Ashford Kent." />
+	<meta name="keywords"
+	content="squash, sport, squash club, squash league" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/custom.css" />
     <!-- SCRIPTS PLACED AT BOTTOM OF BODY

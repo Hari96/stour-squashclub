@@ -9,8 +9,10 @@
     public function index() {
       $year = $this->input->post('year');
       $month = $this->input->post('month');
+      $month_num = $this->users_model->get_month_num($month);
       $data['year'] = $year;
       $data['month'] = $month;
+      $data['month_num'] = $month_num;
       $order_field = "id";
       $order_direction = "asc";
       $data['players'] = $this->users_model->get_players_for_profile($order_field, $order_direction);//ensures inactive players are included in results
@@ -35,6 +37,7 @@
       $month = $this->users_model->get_month($month_num);
       $data['year'] = $year;
       $data['month'] = $month;
+      $data['month_num'] = $month_num;
       $order_field = "id";
       $order_direction = "asc";
       $data['players'] = $this->users_model->get_players_for_profile($order_field, $order_direction);

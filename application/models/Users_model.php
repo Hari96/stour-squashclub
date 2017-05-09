@@ -256,6 +256,48 @@ class Users_model extends CI_Model {
     return $month;
   }
 
+  public function get_month_num($month) {
+    switch($month) {
+      case 'jan':
+      $month_num = '01';
+      break;
+      case 'feb':
+      $month_num = '02';
+      break;
+      case 'mar':
+      $month_num = '03';
+      break;
+      case 'apr':
+      $month_num = '04';
+      break;
+      case 'may':
+      $month_num = '05';
+      break;
+      case 'jun':
+      $month_num = '06';
+      break;
+      case 'jul':
+      $month_num = '07';
+      break;
+      case 'aug':
+      $month_num = '08';
+      break;
+      case 'sep':
+      $month_num = '09';
+      break;
+      case 'oct':
+      $month_num = '10';
+      break;
+      case 'nov':
+      $month_num = '11';
+      break;
+      case 'dec':
+      $month_num = '12';
+      break;
+    }
+    return $month_num;
+  }
+
   public function getNamesFromEmail($email) {
     $this->db->where('email', $email);
     $query = $this->db->get('players');
