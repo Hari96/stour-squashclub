@@ -23,7 +23,8 @@ class User_update extends CI_Controller {
     }
     //Validating Mobile Field
     $this->form_validation->set_rules('inputMobile','Mobile Number','regex_match[/^[0-9]{11}$/]');
-
+    //Validating Landline Field
+    $this->form_validation->set_rules('inputLandline','Landline Number','regex_match[/^[0-9]{11}$/]');
     if ($this->form_validation->run() == FALSE) {
       $this->load->view('templates/header');
       $this->load->view('model_views/myaccount');
@@ -52,7 +53,8 @@ class User_update extends CI_Controller {
           'lName' => $this->input->post('inputLastName'),
           'email' => $email,
           'password' => $password,
-          'mobile' => $this->input->post('inputMobile')
+          'mobile' => $this->input->post('inputMobile'),
+          'landline' => $this->input->post('inputLandline')
           );
           $this->insert_model->update_users($data, $user_id);
           if ($email != $old_email) {
@@ -77,7 +79,8 @@ class User_update extends CI_Controller {
           'fname' => $this->input->post('inputFirstName'),
           'lName' => $this->input->post('inputLastName'),
           'email' => $email,
-          'mobile' => $this->input->post('inputMobile')
+          'mobile' => $this->input->post('inputMobile'),
+          'landline' => $this->input->post('inputLandline')
           );
           $this->insert_model->update_users($data, $user_id);
           if ($email != $old_email) {
@@ -104,10 +107,12 @@ class User_update extends CI_Controller {
     $fName = $row->fName;
     $lName = $row->lName;
     $mobile = $row->mobile;
+    $landline = $row->landline;
     $user_id = $row->id;
     $data['firstname'] = $fName;
     $data['lastname'] = $lName;
     $data['mobile'] = $mobile;
+    $data['landline'] = $landline;
     $data['id'] = $user_id;
     $data['message'] = "To be completed";
     $this->load->view('templates/header', $data);

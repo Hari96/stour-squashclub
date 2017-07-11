@@ -81,6 +81,15 @@ if(isset($_SESSION['logged_in'])) {
             'value' => $mobile
           );
           echo form_input($data);
+          echo form_label('Landline', 'inputLandline');
+          echo "<br>";
+          $data = array(
+            'type' => 'tel',
+            'name' => 'inputLandline',
+            'class' => 'form-control',
+            'value' => $landline
+          );
+          echo form_input($data);
           echo "<br>";
           echo form_submit('user-update', 'Update', 'class="btn btn-primary"');
           echo form_reset('user-reset', 'Reset', 'class="btn btn-warning"');
