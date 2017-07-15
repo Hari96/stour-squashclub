@@ -31,8 +31,8 @@
 </div>
 <?php $email_message = '';} ?>
 <?php if (isset($password_changed)) { ?>
-<div class="message-box alert alert-danger">
-  <h3 style="color:red;"><?php echo $password_changed; ?></h3>
+<div class="message-box alert alert-success">
+  <h3 style="color:green;"><?php echo $password_changed; ?></h3>
   <a href="<?php echo base_url();?>model_views/view/login">Go to login page</a>
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>

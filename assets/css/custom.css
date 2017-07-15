@@ -14,6 +14,9 @@ body {
 .larger {
   font-size: 2rem;
 }
+.smaller {
+  font-size: 1.2rem;
+}
 .bg-navbar {
   background-color: #FFB85F;
   color: #FF7A5A;

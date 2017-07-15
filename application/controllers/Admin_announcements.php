@@ -24,6 +24,7 @@ class Admin_announcements extends CI_Controller {
     for ($i = 2; $i <= 5; $i++) {
        $title = $this->input->post('title' . $i);
        $comment = $this->input->post('content' . $i);
+       $date = $this->input->post('date' . $i);
        $data = array(
          'title' => $title,
          'comment' => $comment,

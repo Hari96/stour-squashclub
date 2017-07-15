@@ -15,7 +15,7 @@ class User_update extends CI_Controller {
     $this->form_validation->set_rules('inputLastName','Last Name','required|min_length[2]|max_length[30]');
     //Validating Email Field
     $this->form_validation->set_rules('inputEmail','Email','required|valid_email');
-    if ($this->input->post['inputPassword'] != "") {
+    if ($this->input->post['inputPassword'] !== "") {
       //Validating Password Field
       $this->form_validation->set_rules('inputPassword','Password','required|min_length[8]|max_length[25]');
       //Validating confirmation Password Field
@@ -26,9 +26,22 @@ class User_update extends CI_Controller {
     //Validating Landline Field
     $this->form_validation->set_rules('inputLandline','Landline Number','regex_match[/^[0-9]{11}$/]');
     if ($this->form_validation->run() == FALSE) {
-      $this->load->view('templates/header');
-      $this->load->view('model_views/myaccount');
-      $this->load->view('templates/footer');
+      $email = $this->session->userdata('email');
+      $data['email'] = $email;
+      $row = $this->users_model->getNamesFromEmail($email);
+      $fName = $row->fName;
+      $lName = $row->lName;
+      $mobile = $row->mobile;
+      $landline = $row->landline;
+      $user_id = $row->id;
+      $data['firstname'] = $fName;
+      $data['lastname'] = $lName;
+      $data['mobile'] = $mobile;
+      $data['landline'] = $landline;
+      $data['id'] = $user_id;
+      $this->load->view('templates/header', $data);
+      $this->load->view('model_views/myaccount', $data);
+      $this->load->view('templates/footer', $data);
     } else {
       $old_email = $this->session->userdata('email');//in case email is changed
       $user_id = $this->input->post('id');

@@ -54,7 +54,8 @@ if(isset($_SESSION['logged_in'])) {
           echo "<br>";
           echo form_label('New password', 'inputPassword');
           ?>
-          <span>&nbsp;&nbsp;(Leave blank if you do not wish to change password)</span>
+          <span>&nbsp;&nbsp;(Leave blank if you do not wish to change password)</span><br>
+          <span class="smaller"><strong>8, or more, characters please</strong></span>
           <?php
           $data = array(
             'name' => 'inputPassword',

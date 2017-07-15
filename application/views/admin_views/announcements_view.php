@@ -20,7 +20,9 @@ if(isset($_SESSION['role']))
       <?php $c = 2; foreach ($comments as $comment):
       $title = "title" . $c;
       $content = "content" . $c;
+      $date = "date" . $c;
       ?>
+      <input type="hidden" name="<?php echo $date; ?>" value="<?php echo $comment['date']; ?>">
       <tr><td><input type="text" name="<?php echo $title; ?>" size="50" value="<?php echo $comment['title']; ?>"></td>
       <td><textarea name="<?php echo $content; ?>" rows="5" cols="50"><?php echo $comment['comment']; ?></textarea></td></tr>
     <?php $c++; endforeach; ?>
