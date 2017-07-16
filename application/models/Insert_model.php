@@ -16,11 +16,11 @@
     }
 
     public function activation_insert($user_id, $league_player) {
-      //$this->load->helper('date');
+      $data_preferences = array(
+        'user_id' => $user_id
+      );
+      $this->db->insert('preferences', $data_preferences);//inserts user id into preferences table
       $date = date('Y-m-d');
-      //$data_leagues = array(
-        //'user_id' => $user_id
-      //);
       if ($league_player == true) {
       $data = array(
         'activated' => 1,

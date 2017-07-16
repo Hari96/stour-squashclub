@@ -161,3 +161,6 @@ table, th, td {
 #profile-div {
   font-size: 1rem;
 }
+.red-font {
+  color: red;
+}

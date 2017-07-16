@@ -378,4 +378,11 @@ class Users_model extends CI_Model {
     //delete individual players who have left the club
   }
 
+  public function get_player_preferences($user_id) {
+    $this->db->where('user_id', $user_id);
+    $query = $this->db->get('preferences');
+    $row = $query->row();
+    return $row;
+  }
+
 }
