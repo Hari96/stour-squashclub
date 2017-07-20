@@ -305,4 +305,9 @@
     $this->db->update('profiles', $data);
   }
 
+  public function update_preferences($user_id, $preference_data) {
+    $this->db->where('user_id', $user_id);
+    $this->db->update('preferences', $preference_data);
+  }
+
 }

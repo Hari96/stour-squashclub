@@ -46,7 +46,13 @@
 <?php } ?>
 <?php if (isset($message_sent)) { ?>
 <div class="message-box alert alert-info">
-  <h3 style="color:green;"><?php echo $message_sent ?></h3>
+  <h3 style="color:green;"><?php echo $message_sent; ?></h3>
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+</div>
+<?php $message_sent = '';} ?>
+<?php if (isset($pref_message)) { ?>
+<div class="message-box alert alert-info">
+  <h3 style="color:green;"><?php echo $pref_message; ?></h3>
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 </div>
 <?php $message_sent = '';} ?>
