@@ -1,6 +1,5 @@
 <div class="container-fluid">
-  <p class="lead red-font">NOTE: This page is currently under construction.
-    Eventually players will be able to set and edit their preferences for days and times.</p>
+  <p class="lead red-font">I am hoping that this facility will be helpful when arranging your games. Please put some thought into your choices. Only one preference each is possible for day and time</p>
   <h1>Preferences - <?php echo $name ?></h1>
   <div>
   There are two courts and 45-minute sessions run as follows:<br>

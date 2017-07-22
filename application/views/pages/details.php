@@ -33,8 +33,11 @@
             <li>Player Number 6 contacts Numbers 1 and 2</li>
           </ul>
           <p>
-          Each league session will last for one calendar month. During that time players are expected to play each other player once. Opponents should be contacted during the first two weeks of the month. Please use the above mentioned guide to make the necessary contacts. Matches are to be played as agreed by the two players. If you are not contacted by halfway through the month, then please make contact yourself. If you are not contacted, or replied to, within the specified time you may claim the match 3-0.
-        </p>
+            Each league session will last for one calendar month. During that time players are expected to play each other player once. Opponents should be contacted during the first two weeks of the month. Please use the above mentioned guide to make the necessary contacts. You can click on a player's name on the divisions page to see if they have set their preferences for suitable days and times for playing matches.
+          </p>
+          <p>
+            Matches are to be played as agreed by the two players. If you are not contacted by halfway through the month, then please make contact yourself. If you are not contacted, or replied to, within the specified time you may claim the match 3-0.
+          </p>
         <p>
         All match results are to be submitted using the <a href="<?php echo base_url();?>captcha_results/form">Results Form.</a></p>
         <p>Please do not enter results directly onto the League match sheets (normally pinned on notice board outside courts at beginning of month). At the end of each League period, promotion and demotion will be carried out as follows:

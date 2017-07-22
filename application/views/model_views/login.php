@@ -96,16 +96,16 @@
         ?>
       </div>
         <?php
-          $attributes = array(
-            'class' => 'required'
-          );
-          echo form_label('Confirm Password', 'confirmPassword', $attributes);
-          $data = array(
-            'name' => 'confirmPassword',
-            'class' => 'form-control',
-            'required' => 'required'
-          );
-          echo form_password($data);
+          //$attributes = array(
+          //  'class' => 'required'
+          //);
+          //echo form_label('Confirm Password', 'confirmPassword', $attributes);
+          //$data = array(
+          //  'name' => 'confirmPassword',
+          //  'class' => 'form-control',
+          //  'required' => 'required'
+          //);
+          //echo form_password($data);
         ?>
         <a href="<?php echo base_url();?>captcha_password/form" style="color:red; font-size: 1.1rem;">I forgot my password</a><br>
         <div class="spacing-top">
