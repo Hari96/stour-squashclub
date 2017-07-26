@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <p class="lead red-font">NOTE: Page under construction. Once completed you will be able to see player preferences</p>
+  
   <h2><?php echo "Preferences for " . $name; ?></h2>
   <div class="table-responsive">
     <table class="table table-bordered">

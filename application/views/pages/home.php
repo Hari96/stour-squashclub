@@ -89,7 +89,10 @@
       <a href="<?php echo base_url(); ?>pages/view/details">General Details</a> for information about possibly joining a higher league.</p>
       <br>
       <h3>Coaching</h3>
-      Coaching takes place regularly on a Saturday - details to follow.
+      <P>There is a squash club running on Saturday afternoons from 1:30 to 3:45.</P>
+      <P>Cost is £6 and all levels, from beginners to more competent players are welcome.</P>
+      <P>Club is organised by Chris Kennedy, who can be contacted on 07816 907964.
+      <p>There is also a regular session on Wednesdays from 7pm to 8:30pm, organised by Steven Ross, who can be contacted on 07793 202169</p>
     </div>
   </div>
 </div>

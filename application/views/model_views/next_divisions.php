@@ -40,11 +40,12 @@ echo ucfirst($month) . " " . $partYear;
                     $name = $player['fName'] . " " . $player['lName'];
                     $mobile = $player['mobile'];
                     $email = $player['email'];
+                    $user_id = $player['id'];
                   }
                 endforeach;
-                if(isset($_SESSION['logged_in'])) {
-                  echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td>" . $mobile . "</td><td>" . $email . "</td></tr>";
-                } else {
+                if(isset($_SESSION['logged_in'])) { ?>
+                  <tr><td><?php echo $c; ?></td><td><a href="<?php echo site_url('Player_preferences/preferences_view/?user_id='.$user_id); ?>"><?php echo $name; ?></a></td><td><?php echo $mobile; ?></td><td><?php echo $email; ?></td></tr>
+                <?php } else {
                   echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td><a href='login'>Login/Register</a> to view contact details</td><td><a href='login'>Login/Register</a> to view contact details</td></tr>";
                 }
               }
@@ -74,11 +75,12 @@ echo ucfirst($month) . " " . $partYear;
                     $name = $player['fName'] . " " . $player['lName'];
                     $mobile = $player['mobile'];
                     $email = $player['email'];
+                    $user_id = $player['id'];
                   }
                 endforeach;
-                if(isset($_SESSION['logged_in'])) {
-                  echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td>" . $mobile . "</td><td>" . $email . "</td></tr>";
-                } else {
+                if(isset($_SESSION['logged_in'])) { ?>
+                  <tr><td><?php echo $c; ?></td><td><a href="<?php echo site_url('Player_preferences/preferences_view/?user_id='.$user_id); ?>"><?php echo $name; ?></a></td><td><?php echo $mobile; ?></td><td><?php echo $email; ?></td></tr>
+                <?php } else {
                   echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td><a href='login'>Login/Register</a> to view contact details</td><td><a href='login'>Login/Register</a> to view contact details</td></tr>";
                 }
               }
@@ -108,11 +110,12 @@ echo ucfirst($month) . " " . $partYear;
                     $name = $player['fName'] . " " . $player['lName'];
                     $mobile = $player['mobile'];
                     $email = $player['email'];
+                    $user_id = $player['id'];
                   }
                 endforeach;
-                if(isset($_SESSION['logged_in'])) {
-                  echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td>" . $mobile . "</td><td>" . $email . "</td></tr>";
-                } else {
+                if(isset($_SESSION['logged_in'])) { ?>
+                  <tr><td><?php echo $c; ?></td><td><a href="<?php echo site_url('Player_preferences/preferences_view/?user_id='.$user_id); ?>"><?php echo $name; ?></a></td><td><?php echo $mobile; ?></td><td><?php echo $email; ?></td></tr>
+                <?php } else {
                   echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td><a href='login'>Login/Register</a> to view contact details</td><td><a href='login'>Login/Register</a> to view contact details</td></tr>";
                 }
               }
@@ -142,11 +145,12 @@ echo ucfirst($month) . " " . $partYear;
                     $name = $player['fName'] . " " . $player['lName'];
                     $mobile = $player['mobile'];
                     $email = $player['email'];
+                    $user_id = $player['id'];
                   }
                 endforeach;
-                if(isset($_SESSION['logged_in'])) {
-                  echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td>" . $mobile . "</td><td>" . $email . "</td></tr>";
-                } else {
+                if(isset($_SESSION['logged_in'])) { ?>
+                  <tr><td><?php echo $c; ?></td><td><a href="<?php echo site_url('Player_preferences/preferences_view/?user_id='.$user_id); ?>"><?php echo $name; ?></a></td><td><?php echo $mobile; ?></td><td><?php echo $email; ?></td></tr>
+                <?php } else {
                   echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td><a href='login'>Login/Register</a> to view contact details</td><td><a href='login'>Login/Register</a> to view contact details</td></tr>";
                 }
               }
@@ -170,11 +174,12 @@ echo ucfirst($month) . " " . $partYear;
                     $name = $player['fName'] . " " . $player['lName'];
                     $mobile = $player['mobile'];
                     $email = $player['email'];
+                    $user_id = $player['id'];
                   }
                 endforeach;
-                if(isset($_SESSION['logged_in'])) {
-                  echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td>" . $mobile . "</td><td>" . $email . "</td></tr>";
-                } else {
+                if(isset($_SESSION['logged_in'])) { ?>
+                  <tr><td><?php echo $c; ?></td><td><a href="<?php echo site_url('Player_preferences/preferences_view/?user_id='.$user_id); ?>"><?php echo $name; ?></a></td><td><?php echo $mobile; ?></td><td><?php echo $email; ?></td></tr>
+                <?php } else {
                   echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td><a href='login'>Login/Register</a> to view contact details</td><td><a href='login'>Login/Register</a> to view contact details</td></tr>";
                 }
               }
@@ -198,11 +203,12 @@ echo ucfirst($month) . " " . $partYear;
                 $name = $player['fName'] . " " . $player['lName'];
                 $mobile = $player['mobile'];
                 $email = $player['email'];
+                $user_id = $player['id'];
               }
             endforeach;
-            if(isset($_SESSION['logged_in'])) {
-              echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td>" . $mobile . "</td><td>" . $email . "</td></tr>";
-            } else {
+            if(isset($_SESSION['logged_in'])) { ?>
+              <tr><td><?php echo $c; ?></td><td><a href="<?php echo site_url('Player_preferences/preferences_view/?user_id='.$user_id); ?>"><?php echo $name; ?></a></td><td><?php echo $mobile; ?></td><td><?php echo $email; ?></td></tr>
+            <?php } else {
               echo "<tr><td>" . $c . "</td><td>" . $name . "</td><td><a href='login'>Login/Register</a> to view contact details</td><td><a href='login'>Login/Register</a> to view contact details</td></tr>";
             }
           }

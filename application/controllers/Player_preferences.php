@@ -10,7 +10,7 @@ class Player_preferences extends CI_Controller {
   }
 
   public function index() {
-    $data['pref_message'] = "Still under construction, please wait - message will appear in Admin Announcements when all is ready.";
+    $data['pref_message'] = "Your preferences have been updated";
     $user_id = $this->input->post('user_id');
     $preference_data = array(
       'mon'=> $this->input->post('mon'),
@@ -115,6 +115,9 @@ class Player_preferences extends CI_Controller {
     case 10:
     $day_pref_output = "Weekends";
     break;
+    case 0:
+    $day_pref_output = "";
+    break;
   }
     $time_output = "";
     $t1 = $row->t1;
@@ -144,6 +147,9 @@ class Player_preferences extends CI_Controller {
       break;
       case 11:
       $time_pref_output = "Evenings";
+      break;
+      case 0:
+      $time_pref_output = "";
       break;
     }
     $comments = $row->comments;
