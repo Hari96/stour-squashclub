@@ -277,7 +277,7 @@ if(isset($_SESSION['role']))
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/announcement_view/announcements_view">Admin announcements</a></td>
           </tr>
           <tr>
-            <td>Sends an email to all division players indicating that new divisions are ready (includes link to logon page).</td>
+            <td>Sends an email to all division players indicating that new divisions are ready.</td>
             <td colspan="3"><a href="<?php echo base_url();?>player_admin/divs_ready">Send 'New divisions are ready' Mail</a></td>
           </tr>
           <tr>

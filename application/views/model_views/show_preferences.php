@@ -1,5 +1,4 @@
 <div class="container-fluid">
-  
   <h2><?php echo "Preferences for " . $name; ?></h2>
   <div class="table-responsive">
     <table class="table table-bordered">
@@ -14,5 +13,7 @@
     </table>
   </div>
   <h3>Further comments:</h3>
-  <?php echo $comments; ?>
+  <p><?php echo $comments; ?></p>
+  <br>
+  <a class="btn btn-primary" href="<?php echo base_url();?>model_views/view/divisions">Return to Current divisions page</a>
 </div>

@@ -106,6 +106,27 @@ class Player_preferences extends CI_Controller {
     if($sun == 1) { $day_output .= "Sunday"; }
     $day_pref = $row->day_pref;
   switch ($day_pref) {
+    case 1:
+    $day_pref_output = "Monday";
+    break;
+    case 2:
+    $day_pref_output = "Tuesday";
+    break;
+    case 3:
+    $day_pref_output = "Wednesday";
+    break;
+    case 4:
+    $day_pref_output = "Thursday";
+    break;
+    case 5:
+    $day_pref_output = "Friday";
+    break;
+    case 6:
+    $day_pref_output = "Saturday";
+    break;
+    case 7:
+    $day_pref_output = "Sunday";
+    break;
     case 8:
     $day_pref_output = "Don't mind";
     break;
@@ -136,6 +157,27 @@ class Player_preferences extends CI_Controller {
     if($t7 == 1) { $time_output .= "20:00 onwards"; }
     $time_pref = $row->time_pref;
     switch ($time_pref) {
+      case 1:
+      $time_pref_output = "08:30 - 10:00";
+      break;
+      case 2:
+      $time_pref_output = "10:00 - 12:00";
+      break;
+      case 3:
+      $time_pref_output = "12:00 - 14:00";
+      break;
+      case 4:
+      $time_pref_output = "14:00 - 16:00";
+      break;
+      case 5:
+      $time_pref_output = "16:00 - 18:00";
+      break;
+      case 6:
+      $time_pref_output = "18:00 - 20:00";
+      break;
+      case 7:
+      $time_pref_output = "20:00 onwards";
+      break;
       case 8:
       $time_pref_output = "Don't mind";
       break;

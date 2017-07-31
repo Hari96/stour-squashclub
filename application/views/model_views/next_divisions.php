@@ -6,6 +6,7 @@ echo ucfirst($month) . " " . $partYear;
   <div class="row">
     <section class="col-md-4 bg-lgrey spacing-top">
       <br>
+      <p class="red-font"><em>If you have not set your preferences for days and times which you can play, please do so by clicking on 'set preferences' under Competitions menu. You can see your opponent's preferences by clicking on their name.</em></p>
       <p>Games to be played between first and last day of the above month.</p>
       <p>The League will be divided into divisions, with a maximum number of five players in each division.
         Each player is responsible for contacting another two players in his/her division, i.e:</p>
@@ -16,6 +17,7 @@ echo ucfirst($month) . " " . $partYear;
         <li>Player Number 4 contacts Numbers 5 and 1</li>
         <li>Player Number 5 contacts Numbers 1 and 2</li>
       </ul>
+      <p><em>For divisions with 4 or 6 players please see <a href="<?php echo base_url();?>pages/view/details">Details and Rules</a>.</em>
       <p>Opponents should be contacted at least one whole week before the session ends.</p>
       <p>Matches are to be played as agreed by the two players. If you are not contacted within the specified time you may claim the match 3-0.</p>
       <p><em>Booking courts:</em></p>
