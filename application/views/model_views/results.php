@@ -206,6 +206,10 @@ if(isset($_SESSION['role']))
                               case 3:
                               $player1_score = 0;
                               $player2_score = 6;
+                              break;
+                              default:
+                              $player1_score = 0;
+                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player1_score;
@@ -280,6 +284,10 @@ if(isset($_SESSION['role']))
                               case 3:
                               $player2_score = 0;
                               $player1_score = 6;
+                              break;
+                              default:
+                              $player1_score = 0;
+                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player2_score;
@@ -432,6 +440,10 @@ if(isset($_SESSION['role']))
                                 case 3:
                                 $player1_score = 0;
                                 $player2_score = 6;
+                                break;
+                                default:
+                                $player1_score = 0;
+                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player1_score;
@@ -506,6 +518,10 @@ if(isset($_SESSION['role']))
                                 case 3:
                                 $player2_score = 0;
                                 $player1_score = 6;
+                                break;
+                                default:
+                                $player1_score = 0;
+                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player2_score;
@@ -658,6 +674,10 @@ if(isset($_SESSION['role']))
                                 case 3:
                                 $player1_score = 0;
                                 $player2_score = 6;
+                                break;
+                                default:
+                                $player1_score = 0;
+                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player1_score;
@@ -732,6 +752,10 @@ if(isset($_SESSION['role']))
                                 case 3:
                                 $player2_score = 0;
                                 $player1_score = 6;
+                                break;
+                                default:
+                                $player1_score = 0;
+                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player2_score;
@@ -884,6 +908,10 @@ if(isset($_SESSION['role']))
                                 case 3:
                                 $player1_score = 0;
                                 $player2_score = 6;
+                                break;
+                                default:
+                                $player1_score = 0;
+                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player1_score;
@@ -958,6 +986,10 @@ if(isset($_SESSION['role']))
                                 case 3:
                                 $player2_score = 0;
                                 $player1_score = 6;
+                                break;
+                                default:
+                                $player1_score = 0;
+                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player2_score;
@@ -1110,6 +1142,10 @@ if(isset($_SESSION['role']))
                               case 3:
                               $player1_score = 0;
                               $player2_score = 6;
+                              break;
+                              default:
+                              $player1_score = 0;
+                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player1_score;
@@ -1184,6 +1220,10 @@ if(isset($_SESSION['role']))
                               case 3:
                               $player2_score = 0;
                               $player1_score = 6;
+                              break;
+                              default:
+                              $player1_score = 0;
+                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player2_score;
@@ -1336,6 +1376,10 @@ if(isset($_SESSION['role']))
                               case 3:
                               $player1_score = 0;
                               $player2_score = 6;
+                              break;
+                              default:
+                              $player1_score = 0;
+                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player1_score;
@@ -1410,6 +1454,10 @@ if(isset($_SESSION['role']))
                               case 3:
                               $player2_score = 0;
                               $player1_score = 6;
+                              break;
+                              default:
+                              $player1_score = 0;
+                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player2_score;
