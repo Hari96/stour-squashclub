@@ -144,72 +144,57 @@ if(isset($_SESSION['role']))
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 6;
-                              $player2_score = 0;
                               break;
                               case 1:
                               $player1_score = 5;
-                              $player2_score = 1;
                               break;
                               case 2:
                               $player1_score = 4;
-                              $player2_score = 2;
                             }
                           }
                           if ($result['player1_score'] == 2) {
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 5;
-                              $Player2_score = 1;
                               break;
                               case 1:
                               $player1_score = 4;
-                              $player2_score = 2;
                               break;
                               case 2:
                               $player1_score = 3;
-                              $player2_score = 3;
                               break;
                               case 3:
                               $player1_score = 2;
-                              $player2_score = 4;
                             }
                           }
                           if ($result['player1_score'] == 1) {
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 4;
-                              $Player2_score = 2;
                               break;
                               case 1:
                               $player1_score = 3;
-                              $player2_score = 3;
                               break;
                               case 2:
                               $player1_score = 2;
-                              $player2_score = 4;
                               break;
                               case 3:
                               $player1_score = 1;
-                              $player2_score = 5;
                             }
                           }
                           if ($result['player1_score'] == 0) {
                             switch($result['player2_score']) {
                               case 1:
                               $player1_score = 2;
-                              $Player2_score = 4;
                               break;
                               case 2:
                               $player1_score = 1;
-                              $player2_score = 5;
                               break;
                               case 3:
                               $player1_score = 0;
-                              $player2_score = 6;
                               break;
                               default:
                               $player1_score = 0;
-                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player1_score;
@@ -222,71 +207,56 @@ if(isset($_SESSION['role']))
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 6;
-                              $player1_score = 0;
                               break;
                               case 1:
                               $player2_score = 5;
-                              $player1_score = 1;
                               break;
                               case 2:
                               $player2_score = 4;
-                              $player1_score = 2;
                             }
                           }
                           if ($result['player2_score'] == 2) {
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 5;
-                              $player1_score = 1;
                               break;
                               case 1:
                               $player2_score = 4;
-                              $player1_score = 2;
                               break;
                               case 2:
                               $player2_score = 3;
-                              $player1_score = 3;
                               break;
                               case 3:
                               $player2_score = 2;
-                              $player1_score = 4;
                             }
                           }
                           if ($result['player2_score'] == 1) {
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 4;
-                              $player1_score = 2;
                               break;
                               case 1:
                               $player2_score = 3;
-                              $player1_score = 3;
                               break;
                               case 2:
                               $player2_score = 2;
-                              $player1_score = 4;
                               break;
                               case 3:
                               $player2_score = 1;
-                              $player1_score = 5;
                             }
                           }
                           if ($result['player2_score'] == 0) {
                             switch($result['player1_score']) {
                               case 1:
                               $player2_score = 2;
-                              $player1_score = 4;
                               break;
                               case 2:
                               $player2_score = 1;
-                              $player1_score = 5;
                               break;
                               case 3:
                               $player2_score = 0;
-                              $player1_score = 6;
                               break;
                               default:
-                              $player1_score = 0;
                               $player2_score = 0;
                             }
                           }
@@ -378,72 +348,57 @@ if(isset($_SESSION['role']))
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 6;
-                                $player2_score = 0;
                                 break;
                                 case 1:
                                 $player1_score = 5;
-                                $player2_score = 1;
                                 break;
                                 case 2:
                                 $player1_score = 4;
-                                $player2_score = 2;
                               }
                             }
                             if ($result['player1_score'] == 2) {
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 5;
-                                $Player2_score = 1;
                                 break;
                                 case 1:
                                 $player1_score = 4;
-                                $player2_score = 2;
                                 break;
                                 case 2:
                                 $player1_score = 3;
-                                $player2_score = 3;
                                 break;
                                 case 3:
                                 $player1_score = 2;
-                                $player2_score = 4;
                               }
                             }
                             if ($result['player1_score'] == 1) {
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 4;
-                                $Player2_score = 2;
                                 break;
                                 case 1:
                                 $player1_score = 3;
-                                $player2_score = 3;
                                 break;
                                 case 2:
                                 $player1_score = 2;
-                                $player2_score = 4;
                                 break;
                                 case 3:
                                 $player1_score = 1;
-                                $player2_score = 5;
                               }
                             }
                             if ($result['player1_score'] == 0) {
                               switch($result['player2_score']) {
                                 case 1:
                                 $player1_score = 2;
-                                $Player2_score = 4;
                                 break;
                                 case 2:
                                 $player1_score = 1;
-                                $player2_score = 5;
                                 break;
                                 case 3:
                                 $player1_score = 0;
-                                $player2_score = 6;
                                 break;
                                 default:
                                 $player1_score = 0;
-                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player1_score;
@@ -456,71 +411,56 @@ if(isset($_SESSION['role']))
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 6;
-                                $player1_score = 0;
                                 break;
                                 case 1:
                                 $player2_score = 5;
-                                $player1_score = 1;
                                 break;
                                 case 2:
                                 $player2_score = 4;
-                                $player1_score = 2;
                               }
                             }
                             if ($result['player2_score'] == 2) {
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 5;
-                                $player1_score = 1;
                                 break;
                                 case 1:
                                 $player2_score = 4;
-                                $player1_score = 2;
                                 break;
                                 case 2:
                                 $player2_score = 3;
-                                $player1_score = 3;
                                 break;
                                 case 3:
                                 $player2_score = 2;
-                                $player1_score = 4;
                               }
                             }
                             if ($result['player2_score'] == 1) {
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 4;
-                                $player1_score = 2;
                                 break;
                                 case 1:
                                 $player2_score = 3;
-                                $player1_score = 3;
                                 break;
                                 case 2:
                                 $player2_score = 2;
-                                $player1_score = 4;
                                 break;
                                 case 3:
                                 $player2_score = 1;
-                                $player1_score = 5;
                               }
                             }
                             if ($result['player2_score'] == 0) {
                               switch($result['player1_score']) {
                                 case 1:
                                 $player2_score = 2;
-                                $player1_score = 4;
                                 break;
                                 case 2:
                                 $player2_score = 1;
-                                $player1_score = 5;
                                 break;
                                 case 3:
                                 $player2_score = 0;
-                                $player1_score = 6;
                                 break;
                                 default:
-                                $player1_score = 0;
                                 $player2_score = 0;
                               }
                             }
@@ -612,72 +552,57 @@ if(isset($_SESSION['role']))
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 6;
-                                $player2_score = 0;
                                 break;
                                 case 1:
                                 $player1_score = 5;
-                                $player2_score = 1;
                                 break;
                                 case 2:
                                 $player1_score = 4;
-                                $player2_score = 2;
                               }
                             }
                             if ($result['player1_score'] == 2) {
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 5;
-                                $Player2_score = 1;
                                 break;
                                 case 1:
                                 $player1_score = 4;
-                                $player2_score = 2;
                                 break;
                                 case 2:
                                 $player1_score = 3;
-                                $player2_score = 3;
                                 break;
                                 case 3:
                                 $player1_score = 2;
-                                $player2_score = 4;
                               }
                             }
                             if ($result['player1_score'] == 1) {
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 4;
-                                $Player2_score = 2;
                                 break;
                                 case 1:
                                 $player1_score = 3;
-                                $player2_score = 3;
                                 break;
                                 case 2:
                                 $player1_score = 2;
-                                $player2_score = 4;
                                 break;
                                 case 3:
                                 $player1_score = 1;
-                                $player2_score = 5;
                               }
                             }
                             if ($result['player1_score'] == 0) {
                               switch($result['player2_score']) {
                                 case 1:
                                 $player1_score = 2;
-                                $Player2_score = 4;
                                 break;
                                 case 2:
                                 $player1_score = 1;
-                                $player2_score = 5;
                                 break;
                                 case 3:
                                 $player1_score = 0;
-                                $player2_score = 6;
                                 break;
                                 default:
                                 $player1_score = 0;
-                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player1_score;
@@ -690,71 +615,56 @@ if(isset($_SESSION['role']))
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 6;
-                                $player1_score = 0;
                                 break;
                                 case 1:
                                 $player2_score = 5;
-                                $player1_score = 1;
                                 break;
                                 case 2:
                                 $player2_score = 4;
-                                $player1_score = 2;
                               }
                             }
                             if ($result['player2_score'] == 2) {
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 5;
-                                $player1_score = 1;
                                 break;
                                 case 1:
                                 $player2_score = 4;
-                                $player1_score = 2;
                                 break;
                                 case 2:
                                 $player2_score = 3;
-                                $player1_score = 3;
                                 break;
                                 case 3:
                                 $player2_score = 2;
-                                $player1_score = 4;
                               }
                             }
                             if ($result['player2_score'] == 1) {
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 4;
-                                $player1_score = 2;
                                 break;
                                 case 1:
                                 $player2_score = 3;
-                                $player1_score = 3;
                                 break;
                                 case 2:
                                 $player2_score = 2;
-                                $player1_score = 4;
                                 break;
                                 case 3:
                                 $player2_score = 1;
-                                $player1_score = 5;
                               }
                             }
                             if ($result['player2_score'] == 0) {
                               switch($result['player1_score']) {
                                 case 1:
                                 $player2_score = 2;
-                                $player1_score = 4;
                                 break;
                                 case 2:
                                 $player2_score = 1;
-                                $player1_score = 5;
                                 break;
                                 case 3:
                                 $player2_score = 0;
-                                $player1_score = 6;
                                 break;
                                 default:
-                                $player1_score = 0;
                                 $player2_score = 0;
                               }
                             }
@@ -846,72 +756,57 @@ if(isset($_SESSION['role']))
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 6;
-                                $player2_score = 0;
                                 break;
                                 case 1:
                                 $player1_score = 5;
-                                $player2_score = 1;
                                 break;
                                 case 2:
                                 $player1_score = 4;
-                                $player2_score = 2;
                               }
                             }
                             if ($result['player1_score'] == 2) {
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 5;
-                                $Player2_score = 1;
                                 break;
                                 case 1:
                                 $player1_score = 4;
-                                $player2_score = 2;
                                 break;
                                 case 2:
                                 $player1_score = 3;
-                                $player2_score = 3;
                                 break;
                                 case 3:
                                 $player1_score = 2;
-                                $player2_score = 4;
                               }
                             }
                             if ($result['player1_score'] == 1) {
                               switch($result['player2_score']) {
                                 case 0:
                                 $player1_score = 4;
-                                $Player2_score = 2;
                                 break;
                                 case 1:
                                 $player1_score = 3;
-                                $player2_score = 3;
                                 break;
                                 case 2:
                                 $player1_score = 2;
-                                $player2_score = 4;
                                 break;
                                 case 3:
                                 $player1_score = 1;
-                                $player2_score = 5;
                               }
                             }
                             if ($result['player1_score'] == 0) {
                               switch($result['player2_score']) {
                                 case 1:
                                 $player1_score = 2;
-                                $Player2_score = 4;
                                 break;
                                 case 2:
                                 $player1_score = 1;
-                                $player2_score = 5;
                                 break;
                                 case 3:
                                 $player1_score = 0;
-                                $player2_score = 6;
                                 break;
                                 default:
                                 $player1_score = 0;
-                                $player2_score = 0;
                               }
                             }
                             $total= $total + $player1_score;
@@ -924,71 +819,56 @@ if(isset($_SESSION['role']))
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 6;
-                                $player1_score = 0;
                                 break;
                                 case 1:
                                 $player2_score = 5;
-                                $player1_score = 1;
                                 break;
                                 case 2:
                                 $player2_score = 4;
-                                $player1_score = 2;
                               }
                             }
                             if ($result['player2_score'] == 2) {
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 5;
-                                $player1_score = 1;
                                 break;
                                 case 1:
                                 $player2_score = 4;
-                                $player1_score = 2;
                                 break;
                                 case 2:
                                 $player2_score = 3;
-                                $player1_score = 3;
                                 break;
                                 case 3:
                                 $player2_score = 2;
-                                $player1_score = 4;
                               }
                             }
                             if ($result['player2_score'] == 1) {
                               switch($result['player1_score']) {
                                 case 0:
                                 $player2_score = 4;
-                                $player1_score = 2;
                                 break;
                                 case 1:
                                 $player2_score = 3;
-                                $player1_score = 3;
                                 break;
                                 case 2:
                                 $player2_score = 2;
-                                $player1_score = 4;
                                 break;
                                 case 3:
                                 $player2_score = 1;
-                                $player1_score = 5;
                               }
                             }
                             if ($result['player2_score'] == 0) {
                               switch($result['player1_score']) {
                                 case 1:
                                 $player2_score = 2;
-                                $player1_score = 4;
                                 break;
                                 case 2:
                                 $player2_score = 1;
-                                $player1_score = 5;
                                 break;
                                 case 3:
                                 $player2_score = 0;
-                                $player1_score = 6;
                                 break;
                                 default:
-                                $player1_score = 0;
                                 $player2_score = 0;
                               }
                             }
@@ -1080,72 +960,57 @@ if(isset($_SESSION['role']))
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 6;
-                              $player2_score = 0;
                               break;
                               case 1:
                               $player1_score = 5;
-                              $player2_score = 1;
                               break;
                               case 2:
                               $player1_score = 4;
-                              $player2_score = 2;
                             }
                           }
                           if ($result['player1_score'] == 2) {
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 5;
-                              $Player2_score = 1;
                               break;
                               case 1:
                               $player1_score = 4;
-                              $player2_score = 2;
                               break;
                               case 2:
                               $player1_score = 3;
-                              $player2_score = 3;
                               break;
                               case 3:
                               $player1_score = 2;
-                              $player2_score = 4;
                             }
                           }
                           if ($result['player1_score'] == 1) {
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 4;
-                              $Player2_score = 2;
                               break;
                               case 1:
                               $player1_score = 3;
-                              $player2_score = 3;
                               break;
                               case 2:
                               $player1_score = 2;
-                              $player2_score = 4;
                               break;
                               case 3:
                               $player1_score = 1;
-                              $player2_score = 5;
                             }
                           }
                           if ($result['player1_score'] == 0) {
                             switch($result['player2_score']) {
                               case 1:
                               $player1_score = 2;
-                              $Player2_score = 4;
                               break;
                               case 2:
                               $player1_score = 1;
-                              $player2_score = 5;
                               break;
                               case 3:
                               $player1_score = 0;
-                              $player2_score = 6;
                               break;
                               default:
                               $player1_score = 0;
-                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player1_score;
@@ -1158,71 +1023,56 @@ if(isset($_SESSION['role']))
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 6;
-                              $player1_score = 0;
                               break;
                               case 1:
                               $player2_score = 5;
-                              $player1_score = 1;
                               break;
                               case 2:
                               $player2_score = 4;
-                              $player1_score = 2;
                             }
                           }
                           if ($result['player2_score'] == 2) {
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 5;
-                              $player1_score = 1;
                               break;
                               case 1:
                               $player2_score = 4;
-                              $player1_score = 2;
                               break;
                               case 2:
                               $player2_score = 3;
-                              $player1_score = 3;
                               break;
                               case 3:
                               $player2_score = 2;
-                              $player1_score = 4;
                             }
                           }
                           if ($result['player2_score'] == 1) {
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 4;
-                              $player1_score = 2;
                               break;
                               case 1:
                               $player2_score = 3;
-                              $player1_score = 3;
                               break;
                               case 2:
                               $player2_score = 2;
-                              $player1_score = 4;
                               break;
                               case 3:
                               $player2_score = 1;
-                              $player1_score = 5;
                             }
                           }
                           if ($result['player2_score'] == 0) {
                             switch($result['player1_score']) {
                               case 1:
                               $player2_score = 2;
-                              $player1_score = 4;
                               break;
                               case 2:
                               $player2_score = 1;
-                              $player1_score = 5;
                               break;
                               case 3:
                               $player2_score = 0;
-                              $player1_score = 6;
                               break;
                               default:
-                              $player1_score = 0;
                               $player2_score = 0;
                             }
                           }
@@ -1314,72 +1164,57 @@ if(isset($_SESSION['role']))
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 6;
-                              $player2_score = 0;
                               break;
                               case 1:
                               $player1_score = 5;
-                              $player2_score = 1;
                               break;
                               case 2:
                               $player1_score = 4;
-                              $player2_score = 2;
                             }
                           }
                           if ($result['player1_score'] == 2) {
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 5;
-                              $Player2_score = 1;
                               break;
                               case 1:
                               $player1_score = 4;
-                              $player2_score = 2;
                               break;
                               case 2:
                               $player1_score = 3;
-                              $player2_score = 3;
                               break;
                               case 3:
                               $player1_score = 2;
-                              $player2_score = 4;
                             }
                           }
                           if ($result['player1_score'] == 1) {
                             switch($result['player2_score']) {
                               case 0:
                               $player1_score = 4;
-                              $Player2_score = 2;
                               break;
                               case 1:
                               $player1_score = 3;
-                              $player2_score = 3;
                               break;
                               case 2:
                               $player1_score = 2;
-                              $player2_score = 4;
                               break;
                               case 3:
                               $player1_score = 1;
-                              $player2_score = 5;
                             }
                           }
                           if ($result['player1_score'] == 0) {
                             switch($result['player2_score']) {
                               case 1:
                               $player1_score = 2;
-                              $Player2_score = 4;
                               break;
                               case 2:
                               $player1_score = 1;
-                              $player2_score = 5;
                               break;
                               case 3:
                               $player1_score = 0;
-                              $player2_score = 6;
                               break;
                               default:
                               $player1_score = 0;
-                              $player2_score = 0;
                             }
                           }
                           $total= $total + $player1_score;
@@ -1392,71 +1227,56 @@ if(isset($_SESSION['role']))
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 6;
-                              $player1_score = 0;
                               break;
                               case 1:
                               $player2_score = 5;
-                              $player1_score = 1;
                               break;
                               case 2:
                               $player2_score = 4;
-                              $player1_score = 2;
                             }
                           }
                           if ($result['player2_score'] == 2) {
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 5;
-                              $player1_score = 1;
                               break;
                               case 1:
                               $player2_score = 4;
-                              $player1_score = 2;
                               break;
                               case 2:
                               $player2_score = 3;
-                              $player1_score = 3;
                               break;
                               case 3:
                               $player2_score = 2;
-                              $player1_score = 4;
                             }
                           }
                           if ($result['player2_score'] == 1) {
                             switch($result['player1_score']) {
                               case 0:
                               $player2_score = 4;
-                              $player1_score = 2;
                               break;
                               case 1:
                               $player2_score = 3;
-                              $player1_score = 3;
                               break;
                               case 2:
                               $player2_score = 2;
-                              $player1_score = 4;
                               break;
                               case 3:
                               $player2_score = 1;
-                              $player1_score = 5;
                             }
                           }
                           if ($result['player2_score'] == 0) {
                             switch($result['player1_score']) {
                               case 1:
                               $player2_score = 2;
-                              $player1_score = 4;
                               break;
                               case 2:
                               $player2_score = 1;
-                              $player1_score = 5;
                               break;
                               case 3:
                               $player2_score = 0;
-                              $player1_score = 6;
                               break;
                               default:
-                              $player1_score = 0;
                               $player2_score = 0;
                             }
                           }
