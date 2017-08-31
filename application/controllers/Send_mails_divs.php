@@ -43,10 +43,16 @@ class Send_mails_divs extends CI_Controller {
       }
       for ($j = 0; $j < $c; $j++) {
         $message = "Hi ".$name_arr[$j]."\n\n";
-        $message.= $content;        
+        $message.= $content;
         mail($email_arr[$j], $subject, $message, "From: support@rgbmarketing.co.uk");
       }
       $data['mail_divs_sent_message'] = "Mails have been sent";
+      $year = date("Y");
+      $data['year'] = $year;
+      $month_num = date("m");
+      $month = $this->users_model->get_month($month_num);
+      $data['month'] = $month;
+      $data['viewable'] = $this->users_model->get_viewable_state($year, $month);
     //copy to admin
     $admin_email = "support@rgbmarketing.co.uk";
     $message = $content;

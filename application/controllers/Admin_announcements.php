@@ -35,6 +35,12 @@ class Admin_announcements extends CI_Controller {
     }
     $data['announcement_message'] = "Latest announcement posted and oldest deleted";
     $this->session->unset_userdata('announcements');
+    $year = date("Y");
+    $data['year'] = $year;
+    $month_num = date("m");
+    $month = $this->users_model->get_month($month_num);
+    $data['month'] = $month;
+    $data['viewable'] = $this->users_model->get_viewable_state($year, $month);
     $this->load->view('templates/header', $data);
     $this->load->view('admin_views/admin_home', $data);
     $this->load->view('templates/footer', $data);

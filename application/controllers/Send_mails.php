@@ -36,7 +36,7 @@ class Send_mails extends CI_Controller {
       $num = $this->input->post('num');
       for ($i = 1; $i <= $num; $i++) {
         if ($this->input->post('ch' . $i) !== null) {
-        //if ($this->input->post('ch' . $i) == 'y') {          
+        //if ($this->input->post('ch' . $i) == 'y') {
           $email_arr[$c] = $this->input->post('mail'.$i);
           $name_arr[$c] = $this->input->post('fn'.$i);
           $c++;
@@ -48,6 +48,12 @@ class Send_mails extends CI_Controller {
         $message.= $content;
         mail($email_arr[$j], $subject, $message, "From: support@rgbmarketing.co.uk");
       }
+      $year = date("Y");
+      $data['year'] = $year;
+      $month_num = date("m");
+      $month = $this->users_model->get_month($month_num);
+      $data['month'] = $month;
+      $data['viewable'] = $this->users_model->get_viewable_state($year, $month);
       if($c == 0) {
         $data['mail_sent_message'] = "No mail sent";
       } else {

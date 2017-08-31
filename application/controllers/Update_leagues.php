@@ -203,7 +203,10 @@
         } else {
           $data['leagues_message'] = 'Leagues changed successfully';
           }
-        //Loading View
+          $month_num = date("m");
+          $month = $this->users_model->get_month($month_num);
+          $data['month'] = $month;
+          $data['viewable'] = $this->users_model->get_viewable_state($year, $month);
         $this->load->view('templates/header', $data);
         $this->load->view('admin_views/admin_home', $data);
         $this->load->view('templates/footer', $data);

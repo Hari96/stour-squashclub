@@ -31,7 +31,12 @@ class Player_admin extends CI_Controller {
     $order_field = 'average';
     $order_direction = 'desc';
     $data['profiles'] = $this->users_model->get_player_profiles($order_field, $order_direction);
-
+    $year = date("Y");
+    $data['year'] = $year;
+    $month_num = date("m");
+    $month = $this->users_model->get_month($month_num);
+    $data['month'] = $month;
+    $data['viewable'] = $this->users_model->get_viewable_state($year, $month);
     $this->load->view('templates/header', $data);
     $this->load->view('admin_views/'.$page, $data);
     $this->load->view('templates/footer', $data);

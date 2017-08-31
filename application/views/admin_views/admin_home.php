@@ -149,7 +149,7 @@ if(isset($_SESSION['role']))
             <td>You can allocate players to divisions and setup new leagues. You are also able to edit a new league if not yet complete. <br> <em>You can only update/create current month's league between 1st and 5th of month; and next month's league between 26th and end of month.</em></td>
             <td><a <?php $day = date('d'); if(intval($day) < 6) { ?> href="<?php echo base_url();?>player_admin/league_view/leagues_view"<?php } else { ?>href=""<?php }?>>Update/create current month's league</a></td>
             <td><a <?php if(intval($day) > 25) { ?> href="<?php echo base_url();?>player_admin/league_view/new_leagues_view"<?php } else { ?>href=""<?php } ?>>Create/update next month's league</a></td>
-            <td><?php if(intval($day) > 25) { ?><a class="btn btn-primary" href="<?php echo base_url();?>results_hub/make_viewable">Make viewable</a><?php } ?></td>
+            <td><?php if(intval($day) > 25 && $viewable == false) { ?><a class="btn btn-primary" href="<?php echo base_url();?>results_hub/make_viewable">Make viewable</a><?php } else if (intval($day) > 25 && $viewable == true) { echo "<button>Next month now viewable</button>"; } ?></td>
           </tr>
           <tr>
             <td>You can enter and update results for the current leagues.</td>
