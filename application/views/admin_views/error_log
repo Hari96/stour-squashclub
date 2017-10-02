@@ -1,0 +1,128 @@
+[29-Sep-2016 19:13:28 UTC] PHP Fatal error:  Call to undefined function activate_profile() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Update_users2.php on line 44
+[29-Sep-2016 20:33:02 UTC] PHP Parse error:  syntax error, unexpected '3' (T_LNUMBER) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 25
+[30-Sep-2016 17:37:27 UTC] PHP Fatal error:  Call to undefined method Insert_model::update_role() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_admin.php on line 14
+[01-Oct-2016 14:56:18 UTC] PHP Parse error:  syntax error, unexpected '"</td><td>"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/divisions.php on line 75
+[01-Oct-2016 17:18:32 UTC] PHP Fatal error:  Call to undefined method Users_model::get_mobile_from_id() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_profiles.php on line 26
+[01-Oct-2016 19:00:58 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 159
+[01-Oct-2016 19:01:40 UTC] PHP Fatal error:  Call to undefined function get_mobile_from_id() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_profiles.php on line 29
+[01-Oct-2016 19:03:53 UTC] PHP Fatal error:  Call to undefined function get_mobile_from_id() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_profiles.php on line 29
+[01-Oct-2016 19:03:55 UTC] PHP Fatal error:  Call to undefined function get_mobile_from_id() in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Player_profiles.php on line 29
+[02-Oct-2016 13:18:51 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[02-Oct-2016 13:27:13 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[02-Oct-2016 13:30:44 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 185
+[02-Oct-2016 13:36:37 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 185
+[02-Oct-2016 13:41:24 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 185
+[02-Oct-2016 13:55:17 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 185
+[02-Oct-2016 13:57:22 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 185
+[02-Oct-2016 13:59:59 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[02-Oct-2016 14:02:14 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[02-Oct-2016 14:05:13 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[02-Oct-2016 14:07:20 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[02-Oct-2016 14:10:08 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[02-Oct-2016 14:12:22 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 186
+[03-Oct-2016 20:38:45 UTC] PHP Parse error:  syntax error, unexpected '-', expecting '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Forum-admin_control.php on line 4
+[05-Oct-2016 18:08:30 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/user_delete.php on line 41
+[05-Oct-2016 18:15:48 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/user_delete.php on line 6
+[07-Oct-2016 13:09:55 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/delete_old_data.php on line 38
+[07-Oct-2016 17:07:52 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Delete_old_data.php on line 23
+[10-Oct-2016 16:29:14 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/player_profile.php on line 56
+[10-Oct-2016 16:51:19 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/player_profile.php on line 22
+[10-Oct-2016 23:55:45 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/model_views/player_profile.php on line 89
+[09-Jan-2017 20:54:09 UTC] PHP Fatal error:  Can't use function return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 36
+[09-Jan-2017 20:54:19 UTC] PHP Fatal error:  Can't use function return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 36
+[09-Jan-2017 20:54:19 UTC] PHP Fatal error:  Can't use function return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 36
+[09-Jan-2017 20:56:10 UTC] PHP Fatal error:  Can't use function return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 36
+[09-Jan-2017 20:57:25 UTC] PHP Fatal error:  Can't use function return value in write context in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/controllers/Insert_users.php on line 36
+[11-Jan-2017 22:48:29 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/profiles_update_view.php on line 46
+[11-Jan-2017 22:53:34 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/views/admin_views/profiles_update_view.php on line 47
+[14-Jan-2017 11:19:27 UTC] PHP Fatal error:  Call to a member function where() on null in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Users_model.php on line 275
+[14-Jan-2017 16:44:45 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 102
+[14-Jan-2017 16:44:46 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 102
+[14-Jan-2017 16:44:46 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 102
+[14-Jan-2017 23:22:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 159
+[14-Jan-2017 23:22:52 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 159
+[14-Jan-2017 23:22:52 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/rgbmarke/public_html/stoursquashclub.co.uk/application/models/Insert_model.php on line 159
+[26-Sep-2017 04:15:16 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 04:15:16 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 05:27:06 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 05:27:06 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:52 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:52 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:53 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:53 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:53 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:53 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:53 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:53 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:53 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:53 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:54 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 06:15:54 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 08:01:58 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 08:01:58 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 09:36:25 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 09:36:25 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 14:07:27 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 14:07:27 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 15:43:58 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 15:43:58 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 15:43:58 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 15:43:58 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 15:47:45 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 15:47:45 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:12:31 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:12:31 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:01 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:01 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:04 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:04 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:06 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:06 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:11 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:11 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:26 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:26 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:33 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:33 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:38 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:38 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:59 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 19:43:59 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:06 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:06 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:13 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:13 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:20 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:20 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:26 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:26 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:30 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:30 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:40 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:40 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:51 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:39:51 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:10 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:10 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:16 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:16 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:30 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:30 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:48 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:48 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:58 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:40:58 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:41:17 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:41:17 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:41:24 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:41:24 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:42:10 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:42:10 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:42:15 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:42:15 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:43:07 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:43:07 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:43:26 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:43:26 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[26-Sep-2017 21:54:20 UTC] PHP Warning:  Module 'imagick' already loaded in Unknown on line 0
+[26-Sep-2017 21:54:20 UTC] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0

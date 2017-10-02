@@ -44,6 +44,16 @@
       }
       $month = $this->users_model->get_month($month_num);
       $this->insert_model->update_viewable($year, $month);
+      if ($month_num < 12) {
+        $next_month_num = $month_num + 1;
+        $next_year = $year;
+      }
+      else {
+        $next_month_num = 1;
+        $next_year = $year + 1;
+      }
+      $next_month = $this->users_model->get_month($next_month_num);
+      $data['viewable'] = $this->users_model->get_viewable_state($next_year, $next_month);
       $data['divs_made_viewable'] = "Next month's divisions made viewable";
       $this->load->view('templates/header', $data);
       $this->load->view('admin_views/admin_home', $data);

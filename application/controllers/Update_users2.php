@@ -44,6 +44,10 @@
           );
           $this->insert_model->activate_profile($profile_data, $user_id);
           $this->insert_model->update_users($user_data, $user_id);
+          $year = date("Y");
+          $month_num = date("m");
+          $month = $this->users_model->get_month($month_num);
+          $data['viewable'] = $this->users_model->get_viewable_state($year, $month);
           $data['update2_message'] = 'Record Updated Successfully';
           //Loading View
           $this->load->view('templates/header', $data);

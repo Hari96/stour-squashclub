@@ -36,7 +36,16 @@ class Player_admin extends CI_Controller {
     $month_num = date("m");
     $month = $this->users_model->get_month($month_num);
     $data['month'] = $month;
-    $data['viewable'] = $this->users_model->get_viewable_state($year, $month);
+    if ($month_num < 12) {
+      $next_month_num = $month_num + 1;
+      $next_year = $year;
+    }
+    else {
+      $next_month_num = 1;
+      $next_year = $year + 1;
+    }
+    $next_month = $this->users_model->get_month($next_month_num);
+    $data['viewable'] = $this->users_model->get_viewable_state($next_year, $next_month);
     $this->load->view('templates/header', $data);
     $this->load->view('admin_views/'.$page, $data);
     $this->load->view('templates/footer', $data);

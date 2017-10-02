@@ -29,12 +29,13 @@ class Update_profiles extends CI_Controller {
       $player2_score = $this->input->post($num2);
       $player2_id = $this->input->post($id2);
       $dat = 'date' . $i;
-      $date = $this->input->post($dat);
+      $date = $this->input->post($dat);//needs to be amended to take account of players who have played no games?
       $d = 'day' . $i;
-      $day = $this->input->post($d);
-      if ($day == "d") {
+      $day = $this->input->post($d);//needs to be amended to take account of players who have played no games?
+      if ($day == "d") {// not sure if this is needed!
         $day = "";
       }
+      //A PROBLEM WITH LINES 39 and 43 needs sorting!!
       if ($date > $lastDate[$player1_id]) {//ensures date and day of latest match is stored
         $lastDate[$player1_id] = $date;
         $lastDay[$player1_id] = $day;
@@ -102,7 +103,7 @@ class Update_profiles extends CI_Controller {
     }
     $order_field = "id";
     $order_direction = "asc";
-    $this->insert_model->record_profile_update($div);
+    $this->insert_model->record_profile_update($div, $month);
     $data['players'] = $this->users_model->get_players($order_field, $order_direction);
     $data['results'] = $this->users_model->get_current_results($year, $month);
     $data['divisions'] =  $this->users_model->get_divs($year, $month);

@@ -169,8 +169,9 @@
     }
   }
 
-  public function record_profile_update($div) {
+  public function record_profile_update($div, $month) {
     $this->db->where('division', $div);
+    $this->db->where('month', $month);
     $data = array(
       'profile_update' => 1
     );
