@@ -115,6 +115,9 @@
         $this->insert_model->code_insert($data_code);
         $message = "Activate your account with us by going to: http://www.stoursquashclub.co.uk/insert_users/complete_registration?activate_code=" . $code . "&league_player=" . $league_player;
         mail($email, "Activate your account today!", $message, "From: noreply@stoursquashclub.co.uk\n");
+        $admin_message = "A new player: " . $name . " has registered, but not yet activated";
+        $admin_mail = "support@rgbmarketing.co.uk";
+        mail($admin_mail, "New player registered.", $admin_message, "From: noreply@stoursquashclub.co.uk\n");
         //unset($_SESSION['reg']);
         //Loading View
         $data['announcements'] = $this->users_model->get_announcements();

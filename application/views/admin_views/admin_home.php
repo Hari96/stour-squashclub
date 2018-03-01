@@ -258,7 +258,7 @@ if(isset($_SESSION['role']))
             <td>
               <?php
               $day = date('d');
-              if(intval($day) > 25 || intval($day) < 4) {
+              if(intval($day) > 25 || intval($day) < 6) {
                 $data = array(
                   'id' => 'yearmonth',
                   'type' => 'submit',
@@ -267,7 +267,7 @@ if(isset($_SESSION['role']))
                 );
                 echo form_button($data);
               } else {
-                echo "Update button will appear <br> after 25th of the month, up to 3rd of next month.";
+                echo "Update button will appear <br> after 25th of the month, up to 5th of next month.";
               }
               ?>
             </td>
